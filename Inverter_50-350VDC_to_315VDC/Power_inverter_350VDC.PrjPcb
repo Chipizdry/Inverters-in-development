@@ -41,23 +41,6 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=Power_Invertor.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=0
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=FSXMRDBX
-
-[Document2]
 DocumentPath=LIBs\Passive_components\CAP_3.3uF_630V.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -74,7 +57,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LFUGKWIA
 
-[Document3]
+[Document2]
 DocumentPath=..\..\..\..\Downloads\altium-library-main\altium-library-main\symbols\ADS1115.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -91,7 +74,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PAEPDQLE
 
-[Document4]
+[Document3]
 DocumentPath=LIBs\Passive_components\CAP_3.3uF_630V.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -107,6 +90,40 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FFHBUSIR
+
+[Document4]
+DocumentPath=Power_Inverter_350VDC.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=FSXMRDBX
+
+[Document5]
+DocumentPath=Power_inverter_350VDC.PrjPcb
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [Configuration1]
 Name=Sources

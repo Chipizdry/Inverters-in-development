@@ -177,6 +177,23 @@ GenerateClassCluster=0
 DocumentUniqueId=HBXNHHJN
 
 [Document9]
+DocumentPath=10W 3Ohm.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=ORPPDJGK
+
+[Document10]
 DocumentPath=Res_Vishay_CRCW08050000Z0EA_eec_IPC_C.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -193,7 +210,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NUMRFNIF
 
-[Document10]
+[Document11]
 DocumentPath=Res_Bourns_3296W-1-202LF_eec.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -210,7 +227,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GSUIDNLX
 
-[Document11]
+[Document12]
 DocumentPath=CAP_0805.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -227,7 +244,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AFJASNKT
 
-[Document12]
+[Document13]
 DocumentPath=Res_Bourns_3296W-1-202LF_eec_MFG.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -244,7 +261,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TYFLHCGD
 
-[Document13]
+[Document14]
 DocumentPath=Res_Vishay_CRCW08050000Z0EA_eec_IPC_B.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -261,7 +278,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MYBMFNJF
 
-[Document14]
+[Document15]
 DocumentPath=CAP_Size_C.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -278,7 +295,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HBXNHHJN
 
-[Document15]
+[Document16]
 DocumentPath=RES0805.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -295,7 +312,41 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YXQCEBVQ
 
-[Document16]
+[Document17]
+DocumentPath=RES1210.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=WKFKGCCF
+
+[Document18]
+DocumentPath=RES1210.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=WEKNXLOR
+
+[Document19]
 DocumentPath=RES0805.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -312,7 +363,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HBXNHHJN
 
-[Document17]
+[Document20]
 DocumentPath=Res_Vishay_CRCW08050000Z0EA_eec_MFG.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -329,7 +380,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document18]
+[Document21]
 DocumentPath=RES_5W.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -344,9 +395,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=HBXNHHJN
+DocumentUniqueId=
 
-[Document19]
+[Document22]
 DocumentPath=RES_5W.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -363,7 +414,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LQEITOAU
 
-[Document20]
+[Document23]
 DocumentPath=RES_0603_YAGEO.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -380,7 +431,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document21]
+[Document24]
 DocumentPath=RES_0603_YAGEO.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -397,8 +448,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FJGIVFTM
 
-[Document22]
-DocumentPath=1000uF_63V.PcbLib
+[Document25]
+DocumentPath=RES_10W.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -412,7 +463,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=IJSLCCIT
+DocumentUniqueId=VWLZTVPY
 
 [Parameter1]
 Name=Copied from the Vault
@@ -530,7 +581,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=NPI23FAA8 (HP LaserJet MFP M426dw)
+TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
