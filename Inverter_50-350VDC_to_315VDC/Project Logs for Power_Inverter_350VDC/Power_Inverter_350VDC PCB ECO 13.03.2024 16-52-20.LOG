@@ -1,0 +1,114 @@
+Added Component: Designator=RG1(TO-220_Bended_Rad)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Upverter"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current-Output"; Value = "1A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Description"; Value = "REG IC REG LINEAR 5V 1A TO220AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Part Number"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "helpURL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ipc Land Pattern Name"; Value = "TO-220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Fairchild"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "LM7812CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0.384521982769"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-40°C to +125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range High"; Value = "+125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range Low"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Input (Max)"; Value = "35V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Output"; Value = "5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Dropout (Max)"; Value = "2V @ 1A (Typ)"; VariantName = "[No Variations]"
+Added Component: Designator=RG2(TO-220_Bended_Rad)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Upverter"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current-Output"; Value = "1A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Description"; Value = "REG IC REG LINEAR 5V 1A TO220AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Part Number"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "helpURL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ipc Land Pattern Name"; Value = "TO-220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Fairchild"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "LM7812CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0.384521982769"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-40°C to +125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range High"; Value = "+125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range Low"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Input (Max)"; Value = "35V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Output"; Value = "5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Dropout (Max)"; Value = "2V @ 1A (Typ)"; VariantName = "[No Variations]"
+Added Component: Designator=RG3(TO-220_Bended_Rad)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Upverter"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current-Output"; Value = "1A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Description"; Value = "REG IC REG LINEAR 5V 1A TO220AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Part Number"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "helpURL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ipc Land Pattern Name"; Value = "TO-220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Fairchild"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0.384521982769"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-40°C to +125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range High"; Value = "+125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range Low"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Input (Max)"; Value = "35V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Output"; Value = "5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Dropout (Max)"; Value = "2V @ 1A (Typ)"; VariantName = "[No Variations]"
+Added Component: Designator=U3(ON_Semiconductor_936A-02_MFG)
+Added Component: Designator=U6(ON_Semiconductor_936A-02_MFG)
+Added Pin To Net: NetName=Net*PWM1_1 Pin=RG1-1
+Added Pin To Net: NetName=GND_II Pin=RG1-2
+Added Pin To Net: NetName=GND_II Pin=RG1-2
+Added Pin To Net: NetName=NetC2_2 Pin=RG1-3
+Added Pin To Net: NetName=Net*PWM1_1 Pin=RG2-1
+Added Pin To Net: NetName=GND Pin=RG2-2
+Added Pin To Net: NetName=GND Pin=RG2-2
+Added Pin To Net: NetName=NetC2_2 Pin=RG2-3
+Added Pin To Net: NetName=NetC2_2 Pin=RG3-1
+Added Pin To Net: NetName=GND Pin=RG3-2
+Added Pin To Net: NetName=GND Pin=RG3-2
+Added Pin To Net: NetName=+5V Pin=RG3-3
+Added Pin To Net: NetName=NetC1_2 Pin=U3-1
+Added Pin To Net: NetName=NetCR1_1 Pin=U3-2
+Added Pin To Net: NetName=GND_II Pin=U3-3
+Added Pin To Net: NetName=NetRP1_2 Pin=U3-4
+Added Pin To Net: NetName=GND_II Pin=U3-5
+Added Pin To Net: NetName=GND_II Pin=U3-6
+Added Pin To Net: NetName=NetC20_2 Pin=U6-1
+Added Pin To Net: NetName=NetCR2_1 Pin=U6-2
+Added Pin To Net: NetName=GND Pin=U6-3
+Added Pin To Net: NetName=NetRP2_2 Pin=U6-4
+Added Pin To Net: NetName=GND Pin=U6-5
+Added Pin To Net: NetName=GND Pin=U6-6
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component J? MG_136_HT
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component RG1 LM7812CT
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component RG2 LM7812CT
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component RG3 LM7805CT
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component     1uF
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component U3
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component U6

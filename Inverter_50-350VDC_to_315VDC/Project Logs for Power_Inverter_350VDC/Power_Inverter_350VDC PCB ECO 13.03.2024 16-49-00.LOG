@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=GND_ISOL Pin=C19-1
+Removed Pin From Net: NetName=+5V_ISOL Pin=C19-2
+Change Component DesignItemId : Designator=C19 Old DesignItemId=CMP-1036-04552-2 New DesignItemId=CAP-NON-POLAR
+Change Component Footprint: Designator=C19 Old Footprint=FP-C0805C-DN-MFG New Footprint=CAP-0805
+Change Component Comment : Designator=C19 Old Comment=C0805C224K5RACTU New Comment=1uF
+Change Component Designator: OldDesignator=C19 NewDesignator=   
+Change Component Description : Designator=    Old Description=CAP CER 0.22UF 50V X7R 0805 New Description=
+Change Component Library : Designator=    Old Library=Altium Content Vault New Library=PASSIVE_COMPONENTS.IntLib
+Change Managed Component Library Link : Designator=    Old VaultGUID= New VaultGUID= Old ItemGUID=B9488122-88ED-4EC5-84F7-203174F09D93 New ItemGUID= Old RevisionGUID=3073E26B-F5D9-41D4-961E-5BC2B966745A New RevisionGUID=
+Change component parameters: Designator = "C19" ("C19"); Footprint = "FP-C0805C-DN-MFG"; UniqueID = "\VTERQLRQ" ("\VTERQLRQ")
+Added Component: Designator=J?(Conn_MEIGAN_MG136HT)
+Added Component: Designator=J?(Conn_MEIGAN_MG136HT)
+Added Component: Designator=R35(RES-0805)
+Added Component: Designator=R37(RES-0805)
+Added Component: Designator=R38(RES-0805)
+Added Pin To Net: NetName=+5V_ISOL Pin=   -1
+Added Pin To Net: NetName=GND_ISOL Pin=   -2
+Added Pin To Net: NetName=NetC9_2 Pin=J?-1
+Added Pin To Net: NetName=NetC9_2 Pin=J?-1
+Added Pin To Net: NetName=VCC Pin=J?-1
+Added Pin To Net: NetName=VCC Pin=J?-1
+Added Pin To Net: NetName=NetDD2_3 Pin=R35-1
+Added Pin To Net: NetName=+5V_ISOL Pin=R35-2
+Added Pin To Net: NetName=NetDD2_2 Pin=R37-1
+Added Pin To Net: NetName=+5V_ISOL Pin=R37-2
+Added Pin To Net: NetName=NetDD2_7 Pin=R38-1
+Added Pin To Net: NetName=NetR33_1 Pin=R38-2
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component J? MG_136_HT
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component J? MG_136_HT
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R35 10K
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R37 10K
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R38 10K
