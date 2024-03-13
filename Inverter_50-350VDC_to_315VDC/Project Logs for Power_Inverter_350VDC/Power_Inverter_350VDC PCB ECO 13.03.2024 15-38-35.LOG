@@ -1,0 +1,12 @@
+Added Component: Designator=TR?(EE85_Ferrite_Core)
+Added Pin To Net: NetName=NetC10_1 Pin=TR?-1
+Added Pin To Net: NetName=NetR26_1 Pin=TR?-3
+Added Pin To Net: NetName=NetD13_2 Pin=TR?-4
+Added Pin To Net: NetName=NetD15_2 Pin=TR?-6
+Added Pin To Net: NetName=NetTP25_1 Pin=TR?-7
+Added Pin To Net: NetName=NetL2_5 Pin=TR?-8
+Added Pin To Net: NetName=NetL2_5 Pin=TR?-9
+Added Pin To Net: NetName=NetTP31_1 Pin=TR?-10
+Added Pin To Net: NetName=NetD1_2 Pin=TR?-11
+Added Pin To Net: NetName=NetD3_2 Pin=TR?-12
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component TR? EE85
