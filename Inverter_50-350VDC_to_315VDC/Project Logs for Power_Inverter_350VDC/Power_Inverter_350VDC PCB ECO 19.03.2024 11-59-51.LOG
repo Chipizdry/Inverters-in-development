@@ -1,0 +1,4 @@
+Added Component: Designator=R40(RES-0805)
+Added Pin To Net: NetName=GND Pin=R40-1
+Added Pin To Net: NetName=NetR33_1 Pin=R40-2
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R40 10K

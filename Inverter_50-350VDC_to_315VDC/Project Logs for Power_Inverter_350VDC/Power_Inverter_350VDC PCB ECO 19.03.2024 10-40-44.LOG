@@ -1,0 +1,6 @@
+Added Component: Designator=DD1(PLS-4-2.54mm)
+Added Pin To Net: NetName=GND_ISOL Pin=DD1-1
+Added Pin To Net: NetName=+5V_ISOL Pin=DD1-2
+Added Pin To Net: NetName=GND Pin=DD1-3
+Added Pin To Net: NetName=+5V Pin=DD1-4
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component DD1 B0505S-1W

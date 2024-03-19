@@ -1,0 +1,16 @@
+Added Component: Designator=R42(RES-0805)
+Added Component: Designator=R44(RES-0805)
+Added Component: Designator=R45(RES-0805)
+Added Component: Designator=R46(RES-0805)
+Added Pin To Net: NetName=NetR42_1 Pin=R42-1
+Added Pin To Net: NetName=NetQ5_1 Pin=R42-2
+Added Pin To Net: NetName=NetC25_1 Pin=R44-1
+Added Pin To Net: NetName=Net*PWM1_6 Pin=R44-2
+Added Pin To Net: NetName=NetQ5_3 Pin=R45-1
+Added Pin To Net: NetName=NetC25_1 Pin=R45-2
+Added Pin To Net: NetName=NetC25_1 Pin=R46-1
+Added Pin To Net: NetName=GND Pin=R46-2
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R42 10K
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R44 10K
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R45 10K
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component R46 10K

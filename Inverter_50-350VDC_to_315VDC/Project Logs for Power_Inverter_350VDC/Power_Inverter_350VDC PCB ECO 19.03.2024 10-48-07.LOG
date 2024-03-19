@@ -1,0 +1,22 @@
+Change Component DesignItemId : Designator=Q3 Old DesignItemId=CMP-1168-00042-1 New DesignItemId=IGBT 60N120T
+Change Component DesignItemId : Designator=Q4 Old DesignItemId=CMP-1168-00042-1 New DesignItemId=IGBT 60N120T
+Change Component Comment : Designator=Q3 Old Comment=IGW60T120 New Comment=IGBT 60N120TG
+Change Component Comment : Designator=Q4 Old Comment=IGW60T120 New Comment=IGBT 60N120TG
+Change Component Description : Designator=Q3 Old Description=Low Loss IGBT in TrenchStop and Fieldstop Technology, PG-TO247-3-44, Tube, Green New Description=IGBT 60N120T TO-264-3
+Change Component Description : Designator=Q4 Old Description=Low Loss IGBT in TrenchStop and Fieldstop Technology, PG-TO247-3-44, Tube, Green New Description=IGBT 60N120T TO-264-3
+Change Component Library : Designator=Q3 Old Library=IGBT 60N120.SchLib New Library=Transistors.IntLib
+Change Component Library : Designator=Q4 Old Library=IGBT 60N120.SchLib New Library=Transistors.IntLib
+Change Managed Component Library Link : Designator=Q3 Old VaultGUID= New VaultGUID= Old ItemGUID=B3B63B27-A2A9-4658-84DB-9C93D5F12BCC New ItemGUID= Old RevisionGUID=F8FD82F0-DCE0-459C-A0C4-EEED66C93E7D New RevisionGUID=
+Change Managed Component Library Link : Designator=Q4 Old VaultGUID= New VaultGUID= Old ItemGUID=B3B63B27-A2A9-4658-84DB-9C93D5F12BCC New ItemGUID= Old RevisionGUID=F8FD82F0-DCE0-459C-A0C4-EEED66C93E7D New RevisionGUID=
+Change component parameters: Designator = "Q3" ("Q3"); Footprint = "TO-264-3"; UniqueID = "\RYHWRZWB" ("\RYHWRZWB")
+Change component parameters: Designator = "Q4" ("Q4"); Footprint = "TO-264-3"; UniqueID = "\BPFQZXDH" ("\BPFQZXDH")
+Added Component: Designator=Q1(TO-264-3)
+Added Component: Designator=Q2(TO-264-3)
+Added Pin To Net: NetName=Net*PWM1_15 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_2 Pin=Q1-2
+Added Pin To Net: NetName=Net*PWM1_17 Pin=Q1-3
+Added Pin To Net: NetName=Net*PWM1_16 Pin=Q2-1
+Added Pin To Net: NetName=Net*PWM1_17 Pin=Q2-2
+Added Pin To Net: NetName=GND Pin=Q2-3
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component Q1 IGBT 60N120TG
+Added Member To Class: ClassName=Power_Inverter_350VDC Member=Component Q2 IGBT 60N120TG
