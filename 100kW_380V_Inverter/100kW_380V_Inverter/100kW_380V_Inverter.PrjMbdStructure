@@ -6,3 +6,5 @@ Record=DiagramHierarchy|SourceDocument=MultiBoardSchematic1.MbsDoc|Kind=Multi-bo
 Record=SubProject|SourceDocument=MultiBoardSchematic1.MbsDoc|ProjectPath=Driver_10_kW\Driver_10kW\Driver_10kW.PrjPcb
 Record=DiagramHierarchy|SourceDocument=MultiBoardSchematic1.MbsDoc|Kind=Multi-board Schematic Module|Designator=3|Source=Inverter\Inverter.PrjPcb
 Record=SubProject|SourceDocument=MultiBoardSchematic1.MbsDoc|ProjectPath=Inverter\Inverter.PrjPcb
+Record=DiagramHierarchy|SourceDocument=MultiBoardSchematic1.MbsDoc|Kind=Multi-board Schematic Module|Designator=11|Source=Standby_PS\Standby_PS.PrjPCB
+Record=SubProject|SourceDocument=MultiBoardSchematic1.MbsDoc|ProjectPath=Standby_PS\Standby_PS.PrjPCB
