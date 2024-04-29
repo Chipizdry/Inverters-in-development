@@ -103,6 +103,8 @@ VaultGUID=
 ManagedProjectGUID=
 RevisionGUID=
 ProjectName=Rectifire_(PFC)_Solar.PrjPcb
+VaultURL=
+VaultName=
 
 [Document4]
 DocumentPath=Driver_10_kW\Driver_10kW.PrjPcb
@@ -141,6 +143,8 @@ VaultGUID=
 ManagedProjectGUID=
 RevisionGUID=
 ProjectName=Inverter.PrjPcb
+VaultURL=
+VaultName=
 
 [Document6]
 DocumentPath=Standby_PS\Standby_PS.PcbDoc
@@ -179,6 +183,8 @@ VaultGUID=
 ManagedProjectGUID=
 RevisionGUID=
 ProjectName=Standby_PS.PrjPCB
+VaultURL=
+VaultName=
 
 [Document8]
 DocumentPath=Standby_PS\Standby_PS.SchDoc
@@ -187,7 +193,7 @@ AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=0
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -195,7 +201,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=YQEDCYZF
 
 [OutputGroup1]
 Name=Netlist Outputs

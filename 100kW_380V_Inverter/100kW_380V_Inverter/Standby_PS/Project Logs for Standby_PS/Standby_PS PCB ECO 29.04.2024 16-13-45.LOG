@@ -1,0 +1,424 @@
+Removed Pin From Net: NetName=GND Pin=C2-2
+Removed Pin From Net: NetName=GND Pin=C3-2
+Removed Pin From Net: NetName=GND Pin=C5-2
+Removed Pin From Net: NetName=NetC6_1 Pin=C6-1
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=GND Pin=C8-2
+Removed Pin From Net: NetName=GND Pin=C9-1
+Removed Pin From Net: NetName=GND Pin=C16-2
+Removed Pin From Net: NetName=GND Pin=C20-2
+Removed Pin From Net: NetName=GND Pin=D1-1
+Removed Pin From Net: NetName=GND_1 Pin=DA1-2
+Removed Pin From Net: NetName=NetC7_2 Pin=DA2-1
+Removed Pin From Net: NetName=NetC7_1 Pin=DA2-2
+Removed Pin From Net: NetName=GND Pin=DA2-5
+Removed Pin From Net: NetName=NetC13_1 Pin=DA2-7
+Removed Pin From Net: NetName=GND Pin=R1-2
+Removed Pin From Net: NetName=GND Pin=R2-1
+Removed Pin From Net: NetName=NetC7_1 Pin=R5-2
+Removed Pin From Net: NetName=NetC7_1 Pin=R8-1
+Removed Pin From Net: NetName=GND Pin=R9-2
+Removed Pin From Net: NetName=GND Pin=R14-1
+Removed Pin From Net: NetName=+350V Pin=T1-3
+Removed Pin From Net: NetName=+350V Pin=T1-3
+Removed Pin From Net: NetName=GND Pin=T1-6
+Removed Pin From Net: NetName=GND Pin=T1-6
+Removed Pin From Net: NetName=GND_1 Pin=T1-10
+Removed Pin From Net: NetName=GND_1 Pin=T1-10
+Removed Pin From Net: NetName=NetC7_2 Pin=TP7-1
+Removed Pin From Net: NetName=GND_1 Pin=TP21-1
+Removed Pin From Net: NetName=NetC7_1 Pin=TP26-1
+Removed Pin From Net: NetName=GND Pin=VD4-2
+Removed Pin From Net: NetName=NetC13_1 Pin=VD6-1
+Change Component Footprint: Designator=VD3 Old Footprint=DO-214AC, SMA New Footprint=US1G_SMA
+Change Component Footprint: Designator=C3 Old Footprint=FP-C0805C-DN-IPC_A New Footprint=CAP-0805
+Change Component Footprint: Designator=C6 Old Footprint=FP-C0805C-DN-IPC_A New Footprint=CAP-0805
+Change Component Footprint: Designator=C7 Old Footprint=FP-C0805C-DN-IPC_A New Footprint=CAP-0805
+Change Component Footprint: Designator=C14 Old Footprint=FP-C0805C-DN-IPC_A New Footprint=CAP-0805
+Change Component Footprint: Designator=R14 Old Footprint=RES-2W New Footprint=RES-0805
+Change Component Footprint: Designator=R1 Old Footprint=RES-0805 New Footprint=RES-2W
+Change Footprint: Footprint Not Found SOIC-16-M
+Change Component Comment : Designator=R14 Old Comment=1.1 Ohm New Comment=1K
+Change Component Comment : Designator=R1 Old Comment=1k New Comment=1.1 Ohm
+Change Component Comment : Designator=R6 Old Comment=1K New Comment=2K
+Change Component Comment : Designator=C3 Old Comment=16V 470pF New Comment=470pF 16V
+Change Component Comment : Designator=C6 Old Comment=50V 1uF New Comment=1uF 50V
+Change Component Comment : Designator=C14 Old Comment=50V 1uF New Comment=1uF_50V
+Change Component Comment : Designator=C7 Old Comment=50V 10nF New Comment=CAP-NON-POLAR
+Change Component Comment : Designator=R5 Old Comment=100K New Comment=10K
+Change Component Comment : Designator=VD3 Old Comment=DIODE New Comment=US1G
+Change Component Comment : Designator=U1 Old Comment=LM317TG New Comment=TL494
+Change Component Comment : Designator=TP5 Old Comment=Test_Point_PCB New Comment=
+Change Component Comment : Designator=TP8 Old Comment=Test_Point_PCB New Comment=
+Change Component Comment : Designator=TP9 Old Comment=Test_Point_PCB New Comment=
+Change Component Comment : Designator=TP10 Old Comment=Test_Point_PCB New Comment=
+Change Component Designator: OldDesignator=C4 NewDesignator=C2
+Change Component Designator: OldDesignator=C6 NewDesignator=C12
+Change Component Designator: OldDesignator=C9 NewDesignator=C19
+Change Component Designator: OldDesignator=C10 NewDesignator=C26
+Change Component Designator: OldDesignator=C11 NewDesignator=C24
+Change Component Designator: OldDesignator=C12 NewDesignator=C28
+Change Component Designator: OldDesignator=C13 NewDesignator=C10
+Change Component Designator: OldDesignator=C14 NewDesignator=C8
+Change Component Designator: OldDesignator=C15 NewDesignator=C16
+Change Component Designator: OldDesignator=C16 NewDesignator=C4
+Change Component Designator: OldDesignator=C17 NewDesignator=C27
+Change Component Designator: OldDesignator=C18 NewDesignator=C21
+Change Component Designator: OldDesignator=C19 NewDesignator=C25
+Change Component Designator: OldDesignator=C21 NewDesignator=C29
+Change Component Designator: OldDesignator=C22 NewDesignator=C20
+Change Component Designator: OldDesignator=C24 NewDesignator=C30
+Change Component Designator: OldDesignator=D2 NewDesignator=D7
+Change Component Designator: OldDesignator=D6 NewDesignator=D5
+Change Component Designator: OldDesignator=J4 NewDesignator=J3
+Change Component Designator: OldDesignator=J5 NewDesignator=J4
+Change Component Designator: OldDesignator=L2 NewDesignator=L1
+Change Component Designator: OldDesignator=R10 NewDesignator=R11
+Change Component Designator: OldDesignator=R11 NewDesignator=R7
+Change Component Designator: OldDesignator=R12 NewDesignator=R8
+Change Component Designator: OldDesignator=R13 NewDesignator=R9
+Change Component Designator: OldDesignator=R15 NewDesignator=R31
+Change Component Designator: OldDesignator=R16 NewDesignator=R32
+Change Component Designator: OldDesignator=R17 NewDesignator=R23
+Change Component Designator: OldDesignator=R18 NewDesignator=R20
+Change Component Designator: OldDesignator=R19 NewDesignator=R24
+Change Component Designator: OldDesignator=R20 NewDesignator=R27
+Change Component Designator: OldDesignator=R21 NewDesignator=R26
+Change Component Designator: OldDesignator=R22 NewDesignator=R30
+Change Component Designator: OldDesignator=R23 NewDesignator=R29
+Change Component Designator: OldDesignator=R24 NewDesignator=R33
+Change Component Designator: OldDesignator=R25 NewDesignator=R34
+Change Component Designator: OldDesignator=R29 NewDesignator=R25
+Change Component Designator: OldDesignator=R30 NewDesignator=R28
+Change Component Designator: OldDesignator=TP4 NewDesignator=TP2
+Change Component Designator: OldDesignator=TP6 NewDesignator=TP3
+Change Component Designator: OldDesignator=TP11 NewDesignator=TP7
+Change Component Designator: OldDesignator=TP12 NewDesignator=TP16
+Change Component Designator: OldDesignator=TP13 NewDesignator=TP17
+Change Component Designator: OldDesignator=TP15 NewDesignator=TP21
+Change Component Designator: OldDesignator=TP16 NewDesignator=TP24
+Change Component Designator: OldDesignator=TP17 NewDesignator=TP25
+Change Component Designator: OldDesignator=TP18 NewDesignator=TP19
+Change Component Designator: OldDesignator=TP19 NewDesignator=TP20
+Change Component Designator: OldDesignator=TP22 NewDesignator=TP14
+Change Component Designator: OldDesignator=TP23 NewDesignator=TP18
+Change Component Designator: OldDesignator=TP24 NewDesignator=TP22
+Change Component Designator: OldDesignator=TP25 NewDesignator=TP23
+Change Component Designator: OldDesignator=TP27 NewDesignator=TP4
+Change Component Designator: OldDesignator=TP29 NewDesignator=TP13
+Change Component Designator: OldDesignator=U2 NewDesignator=U4
+Change Component Designator: OldDesignator=VD2 NewDesignator=VD3
+Change Component Designator: OldDesignator=VD3 NewDesignator=VD5
+Change Component Designator: OldDesignator=VD5 NewDesignator=VD14
+Change Component Designator: OldDesignator=VD10 NewDesignator=VD11
+Change Component Designator: OldDesignator=VD13 NewDesignator=VD6
+Change Component Designator: OldDesignator=VD14 NewDesignator=VD15
+Change Component Designator: OldDesignator=VD15 NewDesignator=VD10
+Change Component Designator: OldDesignator=VD16 NewDesignator=VD12
+Change Component Designator: OldDesignator=VD17 NewDesignator=VD13
+Change Component Designator: OldDesignator=VD18 NewDesignator=VD4
+Change Managed Component Library Link : Designator=C3 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=B9488122-88ED-4EC5-84F7-203174F09D93 New ItemGUID= Old RevisionGUID=3073E26B-F5D9-41D4-961E-5BC2B966745A New RevisionGUID=
+Change Managed Component Library Link : Designator=C12 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=B9488122-88ED-4EC5-84F7-203174F09D93 New ItemGUID= Old RevisionGUID=3073E26B-F5D9-41D4-961E-5BC2B966745A New RevisionGUID=
+Change Managed Component Library Link : Designator=C7 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=B9488122-88ED-4EC5-84F7-203174F09D93 New ItemGUID= Old RevisionGUID=3073E26B-F5D9-41D4-961E-5BC2B966745A New RevisionGUID=
+Change Managed Component Library Link : Designator=C8 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=B9488122-88ED-4EC5-84F7-203174F09D93 New ItemGUID= Old RevisionGUID=3073E26B-F5D9-41D4-961E-5BC2B966745A New RevisionGUID=
+Change component parameters: Designator = "C3" ("C3"); Footprint = "FP-C0805C-DN-IPC_A"; UniqueID = "\IVXXHWKT" ("\IVXXHWKT")
+Change component parameters: Designator = "C6" ("C12"); Footprint = "FP-C0805C-DN-IPC_A"; UniqueID = "\XGBWXCGO" ("\XGBWXCGO")
+Change component parameters: Designator = "C7" ("C7"); Footprint = "FP-C0805C-DN-IPC_A"; UniqueID = "\YJRTDEJG" ("\YJRTDEJG")
+Change component parameters: Designator = "C14" ("C8"); Footprint = "FP-C0805C-DN-IPC_A"; UniqueID = "\IRQJJCXT" ("\IRQJJCXT")
+Added Component: Designator=C9(CAP-0805)
+Added Component: Designator=C11(CAP-0805)
+Added Component: Designator=C13(CAP-0805)
+Added Component: Designator=C14(SIZE_EEE)
+Added Component: Designator=C15(CAP-0805)
+Added Component: Designator=C17(FP-C1210X475K5RACTU-IPC_C)
+Added Component: Designator=C18(FP-C1210X475K5RACTU-IPC_C)
+Added Component: Designator=C22(CAP_3.3uF_630V)
+Added Component: Designator=C23(CAP_3.3uF_630V)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAPPOL-12x25)
+Added Component: Designator=C?(CAP-TAN-D)
+Added Component: Designator=D2(DO-214AA)
+Added Component: Designator=D3(DIOD-SOD123-2_V)
+Add component (AddParameter): Name = "Brand"; Value = "DiodesIncorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Configuration"; Value = "Single"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.farnell.com/datasheets/1915529.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. 24-2, 10/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Factory Pack Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.25mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "If - Forward Current"; Value = "0.15A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ir - Reverse Current"; Value = "1uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "2.85mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "DiodesIncorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.diodes.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Surge Current"; Value = "2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Operating Temperature"; Value = "+150C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Operating Temperature"; Value = "-65C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range"; Value = "-65Cto+150C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "SOD-123"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "SOD123-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package URL"; Value = "http://www.diodes.com/datasheets/ds18004.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Voltage"; Value = "100V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "SwitchingDiodes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Diodes-GeneralPurpose,Power,Switching"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Recovery Time"; Value = "4ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "1N4148"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SwitchingDiode"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Unit Weight"; Value = "0.000353oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vf - Forward Voltage"; Value = "1.25V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.7mm"; VariantName = "[No Variations]"
+Added Component: Designator=D4(DIOD-SOD123-2_V)
+Add component (AddParameter): Name = "Brand"; Value = "DiodesIncorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Configuration"; Value = "Single"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.farnell.com/datasheets/1915529.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. 24-2, 10/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Factory Pack Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.25mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "If - Forward Current"; Value = "0.15A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ir - Reverse Current"; Value = "1uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "2.85mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "DiodesIncorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.diodes.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Surge Current"; Value = "2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Operating Temperature"; Value = "+150C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Operating Temperature"; Value = "-65C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range"; Value = "-65Cto+150C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "SOD-123"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "SOD123-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package URL"; Value = "http://www.diodes.com/datasheets/ds18004.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Voltage"; Value = "100V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "SwitchingDiodes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "Diodes-GeneralPurpose,Power,Switching"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Recovery Time"; Value = "4ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "1N4148"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SwitchingDiode"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Unit Weight"; Value = "0.000353oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vf - Forward Voltage"; Value = "1.25V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.7mm"; VariantName = "[No Variations]"
+Added Component: Designator=D?(DO-214AA)
+Added Component: Designator=D?(DO-214AA)
+Added Component: Designator=D?(DO-214AA)
+Add Component: Footprint Not Found SR5100(DO-201AD
+Added Component: Designator=D?(DO-214AA)
+Add Component: Footprint Not Found WE-PD2_1054
+Added Component: Designator=Q1(FP-PC817XNNIP0F-MFG)
+Add component (AddParameter): Name = "Case/Package"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Emitter Saturation Voltage"; Value = "200mV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Emitter Voltage (VCEO)"; Value = "80V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-emitter Voltage-Max"; Value = "200mV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Copper"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Fall Time"; Value = "18000ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "1.4V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Current"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Type"; Value = "DC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Isolation Voltage"; Value = "5kV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Isolation Voltage-Max"; Value = "5kV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Collector Current"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Input Current"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "100°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Output Voltage"; Value = "80V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Power Dissipation"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-30°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Channels"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Elements"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current per Channel"; Value = "30mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Voltage"; Value = "80V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Dissipation"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reverse Breakdown Voltage"; Value = "6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rise Time"; Value = "18000ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Added Component: Designator=R10(RES-0805)
+Added Component: Designator=R12(RES-0805)
+Added Component: Designator=R13(RES-0805)
+Added Component: Designator=R15(RES-0805)
+Add Component: Footprint Not Found Vishay_CRCW0805-e3_IPC_A
+Add Component: Footprint Not Found Vishay_CRCW0805-e3_IPC_A
+Added Component: Designator=R18(RES-0805)
+Added Component: Designator=R19(RES-0805)
+Added Component: Designator=R21(RES_SMD_1210_IPC_A)
+Added Component: Designator=R22(RES_SMD_1210_IPC_A)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-2W)
+Add Component: Footprint Not Found Test_Point
+Add Component: Footprint Not Found Test_Point
+Add Component: Footprint Not Found Test_Point
+Added Component: Designator=TR?(ETD29_Transformer)
+Add Component: Footprint Not Found SO8-150
+Added Component: Designator=VD7(DO-214AA)
+Added Component: Designator=VD8(DO-214AA)
+Added Component: Designator=VD?(US1G_SMA)
+Add Component: Footprint Not Found TO-220_Bended_Rad
+Added Pin To Net: NetName=NetC7_1 Pin=C9-2
+Added Pin To Net: NetName=NetC6_1 Pin=C12-2
+Added Pin To Net: NetName=NetC7_2 Pin=C13-2
+Added Pin To Net: NetName=NetC7_2 Pin=C14-1
+Added Pin To Net: NetName=+350V Pin=C22-2
+Added Pin To Net: NetName=NetC7_2 Pin=C?-1
+Added Pin To Net: NetName=NetC7_1 Pin=C?-2
+Added Pin To Net: NetName=NetC13_1 Pin=D2-2
+Added Pin To Net: NetName=NetC10_1 Pin=D?-1
+Add Pin To Net: Unknown Pin: Pin L?-2
+Added Pin To Net: NetName=GND_1 Pin=Q1-2
+Added Pin To Net: NetName=NetC7_1 Pin=Q1-3
+Added Pin To Net: NetName=NetC7_2 Pin=Q1-4
+Added Pin To Net: NetName=NetC7_1 Pin=R4-1
+Added Pin To Net: NetName=+350V Pin=R21-2
+Added Pin To Net: NetName=NetC13_1 Pin=TP8-1
+Add Pin To Net: Unknown Pin: Pin U1-4
+Add Pin To Net: Unknown Pin: Pin U1-8
+Add Pin To Net: Unknown Pin: Pin U1-11
+Add Pin To Net: Unknown Pin: Pin U1-12
+Add Pin To Net: Unknown Pin: Pin U1-13
+Add Pin To Net: Unknown Pin: Pin U1-14
+Add Pin To Net: Unknown Pin: Pin U2-5
+Added Pin To Net: NetName=NetC13_1 Pin=VD?-1
+Added Pin To Net: NetName=+350V Pin=VT1-2
+Added Pin To Net: NetName=+350V Pin=VT1-2
+Change Net Name : Old Net Name=GND New Net Name=NetC8_2
+Change Net Name : Old Net Name=NetC4_1 New Net Name=NetC2_1
+Change Net Name : Old Net Name=NetC4_2 New Net Name=NetC2_2
+Change Net Name : Old Net Name=NetC6_1 New Net Name=NetC12_2
+Change Net Name : Old Net Name=NetC10_1 New Net Name=NetC24_1
+Change Net Name : Old Net Name=NetC12_1 New Net Name=NetC28_1
+Change Net Name : Old Net Name=NetC13_1 New Net Name=NetC8_1
+Change Net Name : Old Net Name=NetC15_1 New Net Name=NetC16_1
+Change Net Name : Old Net Name=NetC18_1 New Net Name=NetC21_1
+Change Net Name : Old Net Name=NetC19_1 New Net Name=NetC25_1
+Change Net Name : Old Net Name=NetC22_2 New Net Name=NetC20_2
+Change Net Name : Old Net Name=NetC24_2 New Net Name=NetC30_2
+Change Net Name : Old Net Name=NetR11_1 New Net Name=NetR7_1
+Change Net Name : Old Net Name=NetR12_1 New Net Name=NetR8_1
+Change Net Name : Old Net Name=NetR20_1 New Net Name=NetR26_1
+Change Net Name : Old Net Name=NetR23_1 New Net Name=NetR29_1
+Change Net Name : Old Net Name=NetR24_1 New Net Name=NetR33_1
+Change Net Name : Old Net Name=NetR24_2 New Net Name=NetR33_2
+Change Net Name : Old Net Name=NetR29_2 New Net Name=NetR25_2
+Change Net Name : Old Net Name=NetR30_2 New Net Name=NetR28_2
+Change Net Name : Old Net Name=NetTP24_1 New Net Name=NetTP22_1
+Change Net Name : Old Net Name=NetTP25_1 New Net Name=NetTP23_1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C14-2
+Added Pin To Net: NetName=GND Pin=C15-1
+Added Pin To Net: NetName=GND Pin=C19-1
+Added Pin To Net: NetName=GND Pin=C23-1
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=D?-2
+Added Pin To Net: NetName=GND Pin=D?-2
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R4-2
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=GND Pin=R13-2
+Added Pin To Net: NetName=GND Pin=R14-2
+Added Pin To Net: NetName=GND Pin=R15-2
+Added Pin To Net: NetName=GND Pin=R19-2
+Added Pin To Net: NetName=GND Pin=R22-1
+Added Pin To Net: NetName=GND Pin=VD7-1
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=D1-1
+Added Pin To Net: NetName=NetC3_2 Pin=R1-2
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetC11_1 Pin=C11-1
+Added Pin To Net: NetName=NetC11_1 Pin=R?-2
+Added Pin To Net: NetName=NetC11_1 Pin=U1-3
+Added Net: Name=NetC11_1
+Added Pin To Net: NetName=NetC11_2 Pin=C11-2
+Added Pin To Net: NetName=NetC11_2 Pin=R5-2
+Added Pin To Net: NetName=NetC11_2 Pin=R6-1
+Added Net: Name=NetC11_2
+Added Pin To Net: NetName=NetC15_2 Pin=C15-2
+Added Net: Name=NetC15_2
+Added Pin To Net: NetName=NetC17_1 Pin=C17-1
+Added Pin To Net: NetName=NetC17_1 Pin=C18-1
+Added Pin To Net: NetName=NetC17_1 Pin=R18-2
+Added Pin To Net: NetName=NetC17_1 Pin=TR?-3
+Added Pin To Net: NetName=NetC17_1 Pin=TR?-3
+Added Pin To Net: NetName=NetC17_1 Pin=VD8-1
+Added Pin To Net: NetName=NetC17_1 Pin=VT1-3
+Added Net: Name=NetC17_1
+Added Pin To Net: NetName=NetC17_2 Pin=C17-2
+Added Pin To Net: NetName=NetC17_2 Pin=C18-2
+Added Pin To Net: NetName=NetC17_2 Pin=D2-1
+Added Net: Name=NetC17_2
+Added Pin To Net: NetName=NetC22_1 Pin=C22-1
+Added Pin To Net: NetName=NetC22_1 Pin=C23-2
+Added Pin To Net: NetName=NetC22_1 Pin=R21-1
+Added Pin To Net: NetName=NetC22_1 Pin=R22-2
+Added Pin To Net: NetName=NetC22_1 Pin=TR?-1
+Added Pin To Net: NetName=NetC22_1 Pin=TR?-1
+Added Net: Name=NetC22_1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=D?-1
+Added Pin To Net: NetName=NetC?_1 Pin=D?-1
+Added Pin To Net: NetName=NetC?_1 Pin=R?-2
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_2 Pin=R19-1
+Added Pin To Net: NetName=NetD3_2 Pin=TP10-1
+Added Pin To Net: NetName=NetD3_2 Pin=VD7-2
+Added Net: Name=NetD3_2
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Net: Name=NetD4_1
+Added Pin To Net: NetName=NetD4_2 Pin=D4-2
+Added Pin To Net: NetName=NetD4_2 Pin=R18-1
+Added Pin To Net: NetName=NetD4_2 Pin=TP9-1
+Added Pin To Net: NetName=NetD4_2 Pin=VD8-2
+Added Pin To Net: NetName=NetD4_2 Pin=VT1-1
+Added Net: Name=NetD4_2
+Added Pin To Net: NetName=NetD5_2 Pin=D5-2
+Added Pin To Net: NetName=NetD5_2 Pin=TR?-13
+Added Pin To Net: NetName=NetD5_2 Pin=TR?-13
+Added Net: Name=NetD5_2
+Added Pin To Net: NetName=NetD?_1 Pin=D?-1
+Added Pin To Net: NetName=NetD?_1 Pin=D?-2
+Added Pin To Net: NetName=NetD?_1 Pin=TR?-4
+Added Pin To Net: NetName=NetD?_1 Pin=TR?-4
+Added Net: Name=NetD?_1
+Add Net: Net with name "NetD?_1" already exists
+Added Pin To Net: NetName=NetD?_2 Pin=D?-2
+Added Pin To Net: NetName=NetD?_2 Pin=TR?-11
+Added Pin To Net: NetName=NetD?_2 Pin=TR?-11
+Added Net: Name=NetD?_2
+Added Pin To Net: NetName=NetL?_1 Pin=TR?-12
+Added Pin To Net: NetName=NetL?_1 Pin=TR?-12
+Added Net: Name=NetL?_1
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_1 Pin=R34-2
+Added Pin To Net: NetName=NetQ1_1 Pin=TP25-1
+Added Net: Name=NetQ1_1
+Added Pin To Net: NetName=NetR10_1 Pin=R10-1
+Added Net: Name=NetR10_1
+Added Pin To Net: NetName=NetR10_2 Pin=R10-2
+Added Pin To Net: NetName=NetR10_2 Pin=R14-1
+Added Pin To Net: NetName=NetR10_2 Pin=TP5-1
+Added Net: Name=NetR10_2
+Added Pin To Net: NetName=NetR12_1 Pin=R12-1
+Added Net: Name=NetR12_1
+Added Pin To Net: NetName=NetR12_2 Pin=R12-2
+Added Pin To Net: NetName=NetR12_2 Pin=R15-1
+Added Net: Name=NetR12_2
+Added Pin To Net: NetName=NetR13_1 Pin=R13-1
+Added Net: Name=NetR13_1
+Added Pin To Net: NetName=NetR?_1 Pin=R?-1
+Added Pin To Net: NetName=NetR?_1 Pin=VD?-2
+Added Net: Name=NetR?_1
