@@ -107,23 +107,6 @@ VaultURL=
 VaultName=
 
 [Document4]
-DocumentPath=Driver_10_kW\Driver_10kW.PrjPcb
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document5]
 DocumentPath=Inverter\Inverter.PrjPcb
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -146,24 +129,7 @@ ProjectName=Inverter.PrjPcb
 VaultURL=
 VaultName=
 
-[Document6]
-DocumentPath=Standby_PS\Standby_PS.PcbDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document7]
+[Document5]
 DocumentPath=Standby_PS\Standby_PS.PrjPCB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -186,14 +152,14 @@ ProjectName=Standby_PS.PrjPCB
 VaultURL=
 VaultName=
 
-[Document8]
-DocumentPath=Standby_PS\Standby_PS.SchDoc
+[Document6]
+DocumentPath=Driver\Driver.PrjPcb
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=0
+AnnotateOrder=-1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -201,7 +167,11 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=YQEDCYZF
+DocumentUniqueId=
+VaultGUID=
+ManagedProjectGUID=
+RevisionGUID=
+ProjectName=Driver.PrjPcb
 
 [OutputGroup1]
 Name=Netlist Outputs
