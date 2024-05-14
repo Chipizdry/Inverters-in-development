@@ -1,0 +1,11 @@
+Change Component Footprint: Designator=U3 Old Footprint=TL431_SOT-23-3(MGF) New Footprint=TL431_SOT-23-3(A)
+Change Component Comment : Designator=U3 Old Comment=TL431 New Comment=
+Change Component Library : Designator=U3 Old Library=TL431.IntLib New Library=Diodes.IntLib
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=R?(RES-0805)
+Added Pin To Net: NetName=NetTP23_1 Pin=C?-1
+Added Pin To Net: NetName=NetR25_2 Pin=C?-2
+Added Pin To Net: NetName=NetTP23_1 Pin=R?-1
+Added Pin To Net: NetName=NetR25_2 Pin=R?-2
+Change Net Name : Old Net Name=NetR25_2 New Net Name=NetC?_2
+Change Net Name : Old Net Name=NetTP23_1 New Net Name=NetC?_1

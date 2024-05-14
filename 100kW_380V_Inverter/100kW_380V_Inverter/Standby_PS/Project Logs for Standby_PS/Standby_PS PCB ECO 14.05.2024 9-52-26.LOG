@@ -1,0 +1,45 @@
+Add Component: Footprint Not Found 691101710002
+Add Component: Footprint Not Found Relay_F1CA005V_Omron
+Added Component: Designator=RG1(TO-220_Bended_Rad)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Upverter"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current-Output"; Value = "1A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Description"; Value = "REG IC REG LINEAR 5V 1A TO220AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Part Number"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "helpURL"; Value = "https://upverter.com/upn/revision/b27a7358b7dd93a3/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ipc Land Pattern Name"; Value = "TO-220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Fairchild"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO220"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0.384521982769"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "LM7805CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "512-LM7805CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-40°C to +125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range High"; Value = "+125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range Low"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Input (Max)"; Value = "35V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Output"; Value = "5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Dropout (Max)"; Value = "2V @ 1A (Typ)"; VariantName = "[No Variations]"
+Added Component: Designator=TP12(Test_Point)
+Added Component: Designator=TP39(Test_Point)
+Added Component: Designator=TP44(Test_Point)
+Added Component: Designator=TP45(Test_Point)
+Add Pin To Net: Unknown Pin: Pin J4-1
+Add Pin To Net: Unknown Pin: Pin J4-2
+Add Pin To Net: Unknown Pin: Pin K2-1
+Add Pin To Net: Unknown Pin: Pin K2-8
+Added Pin To Net: NetName=NetC3_1 Pin=RG1-1
+Added Pin To Net: NetName=NetC3_2 Pin=RG1-2
+Added Pin To Net: NetName=NetC3_2 Pin=RG1-2
+Added Pin To Net: NetName=NetC30_2 Pin=RG1-3
+Added Pin To Net: NetName=NetC3_1 Pin=TP12-1
+Added Pin To Net: NetName=NetC3_2 Pin=TP39-1
+Added Pin To Net: NetName=NetC30_2 Pin=TP44-1
+Added Pin To Net: NetName=NetC40_1 Pin=TP45-1

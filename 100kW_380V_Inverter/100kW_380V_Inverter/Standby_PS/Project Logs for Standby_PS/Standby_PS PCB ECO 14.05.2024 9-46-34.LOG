@@ -1,0 +1,21 @@
+Change Component DesignItemId : Designator=C? Old DesignItemId=CAP-POLAR New DesignItemId=CAP_polar_Hitano
+Change Component Footprint: Designator=VD? Old Footprint=DIOD-SOD123-2_V New Footprint=DIOD-SOD123-2_V
+Change Component Footprint: Designator=C? Old Footprint=SIZE_EEE New Footprint=CAP_25V_2200uF
+Change Component Comment : Designator=C? Old Comment=CAP-POLAR New Comment=1000uF_50V
+Add Component: Footprint Not Found 691101710002
+Add Component: Footprint Not Found Relay_F1CA005V_Omron
+Add Component: Footprint Not Found TO-220_Bended_Rad
+Add Component: Footprint Not Found Test_Point
+Add Component: Footprint Not Found Test_Point
+Add Component: Footprint Not Found Test_Point
+Add Component: Footprint Not Found Test_Point
+Add Pin To Net: Unknown Pin: Pin J?-1
+Add Pin To Net: Unknown Pin: Pin J?-2
+Add Pin To Net: Unknown Pin: Pin K?-1
+Add Pin To Net: Unknown Pin: Pin K?-8
+Add Pin To Net: Unknown Pin: Pin RG?-2
+Add Pin To Net: Unknown Pin: Pin RG?-3
+Add Pin To Net: Unknown Pin: Pin TP?-1
+Add Pin To Net: Unknown Pin: Pin TP?-1
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
