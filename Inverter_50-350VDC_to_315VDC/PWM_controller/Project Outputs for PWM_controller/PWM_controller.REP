@@ -1,0 +1,486 @@
+*************************************************************
+FileName = PWM_controller.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : PWM_controller_Copper_Signal_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : PWM_controller_Copper_Signal_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : PWM_controller_Pads_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : PWM_controller_Pads_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : PWM_controller_Paste_Bot.gbr
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : PWM_controller_Legend_Bot.gbr
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D41
+    D42
+    D43
+    D44
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : PWM_controller_Soldermask_Bot.gbr
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D25
+    D31
+    D32
+    D35
+    D36
+    D37
+    D38
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : PWM_controller_Legend_Top.gbr
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D41
+    D42
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : PWM_controller_Paste_Top.gbr
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : PWM_controller_Soldermask_Top.gbr
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D12
+    D24
+    D25
+    D49
+    D50
+    D51
+    D52
+    D53
+    D61
+    D62
+    D63
+    D64
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : PWM_controller_Keep-out.gbr
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Top Courtyard
+      File : PWM_controller_Top_Courtyard.gbr
+
+    Adding Layer      : Top Courtyard
+
+
+Used DCodes :
+    D41
+    D66
+*************************************************************
+
+*************************************************************
+Generating : Top 3D Body
+      File : PWM_controller_Top_3D_Body.gbr
+
+    Adding Layer      : Top 3D Body
+
+
+Used DCodes :
+    D41
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Top Component Center
+      File : PWM_controller_Top_Component_Center.gbr
+
+    Adding Layer      : Top Component Center
+
+
+Used DCodes :
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Top Component Outline
+      File : PWM_controller_Top_Component_Outline.gbr
+
+    Adding Layer      : Top Component Outline
+
+
+Used DCodes :
+    D41
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : PWM_controller_Mechanical_1.gbr
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Bottom 3D Body
+      File : PWM_controller_Bottom_3D_Body.gbr
+
+    Adding Layer      : Bottom 3D Body
+
+
+Used DCodes :
+    D41
+    D58
+*************************************************************
+
+*************************************************************
+Generating : Bottom Assembly
+      File : PWM_controller_Bottom_Assembly.gbr
+
+    Adding Layer      : Bottom Assembly
+
+
+Used DCodes :
+    D41
+    D58
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : PWM_controller_Mechanical_15.gbr
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D41
+    D66
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : PWM_controller_Mechanical_13.gbr
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Bottom Component Center
+      File : PWM_controller_Bottom_Component_Center.gbr
+
+    Adding Layer      : Bottom Component Center
+
+
+Used DCodes :
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Top Assembly
+      File : PWM_controller_Top_Assembly.gbr
+
+    Adding Layer      : Top Assembly
+
+
+Used DCodes :
+    D41
+    D58
+    D67
+    D68
+*************************************************************
+
+*************************************************************
+Generating : Bottom Courtyard
+      File : PWM_controller_Bottom_Courtyard.gbr
+
+    Adding Layer      : Bottom Courtyard
+
+
+Used DCodes :
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Top Designator
+      File : PWM_controller_Top_Designator.gbr
+
+    Adding Layer      : Top Designator
+
+
+Used DCodes :
+    D41
+    D69
+*************************************************************
+
+*************************************************************
+Generating : Profile
+      File : PWM_controller_Profile.gbr
+
+
+Used DCodes :
+    D70
+*************************************************************
+
+*************************************************************
+Generating : Non-plated through-hole drill file
+      File : PWM_controller_NPTH_Drill.gbr
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Plated through-hole drill file
+      File : PWM_controller_PTH_Drill.gbr
+
+
+Used DCodes :
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : PWM_controller_Drawing_1.gbr
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D80
+    D81
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : PWM_controller_Drillmap_1.gbr
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D80
+*************************************************************
+

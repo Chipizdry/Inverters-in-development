@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: PWM_controller.PcbDoc   20.05.2024  16:24:38
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : PWM_controller.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.3mm (12mil)                                             Round             11        PTH        94.20mm (3.71inch)
+T2      0.4mm (16mil)                                             Round             22        PTH        171.96mm (6.77inch)
+T3      0.711mm (28mil)                                           Round             3         PTH        55.63mm (2.19inch)
+T4      0.75mm (30mil)                                            Round             6         PTH        40.79mm (1.61inch)
+T5      0.762mm (30mil)                                           Round             28        PTH        236.49mm (9.31inch)
+T6      1.1mm (43mil)                                             Round             18        PTH        50.80mm (2.00inch)
+T7      1.4mm (55mil)                                             Round             4         PTH        76.61mm (3.02inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              92
+
+Total Processing Time (hh:mm:ss) : 00:00:01

@@ -730,6 +730,23 @@ GenerateClassCluster=0
 DocumentUniqueId=EABYYHSB
 
 [Document41]
+DocumentPath=STM32F303CCT6.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=NOHEHTRZ
+
+[Document42]
 DocumentPath=MCP6001T-SOT23-5.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -746,7 +763,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YCWVPVMQ
 
-[Document42]
+[Document43]
 DocumentPath=SOT-23-5.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -763,7 +780,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document43]
+[Document44]
 DocumentPath=AMC1311.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -780,7 +797,24 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CFGUVKBX
 
-[Document44]
+[Document45]
+DocumentPath=STM32F303CCT6.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BVAIXHTF
+
+[Document46]
 DocumentPath=AMC1311.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -797,7 +831,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YGKLQSVW
 
-[Document45]
+[Document47]
 DocumentPath=B0505S-1W.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -814,7 +848,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SQFZXSOL
 
-[Document46]
+[Document48]
 DocumentPath=B0505S-1W.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -830,6 +864,40 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AHWPHDCU
+
+[Document49]
+DocumentPath=AMC1117.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=LUSBPFML
+
+[Document50]
+DocumentPath=SOT-223.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=NHKOATYI
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -941,6 +1009,16 @@ OutputName21=Mixed Sim Netlist
 OutputDocumentPath21=
 OutputVariantName21=
 OutputDefault21=0
+OutputType22=SIMetrixNetlist
+OutputName22=SIMetrix
+OutputDocumentPath22=
+OutputVariantName22=
+OutputDefault22=0
+OutputType23=SIMPLISNetlist
+OutputName23=SIMPLIS
+OutputDocumentPath23=
+OutputVariantName23=
+OutputDefault23=0
 
 [OutputGroup2]
 Name=Simulator Outputs
@@ -952,6 +1030,16 @@ OutputName1=Mixed Sim
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
+OutputType2=SIMetrixSimulation
+OutputName2=SIMetrix
+OutputDocumentPath2=
+OutputVariantName2=
+OutputDefault2=0
+OutputType3=SIMPLISSimulation
+OutputName3=SIMPLIS
+OutputDocumentPath3=
+OutputVariantName3=
+OutputDefault3=0
 
 [OutputGroup3]
 Name=Documentation Outputs
@@ -1197,6 +1285,11 @@ OutputDocumentPath9=
 OutputVariantName9=[No Variations]
 OutputDefault9=0
 PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType10=GOSTBOM
+OutputName10=GOST BOM
+OutputDocumentPath10=
+OutputVariantName10=[No Variations]
+OutputDefault10=0
 
 [OutputGroup7]
 Name=Other Outputs
@@ -1415,6 +1508,11 @@ OutputName12=Web Review Data
 OutputDocumentPath12=
 OutputVariantName12=
 OutputDefault12=0
+OutputType13=AnsysEDB
+OutputName13=Ansys EDB
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
