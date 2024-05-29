@@ -1,5 +1,0 @@
-DRC Rules Export File for PCB: C:\Users\chipi\Documents\GitHub\Inverters-in-development\Inverter_50-350VDC_to_315VDC\PWM_controller\PWM_controller.PcbDoc
-RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
-RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00
-RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
-RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
