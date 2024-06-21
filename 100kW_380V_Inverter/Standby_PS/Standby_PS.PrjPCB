@@ -117,6 +117,188 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YQEDCYZF
 
+[Document5]
+DocumentPath=Project Outputs for pvs_bnvd\CAMtastic1.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document6]
+DocumentPath=Project Outputs for pvs_bnvd\CAMtastic2.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.REP
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Outline.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drawing_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drillmap_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Keep-out.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_13.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_15.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_NPTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_PTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument31]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument32]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument33]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument34]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument35]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Outline.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument36]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument37]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Designator.gbr
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -240,6 +422,16 @@ OutputName21=Mixed Sim Netlist
 OutputDocumentPath21=
 OutputVariantName21=
 OutputDefault21=0
+OutputType22=SIMetrixNetlist
+OutputName22=SIMetrix
+OutputDocumentPath22=
+OutputVariantName22=
+OutputDefault22=0
+OutputType23=SIMPLISNetlist
+OutputName23=SIMPLIS
+OutputDocumentPath23=
+OutputVariantName23=
+OutputDefault23=0
 
 [OutputGroup2]
 Name=Simulator Outputs
@@ -251,6 +443,16 @@ OutputName1=Mixed Sim
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
+OutputType2=SIMetrixSimulation
+OutputName2=SIMetrix
+OutputDocumentPath2=
+OutputVariantName2=
+OutputDefault2=0
+OutputType3=SIMPLISSimulation
+OutputName3=SIMPLIS
+OutputDocumentPath3=
+OutputVariantName3=
+OutputDefault3=0
 
 [OutputGroup3]
 Name=Documentation Outputs
@@ -439,7 +641,7 @@ OutputDefault5=0
 Configuration5_Name1=ForceUpdateSettings
 Configuration5_Item1=False
 Configuration5_Name2=OutputConfigurationParameter1
-Configuration5_Item2=FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GerberUnit=Metric|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPairs=False|PlotPTHPairs=False|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16908292~1,16908290~1,16973833~1,16908296~1,16908298~1,16908304~1,16908289~1,16908291~1,16973837~1,16908295~1,16908303~1,16973848~1,16908301~1,16973831~1,16908299~1,16973849~1,16908294~1,16973835~1,16973830~1,16973832~1,16842751~1,16908293~1,16908300~1,16973834~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|DocumentPath=C:\Users\chipi\Documents\GitHub\Power_supply\POWER_SUPPLY_20V_4A\POWER_SUPPLY_20V_4A.PcbDoc
+Configuration5_Item2=BoardID=SXVIRCXB|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPair0_Backdrill=False|PlotCounterHolesPair0_Checked=True|PlotCounterHolesPair0_DrillType=Regular|PlotCounterHolesPair0_FileName= |PlotCounterHolesPair0_HighLayer=Bottom Layer|PlotCounterHolesPair0_LowLayer=Top Layer|PlotCounterHolesPairs=True|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPair0_Backdrill=False|PlotViaTypeDrillDrawingPair0_Checked=True|PlotViaTypeDrillDrawingPair0_DrillType=Regular|PlotViaTypeDrillDrawingPair0_FileName= |PlotViaTypeDrillDrawingPair0_HighLayer=Bottom Layer|PlotViaTypeDrillDrawingPair0_LowLayer=Top Layer|PlotViaTypeDrillDrawingPairs=True|PlotViaTypeDrillGuidePair0_Backdrill=False|PlotViaTypeDrillGuidePair0_Checked=True|PlotViaTypeDrillGuidePair0_DrillType=Regular|PlotViaTypeDrillGuidePair0_FileName= |PlotViaTypeDrillGuidePair0_HighLayer=Bottom Layer|PlotViaTypeDrillGuidePair0_LowLayer=Top Layer|PlotViaTypeDrillGuidePairs=True|PlotViaTypeDrillPair0_Backdrill=False|PlotViaTypeDrillPair0_Checked=True|PlotViaTypeDrillPair0_DrillType=Regular|PlotViaTypeDrillPair0_FileName= |PlotViaTypeDrillPair0_HighLayer=Bottom Layer|PlotViaTypeDrillPair0_LowLayer=Top Layer|PlotViaTypeDrillPairs=True|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16908292~1,16908290~1,16973833~1,16908296~1,16908298~1,16908304~1,16908289~1,16908291~1,16973837~1,16908295~1,16908303~1,16973848~1,16908301~1,16973831~1,16908299~1,16973849~1,16908294~1,16973835~1,16973830~1,16973832~1,16842751~1,16908293~1,16908300~1,16973834~1,16908302~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|DocumentPath=C:\Users\chipi\Downloads\Telegram Desktop\Standby_PS\Standby_PS\Standby_PS.PcbDoc
 OutputType6=ODB
 OutputName6=ODB++ Files
 OutputDocumentPath6=
@@ -459,7 +661,7 @@ OutputDefault8=0
 Configuration8_Name1=ForceUpdateSettings
 Configuration8_Item1=False
 Configuration8_Name2=OutputConfigurationParameter1
-Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=C:\Users\chipi\Documents\GitHub\Power_supply\POWER_SUPPLY_20V_4A\POWER_SUPPLY_20V_4A.PcbDoc
+Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=C:\Users\chipi\Downloads\Telegram Desktop\Standby_PS\Standby_PS\Standby_PS.PcbDoc
 OutputType9=IPC2581
 OutputName9=IPC-2581 Files
 OutputDocumentPath9=
@@ -556,6 +758,11 @@ OutputDocumentPath9=
 OutputVariantName9=[No Variations]
 OutputDefault9=0
 PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType10=GOSTBOM
+OutputName10=GOST BOM
+OutputDocumentPath10=
+OutputVariantName10=[No Variations]
+OutputDefault10=0
 
 [OutputGroup7]
 Name=Other Outputs
@@ -774,6 +981,11 @@ OutputName12=Web Review Data
 OutputDocumentPath12=
 OutputVariantName12=
 OutputDefault12=0
+OutputType13=AnsysEDB
+OutputName13=Ansys EDB
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
 
 [OutputGroup10]
 Name=PostProcess Outputs

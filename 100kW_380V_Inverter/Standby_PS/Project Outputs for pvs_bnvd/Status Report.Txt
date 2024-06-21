@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Standby_PS.PrjPCB]
+   Generated File[Standby_PS.TXT]
+   Generated File[Standby_PS.LDP]
+   Generated File[Standby_PS.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 12:22:36 On 20.06.2024
