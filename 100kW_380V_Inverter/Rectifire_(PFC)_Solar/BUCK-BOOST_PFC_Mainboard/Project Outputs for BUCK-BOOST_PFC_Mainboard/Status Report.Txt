@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [BUCK-BOOST_PFC_Mainboard.PrjPcb]
+   Generated File[BUCK-BOOST_PFC_Mainboard-RoundHoles.TXT]
+   Generated File[BUCK-BOOST_PFC_Mainboard-SlotHoles.TXT]
+   Generated File[BUCK-BOOST_PFC_Mainboard.LDP]
+   Generated File[BUCK-BOOST_PFC_Mainboard.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 10:55:40 On 26.06.2024

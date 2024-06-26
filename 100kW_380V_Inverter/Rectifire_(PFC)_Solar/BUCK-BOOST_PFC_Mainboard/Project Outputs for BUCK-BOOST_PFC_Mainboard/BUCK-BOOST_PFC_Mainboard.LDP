@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Rectifire_(PFC)_Solar\BUCK-BOOST_PFC_Mainboard\BUCK-BOOST_PFC_Mainboard.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=buck-boost_pfc_mainboard-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=buck-boost_pfc_mainboard-slotholes.txt|DrillLayers=gtl,gbl

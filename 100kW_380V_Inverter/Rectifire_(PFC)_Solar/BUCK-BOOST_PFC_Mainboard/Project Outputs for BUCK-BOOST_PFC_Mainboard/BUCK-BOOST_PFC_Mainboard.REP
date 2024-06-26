@@ -1,0 +1,550 @@
+*************************************************************
+FileName = BUCK-BOOST_PFC_Mainboard.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : BUCK-BOOST_PFC_Mainboard_Copper_Signal_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : BUCK-BOOST_PFC_Mainboard_Copper_Signal_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : BUCK-BOOST_PFC_Mainboard_Pads_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : BUCK-BOOST_PFC_Mainboard_Pads_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : BUCK-BOOST_PFC_Mainboard_Legend_Top.gbr
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : BUCK-BOOST_PFC_Mainboard_Legend_Bot.gbr
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D60
+    D61
+    D62
+    D63
+    D64
+    D68
+    D69
+    D70
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : BUCK-BOOST_PFC_Mainboard_Soldermask_Top.gbr
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : BUCK-BOOST_PFC_Mainboard_Soldermask_Bot.gbr
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D37
+    D40
+    D42
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : BUCK-BOOST_PFC_Mainboard_Paste_Top.gbr
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : BUCK-BOOST_PFC_Mainboard_Paste_Bot.gbr
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : BUCK-BOOST_PFC_Mainboard_Keep-out.gbr
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D64
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : BUCK-BOOST_PFC_Mainboard_Mechanical_1.gbr
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top 3D Body
+      File : BUCK-BOOST_PFC_Mainboard_Top_3D_Body.gbr
+
+    Adding Layer      : Top 3D Body
+
+
+Used DCodes :
+    D63
+    D95
+    D96
+*************************************************************
+
+*************************************************************
+Generating : Bottom 3D Body
+      File : BUCK-BOOST_PFC_Mainboard_Bottom_3D_Body.gbr
+
+    Adding Layer      : Bottom 3D Body
+
+
+Used DCodes :
+    D63
+*************************************************************
+
+*************************************************************
+Generating : Top Assembly
+      File : BUCK-BOOST_PFC_Mainboard_Top_Assembly.gbr
+
+    Adding Layer      : Top Assembly
+
+
+Used DCodes :
+    D63
+    D96
+*************************************************************
+
+*************************************************************
+Generating : Bottom Assembly
+      File : BUCK-BOOST_PFC_Mainboard_Bottom_Assembly.gbr
+
+    Adding Layer      : Bottom Assembly
+
+
+Used DCodes :
+    D63
+    D96
+*************************************************************
+
+*************************************************************
+Generating : Top Component Center
+      File : BUCK-BOOST_PFC_Mainboard_Top_Component_Center.gbr
+
+    Adding Layer      : Top Component Center
+
+
+Used DCodes :
+    D96
+    D97
+*************************************************************
+
+*************************************************************
+Generating : Bottom Component Center
+      File : BUCK-BOOST_PFC_Mainboard_Bottom_Component_Center.gbr
+
+    Adding Layer      : Bottom Component Center
+
+
+Used DCodes :
+    D96
+*************************************************************
+
+*************************************************************
+Generating : Top Courtyard
+      File : BUCK-BOOST_PFC_Mainboard_Top_Courtyard.gbr
+
+    Adding Layer      : Top Courtyard
+
+
+Used DCodes :
+    D63
+    D97
+*************************************************************
+
+*************************************************************
+Generating : Bottom Courtyard
+      File : BUCK-BOOST_PFC_Mainboard_Bottom_Courtyard.gbr
+
+    Adding Layer      : Bottom Courtyard
+
+
+Used DCodes :
+    D63
+*************************************************************
+
+*************************************************************
+Generating : Board
+      File : BUCK-BOOST_PFC_Mainboard_Board.gbr
+
+    Adding Layer      : Board
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Component Outline
+      File : BUCK-BOOST_PFC_Mainboard_Top_Component_Outline.gbr
+
+    Adding Layer      : Top Component Outline
+
+
+Used DCodes :
+    D96
+*************************************************************
+
+*************************************************************
+Generating : Top Designator
+      File : BUCK-BOOST_PFC_Mainboard_Top_Designator.gbr
+
+    Adding Layer      : Top Designator
+
+
+Used DCodes :
+    D95
+*************************************************************
+
+*************************************************************
+Generating : Profile
+      File : BUCK-BOOST_PFC_Mainboard_Profile.gbr
+
+
+Used DCodes :
+    D98
+*************************************************************
+
+*************************************************************
+Generating : Non-plated through-hole drill file
+      File : BUCK-BOOST_PFC_Mainboard_NPTH_Drill.gbr
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Plated through-hole drill file
+      File : BUCK-BOOST_PFC_Mainboard_PTH_Drill.gbr
+
+
+Used DCodes :
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+    D116
+    D117
+    D118
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : BUCK-BOOST_PFC_Mainboard_Drawing_1.gbr
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D120
+    D121
+    D122
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : BUCK-BOOST_PFC_Mainboard_Drillmap_1.gbr
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D120
+*************************************************************
+
