@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Solar_950_VDC_Standby_PS.PcbDoc   02.07.2024  14:30:42
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Solar_950_VDC_Standby_PS.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.4mm (16mil)                                             Round             37        PTH        533.79mm (21.02inch)
+T2      0.7mm (28mil)                                             Round             9         PTH        25.29mm (1.00inch)
+T3      0.75mm (30mil)                                            Round             2         PTH        7.10mm (0.28inch)
+T4      0.762mm (30mil)                                           Round             38        PTH        849.29mm (33.44inch)
+T5      0.95mm (37mil)                                            Round             2         PTH        103.63mm (4.08inch)
+T6      1mm (39mil)                                               Round             46        PTH        689.30mm (27.14inch)
+T7      1.016mm (40mil)                                           Round             3         PTH        5.08mm (0.20inch)
+T8      1.2mm (47mil)                                             Round             6         PTH        375.22mm (14.77inch)
+T9      1.27mm (50mil)                                            Round             8         PTH        90.75mm (3.57inch)
+T10     1.3mm (51mil)                                             Round             16        PTH        473.78mm (18.65inch)
+T11     1.397mm (55mil)                                           Round             1         PTH        0.00mm (0.00inch)
+T12     1.45mm (57mil)                                            Round             8         PTH        54.97mm (2.16inch)
+T13     1.5mm (59mil)                                             Round             6         PTH        159.31mm (6.27inch)
+T14     1.524mm (60mil)                                           Round             22        PTH        196.99mm (7.76inch)
+T15     1.8mm (71mil)                                             Round             8         PTH        93.07mm (3.66inch)
+T16     2.5mm (98mil)                                             Round             14        PTH        101.22mm (3.99inch)
+T17     3.5mm (138mil)                                            Round             3         PTH        130.00mm (5.12inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              229
+
+Total Processing Time (hh:mm:ss) : 00:00:00
