@@ -866,7 +866,7 @@ GenerateClassCluster=0
 DocumentUniqueId=DDHBIDJO
 
 [Document49]
-DocumentPath=SIZE_EEE.PcbLib
+DocumentPath=SIZE_G.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -1068,6 +1068,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PLNLOPWH
+
+[Document61]
+DocumentPath=SIZE_E.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=QCRMWSNT
 
 [OutputGroup1]
 Name=Netlist Outputs
