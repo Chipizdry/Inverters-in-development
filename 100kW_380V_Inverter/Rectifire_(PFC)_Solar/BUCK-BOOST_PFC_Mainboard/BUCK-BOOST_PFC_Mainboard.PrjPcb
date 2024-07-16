@@ -67,23 +67,6 @@ GenerateClassCluster=0
 DocumentUniqueId=AXDECBBA
 
 [Document2]
-DocumentPath=BUCK-BOOST_PFC_Mainboard.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=FPQAHQWD
-
-[Document3]
 DocumentPath=Project Outputs for BUCK-BOOST_PFC_Mainboard\CAMtastic1.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -100,7 +83,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document4]
+[Document3]
 DocumentPath=Project Outputs for BUCK-BOOST_PFC_Mainboard\CAMtastic2.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -116,6 +99,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
+
+[Document4]
+DocumentPath=BUCK-BOOST_PFC_Mainboard_.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=FPQAHQWD
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for BUCK-BOOST_PFC_Mainboard\BUCK-BOOST_PFC_Mainboard-RoundHoles.TXT

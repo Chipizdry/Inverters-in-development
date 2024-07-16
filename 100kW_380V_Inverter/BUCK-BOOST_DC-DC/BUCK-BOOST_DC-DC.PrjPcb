@@ -64,7 +64,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=AXDECBBA
 
 [Document2]
 DocumentPath=BUCK-BOOST_DC-DC.SchDoc
@@ -81,7 +81,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=FPQAHQWD
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for BUCK-BOOST_PFC_Mainboard\BUCK-BOOST_PFC_Mainboard-RoundHoles.TXT
