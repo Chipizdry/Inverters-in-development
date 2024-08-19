@@ -98,7 +98,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=SXVIRCXB
 
 [Document4]
 DocumentPath=PWM_Controller_Half_Bridge_IR2110.SchDoc
