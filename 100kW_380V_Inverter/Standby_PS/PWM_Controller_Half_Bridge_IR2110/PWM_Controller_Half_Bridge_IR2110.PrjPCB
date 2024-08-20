@@ -117,283 +117,469 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YQEDCYZF
 
+[Document5]
+DocumentPath=Project Outputs for pvs_bnvd\CAMtastic1.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document6]
+DocumentPath=Project Outputs for pvs_bnvd\CAMtastic2.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for pvs_bnvd\Design Rule Check - PWM_Controller_Half_Bridge.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for pvs_bnvd\Design Rule Check - PWM_Controller_Half_Bridge_V2.html
+DocumentPath=Project Outputs for pvs_bnvd\Design Rule Check - PWM_Controller_Half_Bridge_IR2110.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.DRR
+DocumentPath=Project Outputs for pvs_bnvd\Design Rule Check - PWM_Controller_Half_Bridge_V2.html
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.EXTREP
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.LDP
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.REP
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.RUL
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.REP
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.TXT
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Courtyard.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Component_Outline.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Designator.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Bottom_Designator.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Drawing_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Drillmap_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Drawing_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Keep-out.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Drillmap_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Legend_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Legend_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Mechanical_13.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Mechanical_15.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110.REP
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_NPTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Pads_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Pads_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Paste_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_3D_Body_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Paste_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Profile.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_Assembly_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_PTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_Component_Outline.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Soldermask_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Bottom_Designator.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_Courtyard.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Drawing_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.DRR
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Drillmap_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.EXTREP
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument39]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.LDP
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument40]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.REP
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument41]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.RUL
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument42]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.TXT
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument43]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Mechanical_20.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument44]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument45]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument46]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument47]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Courtyard.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument48]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Designator.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument49]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument50]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument51]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Drawing_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument52]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Drillmap_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument53]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Keep-out.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Top_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument54]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Legend_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Top_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument55]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Legend_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Top_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument56]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Mechanical_13.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_IR2110_Top_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument57]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Mechanical_15.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument58]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_NPTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument59]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Pads_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument60]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Pads_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument61]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Paste_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument62]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Paste_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument63]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Profile.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument64]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_PTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument65]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument66]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Soldermask_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument67]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Top_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument68]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Top_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument69]
-DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Top_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument70]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument71]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument72]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument73]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument74]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_Top_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument75]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument76]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument77]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument78]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.REP
+DItemRevisionGUID=
+
+[GeneratedDocument79]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument80]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument81]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument82]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument83]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument84]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Component_Outline.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument85]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument86]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Bottom_Designator.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument87]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Copper_Signal_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument88]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument89]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Drawing_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument90]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Drillmap_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument91]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Keep-out.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument92]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Legend_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument93]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Legend_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument94]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Mechanical_13.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument95]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Mechanical_15.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument96]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_NPTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument97]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Pads_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument98]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Pads_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument99]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument100]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument101]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument102]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_PTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument103]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument104]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument105]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Top_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument106]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Top_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument107]
+DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument108]
 DocumentPath=Project Outputs for pvs_bnvd\PWM_Controller_Half_Bridge_V2_Top_Courtyard.gbr
 DItemRevisionGUID=
 
@@ -708,7 +894,7 @@ OutputDefault1=0
 Configuration1_Name1=ForceUpdateSettings
 Configuration1_Item1=False
 Configuration1_Name2=OutputConfigurationParameter1
-Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Standby_PS\PWM_Controller_Half_Bridge_V2\PWM_Controller_Half_Bridge_V2.PcbDoc
+Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Standby_PS\PWM_Controller_Half_Bridge_IR2110\PWM_Controller_Half_Bridge_IR2110.PcbDoc
 OutputType2=Mask
 OutputName2=Solder/Paste Mask Prints
 OutputDocumentPath2=
@@ -762,7 +948,7 @@ OutputDefault10=0
 Configuration10_Name1=ForceUpdateSettings
 Configuration10_Item1=False
 Configuration10_Name2=OutputConfigurationParameter1
-Configuration10_Item2=BoardID=SXVIRCXB|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPair0_Backdrill=False|PlotCounterHolesPair0_Checked=True|PlotCounterHolesPair0_DrillType=Regular|PlotCounterHolesPair0_FileName= |PlotCounterHolesPair0_HighLayer=Bottom Layer|PlotCounterHolesPair0_LowLayer=Top Layer|PlotCounterHolesPairs=True|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPair0_Backdrill=False|PlotViaTypeDrillDrawingPair0_Checked=True|PlotViaTypeDrillDrawingPair0_DrillType=Regular|PlotViaTypeDrillDrawingPair0_FileName= |PlotViaTypeDrillDrawingPair0_HighLayer=Bottom Layer|PlotViaTypeDrillDrawingPair0_LowLayer=Top Layer|PlotViaTypeDrillDrawingPairs=True|PlotViaTypeDrillGuidePair0_Backdrill=False|PlotViaTypeDrillGuidePair0_Checked=True|PlotViaTypeDrillGuidePair0_DrillType=Regular|PlotViaTypeDrillGuidePair0_FileName= |PlotViaTypeDrillGuidePair0_HighLayer=Bottom Layer|PlotViaTypeDrillGuidePair0_LowLayer=Top Layer|PlotViaTypeDrillGuidePairs=True|PlotViaTypeDrillPair0_Backdrill=False|PlotViaTypeDrillPair0_Checked=True|PlotViaTypeDrillPair0_DrillType=Regular|PlotViaTypeDrillPair0_FileName= |PlotViaTypeDrillPair0_HighLayer=Bottom Layer|PlotViaTypeDrillPair0_LowLayer=Top Layer|PlotViaTypeDrillPairs=True|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16908292~1,16908290~1,16973833~1,16908296~1,16908289~1,16908291~1,16973837~1,16908295~1,16908303~1,16973848~1,16908301~1,16973831~1,16973849~1,16908294~1,16973835~1,16973830~1,16973832~1,16842751~1,16908293~1,16973834~1,16908302~1,16908305~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Standby_PS\PWM_Controller_Half_Bridge_V2\PWM_Controller_Half_Bridge_V2.PcbDoc
+Configuration10_Item2=BoardID=SXVIRCXB|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPair0_Backdrill=False|PlotCounterHolesPair0_Checked=True|PlotCounterHolesPair0_DrillType=Regular|PlotCounterHolesPair0_FileName= |PlotCounterHolesPair0_HighLayer=Bottom Layer|PlotCounterHolesPair0_LowLayer=Top Layer|PlotCounterHolesPairs=True|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPair0_Backdrill=False|PlotViaTypeDrillDrawingPair0_Checked=True|PlotViaTypeDrillDrawingPair0_DrillType=Regular|PlotViaTypeDrillDrawingPair0_FileName= |PlotViaTypeDrillDrawingPair0_HighLayer=Bottom Layer|PlotViaTypeDrillDrawingPair0_LowLayer=Top Layer|PlotViaTypeDrillDrawingPairs=True|PlotViaTypeDrillGuidePair0_Backdrill=False|PlotViaTypeDrillGuidePair0_Checked=True|PlotViaTypeDrillGuidePair0_DrillType=Regular|PlotViaTypeDrillGuidePair0_FileName= |PlotViaTypeDrillGuidePair0_HighLayer=Bottom Layer|PlotViaTypeDrillGuidePair0_LowLayer=Top Layer|PlotViaTypeDrillGuidePairs=True|PlotViaTypeDrillPair0_Backdrill=False|PlotViaTypeDrillPair0_Checked=True|PlotViaTypeDrillPair0_DrillType=Regular|PlotViaTypeDrillPair0_FileName= |PlotViaTypeDrillPair0_HighLayer=Bottom Layer|PlotViaTypeDrillPair0_LowLayer=Top Layer|PlotViaTypeDrillPairs=True|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16908292~1,16908290~1,16973833~1,16908296~1,16908289~1,16908291~1,16973837~1,16908295~1,16908303~1,16973848~1,16908301~1,16973831~1,16973849~1,16908294~1,16973835~1,16973830~1,16973832~1,16842751~1,16908293~1,16973834~1,16908302~1,16908305~1,16908298~1,16908300~1,16908308~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Standby_PS\PWM_Controller_Half_Bridge_IR2110\PWM_Controller_Half_Bridge_IR2110.PcbDoc
 OutputType11=Final
 OutputName11=Final Artwork Prints
 OutputDocumentPath11=
