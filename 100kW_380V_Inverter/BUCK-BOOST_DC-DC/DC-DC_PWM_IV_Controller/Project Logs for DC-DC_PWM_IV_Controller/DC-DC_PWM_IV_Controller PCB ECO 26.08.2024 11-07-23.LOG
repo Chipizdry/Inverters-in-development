@@ -1,0 +1,294 @@
+Added Component: Designator=C1(CAP-0805)
+Added Component: Designator=C2(CAP_SMD_Size_E)
+Added Component: Designator=C3(CAP-0805)
+Added Component: Designator=C4(CAP_SMD_Size_E)
+Added Component: Designator=C5(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=C?(CAP-0805)
+Added Component: Designator=D?(LED_GREEN)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://katalog.we-online.de/led/datasheet/151031YS06000.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Geometry.Height"; Value = "5.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "151031YS06000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "710-151031YS06000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/151031YS06000?qs=LlUlMxKIyB3xSYYW%252BcuBiQ%3D%3D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=JE1(JE)
+Added Component: Designator=L4(WE-PD2_7850)
+Add component (AddParameter): Name = "Case/Size Code"; Value = "7850"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Unshielded Power Inductors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/74477530?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/74477530?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Resistance"; Value = "2.78?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Resistance Max"; Value = "3.3?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.95mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inductance"; Value = "1000µH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "7.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "74477530"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Match Code"; Value = "WE-PD2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Max"; Value = "125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Min"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Current"; Value = "0.3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Saturation Current"; Value = "0.3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Self Resonant Frequency"; Value = "2.4MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "7mm"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RES-0805)
+Added Component: Designator=R2(RES-0805)
+Added Component: Designator=R3(RES-0805)
+Added Component: Designator=R4(RES-0805)
+Added Component: Designator=R5(RES-0805)
+Added Component: Designator=R6(RES-0805)
+Added Component: Designator=R7(RES-0805)
+Added Component: Designator=R8(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=R?(RES-0805)
+Added Component: Designator=T3(SOT23-3_IPC_A)
+Added Component: Designator=T4(SOT23-3_IPC_A)
+Added Component: Designator=U1(SOT-89)
+Added Component: Designator=U2(SOT-89)
+Added Component: Designator=U3(SOT-89)
+Added Component: Designator=U?(SOT-23-5)
+Add component (AddParameter): Name = "Bandwidth"; Value = "1MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Common Mode Rejection Ratio"; Value = "60dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gain Bandwidth Product"; Value = "1MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Bias Current"; Value = "1pA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Offset Voltage (Vos)"; Value = "4.5mV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "3.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "1.8V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Nominal Supply Current"; Value = "100uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Amplifiers"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Channels"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Circuits"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Elements"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Current"; Value = "100uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Voltage"; Value = "5.5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current"; Value = "23mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current per Channel"; Value = "23mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Supply Rejection Ratio (PSRR)"; Value = "86dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Slew Rate"; Value = "0.6V/µs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Unity Gain Bandwidth Product"; Value = "1MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Gain"; Value = "112dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.8mm"; VariantName = "[No Variations]"
+Added Component: Designator=U?(SOT-23-5)
+Add component (AddParameter): Name = "Bandwidth"; Value = "1MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Common Mode Rejection Ratio"; Value = "60dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gain Bandwidth Product"; Value = "1MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Bias Current"; Value = "1pA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Offset Voltage (Vos)"; Value = "4.5mV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "3.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "1.8V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Nominal Supply Current"; Value = "100uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Amplifiers"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Channels"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Circuits"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Elements"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Current"; Value = "100uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Voltage"; Value = "5.5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current"; Value = "23mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Current per Channel"; Value = "23mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Supply Rejection Ratio (PSRR)"; Value = "86dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Slew Rate"; Value = "0.6V/µs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Unity Gain Bandwidth Product"; Value = "1MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Gain"; Value = "112dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.8mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND_III Pin=C1-1
+Added Pin To Net: NetName=+3V3 Pin=C1-2
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=GND_III Pin=C2-2
+Added Pin To Net: NetName=GND_III Pin=C3-1
+Added Pin To Net: NetName=NetC2_1 Pin=C3-2
+Added Pin To Net: NetName=+3V3 Pin=C4-1
+Added Pin To Net: NetName=GND_III Pin=C4-2
+Added Pin To Net: NetName=GND_III Pin=C5-1
+Added Pin To Net: NetName=+5 Pin=C5-2
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=GND_III Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=+5V Pin=C?-2
+Added Pin To Net: NetName=+5V Pin=C?-2
+Added Pin To Net: NetName=NetC?_2 Pin=C?-2
+Added Pin To Net: NetName=NetC?_2 Pin=C?-2
+Added Pin To Net: NetName=NetD?_1 Pin=D?-1
+Added Pin To Net: NetName=GND_III Pin=D?-2
+Added Pin To Net: NetName=+3V3_REF Pin=JE1-1
+Added Pin To Net: NetName=NetJE1_2 Pin=JE1-2
+Added Pin To Net: NetName=NetC2_1 Pin=L4-1
+Added Pin To Net: NetName=+3V3 Pin=L4-2
+Added Pin To Net: NetName=NetP7_15 Pin=R1-1
+Added Pin To Net: NetName=+5 Pin=R1-2
+Added Pin To Net: NetName=NetP7_16 Pin=R2-1
+Added Pin To Net: NetName=NetP7_15 Pin=R2-2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=GND_III Pin=R4-1
+Added Pin To Net: NetName=NetR3_2 Pin=R4-2
+Added Pin To Net: NetName=NetP7_10 Pin=R5-1
+Added Pin To Net: NetName=+5 Pin=R5-2
+Added Pin To Net: NetName=NetP7_5 Pin=R6-1
+Added Pin To Net: NetName=NetP7_10 Pin=R6-2
+Added Pin To Net: NetName=NetR7_1 Pin=R7-1
+Added Pin To Net: NetName=NetR7_2 Pin=R7-2
+Added Pin To Net: NetName=GND_III Pin=R8-1
+Added Pin To Net: NetName=NetR7_2 Pin=R8-2
+Added Pin To Net: NetName=GND_III Pin=R?-1
+Added Pin To Net: NetName=GND_III Pin=R?-1
+Added Pin To Net: NetName=NetC?_1 Pin=R?-1
+Added Pin To Net: NetName=NetD?_1 Pin=R?-1
+Added Pin To Net: NetName=+3V3 Pin=R?-2
+Added Pin To Net: NetName=GND_III Pin=R?-2
+Added Pin To Net: NetName=GND_III Pin=R?-2
+Added Pin To Net: NetName=NetC?_1 Pin=R?-2
+Added Pin To Net: NetName=NetC?_2 Pin=R?-2
+Added Pin To Net: NetName=NetC?_2 Pin=R?-2
+Added Pin To Net: NetName=NetR3_2 Pin=T3-1
+Added Pin To Net: NetName=GND_III Pin=T3-2
+Added Pin To Net: NetName=NetP7_16 Pin=T3-3
+Added Pin To Net: NetName=NetR7_2 Pin=T4-1
+Added Pin To Net: NetName=GND_III Pin=T4-2
+Added Pin To Net: NetName=NetP7_5 Pin=T4-3
+Added Pin To Net: NetName=NetC2_1 Pin=U1-2
+Added Pin To Net: NetName=+5 Pin=U1-3
+Added Pin To Net: NetName=GND_III Pin=U2-1
+Added Pin To Net: NetName=NetC22_1 Pin=U2-2
+Added Pin To Net: NetName=+5 Pin=U2-3
+Added Pin To Net: NetName=GND_III Pin=U3-1
+Added Pin To Net: NetName=NetC38_1 Pin=U3-2
+Added Pin To Net: NetName=+5 Pin=U3-3
+Added Pin To Net: NetName=GND_III Pin=U?-2
+Added Pin To Net: NetName=GND_III Pin=U?-2
+Added Pin To Net: NetName=NetC?_2 Pin=U?-3
+Added Pin To Net: NetName=NetC?_1 Pin=U?-4
+Added Pin To Net: NetName=+5V Pin=U?-5
+Added Pin To Net: NetName=+5V Pin=U?-5
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C1 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C2 CAP-POLAR
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C3 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C4 CAP-POLAR
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C5 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 1000pF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 1000pF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 1000pF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 0.1uF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component C? 1000pF
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component D? 151031YS06000
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component JE1 Jumper
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component L4 1000µH, 0.3A
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R1 470
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R2 1K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R3 1K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R4 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R5 470
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R6 1K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R7 1K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R8 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 100K*
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 100K*
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 220
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component R? 10K
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component T3 BC847C
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component T4 BC847C
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component U1 AMS1117
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component U2 AMS1117
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component U3 AMS1117
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component U?
+Added Member To Class: ClassName=DC-DC_PWM_IV_Controller Member=Component U?
