@@ -135,7 +135,7 @@ GenerateClassCluster=0
 DocumentUniqueId=SVYHXMFW
 
 [Document6]
-DocumentPath=CAPPOL8x12mm.PcbLib
+DocumentPath=CAPPOL-8x12mm.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -710,7 +710,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=YDFSGEVX
 
 [Document40]
 DocumentPath=CAP_1.5uF_400V.PcbLib
