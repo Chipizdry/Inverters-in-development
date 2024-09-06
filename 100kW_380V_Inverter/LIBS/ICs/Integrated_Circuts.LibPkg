@@ -1087,7 +1087,7 @@ GenerateClassCluster=0
 DocumentUniqueId=CGELEQCA
 
 [Document62]
-DocumentPath=..\PASSIVE_COMPONENTS\CAP_100V_1500uF.PcbLib
+DocumentPath=MC34063.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -1101,7 +1101,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=CAVYVPFL
+DocumentUniqueId=UQOCMFEI
 
 [OutputGroup1]
 Name=Netlist Outputs
