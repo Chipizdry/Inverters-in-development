@@ -1,0 +1,27 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: GATE_BOARD.GBR   27.09.2024  14:06:47
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.gbr                Top Layer                               
+.gbr                Bottom Layer                            
+.gbr                Bottom Pad Master                       
+.gbr                Top Pad Master                          
+.gbr                Bottom Paste                            
+.gbr                Bottom Solder                           
+.gbr                Top Overlay                             
+.gbr                Top Paste                               
+.gbr                Top Solder                              
+.gbr                Keep-Out Layer                          
+.gbr                Bottom 3D Body                          
+.gbr                Top 3D Body                             
+.gbr                Top Assembly                            
+.gbr                Mechanical 15                           
+.gbr                Bottom Component Outline                
+.gbr                Board                                   
+.gbr                Profile                                 
+.gbr                Plated through-hole drill file          
+------------------------------------------------------------------------------------------

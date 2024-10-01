@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: GATE_BOARD.PcbDoc   27.09.2024  14:07:01
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : GATE_BOARD-RoundHoles.TXT
+ASCII SlotHoles File : GATE_BOARD-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.9mm (35mil)                                             Round             4         PTH        20.59mm (0.81inch)
+T2      1mm (39mil)                                               Slot              4         PTH        64.37mm (2.53inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              8
+
+Total Processing Time (hh:mm:ss) : 00:00:00
