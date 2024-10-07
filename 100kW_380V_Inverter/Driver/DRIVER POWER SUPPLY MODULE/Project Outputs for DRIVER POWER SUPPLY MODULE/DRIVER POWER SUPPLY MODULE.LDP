@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=driver power supply module-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=driver power supply module-slotholes.txt|DrillLayers=gtl,gbl

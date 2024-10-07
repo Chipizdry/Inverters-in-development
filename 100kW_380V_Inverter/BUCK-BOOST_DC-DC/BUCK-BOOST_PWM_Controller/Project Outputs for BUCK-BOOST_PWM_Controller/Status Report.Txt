@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [BUCK-BOOST_PWM_Controller.PrjPcb]
+   Generated File[BUCK-BOOST_PWM_Controller.TXT]
+   Generated File[BUCK-BOOST_PWM_Controller.LDP]
+   Generated File[BUCK-BOOST_PWM_Controller.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 15:52:42 On 04.10.2024
