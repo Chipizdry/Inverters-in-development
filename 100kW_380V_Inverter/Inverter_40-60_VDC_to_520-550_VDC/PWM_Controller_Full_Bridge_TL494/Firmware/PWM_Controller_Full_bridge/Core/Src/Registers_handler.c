@@ -12,7 +12,47 @@
 //extern RX_BUFFER_SIZE;
 extern uint8_t SLAVE_ID;
 
-void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_reg){
+void RestartModbusReception(uint8_t* rxFrame) {
+    // Очищаем буфер
+    for (uint16_t i = 0; i < 64; i++) {
+        rxFrame[i] = 0;
+    }
+
+    RX_2; // Сброс RX состояния (определите макрос, если он отсутствует)
+    Reset_USART1(); // Сброс UART (вызов вашей функции)
+
+    // Перезапуск приёма через DMA
+    if (HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE) != HAL_OK) {
+        // Если ошибка при запуске приёма, можно добавить дополнительную обработку
+        LED_1_ON; // Например, индикация ошибки
+    }
+
+    // Включение прерывания IDLE
+    __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
+}
+
+void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_reg,uint16_t Size){
+
+
+	if (rxFrame[0] != SLAVE_ID || Size < 4) {
+	        // Ошибка: неверный ID устройства или слишком короткий пакет
+	        sendError(&huart1, 0x03, 0x02); // Код ошибки 0x02: ошибка длины пакета
+
+	        return;
+	    }
+
+
+	  // Расчет CRC для пакета (исключая последние 2 байта CRC)
+	    uint16_t receivedCRC = (rxFrame[Size - 2]<<8) | (rxFrame[Size - 1]);
+	    uint16_t calculatedCRC = calcCRC16ModBus(rxFrame, Size - 2);
+
+	    // Проверка CRC
+	 //   if (receivedCRC != calculatedCRC) {
+	        // Ошибка: неверный CRC
+	   //     sendError(&huart1, 0x03, 0x03); // Код ошибки 0x03: нарушение данных
+
+	     //   return;
+	   // }
 
 			 if (rxFrame[0] == SLAVE_ID) {
                        uint8_t opCode = rxFrame[1];
@@ -32,19 +72,19 @@ void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_
 				  			   break;
 
 				  			   case  READ_INPUT_REGs:
-				  				 handleReadInputRegs (&huart1,data_reg);
+				  				handleReadInputRegs (&huart1,data_reg);
 
 				  			   break;
 
 				  			   case WRITE_SINGLE_REG:
 
-				  			    handleWriteMulyipleHandlingRegister (&huart1,rcv_data_reg);
+				  			    handleWriteMulyipleHandlingRegister(&huart1,rcv_data_reg);
 
                                break;
 
 				  			   case WRITE_HOLDING_REGs:
 
-                                 handleWriteMulyipleHandlingRegister (&huart1,rcv_data_reg);
+                                 handleWriteMulyipleHandlingRegister(&huart1,rcv_data_reg);
 
                                break;
 
@@ -52,20 +92,16 @@ void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_
 				  			   default:
 
 				  				 LED_1_ON;
-				  				  for(uint16_t i=0; i<64;i++){rxFrame[i]=0;}
-				  							 				  			    	     RX_2;
-
-				  							 				  			  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
-				  							 				  			    			    // Включение прерывания IDLE
-				  							 				  			   __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
+				  				 sendError(&huart1, opCode, 0x01); // Код ошибки 0x01: недопустимый код функции
 				  			   break;
 				  			     }
 
 				  			 }
+
 			                  else{
 			                            for(uint16_t i=0; i<64;i++){rxFrame[i]=0;}
 			 				  			    	     RX_2;
-
+			 				  			    	  Reset_USART1();
 			 				  			  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
 			 				  			    			    // Включение прерывания IDLE
 			 				  			   __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE); }

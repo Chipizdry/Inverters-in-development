@@ -13,7 +13,7 @@
 extern uint8_t rxFrame[255];
 extern uint8_t txFrame[255];
 
-extern uint8_t SLAVE_ID;
+
 
 modbusResult handleReadHoldingRegs(UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues){
 

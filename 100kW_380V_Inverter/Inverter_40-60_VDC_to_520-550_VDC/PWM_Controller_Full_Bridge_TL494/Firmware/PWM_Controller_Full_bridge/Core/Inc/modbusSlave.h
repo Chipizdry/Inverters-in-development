@@ -11,7 +11,7 @@
 #include "modbusDevice.h"
 
 #define NUM_OF_HOLDING_REGS 60
-
+extern uint8_t SLAVE_ID;
 modbusResult sendModbusException(UART_HandleTypeDef* huart,modbusExceptionCode exceptionCode);
 
 modbusResult handleReadHoldingRegs (UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues);

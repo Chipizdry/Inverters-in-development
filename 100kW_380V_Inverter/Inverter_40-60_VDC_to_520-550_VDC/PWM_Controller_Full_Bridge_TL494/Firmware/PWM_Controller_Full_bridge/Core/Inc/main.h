@@ -73,10 +73,6 @@ void Error_Handler(void);
 #define OUT_2_GPIO_Port GPIOA
 #define OUT_3_Pin GPIO_PIN_4
 #define OUT_3_GPIO_Port GPIOA
-#define ERR_1_Pin GPIO_PIN_5
-#define ERR_1_GPIO_Port GPIOA
-#define ERR_2_Pin GPIO_PIN_7
-#define ERR_2_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 # define LED_1_ON   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_SET)

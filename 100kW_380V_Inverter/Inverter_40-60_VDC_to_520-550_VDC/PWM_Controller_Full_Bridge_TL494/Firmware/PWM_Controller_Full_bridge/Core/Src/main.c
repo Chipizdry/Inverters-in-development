@@ -43,10 +43,13 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+ADC_HandleTypeDef hadc1;
+
 I2C_HandleTypeDef hi2c2;
 
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim14;
 
 UART_HandleTypeDef huart1;
 DMA_HandleTypeDef hdma_usart1_rx;
@@ -64,6 +67,8 @@ static void MX_I2C2_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_TIM14_Init(void);
 /* USER CODE BEGIN PFP */
 
 
@@ -98,41 +103,12 @@ uint8_t coils=0;
      {
 
          Reset_USART1();
+         RX_2;
+         LED_1_OFF;
      }
  }
 
-/*
- void Reset_USART1(void)
- {
-     // Остановите передачу и прием, если они активны
-     HAL_UART_DMAStop(&huart1);
-     HAL_DMA_Abort(&hdma_usart1_rx);
-     HAL_DMA_Abort(&hdma_usart1_tx);
 
-     // Отключите прерывания
-     __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE);
-     __HAL_UART_DISABLE_IT(&huart1, UART_IT_TC);
-     __HAL_UART_DISABLE_IT(&huart1, UART_IT_RXNE);
-
-     // Сбросьте периферийный модуль USART2
-     __HAL_RCC_USART1_FORCE_RESET();
-     HAL_Delay(1); // Дождитесь завершения сброса
-     __HAL_RCC_USART1_RELEASE_RESET();
-
-     // �?нициализируйте периферийный модуль USART2 заново
-     HAL_UART_Init(&huart1);
-     MX_DMA_Init();
-     MX_USART1_UART_Init();
-     // Настройте DMA и запустите прием
-     HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
-     __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
-     __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
-
-     // Обновление времени последней активности
-     lastActivityTime = HAL_GetTick();
-
- }
- */
  void Reset_USART1(void) {
      // Остановите передачу и прием по DMA, если активны
      HAL_UART_DMAStop(&huart1);
@@ -158,20 +134,18 @@ uint8_t coils=0;
      // Обнуляем настройки UART (в случае, если библиотека HAL требует)
      HAL_UART_DeInit(&huart1);
 
-     // Инициализируем UART заново
+     // �?нициализируем UART заново
      MX_USART1_UART_Init();
 
-     // Инициализируем DMA заново (если DMA используется)
+     // �?нициализируем DMA заново (если DMA используется)
      MX_DMA_Init();
 
      // Настройка UART для приема данных с использованием DMA
      HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
-     __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
-
-     // Отключение прерываний половинного заполнения DMA, если не используются
      __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
 
 
+      RX_2;
 
      // Сброс параметров и таймеров, связанных с UART
      lastActivityTime = HAL_GetTick();
@@ -215,13 +189,15 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM3_Init();
   MX_USART1_UART_Init();
+  MX_ADC1_Init();
+  MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
   HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
-
+   HAL_TIM_Base_Start_IT(&htim14);
 
   /* USER CODE END 2 */
 
@@ -229,7 +205,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
+	  Check_USART1_Timeout();
 	 // LED_1_ON;
     /* USER CODE END WHILE */
 
@@ -281,6 +257,74 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC1_Init(void)
+{
+
+  /* USER CODE BEGIN ADC1_Init 0 */
+
+  /* USER CODE END ADC1_Init 0 */
+
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN ADC1_Init 1 */
+
+  /* USER CODE END ADC1_Init 1 */
+
+  /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
+  */
+  hadc1.Instance = ADC1;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc1.Init.LowPowerAutoWait = DISABLE;
+  hadc1.Init.LowPowerAutoPowerOff = DISABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.NbrOfConversion = 2;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.DMAContinuousRequests = DISABLE;
+  hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
+  hadc1.Init.SamplingTimeCommon1 = ADC_SAMPLETIME_1CYCLE_5;
+  hadc1.Init.SamplingTimeCommon2 = ADC_SAMPLETIME_1CYCLE_5;
+  hadc1.Init.OversamplingMode = DISABLE;
+  hadc1.Init.TriggerFrequencyMode = ADC_TRIGGER_FREQ_HIGH;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_7;
+  sConfig.Rank = ADC_REGULAR_RANK_1;
+  sConfig.SamplingTime = ADC_SAMPLINGTIME_COMMON_1;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Rank = ADC_REGULAR_RANK_2;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC1_Init 2 */
+
+  /* USER CODE END ADC1_Init 2 */
+
 }
 
 /**
@@ -474,6 +518,37 @@ static void MX_TIM3_Init(void)
 }
 
 /**
+  * @brief TIM14 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM14_Init(void)
+{
+
+  /* USER CODE BEGIN TIM14_Init 0 */
+
+  /* USER CODE END TIM14_Init 0 */
+
+  /* USER CODE BEGIN TIM14_Init 1 */
+
+  /* USER CODE END TIM14_Init 1 */
+  htim14.Instance = TIM14;
+  htim14.Init.Prescaler = 0;
+  htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim14.Init.Period = 2000;
+  htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim14.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM14_Init 2 */
+
+  /* USER CODE END TIM14_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -489,7 +564,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 57600;
+  huart1.Init.BaudRate = 128000;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -569,8 +644,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : INT_UI_Pin INT_EXT_Pin ERR_1_Pin ERR_2_Pin */
-  GPIO_InitStruct.Pin = INT_UI_Pin|INT_EXT_Pin|ERR_1_Pin|ERR_2_Pin;
+  /*Configure GPIO pins : INT_UI_Pin INT_EXT_Pin */
+  GPIO_InitStruct.Pin = INT_UI_Pin|INT_EXT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -609,10 +684,23 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 		lastActivityTime = HAL_GetTick();
 	    __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE);
 	    HAL_DMA_Abort(&hdma_usart1_rx);
-	   Registers_handler(rxFrame, data_reg, rcv_data_reg);
+	   Registers_handler(rxFrame, data_reg, rcv_data_reg,Size);
         TX_2;
 	}
 }
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if(htim->Instance == TIM14)  // Проверяем, от какого таймера пришло прерывание
+    {
+
+    	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
+    }
+}
+
+
+
 /* USER CODE END 4 */
 
 /**
