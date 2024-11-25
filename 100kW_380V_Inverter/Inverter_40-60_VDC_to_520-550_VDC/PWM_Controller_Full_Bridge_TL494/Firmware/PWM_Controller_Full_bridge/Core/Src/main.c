@@ -79,9 +79,13 @@ static void MX_TIM14_Init(void);
 # define RX_2   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, GPIO_PIN_RESET)
 
 #define RX_BUFFER_SIZE 64
-#define USART_TIMEOUT 2000 // Таймаут в миллисекундах
+#define USART_TIMEOUT 1000 // Таймаут в миллисекундах
 uint32_t lastActivityTime = 0;
  bool usartBusy = false;
+
+ volatile uint16_t adc_results[2]; // Массив для хранения результатов
+ volatile uint8_t adc_channel_index = 0;
+
 
 uint8_t rxFrame[64];
 uint8_t txFrame[255];
@@ -151,7 +155,36 @@ uint8_t coils=0;
      lastActivityTime = HAL_GetTick();
  }
 
+ uint16_t ADC_Read(uint32_t channel) {
+     ADC_ChannelConfTypeDef sConfig = {0};
 
+
+     // Настраиваем новый канал
+     sConfig.Channel = channel;
+     sConfig.Rank = ADC_REGULAR_RANK_1;
+     sConfig.SamplingTime = ADC_SAMPLETIME_39CYCLES_5;
+     if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK) {
+         return 0;  // Возврат в случае ошибки
+     }
+
+     // Запуск одиночного преобразования
+     if (HAL_ADC_Start(&hadc1) != HAL_OK) {
+         return 0;  // Ошибка запуска
+     }
+
+     // Ожидание завершения преобразования
+     if (HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK) {
+         return 0;  // Ошибка преобразования
+     }
+
+     // Считываем значение
+     uint16_t value = HAL_ADC_GetValue(&hadc1);
+
+     // Останавливаем ADC после завершения
+     HAL_ADC_Stop(&hadc1);
+
+     return value;
+ }
 
 /* USER CODE END 0 */
 
@@ -192,6 +225,7 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
+  HAL_ADCEx_Calibration_Start(&hadc1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
@@ -280,22 +314,22 @@ static void MX_ADC1_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
+  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.LowPowerAutoPowerOff = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.NbrOfConversion = 2;
+  hadc1.Init.NbrOfConversion = 1;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.DMAContinuousRequests = DISABLE;
   hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
-  hadc1.Init.SamplingTimeCommon1 = ADC_SAMPLETIME_1CYCLE_5;
-  hadc1.Init.SamplingTimeCommon2 = ADC_SAMPLETIME_1CYCLE_5;
+  hadc1.Init.SamplingTimeCommon1 = ADC_SAMPLETIME_39CYCLES_5;
+  hadc1.Init.SamplingTimeCommon2 = ADC_SAMPLETIME_39CYCLES_5;
   hadc1.Init.OversamplingMode = DISABLE;
   hadc1.Init.TriggerFrequencyMode = ADC_TRIGGER_FREQ_HIGH;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
@@ -308,15 +342,6 @@ static void MX_ADC1_Init(void)
   sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLINGTIME_COMMON_1;
-  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Regular Channel
-  */
-  sConfig.Channel = ADC_CHANNEL_5;
-  sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -564,7 +589,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 128000;
+  huart1.Init.BaudRate = 57600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -696,6 +721,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     {
 
     	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
+
+    	data_reg[0]=0xFF;
+    	data_reg[1]=0xAA;
+    	data_reg[2] = ADC_Read(ADC_CHANNEL_5); // Преобразование для канала 5
+    	data_reg[3] = ADC_Read(ADC_CHANNEL_7); // Преобразование для канала 7
+
+
     }
 }
 
