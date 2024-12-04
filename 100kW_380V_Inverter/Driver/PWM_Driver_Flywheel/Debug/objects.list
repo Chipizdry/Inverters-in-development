@@ -1,4 +1,7 @@
+"./Core/Src/Registers_handler.o"
 "./Core/Src/main.o"
+"./Core/Src/modbusDevice.o"
+"./Core/Src/modbusSlave.o"
 "./Core/Src/stm32f3xx_hal_msp.o"
 "./Core/Src/stm32f3xx_it.o"
 "./Core/Src/syscalls.o"

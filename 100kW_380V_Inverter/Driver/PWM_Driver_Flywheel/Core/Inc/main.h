@@ -31,7 +31,44 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+# define LED_1_ON   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_SET)
+# define LED_1_OFF  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET)
 
+# define LED_2_ON   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET)
+# define LED_2_OFF  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET)
+
+# define LED_3_ON   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET)
+# define LED_3_OFF  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET)
+
+# define LED_4_ON   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET)
+# define LED_4_OFF  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET)
+
+# define LED_5_ON   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_11, GPIO_PIN_SET)
+# define LED_5_OFF  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_11, GPIO_PIN_RESET)
+
+# define LED_6_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET)
+# define LED_6_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET)
+
+# define LED_7_ON   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET)
+# define LED_7_OFF  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET)
+
+# define DRV_1_ON   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_SET)
+# define DRV_1_OFF  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET)
+
+# define DRV_2_ON   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET)
+# define DRV_2_OFF  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET)
+
+# define DRV_3_ON   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, GPIO_PIN_SET)
+# define DRV_3_OFF  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, GPIO_PIN_RESET)
+
+# define DRV_4_ON   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_SET)
+# define DRV_4_OFF  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_RESET)
+
+
+
+
+# define TX_2   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET)
+# define RX_2 HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET)
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -111,6 +148,7 @@ void Error_Handler(void);
 #define DIRECT_GPIO_Port GPIOD
 
 /* USER CODE BEGIN Private defines */
+
 
 /* USER CODE END Private defines */
 

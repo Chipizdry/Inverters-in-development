@@ -21,7 +21,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdbool.h"
+#include "modbusDevice.h"
+#include "modbusSlave.h"
+#include "Registers_handler.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -115,7 +118,22 @@ int main(void)
   MX_ADC1_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+   LED_1_ON;
+   RX_2;
 
+   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
+   HAL_TIMEx_PWMN_Start(&htim8, TIM_CHANNEL_1);
+
+   DRV_1_ON;
+   DRV_2_ON;
+   DRV_3_ON;
+   DRV_4_ON;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -359,7 +377,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 0;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535;
+  htim1.Init.Period = 2000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -384,7 +402,7 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 0;
+  sConfigOC.Pulse = 1000;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
@@ -571,7 +589,7 @@ static void MX_TIM8_Init(void)
   htim8.Instance = TIM8;
   htim8.Init.Prescaler = 0;
   htim8.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim8.Init.Period = 65535;
+  htim8.Init.Period = 2000;
   htim8.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim8.Init.RepetitionCounter = 0;
   htim8.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -596,7 +614,7 @@ static void MX_TIM8_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 0;
+  sConfigOC.Pulse = 1000;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
