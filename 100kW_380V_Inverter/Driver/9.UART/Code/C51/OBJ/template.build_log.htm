@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.11.2.0
+Copyright (C) 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Vladimir Bors, COR, LIC=21NXV-P8ANZ-TRVXY-IC6EX-JFC88-0XIF8
+ 
+Tool Versions:
+Toolchain:       PK51 Prof. Developers Kit  Version: 9.53.0.0
+Toolchain Path:  C:\Program Files (x86)\KEIL\C51\BIN
+C Compiler:      C51.exe V9.53.0.0
+Assembler:       A51.exe V8.02b
+Linker/Locator:  LX51.exe V4.66.30.0
+Library Manager: LIBX51.exe V4.30.0.2
+Hex Converter:   OHX51.exe V1.43.0.0
+CPU DLL:         S8051.DLL V3.95.0.0
+Dialog DLL:      DCore51.DLL V2.81.4.0
+    Target DLL: DWIN\BIN\ag8051.dll
+Dialog DLL:      TCore51.DLL V2.66.2.1
+ 
+<h2>Project:</h2>
+D:\WORK\DWIN\9.UART\Code\C51\USER\template.uvproj
+Project File Date:  12/09/2024
+
+<h2>Output:</h2>
+Rebuild target 'TEMPLATE'
+assembling STARTUP_M5.A51...
+compiling main.c...
+compiling sys.c...
+compiling uart2.c...
+compiling uart5.c...
+linking...
+Program Size: data=17.1 xdata=780 const=0 code=4860
+creating hex file from "..\OBJ\template"...
+User command #1: D:\WORK\DWIN\TC040\C51\USER\hex2bin.bat
+D:\WORK\DWIN\9.UART\Code\C51\USER>cd .. 
+D:\WORK\DWIN\9.UART\Code\C51>cd OBJ 
+D:\WORK\DWIN\9.UART\Code\C51\OBJ>srec_cat.exe template.hex -Intel -o T5L51.bin -Binary  
+D:\WORK\DWIN\9.UART\Code\C51\OBJ>echo.
+D:\WORK\DWIN\9.UART\Code\C51\OBJ>copy "T5L51.bin" ..\ 
+‘ª®¯¨à®¢ ­® ä ©«®¢:         1.
+D:\WORK\DWIN\9.UART\Code\C51\OBJ>copy "T5L51.bin" ..\..\GUI\DWIN_SET 
+‘ª®¯¨à®¢ ­® ä ©«®¢:         1.
+"..\OBJ\template" - 0 Error(s), 0 Warning(s).
+UI\DWIN_SET 
+‘ª®¯¨à®¢ ­® ä ©«®¢:         1.
+"..\OBJ\template" - 0 Error(s), 1 Warning(s).
+    1.
+"..\OBJ\template" - 0 Error(s), 2 Warning(s).
+
+    SYMBOL:  uart5_rx_sta
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D00H
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_rx_sta
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D0BH
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D26H
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D2CH
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D3DH
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D43H
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D5FH
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D61H
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D74H
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_buf
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D76H
+*** ERROR L128: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  uart5_rx_sta
+    MODULE:  ..\OBJ\main.obj (MAIN)
+    ADDRESS: 1000D9AH
+Program Size: data=17.1 xdata=52 const=0 code=3615
+Target not created.

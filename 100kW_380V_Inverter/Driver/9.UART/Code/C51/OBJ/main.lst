@@ -1,0 +1,100 @@
+C51 COMPILER V9.53.0.0   MAIN                                                              12/09/2024 12:20:59 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\OBJ\main.obj
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL\C51\BIN\C51.EXE main.c LARGE OMF2 OPTIMIZE(3,SIZE) BROWSE INCDIR(..\USE
+                    -R;..\FUNC_HANDLER;..\GUI_APP;..\HANDWARE\UART2) DEBUG PRINT(..\OBJ\main.lst) TABS(2) OBJECT(..\OBJ\main.obj)
+
+line level    source
+
+   1          #include "sys.h"
+   2          #include "uart2.h"
+   3          #include "uart5.h"
+   4          
+   5          #define FIRST_TXT    "DGUS Tool\0\0"
+   6          #define TEST_TXT     "DGUS TEST TEXT\0\0"
+   7          #define INT_TXT    "INERRUPT \0\0"
+   8          #define WHILE_TXT    "WHILE___ \0\0"
+   9          void main(void)
+  10          {   
+  11   1        
+  12   1        //  u8 vp_buffer[16] = {0};           // Буфер для передачи (массив кратен 2
+             - байтам)
+  13   1        
+  14   1        u16 len;
+  15   1        u16 i;
+  16   1      u8 buff[512];
+  17   1      u16 recv_len;
+  18   1        sys_init();//System initialization
+  19   1        uart2_init(9600);//Initialize serial port 2
+  20   1        uart5_init(9600);//Initialize serial port 5
+  21   1          
+  22   1          sys_write_vp(0x2000,FIRST_TXT,sizeof(FIRST_TXT)/2+1);//ٸ֚һٶ"τѾДʾ"࠘ݾʨ׃τѾŚɝ
+  23   1           sys_delay_ms(1000);
+  24   1          sys_write_vp(0x2000,TEST_TXT,sizeof(TEST_TXT)/2+1);
+  25   1      
+  26   1        while(1){   
+  27   2          if(uart2_rx_sta & UART2_PACKET_OK)
+  28   2          {
+  29   3            
+  30   3            sys_write_vp(0x2000,INT_TXT,sizeof(INT_TXT)/2+1);
+  31   3            len = uart2_rx_sta&UART2_PACKET_LEN;
+  32   3            u2_send_bytes(uart2_buf,len);
+  33   3            
+  34   3            recv_len = 0;
+  35   3            for(i=0;i<len;i++)
+  36   3            {
+  37   4              recv_len += sprintf(buff+recv_len,"%02x ",(u16)uart2_buf[i]);
+  38   4            }
+  39   3            buff[recv_len++] = 0;
+  40   3            buff[recv_len++] = 0;
+  41   3            sys_write_vp(0x2000,buff,recv_len/2+21);
+  42   3            
+  43   3            uart2_rx_sta = 0;
+  44   3          }
+  45   2        //  sys_write_vp(0x2000,WHILE_TXT,sizeof(WHILE_TXT)/2+1);
+  46   2          
+  47   2          if(uart5_rx_sta & UART5_PACKET_OK)
+  48   2          {
+  49   3            
+  50   3            sys_write_vp(0x2000,INT_TXT,sizeof(INT_TXT)/2+1);
+  51   3            len = uart5_rx_sta&UART5_PACKET_LEN;
+  52   3            u5_send_bytes(uart5_buf,len);
+  53   3            
+C51 COMPILER V9.53.0.0   MAIN                                                              12/09/2024 12:20:59 PAGE 2   
+
+  54   3            recv_len = 0;
+  55   3            for(i=0;i<len;i++)
+  56   3            {
+  57   4              recv_len += sprintf(buff+recv_len,"%02x ",(u16)uart5_buf[i]);
+  58   4            }
+  59   3            buff[recv_len++] = 0;
+  60   3            buff[recv_len++] = 0;
+  61   3            sys_write_vp(0x2000,buff,recv_len/2+21);
+  62   3            
+  63   3            uart5_rx_sta = 0;
+  64   3          }
+  65   2        }
+  66   1          
+  67   1      }
+  68          
+  69          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    652    ----
+   CONSTANT SIZE    =     47    ----
+   XDATA SIZE       =   ----     518
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

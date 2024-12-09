@@ -1,0 +1,165 @@
+C51 COMPILER V9.53.0.0   UART2                                                             12/09/2024 12:20:59 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE UART2
+OBJECT MODULE PLACED IN ..\OBJ\uart2.obj
+COMPILER INVOKED BY: C:\Program Files (x86)\KEIL\C51\BIN\C51.EXE ..\HANDWARE\UART2\uart2.c LARGE OMF2 OPTIMIZE(3,SIZE) B
+                    -ROWSE INCDIR(..\USER;..\FUNC_HANDLER;..\GUI_APP;..\HANDWARE\UART2) DEBUG PRINT(..\OBJ\uart2.lst) TABS(2) OBJECT(..\OBJ\u
+                    -art2.obj)
+
+line level    source
+
+   1          #include "uart2.h"
+   2          
+   3          
+   4          #if(UART2_INT_EN)
+   5          xdata u16 uart2_rx_sta;//bit15Used to mark whether a complete data packet has been received, bit[14:0] is 
+             -used to store the length of the current data packetxdata u8
+   6          xdata u8  uart2_buf[UART2_PACKET_MAX_LEN+2];//Leave 2 blank characters
+   7          xdata u8  uart2_step;
+   8          
+   9          //Serial port 2 interrupt service routine
+  10          //When sending data, the interrupt must be turned off, here is only responsible for processing the receivi
+             -ng interrupt.
+  11          void uart2_isr()  interrupt 4
+  12          {
+  13   1        u8 res;
+  14   1        
+  15   1        if(RI0)//The serial port accepting the interrupt
+  16   1        {
+  17   2          RI0 = 0;//Clear accept interrupt flag
+  18   2          res = SBUF0;//Read serial data
+  19   2          
+  20   2          if(uart2_rx_sta & UART2_PACKET_OK)//The received data has not been processed yet
+  21   2            return;
+  22   2        
+  23   2          if(uart2_step==0)//The process of accepting data
+  24   2          {
+  25   3            if(res=='\r')//If the "\r\n" end marker is received, it is considered that the packet acceptance is com
+             -plete
+  26   3              uart2_step = 1;//Enter the process of accepting the '\n' token
+  27   3            else if(res=='\n')//If the '\n' end marker is received, it is also considered that the packet is accept
+             -ed as complete
+  28   3              uart2_rx_sta |= UART2_PACKET_OK;//Mark packet acceptance complete
+  29   3            else//Accept data
+  30   3            {
+  31   4              if(uart2_rx_sta>=UART2_PACKET_MAX_LEN)
+  32   4                uart2_rx_sta = 0;//The data is too large, discard it, and start receiving from the beginning
+  33   4      
+  34   4              uart2_buf[uart2_rx_sta++] = res;//Store valid data
+  35   4            }
+  36   3          }else if(uart2_step==1)//The process of judging the end tag
+  37   2          {
+  38   3            uart2_step = 0;
+  39   3            if(res=='\n')
+  40   3              uart2_rx_sta |= UART2_PACKET_OK;//Mark packet acceptance complete
+  41   3            else
+  42   3              uart2_rx_sta = 0;//The next character of '\r' is not '\n', it is considered that the reception is wron
+             -g, and the reception starts from the beginning
+  43   3          }
+  44   2          
+  45   2        } 
+  46   1      }
+  47          #endif
+  48          
+C51 COMPILER V9.53.0.0   UART2                                                             12/09/2024 12:20:59 PAGE 2   
+
+  49          
+  50          //Serial port 2 initialization
+  51          void uart2_init(u32 baud)
+  52          {
+  53   1        MUX_SEL |= 0x40;//Setting bit6 to 1 means to export the uart2 interface to P0.4 and P0.5
+  54   1        P0MDOUT &= 0xCF;
+  55   1        P0MDOUT |= 0x10;//Set the corresponding IO port output and input
+  56   1        ADCON = 0x80;//Select SREL0H:L as baud rate generator
+  57   1        SCON0 = 0x50;//Accept enable and mode settings
+  58   1        PCON &= 0x7F;//SMOD=0
+  59   1        //Baud rate setting, the formula is:
+  60   1        //SMOD=0  SREL0H:L=1024-main frequency/(64*baud rate),SMOD=1   SREL0H:L=1024-main frequency/(32*baud rate)
+  61   1        baud = 1024-(u16)(3225600.0f/baud);
+  62   1        SREL0H = (baud>>8)&0xff;  
+  63   1        SREL0L = baud&0xff;
+  64   1        
+  65   1        #if(UART2_INT_EN)
+  66   1          ES0 = 1;//Interrupt enable
+  67   1          EA = 1;
+  68   1          //xdata variables must be initialized in functions
+  69   1          uart2_rx_sta = 0;
+  70   1          uart2_step = 0;
+  71   1        #else
+                  ES0 = 0;
+                #endif
+  74   1      
+  75   1      }
+  76          
+  77          //Send a byte
+  78          void u2_send_byte(u8 byte)
+  79          {
+  80   1        ES0 = 0;//Close the serial port 2 interrupt first
+  81   1        SBUF0 = byte;
+  82   1        while(!TI0);
+  83   1        TI0 = 0;
+  84   1        #if(UART2_INT_EN)
+  85   1          ES0 = 1;//Re-open interrupt
+  86   1        #endif
+  87   1      }
+  88          
+  89          
+  90          
+  91          //Send data
+  92          void u2_send_bytes(u8 *bytes,u16 len)
+  93          {
+  94   1        u16 i;
+  95   1        
+  96   1        ES0 = 0;//Close the serial port 2 interrupt first
+  97   1        for(i=0;i<len;i++)
+  98   1        {
+  99   2          SBUF0 = bytes[i];
+ 100   2          while(!TI0);
+ 101   2          TI0 = 0;
+ 102   2        }
+ 103   1        #if(UART2_INT_EN)
+ 104   1          ES0 = 1;//Re-open interrupt
+ 105   1        #endif
+ 106   1      }
+ 107          
+ 108          
+ 109          //Implement printf function with uart2 serial port
+ 110          char putchar(char c)
+C51 COMPILER V9.53.0.0   UART2                                                             12/09/2024 12:20:59 PAGE 3   
+
+ 111          {
+ 112   1        u2_send_byte(c);
+ 113   1        
+ 114   1        return c;
+ 115   1      }
+ 116          
+ 117          
+ 118          
+ 119          
+ 120          
+ 121          
+ 122          
+ 123          
+ 124          
+ 125          
+ 126          
+ 127          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    444    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =    105      14
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
