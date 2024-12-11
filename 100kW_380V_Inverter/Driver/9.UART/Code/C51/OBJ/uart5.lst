@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   UART5                                                             12/09/2024 12:20:59 PAGE 1   
+C51 COMPILER V9.53.0.0   UART5                                                             12/11/2024 15:50:00 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE UART5
@@ -22,7 +22,7 @@ line level    source
   11          //Serial port 5 interrupt service routine
   12          //When sending data, the interrupt must be turned off, here is only responsible for processing the receivi
              -ng interrupt.
-  13          void uart5_isr() interrupt 6 { // Адрес прерывания для UART5 (0x6B)
+  13          void uart5_isr() interrupt 13 { // Адрес прерывания для UART5 (0x6B)
   14   1          u8 res;
   15   1      
   16   1          if (SCON3R & 0x01) { // Проверяем флаг приёма RI3
@@ -62,7 +62,7 @@ line level    source
   45   4                  } else {
   46   4                      // Если это не '\n', сбрасываем статус и начинаем зан
              -ово
-C51 COMPILER V9.53.0.0   UART5                                                             12/09/2024 12:20:59 PAGE 2   
+C51 COMPILER V9.53.0.0   UART5                                                             12/11/2024 15:50:00 PAGE 2   
 
   47   4                      uart5_rx_sta = 0;
   48   4                  }
@@ -89,60 +89,65 @@ line level    source
   69   1          BODE3_DIV_L = baud & 0xFF;        // Low byte of the baud rate divisor
   70   1      
   71   1          #if(UART5_INT_EN)
-  72   1              ES3R = 1; // Enable UART5 RX interrupt
-  73   1              ES3T = 1; // Enable UART5 TX interrupt
-  74   1              EA = 1;   // Enable global interrupts
-  75   1          #else
+  72   1        
+  73   1              IP1 = 0x28; // Биты 3 (G3) и 5 (G5) установлены
+  74   1              IP0 = 0x00; // Остальные группы остаются с низким приоритет
+             -ом
+  75   1      
+  76   1              ES3R = 1; // Enable UART5 RX interrupt
+  77   1              ES3T = 1; // Enable UART5 TX interrupt
+  78   1              EA = 1;   // Enable global interrupts
+  79   1          #else
                       ES3R = 0; // Disable UART5 RX interrupt
                       ES3T = 0; // Disable UART5 TX interrupt
                   #endif
-  79   1      }
-  80          
-  81          
-  82          void u5_send_byte(u8 byte) {
-  83   1          ES3T = 0;              // Отключаем прерывания передачи для UART5
-  84   1          SBUF3_TX = byte;       // Отправляем байт через регистр передачи
-  85   1          while (!SCON3T);          // Ждём завершения передачи (TI3 == 1)
-  86   1          SCON3T = 0;               // Сбрасываем флаг передачи
-  87   1          #if(UART5_INT_EN)
-  88   1              ES3T = 1;          // Повторно включаем прерывания передачи, е�
+  83   1      }
+  84          
+  85          
+  86          void u5_send_byte(u8 byte) {
+  87   1          ES3T = 0;              // Отключаем прерывания передачи для UART5
+  88   1          SBUF3_TX = byte;       // Отправляем байт через регистр передачи
+  89   1          while (!SCON3T);          // Ждём завершения передачи (TI3 == 1)
+  90   1          SCON3T = 0;               // Сбрасываем флаг передачи
+  91   1          #if(UART5_INT_EN)
+  92   1              ES3T = 1;          // Повторно включаем прерывания передачи, е�
              -�ли активированы
-  89   1          #endif
-  90   1      }
-  91          
-  92          //Send data
-  93          void u5_send_bytes(u8 *bytes, u16 len) {
-  94   1          u16 i;
-  95   1      
-  96   1          ES3T = 0;              // Отключаем прерывания передачи UART5
-  97   1          for (i = 0; i < len; i++) {
-  98   2              SBUF3_TX = bytes[i]; // Записываем текущий байт в регистр перед�
+  93   1          #endif
+  94   1      }
+  95          
+  96          //Send data
+  97          void u5_send_bytes(u8 *bytes, u16 len) {
+  98   1          u16 i;
+  99   1      
+ 100   1          ES3T = 0;              // Отключаем прерывания передачи UART5
+ 101   1          for (i = 0; i < len; i++) {
+ 102   2              SBUF3_TX = bytes[i]; // Записываем текущий байт в регистр перед�
              -�чи
-  99   2              while (!(SCON3T & 0x01)); // Ждём, пока флаг TI не будет установлен
- 100   2              SCON3T &= ~0x01;       // Сбрасываем флаг TI
- 101   2          }
- 102   1          #if(UART5_INT_EN)
- 103   1              ES3T = 1;          // Включаем прерывания передачи, если они ак
-             -тивированы
- 104   1          #endif
- 105   1      }
-C51 COMPILER V9.53.0.0   UART5                                                             12/09/2024 12:20:59 PAGE 3   
+ 103   2              while (!(SCON3T & 0x01)); // Ждём, пока флаг TI не будет установлен
+ 104   2              SCON3T &= ~0x01;       // Сбрасываем флаг TI
+ 105   2          }
+C51 COMPILER V9.53.0.0   UART5                                                             12/11/2024 15:50:00 PAGE 3   
 
- 106          
- 107          
- 108          //Implement printf function with uart2 serial port
- 109          char putchar5(char c)
- 110          {
- 111   1        u5_send_byte(c);
- 112   1        
- 113   1        return c;
- 114   1      }
- 115          
- 116          
+ 106   1          #if(UART5_INT_EN)
+ 107   1              ES3T = 1;          // Включаем прерывания передачи, если они ак
+             -тивированы
+ 108   1          #endif
+ 109   1      }
+ 110          
+ 111          
+ 112          //Implement printf function with uart2 serial port
+ 113          char putchar5(char c)
+ 114          {
+ 115   1        u5_send_byte(c);
+ 116   1        
+ 117   1        return c;
+ 118   1      }
+ 119          
+ 120          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    441    ----
+   CODE SIZE        =    446    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =    105      14
    PDATA SIZE       =   ----    ----

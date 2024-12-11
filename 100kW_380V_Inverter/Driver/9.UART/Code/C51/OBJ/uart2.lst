@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   UART2                                                             12/09/2024 12:20:59 PAGE 1   
+C51 COMPILER V9.53.0.0   UART2                                                             12/11/2024 15:50:00 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE UART2
@@ -62,7 +62,7 @@ line level    source
   46   1      }
   47          #endif
   48          
-C51 COMPILER V9.53.0.0   UART2                                                             12/09/2024 12:20:59 PAGE 2   
+C51 COMPILER V9.53.0.0   UART2                                                             12/11/2024 15:50:00 PAGE 2   
 
   49          
   50          //Serial port 2 initialization
@@ -126,7 +126,7 @@ line level    source
  108          
  109          //Implement printf function with uart2 serial port
  110          char putchar(char c)
-C51 COMPILER V9.53.0.0   UART2                                                             12/09/2024 12:20:59 PAGE 3   
+C51 COMPILER V9.53.0.0   UART2                                                             12/11/2024 15:50:00 PAGE 3   
 
  111          {
  112   1        u2_send_byte(c);

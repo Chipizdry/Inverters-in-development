@@ -10,7 +10,7 @@ xdata u8  uart5_step;
 
 //Serial port 5 interrupt service routine
 //When sending data, the interrupt must be turned off, here is only responsible for processing the receiving interrupt.
-void uart5_isr() interrupt 6 { // Адрес прерывания для UART5 (0x6B)
+void uart5_isr() interrupt 13 { // Адрес прерывания для UART5 (0x6B)
     u8 res;
 
     if (SCON3R & 0x01) { // Проверяем флаг приёма RI3
@@ -69,6 +69,10 @@ void uart5_init(u32 baud) {
     BODE3_DIV_L = baud & 0xFF;        // Low byte of the baud rate divisor
 
     #if(UART5_INT_EN)
+	
+	      IP1 = 0x28; // Биты 3 (G3) и 5 (G5) установлены
+        IP0 = 0x00; // Остальные группы остаются с низким приоритетом
+
         ES3R = 1; // Enable UART5 RX interrupt
         ES3T = 1; // Enable UART5 TX interrupt
         EA = 1;   // Enable global interrupts

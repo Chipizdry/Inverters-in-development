@@ -13,21 +13,24 @@ void main(void)
 	
 	u16 len;
 	u16 i;
-u8 buff[512];
+u8 buff[512]={0, };
 u16 recv_len;
 	sys_init();//System initialization
-	uart2_init(9600);//Initialize serial port 2
-	uart5_init(9600);//Initialize serial port 5
+	
 		
 		sys_write_vp(0x2000,FIRST_TXT,sizeof(FIRST_TXT)/2+1);//ٸ֚һٶ"τѾДʾ"࠘ݾʨ׃τѾŚɝ
      sys_delay_ms(1000);
 	  sys_write_vp(0x2000,TEST_TXT,sizeof(TEST_TXT)/2+1);
+	uart2_init(9600);//Initialize serial port 2
+	uart5_init(9600);//Initialize serial port 5
 
 	while(1){   
+		
+		
 		if(uart2_rx_sta & UART2_PACKET_OK)
 		{
 			
-			sys_write_vp(0x2000,INT_TXT,sizeof(INT_TXT)/2+1);
+		
 			len = uart2_rx_sta&UART2_PACKET_LEN;
 			u2_send_bytes(uart2_buf,len);
 			
@@ -42,12 +45,11 @@ u16 recv_len;
 			
 			uart2_rx_sta = 0;
 		}
-	//	sys_write_vp(0x2000,WHILE_TXT,sizeof(WHILE_TXT)/2+1);
+	
 		
 		if(uart5_rx_sta & UART5_PACKET_OK)
 		{
 			
-			sys_write_vp(0x2000,INT_TXT,sizeof(INT_TXT)/2+1);
 			len = uart5_rx_sta&UART5_PACKET_LEN;
 			u5_send_bytes(uart5_buf,len);
 			
@@ -59,9 +61,9 @@ u16 recv_len;
 			buff[recv_len++] = 0;
 			buff[recv_len++] = 0;
 			sys_write_vp(0x2000,buff,recv_len/2+21);
-			
 			uart5_rx_sta = 0;
 		}
+		
 	}
 		
 }

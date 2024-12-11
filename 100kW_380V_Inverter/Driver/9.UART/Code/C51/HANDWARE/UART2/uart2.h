@@ -3,7 +3,7 @@
 #include "sys.h"
 #include <stdio.h>
 
-#define UART5_INT_EN							1
+
 #define UART2_INT_EN							1				//Whether the serial port interrupt is enabled
 #define UART2_PACKET_OK						0x8000  //Whether the complete packet was received
 #define UART2_PACKET_LEN					0x7fff	//Length of packet
