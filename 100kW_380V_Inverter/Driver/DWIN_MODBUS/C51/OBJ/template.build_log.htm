@@ -21,29 +21,29 @@ Dialog DLL:      DCore51.DLL V2.81.4.0
 Dialog DLL:      TCore51.DLL V2.66.2.1
  
 <h2>Project:</h2>
-D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\9.UART\Code\C51\USER\template.uvproj
-Project File Date:  12/09/2024
+D:\WORK\DWIN\DWIN_MODBUS\C51\USER\template.uvproj
+Project File Date:  12/11/2024
 
 <h2>Output:</h2>
 Rebuild target 'TEMPLATE'
 assembling STARTUP_M5.A51...
 compiling main.c...
+main.c(14): warning C280: 'send_len': unreferenced local variable
 compiling sys.c...
 compiling uart2.c...
-compiling uart5.c...
 linking...
-Program Size: data=17.1 xdata=780 const=0 code=5582
+Program Size: data=17.1 xdata=688 const=0 code=5049
 creating hex file from "..\OBJ\template"...
 User command #1: D:\WORK\DWIN\TC040\C51\USER\hex2bin.bat
-D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\9.UART\Code\C51\USER>cd .. 
-D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\9.UART\Code\C51>cd OBJ 
-D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\9.UART\Code\C51\OBJ>srec_cat.exe template.hex -Intel -o T5L51.bin -Binary  
-D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\9.UART\Code\C51\OBJ>echo.
-D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\9.UART\Code\C51\OBJ>copy "T5L51.bin" ..\ 
+D:\WORK\DWIN\DWIN_MODBUS\C51\USER>cd .. 
+D:\WORK\DWIN\DWIN_MODBUS\C51>cd OBJ 
+D:\WORK\DWIN\DWIN_MODBUS\C51\OBJ>srec_cat.exe template.hex -Intel -o T5L51.bin -Binary  
+D:\WORK\DWIN\DWIN_MODBUS\C51\OBJ>echo.
+D:\WORK\DWIN\DWIN_MODBUS\C51\OBJ>copy "T5L51.bin" ..\ 
 Скопировано файлов:         1.
-D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\9.UART\Code\C51\OBJ>copy "T5L51.bin" ..\..\GUI\DWIN_SET 
+D:\WORK\DWIN\DWIN_MODBUS\C51\OBJ>copy "T5L51.bin" ..\..\GUI\DWIN_SET 
 Скопировано файлов:         1.
-"..\OBJ\template" - 0 Error(s), 0 Warning(s).
-</pre>
-</body>
-</html>
+"..\OBJ\template" - 0 Error(s), 1 Warning(s).
+\GUI\DWIN_SET 
+Скопировано файлов:         1.
+"..\OBJ\template" - 0 Error(s), 2 Warning(s).
