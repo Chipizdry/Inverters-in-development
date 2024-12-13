@@ -18,7 +18,7 @@ extern u32 sys_tick;
 void uart2_init(u32 baud);
 void u2_send_byte(u8 byte);
 void u2_send_bytes(u8 *bytes,u16 len);
-
+void poll_modbus_devices(void);
 #endif
 
 

@@ -22,7 +22,7 @@ u16 recv_len;
 		
 		sys_write_vp(0x2000,FIRST_TXT,sizeof(FIRST_TXT)/2+1);//ٸ֚һٶ"τѾДʾ"࠘ݾʨ׃τѾŚɝ
      sys_delay_ms(1000);
-	  sys_write_vp(0x2000,TEST_TXT,sizeof(TEST_TXT)/2+1);
+	  sys_write_vp(0x2002,TEST_TXT,sizeof(TEST_TXT)/2+1);
 	uart2_init(9600);//Initialize serial port 2
 	//uart5_init(9600);//Initialize serial port 5
 
@@ -50,10 +50,7 @@ u16 recv_len;
 			//u2_send_bytes(buff,len);
 		}
 	
-		sys_delay_ms(300);
-		if(uart2_rx_sta ==0){
-		send_buff[0]=0x10;
-		u2_send_bytes(buff,8);}
+		poll_modbus_devices();
 		
 		
 	}

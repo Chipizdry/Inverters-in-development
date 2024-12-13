@@ -152,8 +152,73 @@ char putchar(char c)
 
 
 
+u16 calculate_crc(unsigned char *buffer, unsigned char length) {
+    unsigned int temp, temp2, flag;
+    unsigned int i;               // Вынесение переменной `i`
+    unsigned char j;              // Вынесение переменной `j`
+
+    temp = 0xFFFF;
+
+    for (i = 0; i < length; i++) {
+        temp = temp ^ buffer[i];
+        for (j = 0; j < 8; j++) {
+            flag = temp & 0x0001;
+            temp >>= 1;
+            if (flag)
+                temp ^= 0xA001;
+        }
+    }
+
+    // Reverse byte order.
+    temp2 = temp >> 8;
+    temp = (temp << 8) | temp2;
+    temp &= 0xFFFF;
+
+    return temp;
+}
 
 
+// Функция формирования и отправки Modbus-запроса
+void modbus_request(u8 address, u16 start_register, u16 num_registers) {
+    u8 request[8];
+    u16 crc;
+
+    // Формируем запрос Modbus
+    request[0] = address;                      // Адрес устройства
+    request[1] = 0x03;                         // Код функции (чтение регистров)
+    request[2] = (start_register >> 8) & 0xFF; // Старший байт начального регистра
+    request[3] = start_register & 0xFF;        // Младший байт начального регистра
+    request[4] = (num_registers >> 8) & 0xFF;  // Старший байт количества регистров
+    request[5] = num_registers & 0xFF;         // Младший байт количества регистров
+
+    // Вычисляем CRC
+    crc = calculate_crc(request, 6);
+    request[6] = crc & 0xFF;                   // Младший байт CRC
+    request[7] = (crc >> 8) & 0xFF;            // Старший байт CRC
+
+    // Отправляем запрос через UART
+    u2_send_bytes(request, 8);
+}
+
+// Функция циклического опроса 5 адресов Modbus
+void poll_modbus_devices() {
+    u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
+    u16 start_register = 0x0001;              // Начальный регистр
+    u16 num_registers = 4;                    // Количество регистров
+  unsigned int k; 
+    while (1) {
+        for (k = 0; k < 5; k++) {
+            // Формируем и отправляем запрос для каждого адреса
+            modbus_request(modbus_addresses[k], start_register, num_registers);
+
+            // Задержка между запросами для предотвращения наложения
+            sys_delay_ms(900);
+        }
+
+        // Задержка перед следующим циклом опроса всех устройств
+        sys_delay_ms(500);
+    }
+}
 
 
 

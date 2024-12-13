@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 16:04:59 PAGE 1   
+C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 17:06:45 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE UART2
@@ -62,7 +62,7 @@ line level    source
   46            } 
   47          }
   48          */
-C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 16:04:59 PAGE 2   
+C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 17:06:45 PAGE 2   
 
   49          
   50          void uart2_isr() interrupt 4 {
@@ -126,7 +126,7 @@ line level    source
  106   1        #else
                   ES0 = 0;
                 #endif
-C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 16:04:59 PAGE 3   
+C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 17:06:45 PAGE 3   
 
  109   1      
  110   1      }
@@ -174,24 +174,97 @@ line level    source
  152          
  153          
  154          
- 155          
- 156          
- 157          
- 158          
- 159          
- 160          
- 161          
- 162          
+ 155          u16 calculate_crc(unsigned char *buffer, unsigned char length) {
+ 156   1          unsigned int temp, temp2, flag;
+ 157   1          unsigned int i;               // Вынесение переменной `i`
+ 158   1          unsigned char j;              // Вынесение переменной `j`
+ 159   1      
+ 160   1          temp = 0xFFFF;
+ 161   1      
+ 162   1          for (i = 0; i < length; i++) {
+ 163   2              temp = temp ^ buffer[i];
+ 164   2              for (j = 0; j < 8; j++) {
+ 165   3                  flag = temp & 0x0001;
+ 166   3                  temp >>= 1;
+ 167   3                  if (flag)
+ 168   3                      temp ^= 0xA001;
+ 169   3              }
+ 170   2          }
+C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 17:06:45 PAGE 4   
+
+ 171   1      
+ 172   1          // Reverse byte order.
+ 173   1          temp2 = temp >> 8;
+ 174   1          temp = (temp << 8) | temp2;
+ 175   1          temp &= 0xFFFF;
+ 176   1      
+ 177   1          return temp;
+ 178   1      }
+ 179          
+ 180          
+ 181          // Функция формирования и отправки Modbus-запроса
+ 182          void modbus_request(u8 address, u16 start_register, u16 num_registers) {
+ 183   1          u8 request[8];
+ 184   1          u16 crc;
+ 185   1      
+ 186   1          // Формируем запрос Modbus
+ 187   1          request[0] = address;                      // Адрес устройства
+ 188   1          request[1] = 0x03;                         // Код функции (чтение регистров)
+ 189   1          request[2] = (start_register >> 8) & 0xFF; // Старший байт начального регис�
+             -�ра
+ 190   1          request[3] = start_register & 0xFF;        // Младший байт начального регис�
+             -�ра
+ 191   1          request[4] = (num_registers >> 8) & 0xFF;  // Старший байт количества регис�
+             -�ров
+ 192   1          request[5] = num_registers & 0xFF;         // Младший байт количества регис�
+             -�ров
+ 193   1      
+ 194   1          // Вычисляем CRC
+ 195   1          crc = calculate_crc(request, 6);
+ 196   1          request[6] = crc & 0xFF;                   // Младший байт CRC
+ 197   1          request[7] = (crc >> 8) & 0xFF;            // Старший байт CRC
+ 198   1      
+ 199   1          // Отправляем запрос через UART
+ 200   1          u2_send_bytes(request, 8);
+ 201   1      }
+ 202          
+ 203          // Функция циклического опроса 5 адресов Modbus
+ 204          void poll_modbus_devices() {
+ 205   1          u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
+ 206   1          u16 start_register = 0x0001;              // Начальный регистр
+ 207   1          u16 num_registers = 4;                    // Количество регистров
+ 208   1        unsigned int k; 
+ 209   1          while (1) {
+ 210   2              for (k = 0; k < 5; k++) {
+ 211   3                  // Формируем и отправляем запрос для каждого адреса
+ 212   3                  modbus_request(modbus_addresses[k], start_register, num_registers);
+ 213   3      
+ 214   3                  // Задержка между запросами для предотвращения нало
+             -жения
+ 215   3                  sys_delay_ms(900);
+ 216   3              }
+ 217   2      
+ 218   2              // Задержка перед следующим циклом опроса всех устрой�
+             -�тв
+ 219   2              sys_delay_ms(500);
+ 220   2          }
+ 221   1      }
+ 222          
+ 223          
+ 224          
+ 225          
+ 226          
+C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 17:06:45 PAGE 5   
+
+ 227          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    391    ----
-   CONSTANT SIZE    =   ----    ----
-   XDATA SIZE       =    105      14
+   CODE SIZE        =    898    ----
+   CONSTANT SIZE    =      5    ----
+   XDATA SIZE       =    105      53
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----
-C51 COMPILER V9.53.0.0   UART2                                                             12/12/2024 16:04:59 PAGE 4   
-
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----
