@@ -1,5 +1,11 @@
 #include "uart2.h"
 
+u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
+u16 start_register = 0x0001;              // Начальный регистр
+u16 num_registers = 4;                    // Количество регистров
+u8 current_device = 0;                    // Текущее устройство для опроса
+u8 polling_state = 0;                     // Состояние опроса: 0 - отправка, 1 - ожидание
+u16 polling_timer = 0;                    // Таймер ожидания ответа
 
 #if(UART2_INT_EN)
 xdata u16 uart2_rx_sta;//bit15Used to mark whether a complete data packet has been received, bit[14:0] is used to store the length of the current data packetxdata u8
