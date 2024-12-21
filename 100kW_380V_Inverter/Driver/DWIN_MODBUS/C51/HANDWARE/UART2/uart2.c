@@ -1,57 +1,21 @@
 #include "uart2.h"
 
-u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
-u16 start_register = 0x0001;              // Начальный регистр
-u16 num_registers = 4;                    // Количество регистров
-u8 current_device = 0;                    // Текущее устройство для опроса
-u8 polling_state = 0;                     // Состояние опроса: 0 - отправка, 1 - ожидание
-u16 polling_timer = 0;                    // Таймер ожидания ответа
+
+
+volatile u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
+volatile u16 start_reg = 0x0001;              // Начальный регистр
+volatile u16 num_reg = 4;                    // Количество регистров
+volatile u8 current_dev = 0;                    // Текущее устройство для опроса
+
+xdata volatile	u16 current_device=0;          
+
 
 #if(UART2_INT_EN)
 xdata u16 uart2_rx_sta;//bit15Used to mark whether a complete data packet has been received, bit[14:0] is used to store the length of the current data packetxdata u8
 xdata u8  uart2_buf[UART2_PACKET_MAX_LEN+2];//Leave 2 blank characters
 xdata u8  uart2_step;
-
+xdata u8  rcv_complete=0;  // Приём завершён и обработан
 //Serial port 2 interrupt service routine
-//When sending data, the interrupt must be turned off, here is only responsible for processing the receiving interrupt.
-/*
-void uart2_isr()	interrupt 4
-{
-	u8 res;
-	
-	if(RI0)//The serial port accepting the interrupt
-	{
-		RI0 = 0;//Clear accept interrupt flag
-		res = SBUF0;//Read serial data
-		
-		if(uart2_rx_sta & UART2_PACKET_OK)//The received data has not been processed yet
-			return;
-	
-		if(uart2_step==0)//The process of accepting data
-		{
-			if(res=='\r')//If the "\r\n" end marker is received, it is considered that the packet acceptance is complete
-				uart2_step = 1;//Enter the process of accepting the '\n' token
-			else if(res=='\n')//If the '\n' end marker is received, it is also considered that the packet is accepted as complete
-				uart2_rx_sta |= UART2_PACKET_OK;//Mark packet acceptance complete
-			else//Accept data
-			{
-				if(uart2_rx_sta>=UART2_PACKET_MAX_LEN)
-					uart2_rx_sta = 0;//The data is too large, discard it, and start receiving from the beginning
-
-				uart2_buf[uart2_rx_sta++] = res;//Store valid data
-			}
-		}else if(uart2_step==1)//The process of judging the end tag
-		{
-			uart2_step = 0;
-			if(res=='\n')
-				uart2_rx_sta |= UART2_PACKET_OK;//Mark packet acceptance complete
-			else
-				uart2_rx_sta = 0;//The next character of '\r' is not '\n', it is considered that the reception is wrong, and the reception starts from the beginning
-		}
-		
-	}	
-}
-*/
 
 void uart2_isr() interrupt 4 {
     u8 res;
@@ -81,6 +45,7 @@ void uart2_isr() interrupt 4 {
 				
 			if(uart2_step==8)	{  // Данные регистров и контрольная сумма (не используем для вывода на экран)
             uart2_rx_sta |= UART2_PACKET_OK;  // Устанавливаем флаг пакета
+				  rcv_complete=1;
 					uart2_step =0;
         }
     }
@@ -185,17 +150,17 @@ u16 calculate_crc(unsigned char *buffer, unsigned char length) {
 
 
 // Функция формирования и отправки Modbus-запроса
-void modbus_request(u8 address, u16 start_register, u16 num_registers) {
+void modbus_request(u8 dev_addr,u8 dev_comd, u16 start_reg, u16 num_reg) {
     u8 request[8];
     u16 crc;
 
     // Формируем запрос Modbus
-    request[0] = address;                      // Адрес устройства
-    request[1] = 0x03;                         // Код функции (чтение регистров)
-    request[2] = (start_register >> 8) & 0xFF; // Старший байт начального регистра
-    request[3] = start_register & 0xFF;        // Младший байт начального регистра
-    request[4] = (num_registers >> 8) & 0xFF;  // Старший байт количества регистров
-    request[5] = num_registers & 0xFF;         // Младший байт количества регистров
+    request[0] = dev_addr;                      // Адрес устройства
+    request[1] = dev_comd;               // Код функции 
+    request[2] = (start_reg >> 8) & 0xFF; // Старший байт начального регистра
+    request[3] = start_reg & 0xFF;        // Младший байт начального регистра
+    request[4] = (num_reg >> 8) & 0xFF;  // Старший байт количества регистров
+    request[5] = num_reg & 0xFF;         // Младший байт количества регистров
 
     // Вычисляем CRC
     crc = calculate_crc(request, 6);
@@ -207,15 +172,17 @@ void modbus_request(u8 address, u16 start_register, u16 num_registers) {
 }
 
 // Функция циклического опроса 5 адресов Modbus
+
 void poll_modbus_devices() {
     u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
-    u16 start_register = 0x0001;              // Начальный регистр
-    u16 num_registers = 4;                    // Количество регистров
+		u8 dev_comd=3;
+    u16 start_reg = 0x0001;              // Начальный регистр
+    u16 num_reg = 4;                    // Количество регистров
   unsigned int k; 
-    while (1) {
+   
         for (k = 0; k < 5; k++) {
             // Формируем и отправляем запрос для каждого адреса
-            modbus_request(modbus_addresses[k], start_register, num_registers);
+            modbus_request(modbus_addresses[k],dev_comd, start_reg, num_reg);
 
             // Задержка между запросами для предотвращения наложения
             sys_delay_ms(900);
@@ -223,11 +190,7 @@ void poll_modbus_devices() {
 
         // Задержка перед следующим циклом опроса всех устройств
         sys_delay_ms(500);
-    }
+    
 }
-
-
-
-
 
 

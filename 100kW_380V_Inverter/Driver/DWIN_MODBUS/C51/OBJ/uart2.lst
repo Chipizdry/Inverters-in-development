@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   UART2                                                             12/17/2024 10:33:37 PAGE 1   
+C51 COMPILER V9.53.0.0   UART2                                                             12/21/2024 16:25:19 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE UART2
@@ -11,265 +11,219 @@ line level    source
 
    1          #include "uart2.h"
    2          
-   3          u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
-   4          u16 start_register = 0x0001;              // Начальный регистр
-   5          u16 num_registers = 4;                    // Количество регистров
-   6          u8 current_device = 0;                    // Текущее устройство для опроса
-   7          u8 polling_state = 0;                     // Состояние опроса: 0 - отправка, 1 - о
-             -жидание
-   8          u16 polling_timer = 0;                    // Таймер ожидания ответа
+   3          
+   4          
+   5          volatile u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
+   6          volatile u16 start_reg = 0x0001;              // Начальный регистр
+   7          volatile u16 num_reg = 4;                    // Количество регистров
+   8          volatile u8 current_dev = 0;                    // Текущее устройство для опроса
    9          
-  10          #if(UART2_INT_EN)
-  11          xdata u16 uart2_rx_sta;//bit15Used to mark whether a complete data packet has been received, bit[14:0] is 
+  10          xdata volatile  u16 current_device=0;          
+  11          
+  12          
+  13          #if(UART2_INT_EN)
+  14          xdata u16 uart2_rx_sta;//bit15Used to mark whether a complete data packet has been received, bit[14:0] is 
              -used to store the length of the current data packetxdata u8
-  12          xdata u8  uart2_buf[UART2_PACKET_MAX_LEN+2];//Leave 2 blank characters
-  13          xdata u8  uart2_step;
-  14          
-  15          //Serial port 2 interrupt service routine
-  16          //When sending data, the interrupt must be turned off, here is only responsible for processing the receivi
-             -ng interrupt.
-  17          /*
-  18          void uart2_isr()  interrupt 4
-  19          {
-  20            u8 res;
-  21            
-  22            if(RI0)//The serial port accepting the interrupt
-  23            {
-  24              RI0 = 0;//Clear accept interrupt flag
-  25              res = SBUF0;//Read serial data
-  26              
-  27              if(uart2_rx_sta & UART2_PACKET_OK)//The received data has not been processed yet
-  28                return;
-  29            
-  30              if(uart2_step==0)//The process of accepting data
-  31              {
-  32                if(res=='\r')//If the "\r\n" end marker is received, it is considered that the packet acceptance is com
-             -plete
-  33                  uart2_step = 1;//Enter the process of accepting the '\n' token
-  34                else if(res=='\n')//If the '\n' end marker is received, it is also considered that the packet is accept
-             -ed as complete
-  35                  uart2_rx_sta |= UART2_PACKET_OK;//Mark packet acceptance complete
-  36                else//Accept data
-  37                {
-  38                  if(uart2_rx_sta>=UART2_PACKET_MAX_LEN)
-  39                    uart2_rx_sta = 0;//The data is too large, discard it, and start receiving from the beginning
-  40          
-  41                  uart2_buf[uart2_rx_sta++] = res;//Store valid data
-  42                }
-  43              }else if(uart2_step==1)//The process of judging the end tag
-  44              {
-  45                uart2_step = 0;
-  46                if(res=='\n')
-  47                  uart2_rx_sta |= UART2_PACKET_OK;//Mark packet acceptance complete
-  48                else
-C51 COMPILER V9.53.0.0   UART2                                                             12/17/2024 10:33:37 PAGE 2   
-
-  49                  uart2_rx_sta = 0;//The next character of '\r' is not '\n', it is considered that the reception is wron
-             -g, and the reception starts from the beginning
-  50              }
-  51              
-  52            } 
-  53          }
-  54          */
-  55          
-  56          void uart2_isr() interrupt 4 {
-  57   1          u8 res;
-  58   1      
-  59   1          if (RI0) {  // Проверяем флаг приема данных
-  60   2              RI0 = 0;  // Сбрасываем флаг приема
-  61   2      
-  62   2              res = SBUF0;  // Читаем принятый байт данных из регистра
-  63   2      
-  64   2              // Если пакет уже обработан, игнорируем дальнейшие дан
+  15          xdata u8  uart2_buf[UART2_PACKET_MAX_LEN+2];//Leave 2 blank characters
+  16          xdata u8  uart2_step;
+  17          xdata u8  rcv_complete=0;  // Приём завершён и обработан
+  18          //Serial port 2 interrupt service routine
+  19          
+  20          void uart2_isr() interrupt 4 {
+  21   1          u8 res;
+  22   1      
+  23   1          if (RI0) {  // Проверяем флаг приема данных
+  24   2              RI0 = 0;  // Сбрасываем флаг приема
+  25   2      
+  26   2              res = SBUF0;  // Читаем принятый байт данных из регистра
+  27   2      
+  28   2              // Если пакет уже обработан, игнорируем дальнейшие дан
              -ные
-  65   2              if (uart2_rx_sta & UART2_PACKET_OK) {
-  66   3                  return;
-  67   3              }
-  68   2      
-  69   2              // Сохраняем данные в буфер
-  70   2              if (uart2_rx_sta < UART2_PACKET_MAX_LEN) {
-  71   3                  uart2_buf[uart2_rx_sta++] = res;
-  72   3              } else {
-  73   3                  uart2_rx_sta = 0;  // Если буфер переполнен, сбрасываем
-  74   3                  return;
-  75   3              }
-  76   2      
-  77   2              // Процесс приема данных по шагам
-  78   2              if (uart2_step<8) {  // Первый байт — адрес устройства
-  79   3                  uart2_step++;
-  80   3              } 
-  81   2              
-  82   2            if(uart2_step==8) {  // Данные регистров и контрольная сумма (не ис
+  29   2              if (uart2_rx_sta & UART2_PACKET_OK) {
+  30   3                  return;
+  31   3              }
+  32   2      
+  33   2              // Сохраняем данные в буфер
+  34   2              if (uart2_rx_sta < UART2_PACKET_MAX_LEN) {
+  35   3                  uart2_buf[uart2_rx_sta++] = res;
+  36   3              } else {
+  37   3                  uart2_rx_sta = 0;  // Если буфер переполнен, сбрасываем
+  38   3                  return;
+  39   3              }
+  40   2      
+  41   2              // Процесс приема данных по шагам
+  42   2              if (uart2_step<8) {  // Первый байт — адрес устройства
+  43   3                  uart2_step++;
+  44   3              } 
+  45   2              
+  46   2            if(uart2_step==8) {  // Данные регистров и контрольная сумма (не ис
              -пользуем для вывода на экран)
-  83   3                  uart2_rx_sta |= UART2_PACKET_OK;  // Устанавливаем флаг пакета
-  84   3                uart2_step =0;
-  85   3              }
-  86   2          }
-  87   1      }
-  88          #endif
-  89          
-  90          
-  91          //Serial port 2 initialization
-  92          void uart2_init(u32 baud)
-  93          {
-  94   1        MUX_SEL |= 0x40;//Setting bit6 to 1 means to export the uart2 interface to P0.4 and P0.5
-  95   1        P0MDOUT &= 0xCF;
-  96   1        P0MDOUT |= 0x10;//Set the corresponding IO port output and input
-  97   1        ADCON = 0x80;//Select SREL0H:L as baud rate generator
-  98   1        SCON0 = 0x50;//Accept enable and mode settings
-  99   1        PCON &= 0x7F;//SMOD=0
- 100   1        //Baud rate setting, the formula is:
- 101   1        //SMOD=0  SREL0H:L=1024-main frequency/(64*baud rate),SMOD=1   SREL0H:L=1024-main frequency/(32*baud rate)
- 102   1        baud = 1024-(u16)(3225600.0f/baud);
- 103   1        SREL0H = (baud>>8)&0xff;  
- 104   1        SREL0L = baud&0xff;
- 105   1        
- 106   1        #if(UART2_INT_EN)
- 107   1          ES0 = 1;//Interrupt enable
-C51 COMPILER V9.53.0.0   UART2                                                             12/17/2024 10:33:37 PAGE 3   
+  47   3                  uart2_rx_sta |= UART2_PACKET_OK;  // Устанавливаем флаг пакета
+  48   3                rcv_complete=1;
+  49   3                uart2_step =0;
+  50   3              }
+C51 COMPILER V9.53.0.0   UART2                                                             12/21/2024 16:25:19 PAGE 2   
 
- 108   1          EA = 1;
- 109   1          //xdata variables must be initialized in functions
- 110   1          uart2_rx_sta = 0;
- 111   1          uart2_step = 0;
- 112   1        #else
+  51   2          }
+  52   1      }
+  53          #endif
+  54          
+  55          
+  56          //Serial port 2 initialization
+  57          void uart2_init(u32 baud)
+  58          {
+  59   1        MUX_SEL |= 0x40;//Setting bit6 to 1 means to export the uart2 interface to P0.4 and P0.5
+  60   1        P0MDOUT &= 0xCF;
+  61   1        P0MDOUT |= 0x10;//Set the corresponding IO port output and input
+  62   1        ADCON = 0x80;//Select SREL0H:L as baud rate generator
+  63   1        SCON0 = 0x50;//Accept enable and mode settings
+  64   1        PCON &= 0x7F;//SMOD=0
+  65   1        //Baud rate setting, the formula is:
+  66   1        //SMOD=0  SREL0H:L=1024-main frequency/(64*baud rate),SMOD=1   SREL0H:L=1024-main frequency/(32*baud rate)
+  67   1        baud = 1024-(u16)(3225600.0f/baud);
+  68   1        SREL0H = (baud>>8)&0xff;  
+  69   1        SREL0L = baud&0xff;
+  70   1        
+  71   1        #if(UART2_INT_EN)
+  72   1          ES0 = 1;//Interrupt enable
+  73   1          EA = 1;
+  74   1          //xdata variables must be initialized in functions
+  75   1          uart2_rx_sta = 0;
+  76   1          uart2_step = 0;
+  77   1        #else
                   ES0 = 0;
                 #endif
- 115   1      
- 116   1      }
- 117          
- 118          //Send a byte
- 119          void u2_send_byte(u8 byte)
- 120          {
- 121   1        ES0 = 0;//Close the serial port 2 interrupt first
- 122   1        SBUF0 = byte;
- 123   1        while(!TI0);
- 124   1        TI0 = 0;
- 125   1        #if(UART2_INT_EN)
- 126   1          ES0 = 1;//Re-open interrupt
- 127   1        #endif
- 128   1      }
- 129          
- 130          
- 131          
- 132          //Send data
- 133          void u2_send_bytes(u8 *bytes,u16 len)
- 134          {
- 135   1        u16 i;
- 136   1        
- 137   1        ES0 = 0;//Close the serial port 2 interrupt first
- 138   1        for(i=0;i<len;i++)
- 139   1        {
- 140   2          SBUF0 = bytes[i];
- 141   2          while(!TI0);
- 142   2          TI0 = 0;
- 143   2        }
- 144   1        #if(UART2_INT_EN)
- 145   1          ES0 = 1;//Re-open interrupt
- 146   1        #endif
- 147   1      }
- 148          
- 149          
- 150          //Implement printf function with uart2 serial port
- 151          char putchar(char c)
- 152          {
- 153   1        u2_send_byte(c);
- 154   1        
- 155   1        return c;
- 156   1      }
- 157          
- 158          
- 159          
- 160          
- 161          u16 calculate_crc(unsigned char *buffer, unsigned char length) {
- 162   1          unsigned int temp, temp2, flag;
- 163   1          unsigned int i;               // Вынесение переменной `i`
- 164   1          unsigned char j;              // Вынесение переменной `j`
- 165   1      
- 166   1          temp = 0xFFFF;
- 167   1      
- 168   1          for (i = 0; i < length; i++) {
- 169   2              temp = temp ^ buffer[i];
-C51 COMPILER V9.53.0.0   UART2                                                             12/17/2024 10:33:37 PAGE 4   
+  80   1      
+  81   1      }
+  82          
+  83          //Send a byte
+  84          void u2_send_byte(u8 byte)
+  85          {
+  86   1        ES0 = 0;//Close the serial port 2 interrupt first
+  87   1        SBUF0 = byte;
+  88   1        while(!TI0);
+  89   1        TI0 = 0;
+  90   1        #if(UART2_INT_EN)
+  91   1          ES0 = 1;//Re-open interrupt
+  92   1        #endif
+  93   1      }
+  94          
+  95          
+  96          
+  97          //Send data
+  98          void u2_send_bytes(u8 *bytes,u16 len)
+  99          {
+ 100   1        u16 i;
+ 101   1        
+ 102   1        ES0 = 0;//Close the serial port 2 interrupt first
+ 103   1        for(i=0;i<len;i++)
+ 104   1        {
+ 105   2          SBUF0 = bytes[i];
+ 106   2          while(!TI0);
+ 107   2          TI0 = 0;
+ 108   2        }
+ 109   1        #if(UART2_INT_EN)
+ 110   1          ES0 = 1;//Re-open interrupt
+ 111   1        #endif
+ 112   1      }
+C51 COMPILER V9.53.0.0   UART2                                                             12/21/2024 16:25:19 PAGE 3   
 
- 170   2              for (j = 0; j < 8; j++) {
- 171   3                  flag = temp & 0x0001;
- 172   3                  temp >>= 1;
- 173   3                  if (flag)
- 174   3                      temp ^= 0xA001;
- 175   3              }
- 176   2          }
- 177   1      
- 178   1          // Reverse byte order.
- 179   1          temp2 = temp >> 8;
- 180   1          temp = (temp << 8) | temp2;
- 181   1          temp &= 0xFFFF;
- 182   1      
- 183   1          return temp;
- 184   1      }
- 185          
- 186          
- 187          // Функция формирования и отправки Modbus-запроса
- 188          void modbus_request(u8 address, u16 start_register, u16 num_registers) {
- 189   1          u8 request[8];
- 190   1          u16 crc;
- 191   1      
- 192   1          // Формируем запрос Modbus
- 193   1          request[0] = address;                      // Адрес устройства
- 194   1          request[1] = 0x03;                         // Код функции (чтение регистров)
- 195   1          request[2] = (start_register >> 8) & 0xFF; // Старший байт начального регис�
-             -�ра
- 196   1          request[3] = start_register & 0xFF;        // Младший байт начального регис�
-             -�ра
- 197   1          request[4] = (num_registers >> 8) & 0xFF;  // Старший байт количества регис�
-             -�ров
- 198   1          request[5] = num_registers & 0xFF;         // Младший байт количества регис�
-             -�ров
- 199   1      
- 200   1          // Вычисляем CRC
- 201   1          crc = calculate_crc(request, 6);
- 202   1          request[6] = crc & 0xFF;                   // Младший байт CRC
- 203   1          request[7] = (crc >> 8) & 0xFF;            // Старший байт CRC
- 204   1      
- 205   1          // Отправляем запрос через UART
- 206   1          u2_send_bytes(request, 8);
- 207   1      }
- 208          
- 209          // Функция циклического опроса 5 адресов Modbus
- 210          void poll_modbus_devices() {
- 211   1          u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
- 212   1          u16 start_register = 0x0001;              // Начальный регистр
- 213   1          u16 num_registers = 4;                    // Количество регистров
- 214   1        unsigned int k; 
- 215   1          while (1) {
- 216   2              for (k = 0; k < 5; k++) {
- 217   3                  // Формируем и отправляем запрос для каждого адреса
- 218   3                  modbus_request(modbus_addresses[k], start_register, num_registers);
- 219   3      
- 220   3                  // Задержка между запросами для предотвращения нало
+ 113          
+ 114          
+ 115          //Implement printf function with uart2 serial port
+ 116          char putchar(char c)
+ 117          {
+ 118   1        u2_send_byte(c);
+ 119   1        
+ 120   1        return c;
+ 121   1      }
+ 122          
+ 123          
+ 124          
+ 125          
+ 126          u16 calculate_crc(unsigned char *buffer, unsigned char length) {
+ 127   1          unsigned int temp, temp2, flag;
+ 128   1          unsigned int i;               // Вынесение переменной `i`
+ 129   1          unsigned char j;              // Вынесение переменной `j`
+ 130   1      
+ 131   1          temp = 0xFFFF;
+ 132   1      
+ 133   1          for (i = 0; i < length; i++) {
+ 134   2              temp = temp ^ buffer[i];
+ 135   2              for (j = 0; j < 8; j++) {
+ 136   3                  flag = temp & 0x0001;
+ 137   3                  temp >>= 1;
+ 138   3                  if (flag)
+ 139   3                      temp ^= 0xA001;
+ 140   3              }
+ 141   2          }
+ 142   1      
+ 143   1          // Reverse byte order.
+ 144   1          temp2 = temp >> 8;
+ 145   1          temp = (temp << 8) | temp2;
+ 146   1          temp &= 0xFFFF;
+ 147   1      
+ 148   1          return temp;
+ 149   1      }
+ 150          
+ 151          
+ 152          // Функция формирования и отправки Modbus-запроса
+ 153          void modbus_request(u8 dev_addr,u8 dev_comd, u16 start_reg, u16 num_reg) {
+ 154   1          u8 request[8];
+ 155   1          u16 crc;
+ 156   1      
+ 157   1          // Формируем запрос Modbus
+ 158   1          request[0] = dev_addr;                      // Адрес устройства
+ 159   1          request[1] = dev_comd;               // Код функции 
+ 160   1          request[2] = (start_reg >> 8) & 0xFF; // Старший байт начального регистра
+ 161   1          request[3] = start_reg & 0xFF;        // Младший байт начального регистра
+ 162   1          request[4] = (num_reg >> 8) & 0xFF;  // Старший байт количества регистро�
+             -�
+ 163   1          request[5] = num_reg & 0xFF;         // Младший байт количества регистро�
+             -�
+ 164   1      
+ 165   1          // Вычисляем CRC
+ 166   1          crc = calculate_crc(request, 6);
+ 167   1          request[6] = crc & 0xFF;                   // Младший байт CRC
+ 168   1          request[7] = (crc >> 8) & 0xFF;            // Старший байт CRC
+ 169   1      
+ 170   1          // Отправляем запрос через UART
+ 171   1          u2_send_bytes(request, 8);
+ 172   1      }
+C51 COMPILER V9.53.0.0   UART2                                                             12/21/2024 16:25:19 PAGE 4   
+
+ 173          
+ 174          // Функция циклического опроса 5 адресов Modbus
+ 175          
+ 176          void poll_modbus_devices() {
+ 177   1          u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
+ 178   1          u8 dev_comd=3;
+ 179   1          u16 start_reg = 0x0001;              // Начальный регистр
+ 180   1          u16 num_reg = 4;                    // Количество регистров
+ 181   1        unsigned int k; 
+ 182   1         
+ 183   1              for (k = 0; k < 5; k++) {
+ 184   2                  // Формируем и отправляем запрос для каждого адреса
+ 185   2                  modbus_request(modbus_addresses[k],dev_comd, start_reg, num_reg);
+ 186   2      
+ 187   2                  // Задержка между запросами для предотвращения нало
              -жения
- 221   3                  sys_delay_ms(900);
- 222   3              }
- 223   2      
- 224   2              // Задержка перед следующим циклом опроса всех устрой�
+ 188   2                  sys_delay_ms(900);
+ 189   2              }
+ 190   1      
+ 191   1              // Задержка перед следующим циклом опроса всех устрой�
              -�тв
- 225   2              sys_delay_ms(500);
-C51 COMPILER V9.53.0.0   UART2                                                             12/17/2024 10:33:37 PAGE 5   
-
- 226   2          }
- 227   1      }
- 228          
- 229          
- 230          
- 231          
- 232          
- 233          
+ 192   1              sys_delay_ms(500);
+ 193   1          
+ 194   1      }
+ 195          
+ 196          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    898    ----
+   CODE SIZE        =    918    ----
    CONSTANT SIZE    =      5    ----
-   XDATA SIZE       =    118      53
+   XDATA SIZE       =    118      55
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----
    IDATA SIZE       =   ----    ----

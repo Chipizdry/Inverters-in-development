@@ -10,6 +10,14 @@ typedef signed char     s8;
 typedef signed short    s16;
 typedef signed long     s32;
 
+ 	typedef struct {
+						u16 address;
+						u16 command;
+						u16 start_register;
+						u16 num_registers;
+				} ModbusRequest;
+					
+
 // определение макросов
 #define	WDT_ON()				MUX_SEL|=0x02		// включить сторожевой таймер
 #define	WDT_OFF()				MUX_SEL&=0xFD		// отключить сторожевой таймер

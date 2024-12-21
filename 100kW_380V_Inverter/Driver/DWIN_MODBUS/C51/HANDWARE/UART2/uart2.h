@@ -13,12 +13,23 @@
 //Variable declaration
 extern xdata u16 uart2_rx_sta;
 extern xdata u8  uart2_buf[];
-extern u32 sys_tick; 
+extern xdata u8 rcv_complete;           // Приём завершён и обработан
+extern u32 sys_tick;
+extern xdata volatile	u16 current_device;     
+extern  volatile u8 modbus_addresses[5]; // Адреса устройств
+extern  volatile u16 start_reg;              // Начальный регистр
+extern  volatile u16 num_reg;                    // Количество регистров
+
+
+
+
 //Function declaration
 void uart2_init(u32 baud);
 void u2_send_byte(u8 byte);
 void u2_send_bytes(u8 *bytes,u16 len);
-void poll_modbus_devices(void);
+void poll_modbus_devices();
+void modbus_request(u8 dev_addr,u8 dev_comd, u16 start_reg, u16 num_reg);
+u16 calculate_crc(unsigned char *buffer, unsigned char length);
 #endif
 
 
