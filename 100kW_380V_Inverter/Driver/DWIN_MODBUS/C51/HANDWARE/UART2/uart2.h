@@ -15,7 +15,8 @@ extern xdata u16 uart2_rx_sta;
 extern xdata u8  uart2_buf[];
 extern xdata u8 rcv_complete;           // Приём завершён и обработан
 extern u32 sys_tick;
-extern xdata volatile	u16 current_device;     
+extern xdata volatile	u16 current_device;    
+extern idata u16 data_len;
 extern  volatile u8 modbus_addresses[5]; // Адреса устройств
 extern  volatile u16 start_reg;              // Начальный регистр
 extern  volatile u16 num_reg;                    // Количество регистров

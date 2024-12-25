@@ -68,9 +68,9 @@ idata  ModbusRequest request[6] = {
 	sys_init();//System initialization
 	
 		
-		 sys_write_vp(0x2002,FIRST_TXT,sizeof(FIRST_TXT)/2+1);//ٸ֚һٶ"τѾДʾ"࠘ݾʨ׃τѾŚɝ
+		 sys_write_vp(0x2004,FIRST_TXT,sizeof(FIRST_TXT)/2+1);//ٸ֚һٶ"τѾДʾ"࠘ݾʨ׃τѾŚɝ
      sys_delay_ms(1000);
-	   sys_write_vp(0x2034,TEST_TXT,sizeof(TEST_TXT)/2+1);
+	   sys_write_vp(0x2036,TEST_TXT,sizeof(TEST_TXT)/2+1);
 	   uart2_init(9600);//Initialize serial port 2
 	
 	   modbus_requests(&request[0]);
@@ -92,7 +92,7 @@ idata  ModbusRequest request[6] = {
 				recv_len += sprintf(buff+recv_len,"%02X ",(u16)uart2_buf[i]);
 			}
 		
-			sys_write_vp(0x2002,buff,recv_len/2+1);
+			sys_write_vp(0x2004,buff,recv_len/2+1);
 			
 			uart2_rx_sta = 0;
 			
@@ -111,14 +111,15 @@ if (polling_state==0) {
 				temp_request = request[current_device];
 				modbus_requests((ModbusRequest*)&temp_request);
 		   // modbus_requests(&request[current_device]);
-			//	modbus_request(current_device,3,1,3);
 					sys_write_vp(0x2000,(u8*)&current_device,1);
 				
  
     command_value = temp_request.command; // Присваивание значения
     sys_write_vp(0x2001, &temp_request.command, 1); // Запись значения команды
+		sys_write_vp(0x2002, &temp_request.start_register, 1); // Запись первого регистра
+    data_len=(temp_request.num_registers * 2)+8;	
+		sys_write_vp(0x2003,(u16*)&data_len, 2);	
 
-				//	sys_write_vp(0x2001,(u8*)&request[current_device].command,1);
 			polling_state=1;
 	    polling_timer=500000; 
 	     }
@@ -130,7 +131,7 @@ if (polling_state==0) {
         // Если получен ответ
 			
         if (rcv_complete==1) {
-					  sys_write_vp(0x2034, "Received\n", 5);
+					  sys_write_vp(0x2036, "Received        \n", 9);
             // Переход к следующему устройству
             current_device=current_device+1;
             polling_state = 0;  // Возврат в состояние отправки
@@ -139,7 +140,7 @@ if (polling_state==0) {
         // Если время ожидания истекло
          if (polling_timer ==0) {
             // Логируем таймаут (опционально)
-            sys_write_vp(0x2034, "Timeout\n", 4);
+            sys_write_vp(0x2036, "Timeout         \n", 9);
 
             // Переход к следующему устройству
              current_device=current_device+1;

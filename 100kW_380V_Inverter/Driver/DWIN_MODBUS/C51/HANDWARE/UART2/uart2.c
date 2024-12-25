@@ -15,6 +15,7 @@ xdata u16 uart2_rx_sta;//bit15Used to mark whether a complete data packet has be
 xdata u8  uart2_buf[UART2_PACKET_MAX_LEN+2];//Leave 2 blank characters
 xdata u8  uart2_step;
 xdata u8  rcv_complete=0;  // Приём завершён и обработан
+idata u16 data_len=0;
 //Serial port 2 interrupt service routine
 
 void uart2_isr() interrupt 4 {
@@ -39,11 +40,11 @@ void uart2_isr() interrupt 4 {
         }
 
         // Процесс приема данных по шагам
-        if (uart2_step<8) {  // Первый байт — адрес устройства
+        if (uart2_step<data_len) {  // Первый байт — адрес устройства
             uart2_step++;
         } 
 				
-			if(uart2_step==8)	{  // Данные регистров и контрольная сумма (не используем для вывода на экран)
+			if(uart2_step==data_len)	{  // Данные регистров и контрольная сумма (не используем для вывода на экран)
             uart2_rx_sta |= UART2_PACKET_OK;  // Устанавливаем флаг пакета
 				  rcv_complete=1;
 					uart2_step =0;
