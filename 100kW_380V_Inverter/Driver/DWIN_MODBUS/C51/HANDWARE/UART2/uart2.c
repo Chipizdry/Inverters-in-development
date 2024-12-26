@@ -34,17 +34,18 @@ void uart2_isr() interrupt 4 {
         // Сохраняем данные в буфер
         if (uart2_rx_sta < UART2_PACKET_MAX_LEN) {
             uart2_buf[uart2_rx_sta++] = res;
+					
         } else {
             uart2_rx_sta = 0;  // Если буфер переполнен, сбрасываем
             return;
         }
 
         // Процесс приема данных по шагам
-        if (uart2_step<data_len) {  // Первый байт — адрес устройства
+        if (uart2_step<data_len) {  
             uart2_step++;
         } 
 				
-			if(uart2_step==data_len)	{  // Данные регистров и контрольная сумма (не используем для вывода на экран)
+			if(uart2_step==data_len)	{  
             uart2_rx_sta |= UART2_PACKET_OK;  // Устанавливаем флаг пакета
 				  rcv_complete=1;
 					uart2_step =0;
@@ -172,26 +173,36 @@ void modbus_request(u8 dev_addr,u8 dev_comd, u16 start_reg, u16 num_reg) {
     u2_send_bytes(request, 8);
 }
 
-// Функция циклического опроса 5 адресов Modbus
 
-void poll_modbus_devices() {
-    u8 modbus_addresses[5] = {1, 2, 3, 4, 5}; // Адреса устройств
-		u8 dev_comd=3;
-    u16 start_reg = 0x0001;              // Начальный регистр
-    u16 num_reg = 4;                    // Количество регистров
-  unsigned int k; 
+u8 parseModbusPacket(u8 *buffer, u16 length, ModbusPacket *parsedPacket) {
+	  u16 receivedCRC;
+	  u16 calculatedCRC; 
+	  unsigned int m;  
+    if (length < 4) {
+        // Минимальная длина пакета: адрес (1 байт) + функция (1 байт) + CRC (2 байта)
+        return 99 ;
+    }
+
+    // Извлекаем CRC из конца пакета
+		
+    receivedCRC = buffer[length - 2] | (buffer[length - 1] << 8);
+
+    // Вычисляем CRC для проверки
+    calculatedCRC = calculate_crc(buffer, length - 2);
+    if (receivedCRC != calculatedCRC) {
+        return 98 ; // Ошибка CRC
+    }
+
+    // Заполняем структуру пакета
+    parsedPacket->rcv_address = buffer[0];
+    parsedPacket->rcv_functionCode = buffer[1];
+    parsedPacket->rcv_dataLength = length - 4; // Общая длина минус адрес, код функции и CRC
+    for (m = 0; m < parsedPacket->rcv_dataLength; m++) {
+        parsedPacket->rcv_data[m] = buffer[2 + m];
+    }
+     return 1;
    
-        for (k = 0; k < 5; k++) {
-            // Формируем и отправляем запрос для каждого адреса
-            modbus_request(modbus_addresses[k],dev_comd, start_reg, num_reg);
-
-            // Задержка между запросами для предотвращения наложения
-            sys_delay_ms(900);
-        }
-
-        // Задержка перед следующим циклом опроса всех устройств
-        sys_delay_ms(500);
-    
 }
+
 
 

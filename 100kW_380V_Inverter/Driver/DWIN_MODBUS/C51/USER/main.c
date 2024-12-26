@@ -33,8 +33,8 @@ void modbus_requests(ModbusRequest *requests) {
 
     // Вычисляем CRC
     crc = calculate_crc(packet, 6);
-    packet[6] = crc & 0xFF;                            // Младший байт CRC
-    packet[7] = (crc >> 8) & 0xFF;                     // Старший байт CRC
+    packet[7] = crc & 0xFF;                            // Младший байт CRC
+    packet[6] = (crc >> 8) & 0xFF;                     // Старший байт CRC
     // Отправляем запрос через UART
     u2_send_bytes(packet, 8);
 }
@@ -47,12 +47,12 @@ void main(void)
 
 // Глобальные переменные в `xdata`
 idata  ModbusRequest request[6] = {
-    {0x1, 0x3, 0x0001, 0x4},   // Устройство 1
-    {0x2, 0x4, 0x0005, 0x2},   // Устройство 2
-    {0x3, 0x10, 0x0010, 0x6},   // Устройство 3
-    {0x4, 0x2, 0x0020, 0x8},   // Устройство 4
-    {0x5, 0x16, 0x0030, 0x10},  // Устройство 5
-    {0x6, 0x5, 0x0040, 0x12}   // Устройство 6
+    {0x1, 0x3, 0x0000, 0x01},   // Устройство 1
+    {0x1, 0x3, 0x0008, 0x2},   // Устройство 2
+    {0x1, 0x3, 0x0002, 0x2},   // Устройство 3
+    {0x1, 0x3, 0x0020, 0x4},   // Устройство 4
+    {0xFF, 0x3, 0x00FD, 0x01},  // Устройство 5
+    {0xFF, 0x3, 0x002F, 0x1}   // Устройство 6
 };
 
  idata  ModbusRequest temp_request;
@@ -65,12 +65,15 @@ idata  ModbusRequest request[6] = {
   u16 recv_len;
 	idata u8 command_value; // Объявление переменной
 	
+	
+	 ModbusPacket receivedPacket;
+	
 	sys_init();//System initialization
 	
 		
-		 sys_write_vp(0x2004,FIRST_TXT,sizeof(FIRST_TXT)/2+1);//ٸ֚һٶ"τѾДʾ"࠘ݾʨ׃τѾŚɝ
+		 sys_write_vp(0x2005,FIRST_TXT,sizeof(FIRST_TXT)/2+1);//
      sys_delay_ms(1000);
-	   sys_write_vp(0x2036,TEST_TXT,sizeof(TEST_TXT)/2+1);
+	   sys_write_vp(0x2037,TEST_TXT,sizeof(TEST_TXT)/2+1);
 	   uart2_init(9600);//Initialize serial port 2
 	
 	   modbus_requests(&request[0]);
@@ -92,7 +95,7 @@ idata  ModbusRequest request[6] = {
 				recv_len += sprintf(buff+recv_len,"%02X ",(u16)uart2_buf[i]);
 			}
 		
-			sys_write_vp(0x2004,buff,recv_len/2+1);
+			sys_write_vp(0x2005,buff,recv_len/2+1);
 			
 			uart2_rx_sta = 0;
 			
@@ -102,7 +105,7 @@ idata  ModbusRequest request[6] = {
 	
 		
 if (polling_state==0) {
-	     if (current_device >= 6) {
+	     if (current_device >= 5) {
            current_device = 0; // Сбрасываем индекс, если он выходит за границы
           }
 	
@@ -117,11 +120,11 @@ if (polling_state==0) {
     command_value = temp_request.command; // Присваивание значения
     sys_write_vp(0x2001, &temp_request.command, 1); // Запись значения команды
 		sys_write_vp(0x2002, &temp_request.start_register, 1); // Запись первого регистра
-    data_len=(temp_request.num_registers * 2)+8;	
+    data_len=(temp_request.num_registers * 2)+5;	
 		sys_write_vp(0x2003,(u16*)&data_len, 2);	
-
+    sys_write_vp(0x2004, &temp_request.address, 1);
 			polling_state=1;
-	    polling_timer=500000; 
+	    polling_timer=1300000; 
 	     }
       polling_timer--;
 		
@@ -131,16 +134,38 @@ if (polling_state==0) {
         // Если получен ответ
 			
         if (rcv_complete==1) {
-					  sys_write_vp(0x2036, "Received        \n", 9);
+					  sys_write_vp(0x2037, "Received        \n", 9);
+					
+					 if (parseModbusPacket(uart2_buf,len, &receivedPacket)==1) {   
+						 
+						 
+						 
+						 switch (receivedPacket.rcv_functionCode) {
+            case 0x03: // Чтение регистров
+              //  sys_write_vp(0x2007, receivedPacket.data, receivedPacket.dataLength);
+                break;
+            case 0x04: // Чтение входных регистров
+              //  sys_write_vp(0x2008, receivedPacket.data, receivedPacket.dataLength);
+                break;
+            default:
+               // sys_write_vp(0x2009, "Unsupported Function\n", 21);
+                break;
+        }
+						 
+					 }
+					
+					
+					
             // Переход к следующему устройству
             current_device=current_device+1;
             polling_state = 0;  // Возврат в состояние отправки
 					  rcv_complete=0;
+					  polling_timer=0;
         }
         // Если время ожидания истекло
          if (polling_timer ==0) {
             // Логируем таймаут (опционально)
-            sys_write_vp(0x2036, "Timeout         \n", 9);
+            sys_write_vp(0x2037, "Timeout         \n", 9);
 
             // Переход к следующему устройству
              current_device=current_device+1;

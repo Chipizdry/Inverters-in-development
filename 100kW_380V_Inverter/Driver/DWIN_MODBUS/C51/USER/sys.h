@@ -16,7 +16,16 @@ typedef signed long     s32;
 						u16 start_register;
 						u16 num_registers;
 				} ModbusRequest;
-					
+				
+
+// Пример структуры Modbus пакета
+typedef struct {
+	  u8 rcv_address;        // Адрес устройства
+    u8 rcv_functionCode;   // Код функции
+    u8 rcv_data[256];      // Данные (макс. длина)
+    u16 rcv_dataLength;    // Длина данных
+} ModbusPacket;
+				
 
 // определение макросов
 #define	WDT_ON()				MUX_SEL|=0x02		// включить сторожевой таймер
