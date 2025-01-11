@@ -14,6 +14,7 @@
 #define PROCCESING_PAUSE 45
 #define DELAY_PRECCESING_FLAG
 extern uint8_t SLAVE_ID;
+extern TIM_HandleTypeDef htim14;
 typedef enum {
 	READ_COILs = 		0x01,
 	READ_DISC_INPUTs =	0x02,

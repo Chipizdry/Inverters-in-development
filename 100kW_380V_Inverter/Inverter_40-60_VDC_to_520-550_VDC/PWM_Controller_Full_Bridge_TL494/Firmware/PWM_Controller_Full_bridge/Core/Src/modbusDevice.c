@@ -55,39 +55,40 @@ void extractBinaryReceivedData(uint8_t len, uint8_t *receivedData, uint8_t *extr
 modbusResult sendModBusRequest(UART_HandleTypeDef* huart, uint8_t* frame,uint8_t len) {
 
     uint16_t crc = calcCRC16ModBus(frame, len);
-    frame[len+1] = crc & 0xFF;       // CRC LOW
-    frame[len] = (crc >> 8) & 0xFF;  // CRC HIGH
+   // frame[len] = crc & 0xFF;       // CRC LOW
+   // frame[len+1] = (crc >> 8) & 0xFF;  // CRC HIGH
+
+
+    frame[len] =  (crc >> 8) & 0xFF;      // CRC LOW
+    frame[len+1] = crc & 0xFF; // CRC HIGH
+
 
     TX_2;
-  //  HAL_UART_Transmit_DMA(huart,  frame, len+2);
+ //   HAL_UART_Transmit_DMA(huart,  frame, len+2);
+    LED_1_OFF;
 
     if (HAL_UART_Transmit_DMA(huart,  frame, len+2) != HAL_OK) {
+    	 HAL_TIM_Base_Start_IT(&htim14);
 
-    	LED_1_OFF;
 
 	        Error_Handler();
 	    }
 
-	 else{
-		// RX_2;
+	// else{
+	//	 RX_2;
 
-	  }
+	 // }
+
 return 1;
 }
 
 void sendError(UART_HandleTypeDef* huart, uint8_t opCode, uint8_t errorCode) {
-    uint8_t errorFrame[5];
+    uint8_t errorFrame[3];
 
     errorFrame[0] = SLAVE_ID;       // ID устройства
     errorFrame[1] = opCode | 0x80;  // Установка старшего бита для обозначения ошибки
     errorFrame[2] = errorCode;      // Код ошибки
 
-    // Рассчитать CRC для сообщения об ошибке
-    uint16_t crc = calcCRC16ModBus(errorFrame, 3);
-    errorFrame[3] = crc & 0xFF;     // Младший байт CRC
-    errorFrame[4] = (crc >> 8) & 0xFF; // Старший байт CRC
-
-    // Отправка ответа
 
     sendModBusRequest(huart,errorFrame, sizeof(errorFrame));
 

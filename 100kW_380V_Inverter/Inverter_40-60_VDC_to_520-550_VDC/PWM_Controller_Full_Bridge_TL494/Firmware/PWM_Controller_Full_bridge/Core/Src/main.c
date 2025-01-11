@@ -83,13 +83,16 @@ static void MX_TIM14_Init(void);
 uint32_t lastActivityTime = 0;
  bool usartBusy = false;
 
+ volatile uint8_t uartDataReady = 0; // Флаг готовности данных
+ volatile uint8_t uartDataSize = 0; // Размер принятых данных
+
  volatile uint16_t adc_results[2]; // Массив для хранения результатов
  volatile uint8_t adc_channel_index = 0;
 
 
 uint8_t rxFrame[64];
 uint8_t txFrame[255];
-uint8_t SLAVE_ID=1;
+uint8_t SLAVE_ID=2;
 uint16_t data_reg[64]={0,};
 uint16_t rcv_data_reg[64]={0,};
 uint8_t dicreteInputs=0;
@@ -241,6 +244,9 @@ int main(void)
   {
 	  Check_USART1_Timeout();
 	 // LED_1_ON;
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -423,7 +429,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 0;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 1000;
+  htim1.Init.Period = 700;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -448,7 +454,7 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 500;
+  sConfigOC.Pulse = 350;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
@@ -504,7 +510,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 1000;
+  htim3.Init.Period = 700;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -528,7 +534,7 @@ static void MX_TIM3_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 500;
+  sConfigOC.Pulse = 350;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -589,7 +595,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 57600;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -691,13 +697,13 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 
 {
 
-
+	    LED_1_OFF;
 	    RX_2;
 	    lastActivityTime = HAL_GetTick();
 	    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame,RX_BUFFER_SIZE);
 	    __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
 	    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
-	    LED_1_OFF;
+
 }
 
 
@@ -705,12 +711,14 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
 	if (huart->Instance == USART1)
 	{
+
         LED_1_ON;
+        HAL_TIM_Base_Stop_IT(&htim14);
 		lastActivityTime = HAL_GetTick();
 	    __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE);
 	    HAL_DMA_Abort(&hdma_usart1_rx);
-	   Registers_handler(rxFrame, data_reg, rcv_data_reg,Size);
-        TX_2;
+	    Registers_handler(rxFrame, data_reg, rcv_data_reg,Size);
+	    HAL_TIM_Base_Start_IT(&htim14);
 	}
 }
 
