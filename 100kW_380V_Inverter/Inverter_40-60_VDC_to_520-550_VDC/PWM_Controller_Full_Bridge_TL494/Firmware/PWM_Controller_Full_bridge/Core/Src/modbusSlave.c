@@ -106,7 +106,7 @@ modbusResult handleReadCoils (UART_HandleTypeDef* huart,uint8_t* coilValues){
 		sendModbusException(huart,ILLEGAL_DATA_ADDRESS);   // send an exception
 		return MODBUS_ERROR;
 	}
-	memset (txFrame, '\0', 256);
+	memset (txFrame, '\0', 255);
 
 	txFrame[0] = SLAVE_ID;  							// Slave ID
 	txFrame[1] = rxFrame[1];  							// Function code
@@ -135,7 +135,7 @@ modbusResult handleReadDiscreteInputs (UART_HandleTypeDef* huart,uint8_t* dicret
 		sendModbusException(huart,ILLEGAL_DATA_ADDRESS);   // send an exception
 		return MODBUS_ERROR;
 	}
-	memset (txFrame, '\0', 256);
+	memset (txFrame, '\0', 255);
 
 	txFrame[0] = SLAVE_ID;  							// slave ID
 	txFrame[1] = rxFrame[1];  							// function code
@@ -174,7 +174,7 @@ modbusResult handleWriteSingleHandlingRegister(UART_HandleTypeDef* huart,uint16_
 	return 1;
 
 }
-
+/*
 modbusResult handleWriteMulyipleHandlingRegister (UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues){
 
 	uint16_t staringtAddr = ((rxFrame[2]<<8)| rxFrame[3]);
@@ -203,8 +203,8 @@ modbusResult handleWriteMulyipleHandlingRegister (UART_HandleTypeDef* huart,uint
 
 
 	}
-	//   | SLAVE_ID | FUNCTION_CODE | Start Addr |  num of Regs |   CRC   |
-	//   | 1 BYTE   |     1 BYTE    |  2 BYTE    |    2 BYTES   | 2 BYTES |
+	//   | SLAVE_ID | FUNCTION_CODE | Start Addr |  num of Regs |Byte count |  CRC   |
+	//   | 1 BYTE   |     1 BYTE    |  2 BYTE    |    2 BYTES   | 1 BYTE    |2 BYTES |
 
 	txFrame[0] = SLAVE_ID;     // Slave ID
 	txFrame[1] = rxFrame[1];   // Function code
@@ -219,6 +219,54 @@ modbusResult handleWriteMulyipleHandlingRegister (UART_HandleTypeDef* huart,uint
 	return 1;   // success
 
 }
+ */
+
+
+
+modbusResult handleWriteMulyipleHandlingRegister(UART_HandleTypeDef* huart, uint16_t* holdingRegisterValues) {
+    uint16_t startingAddr = ((rxFrame[2] << 8) | rxFrame[3]);  // Начальный адрес
+    uint16_t numRegs = ((rxFrame[4] << 8) | rxFrame[5]);       // Количество регистров
+    uint8_t byteCount = rxFrame[6];                           // Количество байт данных
+
+    // Проверка количества регистров
+    if ((numRegs < 1) || (numRegs > 123)) { // Максимум 123 регистра по спецификации Modbus
+        sendModbusException(huart, ILLEGAL_DATA_VALUE);
+        return MODBUS_ERROR;
+    }
+
+    // Проверка соответствия byte count и количества регистров
+    if (byteCount != (numRegs * 2)) { // Каждый регистр состоит из 2 байт
+        sendModbusException(huart, ILLEGAL_DATA_VALUE);
+        return MODBUS_ERROR;
+    }
+
+    uint16_t endAddr = startingAddr + numRegs - 1; // Конечный адрес
+    if (endAddr > NUM_OF_HOLDING_REGS) { // Проверка допустимого диапазона регистров
+        sendModbusException(huart, ILLEGAL_DATA_ADDRESS);
+        return MODBUS_ERROR;
+    }
+
+    // Чтение данных из rxFrame
+    int indx = 7; // Индекс в rxFrame, где начинаются данные
+    for (int regCursor = 0; regCursor < numRegs; regCursor++) {
+        holdingRegisterValues[startingAddr++] = (rxFrame[indx++] << 8) | rxFrame[indx++];
+    }
+
+    // Формирование ответа
+    txFrame[0] = SLAVE_ID;     // Адрес устройства
+    txFrame[1] = rxFrame[1];   // Код функции
+    txFrame[2] = rxFrame[2];   // Старший байт начального адреса
+    txFrame[3] = rxFrame[3];   // Младший байт начального адреса
+    txFrame[4] = rxFrame[4];   // Старший байт количества регистров
+    txFrame[5] = rxFrame[5];   // Младший байт количества регистров
+
+    // Отправка ответа
+    sendModBusRequest(huart, txFrame, 6); // Данные, CRC добавляется автоматически
+    return 1;
+}
+
+
+
 
 modbusResult handleWriteSingleCoil (UART_HandleTypeDef* huart,uint8_t* coilValues){
 

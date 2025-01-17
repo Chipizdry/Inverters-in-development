@@ -55,23 +55,19 @@ void extractBinaryReceivedData(uint8_t len, uint8_t *receivedData, uint8_t *extr
 modbusResult sendModBusRequest(UART_HandleTypeDef* huart, uint8_t* frame,uint8_t len) {
 
     uint16_t crc = calcCRC16ModBus(frame, len);
-   // frame[len] = crc & 0xFF;       // CRC LOW
-   // frame[len+1] = (crc >> 8) & 0xFF;  // CRC HIGH
-
 
     frame[len] =  (crc >> 8) & 0xFF;      // CRC LOW
     frame[len+1] = crc & 0xFF; // CRC HIGH
 
-
     TX_2;
- //   HAL_UART_Transmit_DMA(huart,  frame, len+2);
+
     LED_1_OFF;
 
     if (HAL_UART_Transmit_DMA(huart,  frame, len+2) != HAL_OK) {
     	 HAL_TIM_Base_Start_IT(&htim14);
 
-
-	        Error_Handler();
+    	 Reset_USART1();
+	      //  Error_Handler();
 	    }
 
 	// else{

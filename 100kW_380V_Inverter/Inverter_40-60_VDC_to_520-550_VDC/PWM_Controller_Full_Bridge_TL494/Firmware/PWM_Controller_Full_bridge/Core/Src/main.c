@@ -79,7 +79,7 @@ static void MX_TIM14_Init(void);
 # define RX_2   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, GPIO_PIN_RESET)
 
 #define RX_BUFFER_SIZE 64
-#define USART_TIMEOUT 1000 // Таймаут в миллисекундах
+#define USART_TIMEOUT 900 // Таймаут в миллисекундах
 uint32_t lastActivityTime = 0;
  bool usartBusy = false;
 
@@ -93,12 +93,20 @@ uint32_t lastActivityTime = 0;
 uint8_t rxFrame[64];
 uint8_t txFrame[255];
 uint8_t SLAVE_ID=2;
-uint16_t data_reg[64]={0,};
-uint16_t rcv_data_reg[64]={0,};
+uint16_t data_reg[16]={0,};
+uint16_t rcv_data_reg[16]={0,};
 uint8_t dicreteInputs=0;
 uint8_t coils=0;
+uint16_t timer1Freq=0;
+uint16_t timer3Freq=0;
+bool pwm_status=0;
+bool dataStates[16];
  void Check_USART1_Timeout(void);
  void Reset_USART1(void);
+
+ uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq);
+ void setBitInUint16(uint16_t *reg, uint8_t bitPos, bool value);
+ void unpackUint16ToBool(uint16_t value, bool *boolArray, uint8_t size);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -117,10 +125,15 @@ uint8_t coils=0;
 
 
  void Reset_USART1(void) {
-     // Остановите передачу и прием по DMA, если активны
-     HAL_UART_DMAStop(&huart1);
+     // Включить индикатор (если требуется)
+     LED_1_ON;
 
-     // Прерывайте любые активные DMA транзакции
+     // Остановить передачу и прием по DMA
+     if (HAL_UART_DMAStop(&huart1) != HAL_OK) {
+         // Обработка ошибки
+     }
+
+     // Прерывание активных DMA транзакций
      if (hdma_usart1_rx.Instance != NULL) {
          HAL_DMA_Abort(&hdma_usart1_rx);
      }
@@ -128,35 +141,44 @@ uint8_t coils=0;
          HAL_DMA_Abort(&hdma_usart1_tx);
      }
 
-     // Отключите все прерывания UART
-     __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE);
-     __HAL_UART_DISABLE_IT(&huart1, UART_IT_TC);
-     __HAL_UART_DISABLE_IT(&huart1, UART_IT_RXNE);
+     // Отключить все прерывания UART
+     __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE | UART_IT_TC | UART_IT_RXNE);
 
-     // Сбросите периферийный модуль USART1
+     // Сбросить флаги ошибок UART
+     __HAL_UART_CLEAR_OREFLAG(&huart1);
+     __HAL_UART_CLEAR_FEFLAG(&huart1);
+
+     // Сбросить периферийный модуль USART1
      __HAL_RCC_USART1_FORCE_RESET();
-     HAL_Delay(1); // Дождитесь завершения сброса
+     HAL_Delay(1); // Задержка для завершения сброса
      __HAL_RCC_USART1_RELEASE_RESET();
 
-     // Обнуляем настройки UART (в случае, если библиотека HAL требует)
-     HAL_UART_DeInit(&huart1);
+     // Деинициализация UART
+     if (HAL_UART_DeInit(&huart1) != HAL_OK) {
+         // Обработка ошибки
+     }
 
-     // �?нициализируем UART заново
+     // Повторная инициализация UART
      MX_USART1_UART_Init();
 
-     // �?нициализируем DMA заново (если DMA используется)
+     // Повторная настройка DMA
      MX_DMA_Init();
 
      // Настройка UART для приема данных с использованием DMA
-     HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
+     if (HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE) != HAL_OK) {
+         // Обработка ошибки
+     }
      __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
 
-
-      RX_2;
-
-     // Сброс параметров и таймеров, связанных с UART
+     // Сброс параметров и таймеров
      lastActivityTime = HAL_GetTick();
+
+
  }
+
+
+
+
 
  uint16_t ADC_Read(uint32_t channel) {
      ADC_ChannelConfTypeDef sConfig = {0};
@@ -236,6 +258,7 @@ int main(void)
    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
    HAL_TIM_Base_Start_IT(&htim14);
 
+   uint32_t timerClockFreq = 64000000;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -245,7 +268,18 @@ int main(void)
 	  Check_USART1_Timeout();
 	 // LED_1_ON;
 
+	  // Расчет частоты для TIM1 и TIM3
+	     timer1Freq = calculateTimerFrequency(TIM1, timerClockFreq);
+	     timer3Freq = calculateTimerFrequency(TIM3, timerClockFreq);
+    if(pwm_status==0) {HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
+                       HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);}
 
+    else{HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+         HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);}
+
+    setBitInUint16(&data_reg[10], 0, pwm_status); // pwm_status в бит 0
+
+    unpackUint16ToBool(rcv_data_reg[10], dataStates, 16);
 
     /* USER CODE END WHILE */
 
@@ -566,7 +600,7 @@ static void MX_TIM14_Init(void)
   htim14.Instance = TIM14;
   htim14.Init.Prescaler = 0;
   htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim14.Init.Period = 2000;
+  htim14.Init.Period = 3000;
   htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim14.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
@@ -638,10 +672,10 @@ static void MX_DMA_Init(void)
 
   /* DMA interrupt init */
   /* DMA1_Channel1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
   /* DMA1_Channel2_3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
 
 }
@@ -697,13 +731,14 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 
 {
 
-	    LED_1_OFF;
+
 	    RX_2;
 	    lastActivityTime = HAL_GetTick();
 	    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame,RX_BUFFER_SIZE);
 	    __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
 	    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
-
+	    HAL_TIM_Base_Start_IT(&htim14);
+	    LED_1_OFF;
 }
 
 
@@ -718,7 +753,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	    __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE);
 	    HAL_DMA_Abort(&hdma_usart1_rx);
 	    Registers_handler(rxFrame, data_reg, rcv_data_reg,Size);
-	    HAL_TIM_Base_Start_IT(&htim14);
+	  //  HAL_TIM_Base_Start_IT(&htim14);
 	}
 }
 
@@ -728,19 +763,39 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if(htim->Instance == TIM14)  // Проверяем, от какого таймера пришло прерывание
     {
 
-    	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
-
-    	data_reg[0]=0xFF;
-    	data_reg[1]=0xAA;
+    	data_reg[0]=timer1Freq;
+    	data_reg[1]=timer3Freq;
     	data_reg[2] = ADC_Read(ADC_CHANNEL_5); // Преобразование для канала 5
     	data_reg[3] = ADC_Read(ADC_CHANNEL_7); // Преобразование для канала 7
-
 
     }
 }
 
 
+// Функция расчёта частоты таймера
+uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq) {
+    uint32_t arr = TIMx->ARR;  // Значение ARR
+    return timerClockFreq / (arr + 1)/2;
+}
 
+
+// Функция для установки значения переменной в определённый бит регистра
+void setBitInUint16(uint16_t *reg, uint8_t bitPos, bool value) {
+    if (bitPos < 16) { // Убедимся, что номер бита в пределах 0-15
+        if (value) {
+            *reg |= (1 << bitPos); // Установить бит
+        } else {
+            *reg &= ~(1 << bitPos); // Сбросить бит
+        }
+    }
+}
+
+
+void unpackUint16ToBool(uint16_t value, bool *boolArray, uint8_t size) {
+    for (uint8_t i = 0; i < size && i < 16; i++) {
+        boolArray[i] = (value >> i) & 0x01;
+    }
+}
 /* USER CODE END 4 */
 
 /**
