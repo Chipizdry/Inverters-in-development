@@ -30,6 +30,22 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
+#define RX_BUFFER_SIZE 64
+#define USART_TIMEOUT 900 // Таймаут в миллисекундах
+uint32_t lastActivityTime = 0;
+ bool usartBusy = false;
+ uint8_t rxFrame[64];
+ uint8_t txFrame[255];
+ uint8_t SLAVE_ID=2;
+ uint16_t data_reg[16]={0,};
+ uint16_t rcv_data_reg[16]={0,};
+ uint8_t dicreteInputs=0;
+ uint8_t coils=0;
+ uint16_t timer1Freq=0;
+ uint16_t timer3Freq=0;
+ bool pwm_status=0;
+ bool dataStates[16];
+ uint32_t timerClockFreq = 72000000;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -53,8 +69,11 @@ TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim8;
+TIM_HandleTypeDef htim15;
 
 UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_rx;
+DMA_HandleTypeDef hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
 
@@ -63,6 +82,7 @@ UART_HandleTypeDef huart1;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM8_Init(void);
@@ -71,8 +91,11 @@ static void MX_USART1_UART_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_TIM15_Init(void);
 /* USER CODE BEGIN PFP */
-
+void Check_USART1_Timeout(void);
+void Reset_USART1(void);
+uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -88,6 +111,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+
 
   /* USER CODE END 1 */
 
@@ -109,6 +133,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM1_Init();
   MX_TIM3_Init();
   MX_TIM8_Init();
@@ -117,10 +142,13 @@ int main(void)
   MX_I2C1_Init();
   MX_ADC1_Init();
   MX_SPI1_Init();
+  MX_TIM15_Init();
   /* USER CODE BEGIN 2 */
    LED_1_ON;
    RX_2;
 
+
+   /*
    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
@@ -129,17 +157,39 @@ int main(void)
    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
    HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
    HAL_TIMEx_PWMN_Start(&htim8, TIM_CHANNEL_1);
+   */
+
+   TIM1->ARR=2000;
+   TIM8->ARR=2000;
 
    DRV_1_ON;
    DRV_2_ON;
    DRV_3_ON;
    DRV_4_ON;
+   HAL_TIM_Base_Start_IT(&htim2);
+   HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
+   HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
+   HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_3);
+   HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_4);
+   HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
+     __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
+     HAL_TIM_Base_Start_IT(&htim15);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	    TIM1->CCR1=rcv_data_reg[0];
+	  	TIM1->CCR2=rcv_data_reg[1];
+	  	TIM1->CCR3=rcv_data_reg[2];
+	  	TIM8->CCR1=rcv_data_reg[3];
+	  	TIM1->ARR= rcv_data_reg[4];
+	  	TIM8->ARR= rcv_data_reg[4];
+	    Check_USART1_Timeout();
+	    data_reg[0]=calculateTimerFrequency(TIM1, timerClockFreq);
+	    data_reg[1]=calculateTimerFrequency(TIM8, timerClockFreq);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -380,7 +430,7 @@ static void MX_TIM1_Init(void)
   htim1.Init.Period = 2000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
-  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
@@ -407,7 +457,7 @@ static void MX_TIM1_Init(void)
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
-  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_SET;
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
@@ -416,6 +466,7 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
@@ -423,7 +474,7 @@ static void MX_TIM1_Init(void)
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 0;
+  sBreakDeadTimeConfig.DeadTime = 150;
   sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
   sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
   sBreakDeadTimeConfig.BreakFilter = 0;
@@ -647,6 +698,52 @@ static void MX_TIM8_Init(void)
 }
 
 /**
+  * @brief TIM15 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM15_Init(void)
+{
+
+  /* USER CODE BEGIN TIM15_Init 0 */
+
+  /* USER CODE END TIM15_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM15_Init 1 */
+
+  /* USER CODE END TIM15_Init 1 */
+  htim15.Instance = TIM15;
+  htim15.Init.Prescaler = 0;
+  htim15.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim15.Init.Period = 65535;
+  htim15.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim15.Init.RepetitionCounter = 0;
+  htim15.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim15) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim15, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim15, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM15_Init 2 */
+
+  /* USER CODE END TIM15_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -662,7 +759,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 57600;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -678,6 +775,25 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_IRQn);
+  /* DMA1_Channel5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
 
 }
 
@@ -765,6 +881,166 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+// Функция расчёта частоты таймера
+uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq) {
+    uint32_t arr = TIMx->ARR;  // Значение ARR
+    return timerClockFreq / (arr + 1);
+}
+
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM2)
+    {
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
+        {
+            TIM2->CNT = 0;
+             LED_2_ON;
+           // period = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);
+           // pulseWidth = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_2);
+
+
+             HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
+             HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
+
+             HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+             HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+        }
+
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
+        {
+             LED_2_OFF;
+             HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
+             HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);
+
+             HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+             HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+
+        }
+
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3)
+        {
+          LED_3_ON;
+          HAL_TIMEx_PWMN_Stop(&htim8, TIM_CHANNEL_1);
+          HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);
+
+          HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+          HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
+
+
+
+        }
+
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_4)
+        {
+           LED_3_OFF;
+           HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);
+           HAL_TIM_PWM_Stop(&htim8, TIM_CHANNEL_1);
+
+           HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+           HAL_TIMEx_PWMN_Start(&htim8, TIM_CHANNEL_1);
+
+        }
+    }
+}
+
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+
+{
+
+
+	    RX_2;
+	    lastActivityTime = HAL_GetTick();
+	    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame,RX_BUFFER_SIZE);
+	    __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
+	    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
+	    HAL_TIM_Base_Start_IT(&htim15);
+	    LED_1_OFF;
+}
+
+
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+	if (huart->Instance == USART1)
+	{
+
+        LED_1_ON;
+        HAL_TIM_Base_Stop_IT(&htim15);
+		lastActivityTime = HAL_GetTick();
+	    __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE);
+	    HAL_DMA_Abort(&hdma_usart1_rx);
+	    Registers_handler(rxFrame, data_reg, rcv_data_reg,Size);
+	    HAL_TIM_Base_Start_IT(&htim15);
+	}
+}
+
+void Check_USART1_Timeout(void)
+ {
+     if (HAL_GetTick() - lastActivityTime >= USART_TIMEOUT)
+     {
+
+         Reset_USART1();
+         RX_2;
+         LED_1_OFF;
+     }
+ }
+
+
+
+void Reset_USART1(void) {
+    // Включить индикатор (если требуется)
+    LED_1_ON;
+
+    // Остановить передачу и прием по DMA
+    if (HAL_UART_DMAStop(&huart1) != HAL_OK) {
+        // Обработка ошибки
+    }
+
+    // Прерывание активных DMA транзакций
+    if (hdma_usart1_rx.Instance != NULL) {
+        HAL_DMA_Abort(&hdma_usart1_rx);
+    }
+    if (hdma_usart1_tx.Instance != NULL) {
+        HAL_DMA_Abort(&hdma_usart1_tx);
+    }
+
+    // Отключить все прерывания UART
+    __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE | UART_IT_TC | UART_IT_RXNE);
+
+    // Сбросить флаги ошибок UART
+    __HAL_UART_CLEAR_OREFLAG(&huart1);
+    __HAL_UART_CLEAR_FEFLAG(&huart1);
+
+    // Сбросить периферийный модуль USART1
+    __HAL_RCC_USART1_FORCE_RESET();
+    HAL_Delay(1); // Задержка для завершения сброса
+    __HAL_RCC_USART1_RELEASE_RESET();
+
+    // Деинициализация UART
+    if (HAL_UART_DeInit(&huart1) != HAL_OK) {
+        // Обработка ошибки
+    }
+
+    // Повторная инициализация UART
+    MX_USART1_UART_Init();
+
+    // Повторная настройка DMA
+    MX_DMA_Init();
+
+    // Настройка UART для приема данных с использованием DMA
+    if (HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE) != HAL_OK) {
+        // Обработка ошибки
+    }
+    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
+
+    // Сброс параметров и таймеров
+    lastActivityTime = HAL_GetTick();
+
+
+}
+
 
 /* USER CODE END 4 */
 

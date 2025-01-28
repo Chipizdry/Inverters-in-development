@@ -20,9 +20,8 @@ modbusResult handleReadHoldingRegs(UART_HandleTypeDef* huart,uint16_t* holdingRe
 	uint16_t startingReg = (rxFrame[2]<<8) | rxFrame[3];
 	uint16_t numOfregs = (rxFrame[4]<<8) | rxFrame[5];
 
-	startingReg=startingReg-30001;
 
-	uint16_t endAddr = startingReg+numOfregs-1;
+	uint16_t endAddr = startingReg+numOfregs;
 
 
 
@@ -55,6 +54,7 @@ modbusResult handleReadHoldingRegs(UART_HandleTypeDef* huart,uint16_t* holdingRe
 	return 1;
 
 }
+
 
 modbusResult handleReadInputRegs(UART_HandleTypeDef* huart,uint16_t* inputRegisterValues){
 

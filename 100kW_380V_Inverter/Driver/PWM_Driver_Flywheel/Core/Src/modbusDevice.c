@@ -60,7 +60,7 @@ modbusResult sendModBusRequest(UART_HandleTypeDef* huart, uint8_t* frame,uint8_t
 
     TX_2;
   //  HAL_UART_Transmit_DMA(huart,  frame, len+2);
-    HAL_TIM_Base_Start_IT(&htim14);
+  //  HAL_TIM_Base_Start_IT(&htim14);
     if (HAL_UART_Transmit_DMA(huart,  frame, len+2) != HAL_OK) {
 
     	LED_1_OFF;

@@ -34,7 +34,15 @@ void RestartModbusReception(uint8_t* rxFrame) {
 void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_reg,uint16_t Size){
 
 
-	if (rxFrame[0] != SLAVE_ID || Size < 4) {
+	if(rxFrame[0] != SLAVE_ID){   for(uint16_t i=0; i<64;i++){rxFrame[i]=0;}
+	     RX_2;
+	     LED_1_OFF;
+	     	HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
+			__HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
+		return;}
+
+
+	if (Size < 4) {
 	        // Ошибка: неверный ID устройства или слишком короткий пакет
 	        sendError(&huart1, 0x03, 0x02); // Код ошибки 0x02: ошибка длины пакета
 
@@ -43,18 +51,18 @@ void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_
 
 
 	  // Расчет CRC для пакета (исключая последние 2 байта CRC)
-	    uint16_t receivedCRC = (rxFrame[Size - 2]<<8) | (rxFrame[Size - 1]);
+	    uint16_t receivedCRC = (rxFrame[Size - 1]) | (rxFrame[Size - 2]<<8);
 	    uint16_t calculatedCRC = calcCRC16ModBus(rxFrame, Size - 2);
 
 	    // Проверка CRC
-	 //   if (receivedCRC != calculatedCRC) {
+	    if (receivedCRC != calculatedCRC) {
 	        // Ошибка: неверный CRC
-	   //     sendError(&huart1, 0x03, 0x03); // Код ошибки 0x03: нарушение данных
+	        sendError(&huart1, 0x03, 0x03); // Код ошибки 0x03: нарушение данных
 
-	     //   return;
-	   // }
+	        return;
+	    }
 
-			 if (rxFrame[0] == SLAVE_ID) {
+
                        uint8_t opCode = rxFrame[1];
 
 				  			  switch (opCode) {
@@ -91,20 +99,12 @@ void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_
 
 				  			   default:
 
-				  				 LED_1_ON;
+
 				  				 sendError(&huart1, opCode, 0x01); // Код ошибки 0x01: недопустимый код функции
 				  			   break;
 				  			     }
 
-				  			 }
 
-			                  else{
-			                            for(uint16_t i=0; i<64;i++){rxFrame[i]=0;}
-			 				  			    	     RX_2;
-			 				  			    	  Reset_USART1();
-			 				  			  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
-			 				  			    			    // Включение прерывания IDLE
-			 				  			   __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE); }
 
                           }
 
