@@ -32,6 +32,7 @@
 
 #define RX_BUFFER_SIZE 64
 #define USART_TIMEOUT 900 // Таймаут в миллисекундах
+#define ROTATE_TIME 2000
 uint32_t lastActivityTime = 0;
  bool usartBusy = false;
  uint8_t rxFrame[64];
@@ -45,7 +46,17 @@ uint32_t lastActivityTime = 0;
  uint16_t timer3Freq=0;
  bool pwm_status=0;
  bool dataStates[16];
+ bool coil_1=0;
+ bool coil_2=0;
+ bool coil_3=0;
+ bool coil_4=0;
+
  uint32_t timerClockFreq = 72000000;
+ uint32_t period=0;
+ uint16_t f=0;
+ uint32_t rpm=0;
+ uint32_t moove=0;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -189,7 +200,22 @@ int main(void)
 	    Check_USART1_Timeout();
 	    data_reg[0]=calculateTimerFrequency(TIM1, timerClockFreq);
 	    data_reg[1]=calculateTimerFrequency(TIM8, timerClockFreq);
+	    data_reg[2]=rpm;
 
+	    coil_1= (rcv_data_reg[7]>>1)&0x01;
+	    coil_2= (rcv_data_reg[7]>>2)&0x01;
+	    coil_3= (rcv_data_reg[7]>>3)&0x01;
+	    coil_4= (rcv_data_reg[7]>>4)&0x01;
+	    if(coil_1){LED_4_ON;}
+	    if(!coil_1){LED_4_OFF;}
+	    if(coil_2){LED_5_ON;}
+	   	if(!coil_2){LED_5_OFF;}
+	   	if(coil_3){LED_6_ON;}
+	    if(!coil_3){LED_6_OFF;}
+	    if(coil_4){LED_7_ON;}
+	    if(!coil_4){LED_7_OFF;}
+
+if((HAL_GetTick()-moove)>=ROTATE_TIME){rpm=0;}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -895,10 +921,21 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
     {
         if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
         {
-            TIM2->CNT = 0;
+
              LED_2_ON;
-           // period = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);
-           // pulseWidth = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_2);
+
+
+
+
+        	period = 0;
+
+            TIM2->CNT = 0;
+            period = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);
+          //  pulseWidth = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_2);
+
+            rpm= 1080000000/period;
+            f=270000000/period;
+
 
 
              HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
@@ -916,6 +953,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 
              HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
              HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+             moove = HAL_GetTick();
 
         }
 
