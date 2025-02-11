@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Driver_S_Comm.PrjPcb]
+   Generated File[Driver_S_Comm.TXT]
+   Generated File[Driver_S_Comm.LDP]
+   Generated File[Driver_S_Comm.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 10:14:05 On 11.02.2025

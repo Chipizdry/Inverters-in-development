@@ -64,7 +64,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=REOACJNG
 
 [Document2]
 DocumentPath=Driver_S_Comm.SchDoc
@@ -83,155 +83,341 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BTRAQOWF
 
+[Document3]
+DocumentPath=Project Outputs for Driver_S_Comm\CAMtastic1.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document4]
+DocumentPath=Project Outputs for Driver_S_Comm\CAMtastic2.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for Driver\Design Rule Check - Driver.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for Driver\Driver.DRR
+DocumentPath=Project Outputs for Driver_S_Comm\Design Rule Check - Driver_S_Comm.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for Driver\Driver.EXTREP
+DocumentPath=Project Outputs for Driver\Driver.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for Driver\Driver.LDP
+DocumentPath=Project Outputs for Driver\Driver.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for Driver\Driver.REP
+DocumentPath=Project Outputs for Driver\Driver.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for Driver\Driver.RUL
+DocumentPath=Project Outputs for Driver\Driver.REP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for Driver\Driver.TXT
+DocumentPath=Project Outputs for Driver\Driver.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for Driver\Driver_Bottom_3D_Body.gbr
+DocumentPath=Project Outputs for Driver\Driver.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for Driver\Driver_Bottom_Assembly.gbr
+DocumentPath=Project Outputs for Driver\Driver_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for Driver\Driver_Bottom_Component_Center.gbr
+DocumentPath=Project Outputs for Driver\Driver_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for Driver\Driver_Bottom_Courtyard.gbr
+DocumentPath=Project Outputs for Driver\Driver_Bottom_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for Driver\Driver_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for Driver\Driver_Bottom_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for Driver\Driver_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for Driver\Driver_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for Driver\Driver_Drawing_1.gbr
+DocumentPath=Project Outputs for Driver\Driver_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for Driver\Driver_Drillmap_1.gbr
+DocumentPath=Project Outputs for Driver\Driver_Drawing_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for Driver\Driver_Keep-out.gbr
+DocumentPath=Project Outputs for Driver\Driver_Drillmap_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for Driver\Driver_Legend_Bot.gbr
+DocumentPath=Project Outputs for Driver\Driver_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for Driver\Driver_Legend_Top.gbr
+DocumentPath=Project Outputs for Driver\Driver_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for Driver\Driver_Mechanical_1.gbr
+DocumentPath=Project Outputs for Driver\Driver_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for Driver\Driver_Mechanical_10.gbr
+DocumentPath=Project Outputs for Driver\Driver_Mechanical_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for Driver\Driver_Mechanical_12.gbr
+DocumentPath=Project Outputs for Driver\Driver_Mechanical_10.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for Driver\Driver_Mechanical_13.gbr
+DocumentPath=Project Outputs for Driver\Driver_Mechanical_12.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for Driver\Driver_Mechanical_15.gbr
+DocumentPath=Project Outputs for Driver\Driver_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for Driver\Driver_NPTH_Drill.gbr
+DocumentPath=Project Outputs for Driver\Driver_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=Project Outputs for Driver\Driver_Pads_Bot.gbr
+DocumentPath=Project Outputs for Driver\Driver_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for Driver\Driver_Pads_Top.gbr
+DocumentPath=Project Outputs for Driver\Driver_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Project Outputs for Driver\Driver_Paste_Bot.gbr
+DocumentPath=Project Outputs for Driver\Driver_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Project Outputs for Driver\Driver_Paste_Top.gbr
+DocumentPath=Project Outputs for Driver\Driver_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Project Outputs for Driver\Driver_Profile.gbr
+DocumentPath=Project Outputs for Driver\Driver_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Project Outputs for Driver\Driver_PTH_Drill.gbr
+DocumentPath=Project Outputs for Driver\Driver_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Project Outputs for Driver\Driver_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for Driver\Driver_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Project Outputs for Driver\Driver_Soldermask_Top.gbr
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Project Outputs for Driver\Driver_Top_3D_Body.gbr
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Project Outputs for Driver\Driver_Top_Assembly.gbr
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Project Outputs for Driver\Driver_Top_Component_Center.gbr
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm.REP
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Project Outputs for Driver\Driver_Top_Component_Outline.gbr
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for Driver\Driver_Top_Courtyard.gbr
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument38]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Bottom_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument39]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Bottom_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument40]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Bottom_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument41]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Bottom_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument42]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Copper_Signal_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument43]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument44]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Drawing_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument45]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Drillmap_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument46]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Keep-out.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument47]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Legend_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument48]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Legend_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument49]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Mechanical_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument50]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Mechanical_10.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument51]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Mechanical_12.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument52]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Mechanical_13.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument53]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Mechanical_15.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument54]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_NPTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument55]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Pads_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument56]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Pads_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument57]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument58]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument59]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument60]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_PTH_Drill.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument61]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument62]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument63]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Top_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument64]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Top_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument65]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument66]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Top_Component_Outline.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument67]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Top_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument68]
+DocumentPath=Project Outputs for Driver_S_Comm\Driver_S_Comm_Top_Designator.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument69]
+DocumentPath=Project Outputs for Driver\Driver_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument70]
+DocumentPath=Project Outputs for Driver\Driver_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument71]
+DocumentPath=Project Outputs for Driver\Driver_Top_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument72]
+DocumentPath=Project Outputs for Driver\Driver_Top_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument73]
+DocumentPath=Project Outputs for Driver\Driver_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument74]
+DocumentPath=Project Outputs for Driver\Driver_Top_Component_Outline.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument75]
+DocumentPath=Project Outputs for Driver\Driver_Top_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument76]
 DocumentPath=Project Outputs for Driver\Driver_Top_Designator.gbr
 DItemRevisionGUID=
 
@@ -511,7 +697,7 @@ OutputDefault1=0
 Configuration1_Name1=ForceUpdateSettings
 Configuration1_Item1=False
 Configuration1_Name2=OutputConfigurationParameter1
-Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\Driver_MainBoard\Driver.PcbDoc
+Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\Driver_MainBoard_Soft_Commutation\Driver_S_Comm.PcbDoc
 OutputType2=Mask
 OutputName2=Solder/Paste Mask Prints
 OutputDocumentPath2=
@@ -565,7 +751,7 @@ OutputDefault10=0
 Configuration10_Name1=ForceUpdateSettings
 Configuration10_Item1=False
 Configuration10_Name2=OutputConfigurationParameter1
-Configuration10_Item2=BoardID=REOACJNG|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPair0_Backdrill=False|PlotCounterHolesPair0_Checked=True|PlotCounterHolesPair0_DrillType=Regular|PlotCounterHolesPair0_FileName= |PlotCounterHolesPair0_HighLayer=Bottom Layer|PlotCounterHolesPair0_LowLayer=Top Layer|PlotCounterHolesPairs=True|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPair0_Backdrill=False|PlotViaTypeDrillDrawingPair0_Checked=True|PlotViaTypeDrillDrawingPair0_DrillType=Regular|PlotViaTypeDrillDrawingPair0_FileName= |PlotViaTypeDrillDrawingPair0_HighLayer=Bottom Layer|PlotViaTypeDrillDrawingPair0_LowLayer=Top Layer|PlotViaTypeDrillDrawingPairs=True|PlotViaTypeDrillGuidePair0_Backdrill=False|PlotViaTypeDrillGuidePair0_Checked=True|PlotViaTypeDrillGuidePair0_DrillType=Regular|PlotViaTypeDrillGuidePair0_FileName= |PlotViaTypeDrillGuidePair0_HighLayer=Bottom Layer|PlotViaTypeDrillGuidePair0_LowLayer=Top Layer|PlotViaTypeDrillGuidePairs=True|PlotViaTypeDrillPair0_Backdrill=False|PlotViaTypeDrillPair0_Checked=True|PlotViaTypeDrillPair0_DrillType=Regular|PlotViaTypeDrillPair0_FileName= |PlotViaTypeDrillPair0_HighLayer=Bottom Layer|PlotViaTypeDrillPair0_LowLayer=Top Layer|PlotViaTypeDrillPairs=True|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16908292~1,16908290~1,16908302~1,16908305~1,16973833~1,16908296~1,16908298~1,16908289~1,16908291~1,16908306~1,16908295~1,16908303~1,16973848~1,16908301~1,16973831~1,16908297~1,16908299~1,16973849~1,16973835~1,16973830~1,16973832~1,16842751~1,16908300~1,16973834~1,16973837~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\Driver_MainBoard\Driver.PcbDoc
+Configuration10_Item2=BoardID=REOACJNG|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPair0_Backdrill=False|PlotCounterHolesPair0_Checked=True|PlotCounterHolesPair0_DrillType=Regular|PlotCounterHolesPair0_FileName= |PlotCounterHolesPair0_HighLayer=Bottom Layer|PlotCounterHolesPair0_LowLayer=Top Layer|PlotCounterHolesPairs=True|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPair0_Backdrill=False|PlotViaTypeDrillDrawingPair0_Checked=True|PlotViaTypeDrillDrawingPair0_DrillType=Regular|PlotViaTypeDrillDrawingPair0_FileName= |PlotViaTypeDrillDrawingPair0_HighLayer=Bottom Layer|PlotViaTypeDrillDrawingPair0_LowLayer=Top Layer|PlotViaTypeDrillDrawingPairs=True|PlotViaTypeDrillGuidePair0_Backdrill=False|PlotViaTypeDrillGuidePair0_Checked=True|PlotViaTypeDrillGuidePair0_DrillType=Regular|PlotViaTypeDrillGuidePair0_FileName= |PlotViaTypeDrillGuidePair0_HighLayer=Bottom Layer|PlotViaTypeDrillGuidePair0_LowLayer=Top Layer|PlotViaTypeDrillGuidePairs=True|PlotViaTypeDrillPair0_Backdrill=False|PlotViaTypeDrillPair0_Checked=True|PlotViaTypeDrillPair0_DrillType=Regular|PlotViaTypeDrillPair0_FileName= |PlotViaTypeDrillPair0_HighLayer=Bottom Layer|PlotViaTypeDrillPair0_LowLayer=Top Layer|PlotViaTypeDrillPairs=True|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16908292~1,16908290~1,16908302~1,16908305~1,16973833~1,16908296~1,16908298~1,16908289~1,16908291~1,16908306~1,16908295~1,16908303~1,16973848~1,16908301~1,16973831~1,16908297~1,16908299~1,16973849~1,16973835~1,16973830~1,16973832~1,16842751~1,16908300~1,16973834~1,16973837~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\Driver_MainBoard_Soft_Commutation\Driver_S_Comm.PcbDoc
 OutputType11=Final
 OutputName11=Final Artwork Prints
 OutputDocumentPath11=

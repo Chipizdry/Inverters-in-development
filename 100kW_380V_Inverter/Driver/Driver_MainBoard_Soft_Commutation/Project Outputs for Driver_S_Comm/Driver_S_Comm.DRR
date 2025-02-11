@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Driver_S_Comm.PcbDoc   11.02.2025  10:14:05
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Driver_S_Comm.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.3mm (12mil)                                             Round             177       PTH        1420.84mm (55.94inch)
+T2      0.4mm (16mil)                                             Round             7         PTH        295.63mm (11.64inch)
+T3      0.5mm (20mil)                                             Round             127       PTH        1753.15mm (69.02inch)
+T4      0.7mm (28mil)                                             Round             2         PTH        4.88mm (0.19inch)
+T5      0.8mm (31mil)           +/-0.05mm (2mil)                  Round             4         PTH        6.00mm (0.24inch)
+T6      0.9mm (35mil)                                             Round             4         PTH        7.62mm (0.30inch)
+T7      0.95mm (37mil)                                            Round             91        PTH        1450.27mm (57.10inch)
+T8      1mm (39mil)                                               Round             115       PTH        1522.89mm (59.96inch)
+T9      1.1mm (43mil)                                             Round             113       PTH        625.69mm (24.63inch)
+T10     1.3mm (51mil)                                             Round             5         PTH        208.77mm (8.22inch)
+T11     1.778mm (70mil)                                           Round             64        PTH        396.92mm (15.63inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              709
+
+Total Processing Time (hh:mm:ss) : 00:00:00
