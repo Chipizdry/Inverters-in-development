@@ -33,8 +33,10 @@
 #define RX_BUFFER_SIZE 64
 #define USART_TIMEOUT 900 // Таймаут в миллисекундах
 #define ROTATE_TIME 2000
+#define UPDATE_TIME 1000 //время прироста ШИМ на один шаг
 #define ADC_NUM_CHANNELS 8  // Количество каналов
 
+#define ANGLE_OF_ATTACK 15
 uint16_t adc_values[ADC_NUM_CHANNELS];
 uint32_t lastActivityTime = 0;
  bool usartBusy = false;
@@ -47,17 +49,23 @@ uint32_t lastActivityTime = 0;
  uint8_t coils=0;
  uint16_t timer1Freq=0;
  uint16_t timer3Freq=0;
+ uint16_t auto_mode_timer=0;
+ uint32_t pwm=0;
+
  bool pwm_status=0;
  bool dataStates[16];
  bool coil_1=0;
  bool coil_2=0;
  bool coil_3=0;
  bool coil_4=0;
-
+ bool auto_mode=0;
+volatile uint8_t coil_period=0;
+volatile uint8_t polarity=0;
+volatile uint8_t speed_test=0;
  uint32_t timerClockFreq = 72000000;
- uint32_t period=0;
+volatile uint32_t period=0;
  uint16_t f=0;
- uint32_t rpm=0;
+ volatile uint32_t rpm=0;
  uint32_t moove=0;
 
 /* USER CODE END PTD */
@@ -82,6 +90,7 @@ SPI_HandleTypeDef hspi1;
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim8;
 TIM_HandleTypeDef htim15;
 
@@ -106,11 +115,17 @@ static void MX_I2C1_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM15_Init(void);
+static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
 void Check_USART1_Timeout(void);
 void Reset_USART1(void);
 void Read_ADC_Values(void);
 uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq);
+
+void Rising_1_coil(void);
+void Falling_1_coil(void);
+void Rising_2_coil(void);
+void Falling_2_coil(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -158,6 +173,7 @@ int main(void)
   MX_ADC1_Init();
   MX_SPI1_Init();
   MX_TIM15_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
    LED_1_ON;
    RX_2;
@@ -199,22 +215,41 @@ int main(void)
    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
      __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
      HAL_TIM_Base_Start_IT(&htim15);
+     HAL_TIM_Base_Start_IT(&htim3);
+     LED_1_OFF;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if(auto_mode==0){
 	    TIM1->CCR1=rcv_data_reg[0];
 	  	TIM1->CCR2=rcv_data_reg[1];
 	  	TIM1->CCR3=rcv_data_reg[2];
 	  	TIM8->CCR1=rcv_data_reg[3];
+         pwm=rcv_data_reg[0];
+	  }
+
+	  if(auto_mode==1){
+
+		  if(HAL_GetTick()-auto_mode_timer>=UPDATE_TIME){
+           pwm=pwm+5;
+           TIM1->CCR1=pwm;
+           TIM1->CCR2=pwm;
+           TIM1->CCR3=pwm;
+           TIM8->CCR1=pwm;
+		  auto_mode_timer=HAL_GetTick();}
+	  }
+
 	  	TIM1->ARR= rcv_data_reg[4];
 	  	TIM8->ARR= rcv_data_reg[4];
 	    Check_USART1_Timeout();
-	    data_reg[0]=calculateTimerFrequency(TIM1, timerClockFreq);
-	    data_reg[1]=calculateTimerFrequency(TIM8, timerClockFreq);
-	    data_reg[2]=rpm;
+	    data_reg[0]=calculateTimerFrequency(TIM1, timerClockFreq); //Частота ШИМ ,КГц
+	    data_reg[1]=calculateTimerFrequency(TIM8, timerClockFreq); //Частота ШИМ ,КГц
+	    data_reg[2]=rpm;       //Скорость об.мин
+	    data_reg[3]=TIM1->ARR; //Период таймера 1
+	    data_reg[4]=pwm;//Значение ШИМ
 	  //  data_reg[3]=adc_values[0];
 	  //  data_reg[4]=adc_values[1];
 	  //  data_reg[5]=adc_values[2];
@@ -225,6 +260,7 @@ int main(void)
 	    coil_2= (rcv_data_reg[7]>>2)&0x01;
 	    coil_3= (rcv_data_reg[7]>>3)&0x01;
 	    coil_4= (rcv_data_reg[7]>>4)&0x01;
+        auto_mode= (rcv_data_reg[7]>>5)&0x01;
 	    if(coil_1){LED_4_ON;DRV_1_ON;}
 	    if(!coil_1){LED_4_OFF;DRV_1_OFF;}
 	    if(coil_2){LED_5_ON;DRV_2_ON;}
@@ -693,9 +729,9 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 0;
+  htim3.Init.Prescaler = 199;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 65535;
+  htim3.Init.Period = 35999;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -716,6 +752,44 @@ static void MX_TIM3_Init(void)
   /* USER CODE BEGIN TIM3_Init 2 */
 
   /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
+  * @brief TIM6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM6_Init(void)
+{
+
+  /* USER CODE BEGIN TIM6_Init 0 */
+
+  /* USER CODE END TIM6_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM6_Init 1 */
+
+  /* USER CODE END TIM6_Init 1 */
+  htim6.Instance = TIM6;
+  htim6.Init.Prescaler = 0;
+  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim6.Init.Period = 65535;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM6_Init 2 */
+
+  /* USER CODE END TIM6_Init 2 */
 
 }
 
@@ -907,8 +981,8 @@ static void MX_DMA_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -978,8 +1052,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(DIRECT_GPIO_Port, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -990,6 +1064,34 @@ uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq) {
     return timerClockFreq / (arr + 1);
 }
 
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == TIM3) {
+     if(coil_period==2){
+
+    	 coil_period=0;
+     if(speed_test==1){
+    	 LED_1_OFF;
+    	 if(polarity==1){Falling_2_coil();}
+    	 if(polarity==2){Falling_1_coil();}
+
+         }
+
+     }
+
+
+     if(coil_period==1){LED_1_ON;TIM3->CNT=0;TIM3->ARR = period/250; coil_period=2;
+
+          if(speed_test==1){
+    	 if(polarity==1){Rising_2_coil();}
+    	 if(polarity==2){Rising_1_coil();}
+
+
+          }
+
+     }
+
+    }
+}
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
@@ -999,17 +1101,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
         {
 
              LED_2_ON;
-
-
-
-
-        //	period = 0;
-
-         //   TIM2->CNT = 0;
-          //  period = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);
-
-          //  rpm= 1080000000/period;
-         //   f=270000000/period;
 
              DR_1_OFF;
              DR_4_OFF;
@@ -1045,46 +1136,49 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 
         if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3)
         {
-          LED_3_ON;
+          coil_period=1;
+          polarity=1;
           period = 0;
           TIM2->CNT = 0;
           period = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_4);
+          rpm= 540000000/period;
+          f=135000000/period;
 
-          rpm= 1080000000/period;
-          f=270000000/period;
+          TIM3->ARR = period/2000;
+         // TIM3->ARR = period/1600;
 
-          DR_6_OFF;
-          DR_7_OFF;
-          HAL_TIMEx_PWMN_Stop(&htim8, TIM_CHANNEL_1);
-          HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);
-
-          HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
-          HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
-
-          DR_5_ON;
-          DR_8_ON;
+          TIM3->CNT=0;
+         if((rpm<=45)&&(speed_test==0)){
+          Falling_1_coil();
+          Rising_2_coil();}
+          Falling_1_coil();
+         if((rpm>=45)&&(speed_test==0)){speed_test=1;}
+          LED_1_OFF;
 
         }
 
         if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_4)
         {
-           LED_3_OFF;
+           coil_period=1;
+           polarity=2;
 
-           DR_5_OFF;
-           DR_8_OFF;
 
-           HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);
-           HAL_TIM_PWM_Stop(&htim8, TIM_CHANNEL_1);
-
-           HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-           HAL_TIMEx_PWMN_Start(&htim8, TIM_CHANNEL_1);
-
-           DR_6_ON;
-           DR_7_ON;
-
+           TIM3->ARR = period/2000;
+          // TIM3->ARR = period/1600;
+           TIM3->CNT=0;
            moove = HAL_GetTick();
+
+           if((rpm<=45)&&(speed_test==0)){
+           Falling_2_coil();
+           Rising_1_coil();}
+           Falling_2_coil();
+           if((rpm>=45)&&(speed_test==0)){speed_test=1;}
+           LED_1_OFF;
         }
     }
+
+
+
 }
 
 
@@ -1099,7 +1193,6 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 	    __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
 	    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
 	    HAL_TIM_Base_Start_IT(&htim15);
-	    LED_1_OFF;
 }
 
 
@@ -1108,7 +1201,6 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	if (huart->Instance == USART1)
 	{
 
-        LED_1_ON;
         HAL_TIM_Base_Stop_IT(&htim15);
 		lastActivityTime = HAL_GetTick();
 	    __HAL_UART_DISABLE_IT(&huart1, UART_IT_IDLE);
@@ -1125,7 +1217,6 @@ void Check_USART1_Timeout(void)
 
          Reset_USART1();
          RX_2;
-         LED_1_OFF;
      }
  }
 
@@ -1133,7 +1224,7 @@ void Check_USART1_Timeout(void)
 
 void Reset_USART1(void) {
     // Включить индикатор (если требуется)
-    LED_1_ON;
+  //  LED_1_ON;
 
     // Остановить передачу и прием по DMA
     if (HAL_UART_DMAStop(&huart1) != HAL_OK) {
@@ -1194,6 +1285,33 @@ void Read_ADC_Values(void)
     HAL_ADC_Stop(&hadc1);
 }
 
+void Rising_2_coil(void){
+	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+	HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
+	DR_5_ON;
+	DR_8_ON;
+}
+
+void Falling_1_coil(void){
+	 DR_6_OFF;
+	 DR_7_OFF;
+	 HAL_TIMEx_PWMN_Stop(&htim8, TIM_CHANNEL_1);
+	 HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);
+}
+
+void Rising_1_coil(void){
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+    HAL_TIMEx_PWMN_Start(&htim8, TIM_CHANNEL_1);
+    DR_6_ON;
+    DR_7_ON;
+}
+
+void Falling_2_coil(void){
+	 DR_5_OFF;
+	 DR_8_OFF;
+	 HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);
+	 HAL_TIM_PWM_Stop(&htim8, TIM_CHANNEL_1);
+}
 /* USER CODE END 4 */
 
 /**

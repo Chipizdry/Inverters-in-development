@@ -24,7 +24,7 @@ void RestartModbusReception(uint8_t* rxFrame) {
     // Перезапуск приёма через DMA
     if (HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE) != HAL_OK) {
         // Если ошибка при запуске приёма, можно добавить дополнительную обработку
-        LED_1_ON; // Например, индикация ошибки
+       // LED_1_ON; // Например, индикация ошибки
     }
 
     // Включение прерывания IDLE
@@ -36,7 +36,7 @@ void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_
 
 	if(rxFrame[0] != SLAVE_ID){   for(uint16_t i=0; i<64;i++){rxFrame[i]=0;}
 	     RX_2;
-	     LED_1_OFF;
+	    // LED_1_OFF;
 	     	HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame, RX_BUFFER_SIZE);
 			__HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
 		return;}
