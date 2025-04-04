@@ -83,192 +83,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FSXMRDBX
 
-[Document3]
-DocumentPath=Project Outputs for Push-Pull_Inverter\CAMtastic1.Cam
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document4]
-DocumentPath=Project Outputs for Push-Pull_Inverter\CAMtastic2.Cam
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[GeneratedDocument1]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Design Rule Check - Push-Pull_Inverter.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter-RoundHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter-SlotHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter.REP
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Board.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Bottom_3D_Body.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Bottom_Assembly.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Bottom_Component_Center.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Bottom_Component_Outline.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Bottom_Courtyard.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Bottom_Designator.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Copper_Signal_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Copper_Signal_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Drawing_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Drillmap_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Keep-out.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Legend_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Legend_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Mechanical_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Mechanical_15.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_NPTH_Drill.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Pads_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument26]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Pads_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument27]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Paste_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument28]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Paste_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument29]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Profile.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument30]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_PTH_Drill.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument31]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Soldermask_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument32]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Soldermask_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument33]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Top_3D_Body.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument34]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Top_Assembly.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument35]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Top_Component_Center.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument36]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Top_Component_Outline.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument37]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Top_Courtyard.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument38]
-DocumentPath=Project Outputs for Push-Pull_Inverter\Push-Pull_Inverter_Top_Designator.gbr
-DItemRevisionGUID=
-
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -961,6 +775,7 @@ Type147=1
 Type148=1
 Type149=1
 Type150=1
+Type151=1
 
 [Difference Levels]
 Type1=1
@@ -1044,6 +859,7 @@ Type78=1
 Type79=1
 Type80=1
 Type81=1
+Type82=1
 
 [Electrical Rules Check]
 Type1=1
@@ -1200,6 +1016,13 @@ Type151=2
 Type152=1
 Type153=1
 Type154=0
+Type155=0
+Type156=0
+Type157=0
+Type158=0
+Type159=0
+Type160=0
+Type161=0
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
