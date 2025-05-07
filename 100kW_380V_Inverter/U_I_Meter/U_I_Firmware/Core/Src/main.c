@@ -33,7 +33,8 @@
 #define RX_BUFFER_SIZE 64
 #define USART_TIMEOUT 900 // Таймаут в миллисекундах
 #define ADC_NUM_CHANNELS 7
-
+#define MA_WINDOW_SIZE 50
+#define ADC_CHANNEL_COUNT 2
 #define STEINHART_A 0.001129148f
 #define STEINHART_B 0.000234125f
 #define STEINHART_C 0.0000000876741f  // 8.76741e-08
@@ -49,6 +50,17 @@ uint32_t lastActivityTime = 0;
  uint16_t rcv_data_reg[16]={0,};
  uint8_t coils=0;
  uint8_t dicreteInputs=0;
+
+
+ typedef struct {
+     uint16_t buffer[MA_WINDOW_SIZE];
+     uint32_t sum;
+     uint8_t index;
+     uint8_t filled;
+     uint16_t result;
+ } MovingAverageFilter;
+
+ MovingAverageFilter ma_filters[ADC_CHANNEL_COUNT] = {0};
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -66,6 +78,8 @@ ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
 I2C_HandleTypeDef hi2c2;
+DMA_HandleTypeDef hdma_i2c2_rx;
+DMA_HandleTypeDef hdma_i2c2_tx;
 
 TIM_HandleTypeDef htim14;
 
@@ -94,6 +108,7 @@ static void MX_TIM14_Init(void);
 void Check_USART1_Timeout(void);
 void Reset_USART1(void);
 float calculate_ntc_temperature(uint16_t adc_raw);
+void MA_Update(MovingAverageFilter *filter, uint16_t new_value);
 /* USER CODE END 0 */
 
 /**
@@ -149,8 +164,8 @@ int main(void)
 
 	// float t_float = calculate_ntc_temperature(adc_values[2]);
 	  Check_USART1_Timeout();
-	data_reg[0]=adc_values[0];
-	data_reg[1]=adc_values[1];
+	data_reg[0] = ma_filters[0].result*0.53;
+	data_reg[1] = ma_filters[1].result;
 	memcpy(&data_reg[2], (int16_t[]){(int16_t)(calculate_ntc_temperature(adc_values[2]) * 10.0f + 0.5f)}, 2);
 	data_reg[3]=adc_values[3];
 	data_reg[4]=adc_values[4];
@@ -338,8 +353,8 @@ static void MX_I2C2_Init(void)
 
   /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
-  hi2c2.Init.Timing = 0x10B17DB5;
-  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.Timing = 0x00C12166;
+  hi2c2.Init.OwnAddress1 = 222;
   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c2.Init.OwnAddress2 = 0;
@@ -465,6 +480,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel2_3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
+  /* DMA1_Ch4_5_DMAMUX1_OVR_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Ch4_5_DMAMUX1_OVR_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Ch4_5_DMAMUX1_OVR_IRQn);
 
 }
 
@@ -551,8 +569,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
     if (hadc->Instance == ADC1)
     {
+
+    	MA_Update(&ma_filters[0], adc_values[0]);
+    	MA_Update(&ma_filters[1], adc_values[1]);
     	LED_2_OFF;
-    	//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
+
         adc_ready = 1;
     }
 }
@@ -652,6 +673,24 @@ void Check_USART1_Timeout(void)
      float T_celsius = T_kelvin - 273.15f;
 
      return T_celsius;
+ }
+
+
+ void MA_Update(MovingAverageFilter *filter, uint16_t new_value)
+ {
+     filter->sum -= filter->buffer[filter->index];
+     filter->buffer[filter->index] = new_value;
+     filter->sum += new_value;
+
+     filter->index++;
+     if (filter->index >= MA_WINDOW_SIZE)
+     {
+         filter->index = 0;
+         filter->filled = 1;
+     }
+
+     uint8_t size = filter->filled ? MA_WINDOW_SIZE : filter->index;
+     filter->result = filter->sum / (size ? size : 1);
  }
 
 /* USER CODE END 4 */
