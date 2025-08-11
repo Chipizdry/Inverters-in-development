@@ -1,0 +1,13 @@
+../Core/Src/main.c:567:13:MX_DMA_Init	16	static
+../Core/Src/main.c:521:13:MX_USART1_UART_Init	8	static,ignoring_inline_asm
+../Core/Src/main.c:186:6:SystemClock_Config	80	static,ignoring_inline_asm
+../Core/Src/main.c:625:6:HAL_UART_TxCpltCallback	8	static
+../Core/Src/main.c:640:6:HAL_UARTEx_RxEventCallback	8	static
+../Core/Src/main.c:669:6:HAL_TIM_PeriodElapsedCallback	8	static
+../Core/Src/main.c:690:7:Reset_USART1	16	static
+../Core/Src/main.c:678:6:Check_USART1_Timeout	8	static
+../Core/Src/main.c:744:8:calculate_ntc_temperature	16	static
+../Core/Src/main.c:117:5:main	152	static,ignoring_inline_asm
+../Core/Src/main.c:767:7:MA_Update	16	static
+../Core/Src/main.c:656:6:HAL_ADC_ConvCpltCallback	16	static
+../Core/Src/main.c:790:6:Error_Handler	0	static,ignoring_inline_asm
