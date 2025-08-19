@@ -794,6 +794,58 @@ void Check_USART1_Timeout(void)
  }
 
 
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if(GPIO_Pin == HALL_A_Pin) // Прерывание по PB0
+    {
+        if (GPIO_PIN_SET == HAL_GPIO_ReadPin(HALL_A_GPIO_Port, HALL_A_Pin))
+        {
+            LED_1_ON;
+            BLDC_STATE[0] = 0;
+            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+        }
+        else if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(HALL_A_GPIO_Port, HALL_A_Pin))
+        {
+            LED_1_OFF;
+            BLDC_STATE[0] = 1;
+            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+        }
+    }
+
+    if(GPIO_Pin == HALL_B_Pin) // Прерывание по PB1
+    {
+        if (GPIO_PIN_SET == HAL_GPIO_ReadPin(HALL_B_GPIO_Port, HALL_B_Pin))
+        {
+            LED_2_ON;
+            BLDC_STATE[1] = 0;
+            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+        }
+        else if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(HALL_B_GPIO_Port, HALL_B_Pin))
+        {
+            LED_2_OFF;
+            BLDC_STATE[1] = 1;
+            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+        }
+    }
+
+    if(GPIO_Pin == HALL_C_Pin) // Прерывание по PB2
+    {
+        if (GPIO_PIN_SET == HAL_GPIO_ReadPin(HALL_C_GPIO_Port, HALL_C_Pin))
+        {
+            LED_3_ON;
+            BLDC_STATE[2] = 0;
+            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+        }
+        else if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(HALL_C_GPIO_Port, HALL_C_Pin))
+        {
+            LED_3_OFF;
+            BLDC_STATE[2] = 1;
+            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+        }
+    }
+}
+
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */

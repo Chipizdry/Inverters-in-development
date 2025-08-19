@@ -12,8 +12,9 @@
 ../Core/Src/main.c:760:6:HAL_UART_TxCpltCallback	1
 ../Core/Src/main.c:774:6:HAL_UARTEx_RxEventCallback	2
 ../Core/Src/main.c:787:6:Check_USART1_Timeout	2
-../Core/Src/main.c:806:6:StartDefaultTask	1
-../Core/Src/main.c:825:6:StartTask02	8
-../Core/Src/main.c:882:6:MPU_Config	1
-../Core/Src/main.c:917:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:937:6:Error_Handler	1
+../Core/Src/main.c:798:6:HAL_GPIO_EXTI_Callback	10
+../Core/Src/main.c:858:6:StartDefaultTask	1
+../Core/Src/main.c:877:6:StartTask02	8
+../Core/Src/main.c:934:6:MPU_Config	1
+../Core/Src/main.c:969:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:989:6:Error_Handler	1
