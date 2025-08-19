@@ -214,6 +214,9 @@ int main(void)
     LED_6_OFF ;
     LED_7_OFF ;
     LED_8_OFF ;
+  //  DRIVE_1_OFF;
+  //  DRIVE_2_OFF;
+  //  DRIVE_3_OFF;
     RX_2;
 
   /* USER CODE END 2 */
@@ -705,7 +708,7 @@ uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq) {
 
 void Reset_USART1(void) {
     // Включить индикатор (если требуется)
-  //  LED_1_ON;
+    LED_4_ON;
 
     // Остановить передачу и прием по DMA
     if (HAL_UART_DMAStop(&huart1) != HAL_OK) {
@@ -760,14 +763,12 @@ void Reset_USART1(void) {
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 
 {
-
-
 	    RX_2;
 	    lastActivityTime = HAL_GetTick();
 	    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rxFrame,RX_BUFFER_SIZE);
 	    __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
 	    __HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
-
+       LED_4_OFF;
 }
 
 
@@ -909,13 +910,16 @@ void StartTask02(void *argument)
 		  }
 
 
-	TIM1->CCR1=rcv_data_reg[0];
-	TIM1->CCR2=rcv_data_reg[1];
-	TIM1->CCR3=rcv_data_reg[2];
+
 	TIM1->ARR= rcv_data_reg[4];
 	data_reg[0]=calculateTimerFrequency(TIM1, timerClockFreq);
 	data_reg[2]=rpm;
     osDelay(100);
+    data_reg[0]=calculateTimerFrequency(TIM1, timerClockFreq); //Частота ШИМ ,КГц
+   	data_reg[1]=calculateTimerFrequency(TIM1, timerClockFreq); //Частота ШИМ ,КГц
+   	    data_reg[2]=rpm;       //Скорость об.мин
+   	    data_reg[3]=TIM1->ARR; //Период таймера 1
+   	    data_reg[4]=pwm;       //Значение ШИМ
 
 
     coil_1= (rcv_data_reg[7]>>1)&0x01;
