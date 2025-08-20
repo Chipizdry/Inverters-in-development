@@ -198,14 +198,14 @@ int main(void)
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_3);
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_4);
-
+/*
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
-
+*/
     LED_1_OFF ;
     LED_2_OFF ;
     LED_3_OFF ;
