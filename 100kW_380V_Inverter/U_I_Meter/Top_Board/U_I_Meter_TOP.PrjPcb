@@ -83,189 +83,147 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EDDCSMXV
 
-[Document3]
-DocumentPath=Project Outputs for U_I_Meter_TOP\CAMtastic1.Cam
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document4]
-DocumentPath=Project Outputs for U_I_Meter_TOP\CAMtastic2.Cam
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
 [GeneratedDocument1]
 DocumentPath=Project Outputs for U_I_Meter_TOP\Design Rule Check - U_I_Meter_TOP.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP-RoundHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP-SlotHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument4]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP.DRR
 DItemRevisionGUID=
 
-[GeneratedDocument5]
+[GeneratedDocument3]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument6]
+[GeneratedDocument4]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument7]
+[GeneratedDocument5]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP.REP
 DItemRevisionGUID=
 
-[GeneratedDocument8]
+[GeneratedDocument6]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP.TXT
 DItemRevisionGUID=
 
-[GeneratedDocument9]
+[GeneratedDocument7]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument10]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument11]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Bottom_Component_Center.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument12]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Bottom_Courtyard.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument13]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument14]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Drawing_1.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Drillmap_1.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Keep-out.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Legend_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Legend_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Mechanical_1.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Mechanical_3.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument22]
+[GeneratedDocument20]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Mechanical_10.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument23]
+[GeneratedDocument21]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Mechanical_12.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument24]
+[GeneratedDocument22]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_NPTH_Drill.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument25]
+[GeneratedDocument23]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Pads_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument26]
+[GeneratedDocument24]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Pads_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument27]
+[GeneratedDocument25]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Paste_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument28]
+[GeneratedDocument26]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Paste_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument29]
+[GeneratedDocument27]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Profile.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument30]
+[GeneratedDocument28]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_PTH_Drill.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument31]
+[GeneratedDocument29]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument32]
+[GeneratedDocument30]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Soldermask_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument33]
+[GeneratedDocument31]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Top_3D_Body.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument34]
+[GeneratedDocument32]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Top_Assembly.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument35]
+[GeneratedDocument33]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Top_Component_Center.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument36]
+[GeneratedDocument34]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Top_Component_Outline.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument37]
+[GeneratedDocument35]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Top_Courtyard.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument38]
+[GeneratedDocument36]
 DocumentPath=Project Outputs for U_I_Meter_TOP\U_I_Meter_TOP_Top_Designator.gbr
 DItemRevisionGUID=
 
@@ -569,7 +527,7 @@ OutputDefault5=0
 Configuration5_Name1=ForceUpdateSettings
 Configuration5_Item1=False
 Configuration5_Name2=OutputConfigurationParameter1
-Configuration5_Item2=BoardID=EDDCSMXV|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=False|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=50|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPairs=False|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16842751~1,16973830~1,16973831~1,16973834~1,16973835~1,16973832~1,16973833~1,16908289~1,16908291~1,16908292~1,16908293~1,16908298~1,16908299~1,16908300~1,16908301~1,16908303~1,16908304~1,16908308~1,16908309~1,16908311~1,16908312~1,16973837~1,16973848~1,16973849~1|PlusApertureTolerance=50|Record=GerberX2View|Sorted=False|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\U_I_Meter\Top_Board\U_I_Meter_TOP.PcbDoc
+Configuration5_Item2=BoardID=EDDCSMXV|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=False|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=50|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPairs=False|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16842751~1,16973830~1,16973831~1,16973834~1,16973835~1,16973832~1,16973833~1,16908289~1,16908291~1,16908292~1,16908293~1,16908298~1,16908299~1,16908300~1,16908301~1,16908303~1,16908304~1,16908308~1,16908309~1,16908311~1,16908312~1,16973837~1,16973848~1,16973849~1|PlusApertureTolerance=50|Record=GerberX2View|Sorted=False|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\U_I_Meter_TOP\U_I_Meter_TOP\U_I_Meter_TOP.PcbDoc
 OutputType6=ODB
 OutputName6=ODB++ Files
 OutputDocumentPath6=
@@ -589,7 +547,7 @@ OutputDefault8=0
 Configuration8_Name1=ForceUpdateSettings
 Configuration8_Item1=False
 Configuration8_Name2=OutputConfigurationParameter1
-Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\U_I_Meter\Top_Board\U_I_Meter_TOP.PcbDoc
+Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\U_I_Meter_TOP\U_I_Meter_TOP\U_I_Meter_TOP.PcbDoc
 OutputType9=IPC2581
 OutputName9=IPC-2581 Files
 OutputDocumentPath9=

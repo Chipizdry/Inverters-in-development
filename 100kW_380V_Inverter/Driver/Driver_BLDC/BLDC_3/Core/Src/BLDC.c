@@ -28,7 +28,7 @@ void Phaze_C_ON(void){HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);HAL_TIM_PWM_Sta
 void Phaze_C_OFF(void){HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);}
 void Phaze_C_ZZ(void){HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);}
 
-
+/*
 void BLDC_MotorCommutation(uint8_t halls  ){
 
 	 switch (halls) {
@@ -97,3 +97,4 @@ void BLDC_MotorCommutation(uint8_t halls  ){
 	break;}
 
 }
+*/

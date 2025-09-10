@@ -1,4 +1,5 @@
 "./Core/Src/BLDC.o"
+"./Core/Src/BLDC_asm.o"
 "./Core/Src/Registers_handler.o"
 "./Core/Src/freertos.o"
 "./Core/Src/main.o"

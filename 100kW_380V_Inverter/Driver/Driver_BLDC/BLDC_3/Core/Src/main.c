@@ -38,6 +38,11 @@
 #define UPDATE_TIME 1000 //время прироста ШИМ на один шаг
 #define ADC_NUM_CHANNELS 4  // Количество каналов
 
+// Константы для избежания плавающей точки
+#define CPU_FREQ_HZ 216000000
+#define CALC_CONSTANT (60 * CPU_FREQ_HZ / NUM_MAGNETS)
+
+
 #define ANGLE_OF_ATTACK 15
 uint16_t adc_values[ADC_NUM_CHANNELS];
 uint32_t lastActivityTime = 0;
@@ -437,7 +442,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 0;
+  htim1.Init.Prescaler = 5;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 2000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -548,25 +553,29 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
-  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_FALLING;
   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
-  sConfigIC.ICFilter = 0;
+  sConfigIC.ICFilter = 13;
   if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
   }
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
   sConfigIC.ICSelection = TIM_ICSELECTION_INDIRECTTI;
+  sConfigIC.ICFilter = 0;
   if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
   }
   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  sConfigIC.ICFilter = 13;
   if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
   }
   sConfigIC.ICSelection = TIM_ICSELECTION_INDIRECTTI;
+  sConfigIC.ICFilter = 0;
   if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_4) != HAL_OK)
   {
     Error_Handler();
@@ -847,6 +856,54 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     }
 }
 
+
+
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM2)
+    {
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
+        {
+
+
+
+		  period = 0;
+		      TIM2->CNT = 0;
+		      period = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_2);
+
+		      // Правильные константы для 216 MHz и 8 магнитов:
+		      rpm = 1620000000 / period/2;  // 216M * 60 / 8 = 1620M
+		      f = 27000000 / period/2;      // 216M / 8 = 27M
+
+		      // Корректируем граничные значения:
+		      if((period > 1620000000) || (period <= 2160)) {  // period <= 2160 = ~100,000 RPM
+		          rpm = 0;
+		          f = 0;
+		      }
+
+        }
+
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
+        {
+        	 moove = HAL_GetTick();
+        }
+
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3)
+        {
+
+        }
+
+        if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_4)
+        {
+
+        }
+    }
+
+
+
+}
+
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -863,6 +920,7 @@ void StartDefaultTask(void *argument)
   for(;;)
   {
 	  Check_USART1_Timeout(); // Добавьте эту строку
+	  if((HAL_GetTick()-moove)>=ROTATE_TIME){rpm=0;}
 	      osDelay(2000); // Проверяем каждые 100 мс (можно настроить)
   }
   /* USER CODE END 5 */
@@ -984,7 +1042,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 }
 
   /* USER CODE END Callback 1 */
-
 
 /**
   * @brief  This function is executed in case of error occurrence.
