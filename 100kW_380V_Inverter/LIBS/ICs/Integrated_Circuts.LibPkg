@@ -730,23 +730,6 @@ GenerateClassCluster=0
 DocumentUniqueId=NOHEHTRZ
 
 [Document41]
-DocumentPath=MCP6001T-SOT23-5.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=YCWVPVMQ
-
-[Document42]
 DocumentPath=SOT-23-5.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -763,7 +746,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HYXYODRL
 
-[Document43]
+[Document42]
 DocumentPath=AMC1311.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -780,7 +763,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CFGUVKBX
 
-[Document44]
+[Document43]
 DocumentPath=STM32F303CCT6.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -797,7 +780,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BVAIXHTF
 
-[Document45]
+[Document44]
 DocumentPath=AMC1311.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -814,7 +797,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YGKLQSVW
 
-[Document46]
+[Document45]
 DocumentPath=B0505S-1W.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -831,7 +814,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SQFZXSOL
 
-[Document47]
+[Document46]
 DocumentPath=B0505S-1W.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -848,7 +831,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AHWPHDCU
 
-[Document48]
+[Document47]
 DocumentPath=AMC1117.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -865,7 +848,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LUSBPFML
 
-[Document49]
+[Document48]
 DocumentPath=SOT-223.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -882,7 +865,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NHKOATYI
 
-[Document50]
+[Document49]
 DocumentPath=MAX485.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -899,7 +882,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ATQIKHRO
 
-[Document51]
+[Document50]
 DocumentPath=SOIC-8(Maxim_integrations).PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -916,7 +899,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IGJCJSVM
 
-[Document52]
+[Document51]
 DocumentPath=SOT-89.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -933,7 +916,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QJEYUEBI
 
-[Document53]
+[Document52]
 DocumentPath=SOIC127P1036X391-16N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -950,7 +933,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document54]
+[Document53]
 DocumentPath=HCPL-316J.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -967,7 +950,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YRKRRDCM
 
-[Document55]
+[Document54]
 DocumentPath=TO-252.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -984,7 +967,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document56]
+[Document55]
 DocumentPath=LM7818.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1001,7 +984,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KSHOOGXN
 
-[Document57]
+[Document56]
 DocumentPath=IR2110S.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1018,7 +1001,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AYPVNBEE
 
-[Document58]
+[Document57]
 DocumentPath=REF3033.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1035,7 +1018,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ZDTYHDJJ
 
-[Document59]
+[Document58]
 DocumentPath=SOT23-3.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1052,7 +1035,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BIQLAOVH
 
-[Document60]
+[Document59]
 DocumentPath=LP2951.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1069,7 +1052,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YACTQAEO
 
-[Document61]
+[Document60]
 DocumentPath=PC817.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1086,7 +1069,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CGELEQCA
 
-[Document62]
+[Document61]
 DocumentPath=MC34063.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1103,7 +1086,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UQOCMFEI
 
-[Document63]
+[Document62]
 DocumentPath=STM32G030F6P6.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1120,7 +1103,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MJCTPOBC
 
-[Document64]
+[Document63]
 DocumentPath=STM32G030F6T6.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1137,7 +1120,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OMLURRCW
 
-[Document65]
+[Document64]
 DocumentPath=STM32F405RGT6.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1154,7 +1137,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GMUBKJQR
 
-[Document66]
+[Document65]
 DocumentPath=LQFP64.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1171,7 +1154,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XQDGKJKG
 
-[Document67]
+[Document66]
 DocumentPath=ESP32-C3.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1188,7 +1171,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UUHLGIXJ
 
-[Document68]
+[Document67]
 DocumentPath=ESP32-C3_Mini.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1205,7 +1188,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SHEJJITC
 
-[Document69]
+[Document68]
 DocumentPath=CD4066.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1222,7 +1205,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IWMAJCJV
 
-[Document70]
+[Document69]
 DocumentPath=SN74HC541DWR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1239,7 +1222,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SRPLSSKG
 
-[Document71]
+[Document70]
 DocumentPath=SN74HC541DWR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1256,7 +1239,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TDSGUIKA
 
-[Document72]
+[Document71]
 DocumentPath=SOP-20.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1273,7 +1256,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document73]
+[Document72]
 DocumentPath=W25Q128.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1290,7 +1273,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ADDZJLUV
 
-[Document74]
+[Document73]
 DocumentPath=SOIC-8-WINB.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1307,7 +1290,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HDUXWYKQ
 
-[Document75]
+[Document74]
 DocumentPath=STM32F722RET6.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1324,7 +1307,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JUESFERX
 
-[Document76]
+[Document75]
 DocumentPath=LQFP64-5W.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1341,7 +1324,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LKFGCGVM
 
-[Document77]
+[Document76]
 DocumentPath=SG3525.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1358,7 +1341,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IETYKAMD
 
-[Document78]
+[Document77]
 DocumentPath=SOIC_16_ST.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1375,7 +1358,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GCVHDEMU
 
-[Document79]
+[Document78]
 DocumentPath=LM358DR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1392,7 +1375,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LLWQFLXY
 
-[Document80]
+[Document79]
 DocumentPath=InSOP-24D.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1408,6 +1391,108 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SKFGPLDR
+
+[Document80]
+DocumentPath=QRE1113.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=IKVUBIPG
+
+[Document81]
+DocumentPath=MCP6001T.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=DYVWFYDG
+
+[Document82]
+DocumentPath=MOD-ESP32-WROOM-32E.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document83]
+DocumentPath=MOD-ESP32-WROOM-32E.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TCJCTKYI
+
+[Document84]
+DocumentPath=LAN7820A.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=RWUMCRYU
+
+[Document85]
+DocumentPath=24QFN.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TYCYYAGQ
 
 [OutputGroup1]
 Name=Netlist Outputs
