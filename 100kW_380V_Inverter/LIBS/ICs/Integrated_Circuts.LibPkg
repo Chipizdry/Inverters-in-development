@@ -1664,6 +1664,40 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VFEPVUPR
 
+[Document96]
+DocumentPath=MCP6004_TSSOP.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=NPVAYZGZ
+
+[Document97]
+DocumentPath=TSSOP-14.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=AQCDUPAC
+
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
@@ -2048,6 +2082,11 @@ OutputName10=GOST BOM
 OutputDocumentPath10=
 OutputVariantName10=[No Variations]
 OutputDefault10=0
+OutputType11=BOM_ReportManufacturing
+OutputName11=Manufacturing Data
+OutputDocumentPath11=
+OutputVariantName11=[No Variations]
+OutputDefault11=0
 
 [OutputGroup7]
 Name=Other Outputs
@@ -2339,6 +2378,16 @@ Type148=1
 Type149=1
 Type150=1
 Type151=1
+Type152=1
+Type153=1
+Type154=1
+Type155=1
+Type156=1
+Type157=1
+Type158=1
+Type159=1
+Type160=1
+Type161=1
 
 [Difference Levels]
 Type1=1
@@ -2423,6 +2472,12 @@ Type79=1
 Type80=1
 Type81=1
 Type82=1
+Type83=1
+Type84=1
+Type85=1
+Type86=1
+Type87=1
+Type88=1
 
 [Electrical Rules Check]
 Type1=1
@@ -2586,6 +2641,10 @@ Type158=0
 Type159=0
 Type160=0
 Type161=0
+Type162=1
+Type163=1
+Type164=1
+Type165=2
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
