@@ -126,6 +126,10 @@ DocumentPath=Project Outputs for Optic_sensor\Design Rule Check - Optic_sensor.h
 DItemRevisionGUID=
 
 [GeneratedDocument3]
+DocumentPath=Project Outputs for Optic_sensor_quad\Design Rule Check - Optic_sensor_quad.html
+DItemRevisionGUID=
+
+[GeneratedDocument4]
 DocumentPath=Project Outputs for PWM_controller\Design Rule Check - PWM_controller.html
 DItemRevisionGUID=
 
