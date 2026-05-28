@@ -64,8 +64,8 @@ all: main-build
 main-build: BLDC_3.elf secondary-outputs
 
 # Tool invocations
-BLDC_3.elf BLDC_3.map: $(OBJS) $(USER_OBJS) D:\STM\BLDC_3\STM32F722RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BLDC_3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\STM\BLDC_3\STM32F722RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+BLDC_3.elf BLDC_3.map: $(OBJS) $(USER_OBJS) D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\BLDC_3\STM32F722RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BLDC_3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\BLDC_3\STM32F722RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

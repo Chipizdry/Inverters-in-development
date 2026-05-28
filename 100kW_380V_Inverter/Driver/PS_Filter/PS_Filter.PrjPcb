@@ -50,7 +50,7 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=DRIVER POWER SUPPLY MODULE.PcbDoc
+DocumentPath=PS_Filter.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -60,183 +60,395 @@ AnnotateOrder=-1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=REOACJNG
 
 [Document2]
-DocumentPath=DRIVER POWER SUPPLY MODULE.SchDoc
+DocumentPath=PS_Filter.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=0
+AnnotateOrder=-1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BTRAQOWF
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\Design Rule Check - DRIVER POWER SUPPLY MODULE.html
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_bot\components
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE-RoundHoles.TXT
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_top\components
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE-SlotHoles.TXT
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\comp_+_bot\components
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.DRR
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\comp_+_top\components
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.EXTREP
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\eda\data
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.LDP
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\eda\data
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.REP
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\Design Rule Check - DRIVER POWER SUPPLY MODULE.html
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.RUL
+DocumentPath=Project Outputs for PS_Filter\Design Rule Check - PS_Filter.html
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_3D_Body.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE-RoundHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_Assembly.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE-SlotHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_Component_Center.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_Courtyard.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.REP
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Drawing_1.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Drillmap_1.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Keep-out.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Legend_Bot.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Legend_Top.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Bottom_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_1.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_10.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_12.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Drawing_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_13.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Drillmap_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_15.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_NPTH_Drill.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Pads_Bot.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Pads_Top.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Paste_Bot.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_10.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Paste_Top.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_12.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Profile.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_PTH_Drill.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Soldermask_Top.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_3D_Body.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Assembly.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Component_Center.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Component_Outline.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Courtyard.gbr
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument39]
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument40]
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Soldermask_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument41]
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_3D_Body.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument42]
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Assembly.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument43]
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument44]
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Component_Outline.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument45]
+DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument46]
 DocumentPath=Project Outputs for DRIVER POWER SUPPLY MODULE\DRIVER POWER SUPPLY MODULE_Top_Designator.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument47]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\bottom_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument48]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\bottom_overlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument49]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\bottom_paste\features
+DItemRevisionGUID=
+
+[GeneratedDocument50]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\bottom_solder\features
+DItemRevisionGUID=
+
+[GeneratedDocument51]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_bot\features
+DItemRevisionGUID=
+
+[GeneratedDocument52]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_top\features
+DItemRevisionGUID=
+
+[GeneratedDocument53]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\dielectric_1\features
+DItemRevisionGUID=
+
+[GeneratedDocument54]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_non-plated_bottom_layer-top_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument55]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_plated_bottom_layer-top_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument56]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\rout\features
+DItemRevisionGUID=
+
+[GeneratedDocument57]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\top_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument58]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\top_overlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument59]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\top_paste\features
+DItemRevisionGUID=
+
+[GeneratedDocument60]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\top_solder\features
+DItemRevisionGUID=
+
+[GeneratedDocument61]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\bottom_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument62]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\bottom_overlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument63]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\bottom_paste\features
+DItemRevisionGUID=
+
+[GeneratedDocument64]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\bottom_solder\features
+DItemRevisionGUID=
+
+[GeneratedDocument65]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\comp_+_bot\features
+DItemRevisionGUID=
+
+[GeneratedDocument66]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\comp_+_top\features
+DItemRevisionGUID=
+
+[GeneratedDocument67]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\dielectric_1\features
+DItemRevisionGUID=
+
+[GeneratedDocument68]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\drill_non-plated_bottom_layer-top_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument69]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\drill_plated_bottom_layer-top_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument70]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\rout\features
+DItemRevisionGUID=
+
+[GeneratedDocument71]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\top_layer\features
+DItemRevisionGUID=
+
+[GeneratedDocument72]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\top_overlay\features
+DItemRevisionGUID=
+
+[GeneratedDocument73]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\top_paste\features
+DItemRevisionGUID=
+
+[GeneratedDocument74]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\top_solder\features
+DItemRevisionGUID=
+
+[GeneratedDocument75]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\matrix\matrix
+DItemRevisionGUID=
+
+[GeneratedDocument76]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\matrix\matrix
+DItemRevisionGUID=
+
+[GeneratedDocument77]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\netlists\cadnet\netlist
+DItemRevisionGUID=
+
+[GeneratedDocument78]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\netlists\cadnet\netlist
+DItemRevisionGUID=
+
+[GeneratedDocument79]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\Pick Place for PS_Filter.csv
+DItemRevisionGUID=
+
+[GeneratedDocument80]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\profile
+DItemRevisionGUID=
+
+[GeneratedDocument81]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\profile
+DItemRevisionGUID=
+
+[GeneratedDocument82]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\PS_Filter.REP
+DItemRevisionGUID=
+
+[GeneratedDocument83]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\SimulationDummy.REP
+DItemRevisionGUID=
+
+[GeneratedDocument84]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\user\SimulationDummy.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument85]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\stephdr
+DItemRevisionGUID=
+
+[GeneratedDocument86]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\stephdr
+DItemRevisionGUID=
+
+[GeneratedDocument87]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_non-plated_bottom_layer-top_layer\tools
+DItemRevisionGUID=
+
+[GeneratedDocument88]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_plated_bottom_layer-top_layer\tools
+DItemRevisionGUID=
+
+[GeneratedDocument89]
+DocumentPath=C:\ProgramData\Altium\Altium Designer {35B4719C-123F-4E97-9486-B0C66D798950}\Extensions\EMIStream\Data\odb\steps\pcb\layers\rout\tools
+DItemRevisionGUID=
+
+[GeneratedDocument90]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\drill_non-plated_bottom_layer-top_layer\tools
+DItemRevisionGUID=
+
+[GeneratedDocument91]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\drill_plated_bottom_layer-top_layer\tools
+DItemRevisionGUID=
+
+[GeneratedDocument92]
+DocumentPath=PDNAnalyzer_Output\PS_Filter\ODBTemp\odb\steps\pcb\layers\rout\tools
 DItemRevisionGUID=
 
 [Configuration1]
@@ -543,6 +755,8 @@ OutputName6=ODB++ Files
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
+Configuration6_Name1=OutputConfigurationParameter1
+Configuration6_Item1=Compression_None=True|Compression_tar_tgz=True|Compression_zip=True|DifferentFootprints=False|ExportPositivePlaneLayers=False|GenerateDRCRulesFile=False|IncludeComponents=True|IncludeNetList=True|IncludeUnconnectedMidLayerPads=False|IncludeVariantsData=False|IntentionalShorts=False|MergeNetTieNets=False|NeutralizeNetNames=False|ObjsInsideBoardOutlineOnly=False|ODBProfileLayer=-1000|ODBProfileLayerV7=-1|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBottomLayerPlot=True|PlotBottomOverlayPlot=True|PlotBottomPastePlot=True|PlotBottomSolderPlot=True|PlotCounterHolesPairs=False|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotInternalPlane10Plot=False|PlotInternalPlane11Plot=False|PlotInternalPlane12Plot=False|PlotInternalPlane13Plot=False|PlotInternalPlane14Plot=False|PlotInternalPlane15Plot=False|PlotInternalPlane16Plot=False|PlotInternalPlane1Plot=False|PlotInternalPlane2Plot=False|PlotInternalPlane3Plot=False|PlotInternalPlane4Plot=False|PlotInternalPlane5Plot=False|PlotInternalPlane6Plot=False|PlotInternalPlane7Plot=False|PlotInternalPlane8Plot=False|PlotInternalPlane9Plot=False|PlotKeepOutLayerPlot=False|PlotMechanical10Plot=False|PlotMechanical11Plot=False|PlotMechanical12Plot=False|PlotMechanical13Plot=False|PlotMechanical14Plot=False|PlotMechanical15Plot=False|PlotMechanical16Plot=False|PlotMechanical1Plot=False|PlotMechanical2Plot=False|PlotMechanical3Plot=False|PlotMechanical4Plot=False|PlotMechanical5Plot=False|PlotMechanical6Plot=False|PlotMechanical7Plot=False|PlotMechanical8Plot=False|PlotMechanical9Plot=False|PlotMicroViasPairs=False|PlotMidLayer10Plot=False|PlotMidLayer11Plot=False|PlotMidLayer12Plot=False|PlotMidLayer13Plot=False|PlotMidLayer14Plot=False|PlotMidLayer15Plot=False|PlotMidLayer16Plot=False|PlotMidLayer17Plot=False|PlotMidLayer18Plot=False|PlotMidLayer19Plot=False|PlotMidLayer1Plot=False|PlotMidLayer20Plot=False|PlotMidLayer21Plot=False|PlotMidLayer22Plot=False|PlotMidLayer23Plot=False|PlotMidLayer24Plot=False|PlotMidLayer25Plot=False|PlotMidLayer26Plot=False|PlotMidLayer27Plot=False|PlotMidLayer28Plot=False|PlotMidLayer29Plot=False|PlotMidLayer2Plot=False|PlotMidLayer30Plot=False|PlotMidLayer3Plot=False|PlotMidLayer4Plot=False|PlotMidLayer5Plot=False|PlotMidLayer6Plot=False|PlotMidLayer7Plot=False|PlotMidLayer8Plot=False|PlotMidLayer9Plot=False|PlotNPTHPairs=False|PlotPTHPairs=False|PlotTopLayerPlot=True|PlotTopOverlayPlot=True|PlotTopPastePlot=True|PlotTopSolderPlot=True|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|Record=ODBView|RemoveComponentProperties=False|ToolsByDrillSymbols=False|Units=Metric|Version=8.1|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\PS_Filter\PDNAnalyzer_Output\PS_Filter\SimulationDummy.PcbDoc
 OutputType7=Drill
 OutputName7=Drill Drawing/Guides
 OutputDocumentPath7=
@@ -598,7 +812,7 @@ Configuration1_Item1=CaptionAsName
 Configuration1_Name2=ForceUpdateSettings
 Configuration1_Item2=False
 Configuration1_Name3=General
-Configuration1_Item3=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|TemplateVaultGuid=|TemplateItemGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=1200|FormHeight=710|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=USD|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|UseDirectApi=False|BomSetName=
+Configuration1_Item3=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|TemplateVaultGuid=|TemplateItemGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=1200|FormHeight=710|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=USD|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|BomSetName=
 Configuration1_Name4=GroupOrder
 Configuration1_Item4=Comment=True|Footprint=True
 Configuration1_Name5=SortOrder
