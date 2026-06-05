@@ -12,21 +12,22 @@
 #include "main.h"
 #include "stdbool.h"
 extern TIM_HandleTypeDef htim1;
-void Phaze_A_ON(void);
+void Phaze_A_ON(uint16_t pwm);
 void Phaze_A_OFF(void);
 void Phaze_A_ZZ(void);
 
-void Phaze_B_ON(void);
+void Phaze_B_ON(uint16_t pwm);
 void Phaze_B_OFF(void);
 void Phaze_B_ZZ(void);
 
-void Phaze_C_ON(void);
+void Phaze_C_ON(uint16_t pwm);
 void Phaze_C_OFF(void);
 void Phaze_C_ZZ(void);
 
 uint8_t SWITCH( bool coils[]);
-void BLDC_DriveCommutation(uint8_t halls);
-void BLDC_RegenCommutation(uint8_t halls);
+//void BLDC_MotorCommutation(uint8_t halls  );
+void BLDC_MotorCommutation(uint8_t halls, uint16_t pwm);
+void BLDC_GeneratorCommutation(uint8_t halls ,uint16_t pwm );
 
 
 #endif /* INC_BLDC_H_ */

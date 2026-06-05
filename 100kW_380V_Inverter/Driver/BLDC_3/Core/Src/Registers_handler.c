@@ -92,13 +92,13 @@ void Registers_handler(uint8_t* rxFrame, uint16_t* data_reg, uint16_t* rcv_data_
 
 				  			   case WRITE_SINGLE_REG:
 
-				  			    handleWriteMulyipleHandlingRegister(&huart1,rcv_data_reg);
+				  			    handleWriteMulyipleHandlingRegister(&huart1,rcv_data_reg,Size);
 
                                break;
 
 				  			   case WRITE_HOLDING_REGs:
 
-                                 handleWriteMulyipleHandlingRegister(&huart1,rcv_data_reg);
+                                 handleWriteMulyipleHandlingRegister(&huart1,rcv_data_reg,Size);
 
                                break;
 

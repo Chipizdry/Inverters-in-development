@@ -1,9 +1,5 @@
- /*******************************
-  *      modbusSlave.h
-  *
-  *  Created on: 1 feb. 2023
-  *   Author: JorgeMaker
- *******************************/
+
+
 
 #ifndef INC_MODBUSSLAVE_H_
 #define INC_MODBUSSLAVE_H_
@@ -19,7 +15,7 @@ modbusResult handleReadInputRegs (UART_HandleTypeDef* huart,uint16_t* inputRegis
 modbusResult handleReadCoils (UART_HandleTypeDef* huart,uint8_t* coilValues);
 modbusResult handleReadDiscreteInputs (UART_HandleTypeDef* huart,uint8_t* dicreteInputValues);
 modbusResult handleWriteSingleHandlingRegister (UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues);
-modbusResult handleWriteMulyipleHandlingRegister (UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues);
+modbusResult handleWriteMulyipleHandlingRegister(UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues,uint16_t Size);
 modbusResult handleWriteSingleCoil (UART_HandleTypeDef* huart,uint8_t* coilValues);
 modbusResult hadleWriteMultipleCoils(UART_HandleTypeDef* huart,uint8_t* coilValues);
 

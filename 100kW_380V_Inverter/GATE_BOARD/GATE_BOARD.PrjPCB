@@ -169,250 +169,254 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD-RoundHoles.TXT
+DocumentPath=Project Outputs for pvs_bnvd\Design Rule Check - GATE_BOARD.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD-SlotHoles.TXT
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD-RoundHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.DRR
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD-SlotHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.EXTREP
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.LDP
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.REP
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.RUL
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.REP
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Board.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Board.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_Component_Outline.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Keep-out.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Legend_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Mechanical_15.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Profile.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_PTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.DRR
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.EXTREP
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.LDP
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.REP
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.RUL
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.REP
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.TXT
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Courtyard.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Outline.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument39]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument40]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument41]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drawing_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument42]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drillmap_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drawing_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument43]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Keep-out.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drillmap_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument44]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument45]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument46]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_13.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument47]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_15.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument48]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_NPTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument49]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument50]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument51]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument52]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument53]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Profile.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument54]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_PTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument55]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument56]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument57]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument58]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument59]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument60]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument61]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Courtyard.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Outline.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument62]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument63]
 DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Designator.gbr
 DItemRevisionGUID=
 
@@ -873,6 +877,11 @@ OutputName10=GOST BOM
 OutputDocumentPath10=
 OutputVariantName10=[No Variations]
 OutputDefault10=0
+OutputType11=BOM_ReportManufacturing
+OutputName11=Manufacturing Data
+OutputDocumentPath11=
+OutputVariantName11=[No Variations]
+OutputDefault11=0
 
 [OutputGroup7]
 Name=Other Outputs
@@ -1000,6 +1009,36 @@ OutputName13=Ansys EDB
 OutputDocumentPath13=
 OutputVariantName13=
 OutputDefault13=0
+OutputType14=Ansoft Neutral
+OutputName14=Ansoft Neutral (AutoPCB)
+OutputDocumentPath14=
+OutputVariantName14=
+OutputDefault14=0
+OutputType15=HyperLynx
+OutputName15=HyperLynx (AutoPCB)
+OutputDocumentPath15=
+OutputVariantName15=
+OutputDefault15=0
+OutputType16=MathWorks
+OutputName16=MathWorks (AutoPCB)
+OutputDocumentPath16=
+OutputVariantName16=
+OutputDefault16=0
+OutputType17=Orcad v7 Capture Design
+OutputName17=Orcad v7 Capture Design (AutoSCH)
+OutputDocumentPath17=
+OutputVariantName17=
+OutputDefault17=0
+OutputType18=P-CAD ASCII
+OutputName18=P-CAD ASCII (AutoPCB)
+OutputDocumentPath18=
+OutputVariantName18=
+OutputDefault18=0
+OutputType19=P-CAD V16 Schematic Design
+OutputName19=P-CAD V16 Schematic Design (AutoSCH)
+OutputDocumentPath19=
+OutputVariantName19=
+OutputDefault19=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
@@ -1163,6 +1202,17 @@ Type147=1
 Type148=1
 Type149=1
 Type150=1
+Type151=1
+Type152=1
+Type153=1
+Type154=1
+Type155=1
+Type156=1
+Type157=1
+Type158=1
+Type159=1
+Type160=1
+Type161=1
 
 [Difference Levels]
 Type1=1
@@ -1246,6 +1296,13 @@ Type78=1
 Type79=1
 Type80=1
 Type81=1
+Type82=1
+Type83=1
+Type84=1
+Type85=1
+Type86=1
+Type87=1
+Type88=1
 
 [Electrical Rules Check]
 Type1=1
@@ -1402,6 +1459,17 @@ Type151=2
 Type152=1
 Type153=1
 Type154=0
+Type155=0
+Type156=0
+Type157=0
+Type158=0
+Type159=0
+Type160=0
+Type161=0
+Type162=1
+Type163=1
+Type164=1
+Type165=2
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW

@@ -37,8 +37,8 @@
 #define ROTATE_TIME 2000
 #define UPDATE_TIME 1000 //время прироста ШИМ на один шаг
 #define ADC_NUM_CHANNELS 4  // Количество каналов
-#define MODE_DRIVE 1
-#define MODE_REGEN 0
+#define MODE_DRIVE 0
+#define MODE_GEN 1
 // Константы для избежания плавающей точки
 #define CPU_FREQ_HZ 216000000
 #define CALC_CONSTANT (60 * CPU_FREQ_HZ / NUM_MAGNETS)
@@ -48,15 +48,16 @@
 uint16_t adc_values[ADC_NUM_CHANNELS];
 uint32_t lastActivityTime = 0;
  bool usartBusy = false;
- uint8_t rxFrame[64];
- uint8_t txFrame[255];
+ uint8_t rxFrame[128]={0,};
+ uint8_t txFrame[128]={0,};
  uint8_t SLAVE_ID=2;
- uint16_t data_reg[16]={0,};
- uint16_t rcv_data_reg[16]={0,};
+ uint16_t data_reg[32]={0,};
+ uint16_t rcv_data_reg[32]={0,};
  uint16_t timer1Freq=0;
  uint16_t timer3Freq=0;
  uint16_t auto_mode_timer=0;
  uint32_t pwm=0;
+ uint16_t pwm_boost=0;
 
  uint8_t dicreteInputs[200] = {0};
  uint8_t coils[200] = {0};
@@ -140,8 +141,9 @@ void StartTask02(void *argument);
 /* USER CODE BEGIN PFP */
 void Check_USART1_Timeout(void);
 void Reset_USART1(void);
-void BLDC_MotorCommutation(uint8_t halls);
+void BLDC_MotorCommutation(uint8_t halls, uint16_t pwm);
 uint16_t calculateTimerFrequency(TIM_TypeDef *TIMx, uint32_t timerClockFreq);
+void BLDC_FlywheelCommutation(uint8_t halls ,uint16_t pwm , bool bldc_mode);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -230,7 +232,19 @@ int main(void)
   //  DRIVE_2_OFF;
   //  DRIVE_3_OFF;
     RX_2;
+    HAL_TIM_Base_Start(&htim1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
 
+    TIM1->CCER = 0;                // все выходы выключены
+    TIM1->BDTR |= TIM_BDTR_MOE;    // разрешить выходы
+ /*   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);      // преинициализация
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);  */
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -476,10 +490,10 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 1000;
+  sConfigOC.Pulse = 1;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
   sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -497,7 +511,7 @@ static void MX_TIM1_Init(void)
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 255;
+  sBreakDeadTimeConfig.DeadTime = 180;
   sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
   sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
   sBreakDeadTimeConfig.BreakFilter = 0;
@@ -861,67 +875,73 @@ void Check_USART1_Timeout(void)
      }
  }
 
-void BLDC_MotorCommutation(uint8_t halls)
+
+void BLDC_FlywheelCommutation(uint8_t halls ,uint16_t pwm , bool bldc_mode)
 {
-    if(bldc_mode == MODE_DRIVE)
-        BLDC_DriveCommutation(halls);
-    else
-        BLDC_RegenCommutation(halls);
+    if (bldc_mode == MODE_DRIVE)
+    {
+    	LED_5_OFF;
+        BLDC_MotorCommutation(halls,pwm);
+    }
+    if (bldc_mode == MODE_GEN)
+    {
+    	LED_5_ON;
+        BLDC_GeneratorCommutation(halls, pwm);
+    }
 }
-
-
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    if(GPIO_Pin == HALL_A_Pin) // Прерывание по PB0
+    uint16_t current_pwm = (bldc_mode == MODE_DRIVE) ? pwm : pwm_boost;
+
+    if(GPIO_Pin == HALL_A_Pin)
     {
         if (GPIO_PIN_SET == HAL_GPIO_ReadPin(HALL_A_GPIO_Port, HALL_A_Pin))
         {
             LED_1_ON;
             BLDC_STATE[0] = 0;
-            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+            BLDC_FlywheelCommutation(SWITCH(BLDC_STATE), current_pwm, bldc_mode);
         }
-        else if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(HALL_A_GPIO_Port, HALL_A_Pin))
+        else
         {
             LED_1_OFF;
             BLDC_STATE[0] = 1;
-            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+            BLDC_FlywheelCommutation(SWITCH(BLDC_STATE), current_pwm, bldc_mode);
         }
     }
 
-    if(GPIO_Pin == HALL_B_Pin) // Прерывание по PB1
+    if(GPIO_Pin == HALL_B_Pin)
     {
         if (GPIO_PIN_SET == HAL_GPIO_ReadPin(HALL_B_GPIO_Port, HALL_B_Pin))
         {
             LED_2_ON;
             BLDC_STATE[1] = 0;
-            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+            BLDC_FlywheelCommutation(SWITCH(BLDC_STATE), current_pwm, bldc_mode);
         }
-        else if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(HALL_B_GPIO_Port, HALL_B_Pin))
+        else
         {
             LED_2_OFF;
             BLDC_STATE[1] = 1;
-            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+            BLDC_FlywheelCommutation(SWITCH(BLDC_STATE), current_pwm, bldc_mode);
         }
     }
 
-    if(GPIO_Pin == HALL_C_Pin) // Прерывание по PB2
+    if(GPIO_Pin == HALL_C_Pin)
     {
         if (GPIO_PIN_SET == HAL_GPIO_ReadPin(HALL_C_GPIO_Port, HALL_C_Pin))
         {
             LED_3_ON;
             BLDC_STATE[2] = 0;
-            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+            BLDC_FlywheelCommutation(SWITCH(BLDC_STATE), current_pwm, bldc_mode);
         }
-        else if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(HALL_C_GPIO_Port, HALL_C_Pin))
+        else
         {
             LED_3_OFF;
             BLDC_STATE[2] = 1;
-            BLDC_MotorCommutation(SWITCH(BLDC_STATE));
+            BLDC_FlywheelCommutation(SWITCH(BLDC_STATE), current_pwm, bldc_mode);
         }
     }
 }
-
 
 
 
@@ -931,8 +951,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
     {
         if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
         {
-
-
 
 		  period = 0;
 		      TIM2->CNT = 0;
@@ -985,9 +1003,9 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  Check_USART1_Timeout(); // Добавьте эту строку
+	  Check_USART1_Timeout();
 	  if((HAL_GetTick()-moove)>=ROTATE_TIME){rpm=0;}
-	      osDelay(2000); // Проверяем каждые 100 мс (можно настроить)
+	      osDelay(1000); // Проверяем каждые 1000 мс (можно настроить)
   }
   /* USER CODE END 5 */
 }
@@ -1003,58 +1021,84 @@ void StartTask02(void *argument)
 {
   /* USER CODE BEGIN StartTask02 */
   /* Infinite loop */
+
+	 static uint8_t prev_bldc_mode = MODE_DRIVE;
   for(;;)
   {
-      // Управление PWM
-      if(auto_mode==0){
-          pwm = rcv_data_reg[4];
-          if(pwm >= TIM1->ARR) pwm = TIM1->ARR;
-          if(pwm <= 0) pwm = 0;
-
-          TIM1->CCR1 = pwm;
-          TIM1->CCR2 = pwm;
-          TIM1->CCR3 = pwm;
-      }
-
-      if(auto_mode==1){
-          if(HAL_GetTick() - auto_mode_timer >= UPDATE_TIME){
-              pwm = pwm + 1;
-              if(pwm >= TIM1->ARR) pwm = TIM1->ARR;
-              if(pwm <= 0) pwm = 0;
-
-              TIM1->CCR1 = pwm;
-              TIM1->CCR2 = pwm;
-              TIM1->CCR3 = pwm;
-
-              auto_mode_timer = HAL_GetTick();
-          }
-      }
-
-      // Установка периода таймера из регистра
-      TIM1->ARR = rcv_data_reg[3];
-
-      // Обновление регистров данных для Modbus
-      uint32_t freqHz = calculateTimerFrequency(TIM1, timerClockFreq);
-
-      data_reg[0] = freqHz;      // REG_PWM - частота в Гц  HI
-      data_reg[1] = freqHz;      // REG_PWM - частота в Гц  LO
-      data_reg[2] = rpm;         // REG_RPM - скорость
-      data_reg[3] = TIM1->ARR;   // REG_TIMER_ARR - период таймера
-      data_reg[4] = pwm;         // TIM1->CCR1 = pwm;скважность таймера
-      data_reg[5] = pwm;         // TIM1->CCR2 = pwm;скважность таймера
-      data_reg[6] = pwm;         // TIM1->CCR3 = pwm;скважность таймера
+	  // ===== 1. СНАЧАЛА читаем присланные данные =====
+	  uint16_t new_arr = rcv_data_reg[3];
+	  uint16_t new_pwm = rcv_data_reg[4];
+	  uint16_t new_pwm_boost = rcv_data_reg[8];
+	  uint16_t new_status = rcv_data_reg[7];
+	  // ===== 2. Обновляем состояние из присланного статуса =====
+	  uint8_t low_byte = (uint8_t)(new_status & 0xFF);
+	  coil_1    = (low_byte >> 1) & 0x01;
+	  coil_2    = (low_byte >> 2) & 0x01;
+	  coil_3    = (low_byte >> 3) & 0x01;
+	  coil_4    = (low_byte >> 4) & 0x01;
+	  auto_mode = (low_byte >> 5) & 0x01;
+	  pwr_on    = (low_byte >> 6) & 0x01;
+	  bldc_mode = (low_byte >> 7) & 0x01;
 
 
-      // Чтение статуса из регистра
-      coil_1    = (rcv_data_reg[7] >> 1) & 0x01;
-      coil_2    = (rcv_data_reg[7] >> 2) & 0x01;
-      coil_3    = (rcv_data_reg[7] >> 3) & 0x01;
-      coil_4    = (rcv_data_reg[7] >> 4) & 0x01;
-      auto_mode = (rcv_data_reg[7] >> 5) & 0x01;
-      pwr_on    = (rcv_data_reg[7] >> 6) & 0x01;
-      bldc_mode = (rcv_data_reg[7] >> 7) & 0x01;
 
-      osDelay(100);  // Задержка 100 мс между обновлениями
+      // 3. При смене режима сбрасываем все ШИМ-выходы
+             if (bldc_mode != prev_bldc_mode) {
+                 TIM1->CCR1 = 0;
+                 TIM1->CCR2 = 0;
+                 TIM1->CCR3 = 0;
+
+                 pwm = 0;
+                 pwm_boost = 0;
+                 prev_bldc_mode = bldc_mode;
+             }
+
+      // ===== 4. Формируем ответные регистры (ИЗ ТЕКУЩЕГО СОСТОЯНИЯ!) =====
+           uint32_t freqHz = calculateTimerFrequency(TIM1, timerClockFreq);
+
+           data_reg[0] = freqHz;           // FREQ HI
+           data_reg[1] = freqHz;           // FREQ LO
+           data_reg[2] = rpm;              // RPM
+           data_reg[3] = TIM1->ARR;        // TIMER_ARR
+           data_reg[4] = pwm;              // PWM_CH1
+           data_reg[5] = pwm;              // PWM_CH2
+           data_reg[6] = pwm;              // PWM_CH3
+
+           //формируем статус из текущих флагов
+           uint16_t current_status = 0;
+           current_status |= (coil_1 << 1);
+           current_status |= (coil_2 << 2);
+           current_status |= (coil_3 << 3);
+           current_status |= (coil_4 << 4);
+           current_status |= (auto_mode << 5);
+           current_status |= (pwr_on << 6);
+           current_status |= (bldc_mode << 7);
+
+           data_reg[7] =current_status;   // STATUS
+           data_reg[8] = pwm_boost;        // PWM_GEN
+
+
+           //    uint8_t high_byte = (uint8_t)(new_status >> 8);   // старший байт
+           		TIM1->ARR = new_arr;
+           		pwm_boost= new_pwm_boost;
+                 // Управление PWM
+                 if((auto_mode==0)&&(bldc_mode==0)){
+                     pwm = new_pwm;
+                     if(pwm >= TIM1->ARR) pwm = TIM1->ARR;
+                     if(pwm <= 0) pwm = 0;
+                 }
+
+                 if((auto_mode==1)&&(bldc_mode==0)){
+                     if(HAL_GetTick() - auto_mode_timer >= UPDATE_TIME){
+                         pwm = pwm + 1;
+                         if(pwm >= TIM1->ARR) pwm = TIM1->ARR;
+                         if(pwm <= 0) pwm = 0;
+                         auto_mode_timer = HAL_GetTick();
+                     }
+                 }
+
+
+           osDelay(100);
   }
   /* USER CODE END StartTask02 */
 }

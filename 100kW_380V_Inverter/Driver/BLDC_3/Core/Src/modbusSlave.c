@@ -10,8 +10,8 @@
 #include "modbusDevice.h"
 #include "modbusSlave.h"
 
-extern uint8_t rxFrame[255];
-extern uint8_t txFrame[255];
+extern uint8_t rxFrame[128];
+extern uint8_t txFrame[128];
 
 
 
@@ -106,7 +106,7 @@ modbusResult handleReadCoils (UART_HandleTypeDef* huart,uint8_t* coilValues){
 		sendModbusException(huart,ILLEGAL_DATA_ADDRESS);   // send an exception
 		return MODBUS_ERROR;
 	}
-	memset (txFrame, '\0', 256);
+	memset (txFrame, '\0', sizeof(txFrame));
 
 	txFrame[0] = SLAVE_ID;  							// Slave ID
 	txFrame[1] = rxFrame[1];  							// Function code
@@ -135,7 +135,7 @@ modbusResult handleReadDiscreteInputs (UART_HandleTypeDef* huart,uint8_t* dicret
 		sendModbusException(huart,ILLEGAL_DATA_ADDRESS);   // send an exception
 		return MODBUS_ERROR;
 	}
-	memset (txFrame, '\0', 256);
+	memset (txFrame, '\0', sizeof(txFrame));
 
 	txFrame[0] = SLAVE_ID;  							// slave ID
 	txFrame[1] = rxFrame[1];  							// function code
@@ -175,50 +175,77 @@ modbusResult handleWriteSingleHandlingRegister(UART_HandleTypeDef* huart,uint16_
 
 }
 
-modbusResult handleWriteMulyipleHandlingRegister (UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues){
-
-	uint16_t staringtAddr = ((rxFrame[2]<<8)| rxFrame[3]);
-
-	uint16_t numRegs = ((rxFrame[4]<<8) | rxFrame[5]);   // number to registers master has requested
-
-	if ((numRegs<1)||(numRegs>123))  // maximum no. of Registers as per Modbus Specification
-	{
-		sendModbusException(huart,ILLEGAL_DATA_VALUE);  // send an exception
-		return MODBUS_ERROR;
-	}
-
-	uint16_t endAddr = staringtAddr + numRegs - 1;  // end Register
-	if (endAddr> NUM_OF_HOLDING_REGS)  	// end Register can not be more than NUM_OF_HOLDING_REGS as
-										// we only have record of NUM_OF_HOLDING_REGS Registers in total
-	{
-		sendModbusException(huart,ILLEGAL_DATA_ADDRESS);   // send an exception
-		return MODBUS_ERROR;
-	}
-
-	int indx = 7;  // we need to keep track of index in rxFrame
-
-	for (int regCorsor=0; regCorsor<numRegs; regCorsor++){
-
-		holdingRegisterValues[staringtAddr++] = (rxFrame[indx++]<<8)|rxFrame[indx++];
 
 
-	}
-	//   | SLAVE_ID | FUNCTION_CODE | Start Addr |  num of Regs |   CRC   |
-	//   | 1 BYTE   |     1 BYTE    |  2 BYTE    |    2 BYTES   | 2 BYTES |
+modbusResult handleWriteMulyipleHandlingRegister( UART_HandleTypeDef* huart,uint16_t* holdingRegisterValues,uint16_t Size)
 
-	txFrame[0] = SLAVE_ID;     // Slave ID
-	txFrame[1] = rxFrame[1];   // Function code
 
-	txFrame[2] = rxFrame[2];   // Start Addr HIGH Byte
-	txFrame[3] = rxFrame[3];   // Start Addr LOW Byte
+{
+    uint16_t startingAddr = ((rxFrame[2] << 8) | rxFrame[3]);
+    uint16_t numRegs      = ((rxFrame[4] << 8) | rxFrame[5]);
 
-	txFrame[4] = rxFrame[4];   // Num of Regs HIGH Byte
-	txFrame[5] = rxFrame[5];   // Num of Regs LOW Byte
+    // 1. Проверка количества регистров
+    if ((numRegs < 1) || (numRegs > 123))
+    {
+        sendModbusException(huart, ILLEGAL_DATA_VALUE);
+        return MODBUS_ERROR;
+    }
 
-	sendModBusRequest(huart,txFrame, 6);  // send data... CRC will be calculated in the function itself
-	return 1;   // success
+    // 2. Проверка byte count
+    uint8_t byteCount = rxFrame[6];
+    if (byteCount != numRegs * 2)
+    {
+        sendModbusException(huart, ILLEGAL_DATA_VALUE);
+        return MODBUS_ERROR;
+    }
 
+    // 3. Проверка длины пакета (важно при DMA)
+    if (Size < (7 + byteCount))
+    {
+        sendModbusException(huart, ILLEGAL_DATA_VALUE);
+        return MODBUS_ERROR;
+    }
+
+    // 4. Проверка границ массива (ИСПРАВЛЕНО >=)
+    uint16_t endAddr = startingAddr + numRegs;
+    if (endAddr > NUM_OF_HOLDING_REGS)
+    {
+        sendModbusException(huart, ILLEGAL_DATA_ADDRESS);
+        return MODBUS_ERROR;
+    }
+
+    // 5. Безопасная запись (защита от гонки)
+    __disable_irq();
+
+    int indx = 7;
+    for (uint16_t i = 0; i < numRegs; i++)
+    {
+        holdingRegisterValues[startingAddr + i] =
+            (rxFrame[indx] << 8) | rxFrame[indx + 1];
+
+        indx += 2;
+    }
+
+    __enable_irq();
+
+    // 6. Ответ Modbus (эхо)
+    txFrame[0] = SLAVE_ID;
+    txFrame[1] = rxFrame[1];
+
+    txFrame[2] = rxFrame[2];
+    txFrame[3] = rxFrame[3];
+
+    txFrame[4] = rxFrame[4];
+    txFrame[5] = rxFrame[5];
+
+    sendModBusRequest(huart, txFrame, 6);
+
+    return MODBUS_OK;
 }
+
+
+
+
 
 modbusResult handleWriteSingleCoil (UART_HandleTypeDef* huart,uint8_t* coilValues){
 

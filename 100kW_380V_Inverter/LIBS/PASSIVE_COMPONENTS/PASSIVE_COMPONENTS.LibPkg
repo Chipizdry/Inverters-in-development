@@ -1222,6 +1222,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SWIOCABY
 
+[Document70]
+DocumentPath=47nF_2kV.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BNPVGQRC
+
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
@@ -1738,6 +1755,36 @@ OutputName13=Ansys EDB
 OutputDocumentPath13=
 OutputVariantName13=
 OutputDefault13=0
+OutputType14=Ansoft Neutral
+OutputName14=Ansoft Neutral (AutoPCB)
+OutputDocumentPath14=
+OutputVariantName14=
+OutputDefault14=0
+OutputType15=HyperLynx
+OutputName15=HyperLynx (AutoPCB)
+OutputDocumentPath15=
+OutputVariantName15=
+OutputDefault15=0
+OutputType16=MathWorks
+OutputName16=MathWorks (AutoPCB)
+OutputDocumentPath16=
+OutputVariantName16=
+OutputDefault16=0
+OutputType17=Orcad v7 Capture Design
+OutputName17=Orcad v7 Capture Design (AutoSCH)
+OutputDocumentPath17=
+OutputVariantName17=
+OutputDefault17=0
+OutputType18=P-CAD ASCII
+OutputName18=P-CAD ASCII (AutoPCB)
+OutputDocumentPath18=
+OutputVariantName18=
+OutputDefault18=0
+OutputType19=P-CAD V16 Schematic Design
+OutputName19=P-CAD V16 Schematic Design (AutoSCH)
+OutputDocumentPath19=
+OutputVariantName19=
+OutputDefault19=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
