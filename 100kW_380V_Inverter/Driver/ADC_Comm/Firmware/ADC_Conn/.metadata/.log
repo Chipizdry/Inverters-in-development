@@ -1,0 +1,20 @@
+!SESSION 2026-06-05 13:09:57.176 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-05 14:15:42.466
+!MESSAGE Log4j2 initialized with config file D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-05 14:15:45.247
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-06-05 14:15:46.062
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-06-05 14:15:46.063
+!MESSAGE port: 

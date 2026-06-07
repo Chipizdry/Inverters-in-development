@@ -13,15 +13,15 @@
 #include "stdbool.h"
 extern TIM_HandleTypeDef htim1;
 void Phaze_A_ON(uint16_t pwm);
-void Phaze_A_OFF(void);
+void Phaze_A_OFF(uint16_t pwm);
 void Phaze_A_ZZ(void);
 
 void Phaze_B_ON(uint16_t pwm);
-void Phaze_B_OFF(void);
+void Phaze_B_OFF(uint16_t pwm);
 void Phaze_B_ZZ(void);
 
 void Phaze_C_ON(uint16_t pwm);
-void Phaze_C_OFF(void);
+void Phaze_C_OFF(uint16_t pwm);
 void Phaze_C_ZZ(void);
 
 uint8_t SWITCH( bool coils[]);
