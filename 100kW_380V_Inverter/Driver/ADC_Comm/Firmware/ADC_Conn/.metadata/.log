@@ -18,3 +18,51 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\GitHub\Inverters-in
 
 !ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-06-05 14:15:46.063
 !MESSAGE port: 
+!SESSION 2026-06-10 10:59:01.514 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-10 10:59:08.818
+!MESSAGE Log4j2 initialized with config file D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-10 10:59:12.510
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-06-10 10:59:14.169
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-06-10 10:59:14.169
+!MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-06-10 11:00:30.236
+!MESSAGE Indexed 'U_I_Meter' (35 sources, 181 headers) in 5,69 sec: 18 675 declarations; 97 555 references; 10 unresolved inclusions; 512 syntax errors; 2 745 unresolved names (2,3 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-06-10 11:03:18.666
+!MESSAGE Indexed 'U_I_Meter' (34 sources, 181 headers) in 2,25 sec: 18 871 declarations; 100 740 references; 3 unresolved inclusions; 26 syntax errors; 510 unresolved names (0,42 %)
+!SESSION 2026-06-10 11:05:38.158 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  D:\GitHub\U_I_Meter_Logger\U_I_Meter\U_I_Firmware\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\GitHub\U_I_Meter_Logger\U_I_Meter\U_I_Firmware\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-10 11:05:43.591
+!MESSAGE Log4j2 initialized with config file D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-10 11:05:47.598
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-06-10 11:05:47.975
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-06-10 11:05:47.975
+!MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-06-10 11:05:52.246
+!MESSAGE Indexed 'U_I_Meter' (34 sources, 181 headers) in 4,2 sec: 18 871 declarations; 100 740 references; 3 unresolved inclusions; 26 syntax errors; 510 unresolved names (0,42 %)

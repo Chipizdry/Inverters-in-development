@@ -168,6 +168,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document8]
+DocumentPath=GATE_BOARD.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for pvs_bnvd\Design Rule Check - GATE_BOARD.html
 DItemRevisionGUID=
@@ -209,214 +226,226 @@ DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Bottom_Component_Outline.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Keep-out.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Legend_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Mechanical_15.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Profile.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_PTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.DRR
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.EXTREP
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.LDP
+DocumentPath=Project Outputs for pvs_bnvd\GATE_BOARD_Top_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.REP
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.RUL
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.TXT
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.REP
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_3D_Body_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument39]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Courtyard.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Assembly_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument40]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Center.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument41]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Component_Outline.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument42]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drawing_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Bottom_Courtyard.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument43]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drillmap_1.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument44]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Keep-out.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument45]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drawing_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument46]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Drillmap_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument47]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_13.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument48]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_15.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument49]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_NPTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument50]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument51]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument52]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument53]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument54]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Profile.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument55]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_PTH_Drill.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument56]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument57]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Top.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument58]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_3D_Body.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument59]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Assembly.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument60]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Center.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument61]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Outline.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument62]
-DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Courtyard.gbr
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument63]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument64]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Component_Outline.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument65]
+DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Courtyard.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument66]
 DocumentPath=Project Outputs for pvs_bnvd\Standby_PS_Top_Designator.gbr
 DItemRevisionGUID=
 
@@ -432,6 +461,45 @@ ConfigurationType=
 
 [Generic_EDE]
 OutputDir=Project Outputs for pvs_bnvd
+
+[Generic_SmartPDF]
+AutoOpenFile=-1
+AutoOpenOutJob=-1
+
+[Generic_SmartPDFSettings]
+ProjectMode=0
+ZoomPrecision=50
+AddNetsInformation=-1
+AddNetPins=-1
+AddNetNetLabels=-1
+AddNetPorts=-1
+ShowComponentParameters=-1
+GlobalBookmarks=0
+ExportBOM=0
+TemplateFilename=
+TemplateStoreRelative=-1
+PCB_PrintColor=1
+SCH_PrintColor=0
+PrintQuality=-4
+SCH_ShowNoErc=-1
+SCH_ShowParameter=-1
+SCH_ShowProbes=-1
+SCH_ShowBlankets=-1
+SCH_NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle
+SCH_ShowNote=-1
+SCH_ShowNoteCollapsed=-1
+Wir_PrintColor=0
+Ldr_PrintColor=0
+Esd_PrintColor=0
+SCH_ExpandLogicalToPhysical=-1
+SCH_VariantName=[No Variations]
+SCH_ExpandComponentDesignators=-1
+SCH_ExpandNetlabels=0
+SCH_ExpandPorts=0
+SCH_ExpandSheetNumber=0
+SCH_ExpandDocumentNumber=0
+SCH_HasExpandLogicalToPhysicalSheets=-1
+SaveSettingsToOutJob=-1
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -755,7 +823,7 @@ OutputDefault5=0
 Configuration5_Name1=ForceUpdateSettings
 Configuration5_Item1=False
 Configuration5_Name2=OutputConfigurationParameter1
-Configuration5_Item2=BoardID=SXVIRCXB|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPair0_Backdrill=False|PlotCounterHolesPair0_Checked=True|PlotCounterHolesPair0_DrillType=Regular|PlotCounterHolesPair0_FileName= |PlotCounterHolesPair0_HighLayer=Bottom Layer|PlotCounterHolesPair0_LowLayer=Top Layer|PlotCounterHolesPairs=True|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPair0_Backdrill=False|PlotViaTypeDrillDrawingPair0_Checked=True|PlotViaTypeDrillDrawingPair0_DrillType=Regular|PlotViaTypeDrillDrawingPair0_FileName= |PlotViaTypeDrillDrawingPair0_HighLayer=Bottom Layer|PlotViaTypeDrillDrawingPair0_LowLayer=Top Layer|PlotViaTypeDrillDrawingPairs=True|PlotViaTypeDrillGuidePair0_Backdrill=False|PlotViaTypeDrillGuidePair0_Checked=True|PlotViaTypeDrillGuidePair0_DrillType=Regular|PlotViaTypeDrillGuidePair0_FileName= |PlotViaTypeDrillGuidePair0_HighLayer=Bottom Layer|PlotViaTypeDrillGuidePair0_LowLayer=Top Layer|PlotViaTypeDrillGuidePairs=True|PlotViaTypeDrillPair0_Backdrill=False|PlotViaTypeDrillPair0_Checked=True|PlotViaTypeDrillPair0_DrillType=Regular|PlotViaTypeDrillPair0_FileName= |PlotViaTypeDrillPair0_HighLayer=Bottom Layer|PlotViaTypeDrillPair0_LowLayer=Top Layer|PlotViaTypeDrillPairs=True|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16908290~1,16973833~1,16908289~1,16908291~1,16973837~1,16908303~1,16973848~1,16973849~1,16973835~1,16973830~1,16973832~1,16842751~1,16973834~1,16908302~1,16908306~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|UncheckPlotDrillDrawingPair0_Backdrill=False|UncheckPlotDrillDrawingPair0_Checked=False|UncheckPlotDrillDrawingPair0_DrillType=Regular|UncheckPlotDrillDrawingPair0_FileName= |UncheckPlotDrillDrawingPair0_HighLayer=Bottom Layer|UncheckPlotDrillDrawingPair0_LowLayer=Top Layer|UncheckPlotDrillGuidePair0_Backdrill=False|UncheckPlotDrillGuidePair0_Checked=False|UncheckPlotDrillGuidePair0_DrillType=Regular|UncheckPlotDrillGuidePair0_FileName= |UncheckPlotDrillGuidePair0_HighLayer=Bottom Layer|UncheckPlotDrillGuidePair0_LowLayer=Top Layer|UncheckPlotNPTHPair0_Backdrill=False|UncheckPlotNPTHPair0_Checked=False|UncheckPlotNPTHPair0_DrillType=Regular|UncheckPlotNPTHPair0_FileName= |UncheckPlotNPTHPair0_HighLayer=Top Layer|UncheckPlotNPTHPair0_LowLayer=Bottom Layer|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\GATE_BOARD\GATE_BOARD.PcbDoc
+Configuration5_Item2=BoardID=SXVIRCXB|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=39|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPair0_Backdrill=False|PlotCounterHolesPair0_Checked=True|PlotCounterHolesPair0_DrillType=Regular|PlotCounterHolesPair0_FileName= |PlotCounterHolesPair0_HighLayer=Bottom Layer|PlotCounterHolesPair0_LowLayer=Top Layer|PlotCounterHolesPairs=True|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPair0_Backdrill=False|PlotViaTypeDrillDrawingPair0_Checked=True|PlotViaTypeDrillDrawingPair0_DrillType=Regular|PlotViaTypeDrillDrawingPair0_FileName= |PlotViaTypeDrillDrawingPair0_HighLayer=Bottom Layer|PlotViaTypeDrillDrawingPair0_LowLayer=Top Layer|PlotViaTypeDrillDrawingPairs=True|PlotViaTypeDrillGuidePair0_Backdrill=False|PlotViaTypeDrillGuidePair0_Checked=True|PlotViaTypeDrillGuidePair0_DrillType=Regular|PlotViaTypeDrillGuidePair0_FileName= |PlotViaTypeDrillGuidePair0_HighLayer=Bottom Layer|PlotViaTypeDrillGuidePair0_LowLayer=Top Layer|PlotViaTypeDrillGuidePairs=True|PlotViaTypeDrillPair0_Backdrill=False|PlotViaTypeDrillPair0_Checked=True|PlotViaTypeDrillPair0_DrillType=Regular|PlotViaTypeDrillPair0_FileName= |PlotViaTypeDrillPair0_HighLayer=Bottom Layer|PlotViaTypeDrillPair0_LowLayer=Top Layer|PlotViaTypeDrillPairs=True|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16973833~1,16908289~1,16908291~1,16973837~1,16908303~1,16973848~1,16973849~1,16973835~1,16973830~1,16973832~1,16842751~1,16973834~1,16908293~1,16908295~1,16908298~1,16908300~1|PlusApertureTolerance=39|Record=GerberX2View|Sorted=False|UncheckPlotDrillDrawingPair0_Backdrill=False|UncheckPlotDrillDrawingPair0_Checked=False|UncheckPlotDrillDrawingPair0_DrillType=Regular|UncheckPlotDrillDrawingPair0_FileName= |UncheckPlotDrillDrawingPair0_HighLayer=Bottom Layer|UncheckPlotDrillDrawingPair0_LowLayer=Top Layer|UncheckPlotDrillGuidePair0_Backdrill=False|UncheckPlotDrillGuidePair0_Checked=False|UncheckPlotDrillGuidePair0_DrillType=Regular|UncheckPlotDrillGuidePair0_FileName= |UncheckPlotDrillGuidePair0_HighLayer=Bottom Layer|UncheckPlotDrillGuidePair0_LowLayer=Top Layer|UncheckPlotNPTHPair0_Backdrill=False|UncheckPlotNPTHPair0_Checked=False|UncheckPlotNPTHPair0_DrillType=Regular|UncheckPlotNPTHPair0_FileName= |UncheckPlotNPTHPair0_HighLayer=Top Layer|UncheckPlotNPTHPair0_LowLayer=Bottom Layer|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\GATE_BOARD\GATE_BOARD.PcbDoc
 OutputType6=ODB
 OutputName6=ODB++ Files
 OutputDocumentPath6=
@@ -775,7 +843,7 @@ OutputDefault8=0
 Configuration8_Name1=ForceUpdateSettings
 Configuration8_Item1=False
 Configuration8_Name2=OutputConfigurationParameter1
-Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=C:\Users\chipi\Documents\GitHub\Inverters-in-development\100kW_380V_Inverter\GATE_BOARD\GATE_BOARD.PcbDoc
+Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=3|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\GATE_BOARD\GATE_BOARD.PcbDoc
 OutputType9=IPC2581
 OutputName9=IPC-2581 Files
 OutputDocumentPath9=
@@ -818,7 +886,7 @@ Configuration1_Item1=CaptionAsName
 Configuration1_Name2=ForceUpdateSettings
 Configuration1_Item2=False
 Configuration1_Name3=General
-Configuration1_Item3=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|TemplateVaultGuid=|TemplateRevisionGuid=|BatchMode=2|FormWidth=1512|FormHeight=975|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=USD|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|UseDirectApi=False|BomSetName=
+Configuration1_Item3=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|TemplateVaultGuid=|TemplateItemGuid=|TemplateRevisionGuid=|BatchMode=2|FormWidth=1440|FormHeight=853|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=USD|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|BomSetName=
 Configuration1_Name4=GroupOrder
 Configuration1_Item4=Comment=True|Footprint=True
 Configuration1_Name5=SortOrder
@@ -1009,36 +1077,6 @@ OutputName13=Ansys EDB
 OutputDocumentPath13=
 OutputVariantName13=
 OutputDefault13=0
-OutputType14=Ansoft Neutral
-OutputName14=Ansoft Neutral (AutoPCB)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=HyperLynx
-OutputName15=HyperLynx (AutoPCB)
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=MathWorks
-OutputName16=MathWorks (AutoPCB)
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=Orcad v7 Capture Design
-OutputName17=Orcad v7 Capture Design (AutoSCH)
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
-OutputType18=P-CAD ASCII
-OutputName18=P-CAD ASCII (AutoPCB)
-OutputDocumentPath18=
-OutputVariantName18=
-OutputDefault18=0
-OutputType19=P-CAD V16 Schematic Design
-OutputName19=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath19=
-OutputVariantName19=
-OutputDefault19=0
 
 [OutputGroup10]
 Name=PostProcess Outputs

@@ -1,0 +1,267 @@
+*************************************************************
+FileName = GATE_BOARD.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : GATE_BOARD_Copper_Signal_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : GATE_BOARD_Copper_Signal_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D18
+    D19
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : GATE_BOARD_Pads_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D18
+    D19
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : GATE_BOARD_Pads_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D18
+    D19
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : GATE_BOARD_Paste_Bot.gbr
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : GATE_BOARD_Soldermask_Bot.gbr
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D20
+    D21
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : GATE_BOARD_Legend_Top.gbr
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D22
+    D23
+    D24
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : GATE_BOARD_Paste_Top.gbr
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : GATE_BOARD_Soldermask_Top.gbr
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D20
+    D21
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : GATE_BOARD_Keep-out.gbr
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D24
+*************************************************************
+
+*************************************************************
+Generating : Top 3D Body
+      File : GATE_BOARD_Top_3D_Body.gbr
+
+    Adding Layer      : Top 3D Body
+
+
+Used DCodes :
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Top Assembly
+      File : GATE_BOARD_Top_Assembly.gbr
+
+    Adding Layer      : Top Assembly
+
+
+Used DCodes :
+    D23
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : GATE_BOARD_Mechanical_15.gbr
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D23
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Top Courtyard
+      File : GATE_BOARD_Top_Courtyard.gbr
+
+    Adding Layer      : Top Courtyard
+
+
+Used DCodes :
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Top Component Center
+      File : GATE_BOARD_Top_Component_Center.gbr
+
+    Adding Layer      : Top Component Center
+
+
+Used DCodes :
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Bottom Assembly
+      File : GATE_BOARD_Bottom_Assembly.gbr
+
+    Adding Layer      : Bottom Assembly
+
+
+Used DCodes :
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Bottom 3D Body
+      File : GATE_BOARD_Bottom_3D_Body.gbr
+
+    Adding Layer      : Bottom 3D Body
+
+
+Used DCodes :
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Profile
+      File : GATE_BOARD_Profile.gbr
+
+
+Used DCodes :
+    D30
+*************************************************************
+
+*************************************************************
+Generating : Plated through-hole drill file
+      File : GATE_BOARD_PTH_Drill.gbr
+
+
+Used DCodes :
+    D31
+    D32
+*************************************************************
+

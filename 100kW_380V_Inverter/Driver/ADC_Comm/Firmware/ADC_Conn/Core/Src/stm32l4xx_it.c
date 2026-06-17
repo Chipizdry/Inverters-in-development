@@ -57,6 +57,8 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern DFSDM_Filter_HandleTypeDef hdfsdm1_filter0;
+extern DFSDM_Filter_HandleTypeDef hdfsdm1_filter1;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern DMA_HandleTypeDef hdma_usart1_tx;
 extern UART_HandleTypeDef huart1;
@@ -224,6 +226,34 @@ void USART1_IRQHandler(void)
   /* USER CODE BEGIN USART1_IRQn 1 */
 
   /* USER CODE END USART1_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DFSDM1 filter0 global interrupt.
+  */
+void DFSDM1_FLT0_IRQHandler(void)
+{
+  /* USER CODE BEGIN DFSDM1_FLT0_IRQn 0 */
+
+  /* USER CODE END DFSDM1_FLT0_IRQn 0 */
+  HAL_DFSDM_IRQHandler(&hdfsdm1_filter0);
+  /* USER CODE BEGIN DFSDM1_FLT0_IRQn 1 */
+
+  /* USER CODE END DFSDM1_FLT0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DFSDM1 filter1 global interrupt.
+  */
+void DFSDM1_FLT1_IRQHandler(void)
+{
+  /* USER CODE BEGIN DFSDM1_FLT1_IRQn 0 */
+
+  /* USER CODE END DFSDM1_FLT1_IRQn 0 */
+  HAL_DFSDM_IRQHandler(&hdfsdm1_filter1);
+  /* USER CODE BEGIN DFSDM1_FLT1_IRQn 1 */
+
+  /* USER CODE END DFSDM1_FLT1_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
