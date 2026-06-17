@@ -67,12 +67,16 @@ void Error_Handler(void);
 #define RELAY_1_GPIO_Port GPIOA
 #define RELAY_2_Pin GPIO_PIN_4
 #define RELAY_2_GPIO_Port GPIOA
-#define DIRECT_Pin GPIO_PIN_8
-#define DIRECT_GPIO_Port GPIOA
+#define LED_4_Pin GPIO_PIN_6
+#define LED_4_GPIO_Port GPIOA
+#define LED_5_Pin GPIO_PIN_0
+#define LED_5_GPIO_Port GPIOB
 #define DELAY_Pin GPIO_PIN_11
 #define DELAY_GPIO_Port GPIOA
 #define START_Pin GPIO_PIN_12
 #define START_GPIO_Port GPIOA
+#define BTN_Pin GPIO_PIN_3
+#define BTN_GPIO_Port GPIOH
 
 /* USER CODE BEGIN Private defines */
 

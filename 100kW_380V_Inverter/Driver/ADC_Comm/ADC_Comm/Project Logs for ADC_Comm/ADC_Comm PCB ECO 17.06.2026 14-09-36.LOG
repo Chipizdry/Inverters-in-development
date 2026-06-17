@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=D12 Old Footprint=LED_GREEN New Footprint=LED_YELLOW
+Change Component Comment : Designator=D9 Old Comment=LED_RED New Comment=LED_GREEN
+Change Component Comment : Designator=D11 Old Comment=LED_YELLOW New Comment=LED_RED
+Change Component Description : Designator=D9 Old Description=WURTH ELEKTRONIK - 151031YS06000 - LED, Yellow, Through Hole, T-1 (3mm), 30 mA, 2 V, 590 nm New Description=LED_GREEN
+Change Component Description : Designator=D10 Old Description=WURTH ELEKTRONIK - 151031YS06000 - LED, Yellow, Through Hole, T-1 (3mm), 30 mA, 2 V, 590 nm New Description=LED_RED
+Change Component Description : Designator=D11 Old Description=WURTH ELEKTRONIK - 151031YS06000 - LED, Yellow, Through Hole, T-1 (3mm), 30 mA, 2 V, 590 nm New Description=LED_RED
+Change Component Description : Designator=D12 Old Description=WURTH ELEKTRONIK - 151031YS06000 - LED, Yellow, Through Hole, T-1 (3mm), 30 mA, 2 V, 590 nm New Description=LED_YELLOW
