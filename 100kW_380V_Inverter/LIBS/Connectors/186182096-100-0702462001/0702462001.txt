@@ -1,0 +1,10 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-04062020-054075";"";
+"REFERENCE";"702462001";"";
+"TraceParts.PartTitle";"C-Grid";"";
+"TraceParts.InstanceId";"90-04062020-0540752N3XX9WWY2MK673V115V3T3RA";"";
+"SUPPLIER";"Molex";"";
+"DESIGN";"2.54mm Pitch C-Grid Header, Low Profile, Dual Row, Vertical, Shrouded, 20 Circuits, 0.38µm Gold (Au) Selective Plating, Tray";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.6";"";
