@@ -1,9 +1,0 @@
-Manufacturer=Molex
-PartNumber=70246-2001
-PartCategory=Connector
-PackageCategory=Header, Shrouded - Straight PTH Box
-PinCount=20
-Version=1.1
-Released=2020-09-10 19:00:00
-Downloaded=2026-06-29 13:42:51
-3D=Y
