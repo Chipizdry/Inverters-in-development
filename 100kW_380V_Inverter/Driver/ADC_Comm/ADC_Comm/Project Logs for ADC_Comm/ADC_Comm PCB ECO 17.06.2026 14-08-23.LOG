@@ -1,7 +1,0 @@
-Change Component Footprint: Designator=D9 Old Footprint=LED_RED New Footprint=LED_GREEN
-Change Component Footprint: Designator=D11 Old Footprint=LED_YELLOW New Footprint=LED_RED
-Change Component Comment : Designator=K1 Old Comment= V23079-A1001-B301 New Comment=V23079-A2003-B301
-Change Component Comment : Designator=K2 Old Comment= V23079-A1001-B301 New Comment=V23079-A2003-B301
-Change Component Description : Designator=K1 Old Description=V23079-A1001-B301 5VDC 1A Tyco axicom New Description=V23079-A2003-B301 12VDC 1A Tyco axicom
-Change Component Description : Designator=K2 Old Description=V23079-A1001-B301 5VDC 1A Tyco axicom New Description=V23079-A2003-B301 12VDC 1A Tyco axicom
-Change Component Description : Designator=D8 Old Description=WURTH ELEKTRONIK - 151031YS06000 - LED, Yellow, Through Hole, T-1 (3mm), 30 mA, 2 V, 590 nm New Description=LED_GREEN
