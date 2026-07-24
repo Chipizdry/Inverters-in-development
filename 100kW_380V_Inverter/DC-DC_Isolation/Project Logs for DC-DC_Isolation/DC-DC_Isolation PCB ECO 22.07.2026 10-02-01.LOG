@@ -1,0 +1,6 @@
+Added Component: Designator=R27(RES-0603)
+Added Pin To Net: NetName=NetR17_2 Pin=R27-1
+Added Pin To Net: NetName=NetP1_7 Pin=P1-7
+Added Pin To Net: NetName=NetP1_7 Pin=R27-2
+Added Net: Name=NetP1_7
+Added Member To Class: ClassName=DC-DC_Isolation Member=Component R27 1K

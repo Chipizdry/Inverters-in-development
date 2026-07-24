@@ -1,0 +1,708 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\Altium\Altium_docs\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">23.07.2026</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:31:55</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc" class="file"><acronym title="D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc">D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">121</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">PCB Health Issues:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+</table>
+</td>
+</table><a name="IDMQ0BPMDOIWTLJ3BVUM24TLRJ0NNKZLDOY0CYGYJPZ1UP5AIBGGO"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYHM2KJVHU0RDBTRRWE2154BFKFI00JGZYDEWTDLDGZVNB2KPSIZ">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOESW4CW2BYQ2FTK3ZJQKOOCKUEF1QWD4HUKXMDPVCYYKDONA2KBP">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXAMU2BXQD0LLKDGEN2FLW0LH4PVQD21IKQBBPTD15SFY31CHHIHL">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCHVRWHQNBOQXIVQTOZS3ZJXS5GRKM2EDNBBAJKNHGTGSXO1FDDFF">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRT3BQLKCGOWXEQLVYMWRB4QTEK3AGZ5E0BUBPHJLFZUTAMTU03ZM">Width Constraint (Min=0.254mm) (Max=3mm) (Preferred=0.5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKUT5JOEZ0ANAO2033TLNXEIB1HO15H3IPTBP21LB0HU3SLL2KYWF">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDY3EALWTOVTW1DYAFJYG1P4A3KNDMTSAMYPMGTAJ0QJUTL2I4EAII">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUEUTC0YGNBV1TJH3QFD0T3UDQNFJANCI1IM0J0ZGG1HPBLW3AL">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIZJZVYY3FICXBBDMNJUOBS3JULJ0ASO3PN4KJNHTL2TIJN4JBCEO">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMG0NQOCITA5SLLBVVRQHDXK01GULMRENE3ITSHBTRMB5KBZICMVN">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</a></td>
+<td class="column2">119</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZTYOAAO3MM3RKXW1QAJ30PKWZNZAI4M00WDMK2FXJCKRBF1RKXDM">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCJ2V0FE2GJMZODRX1VTYVBKX2LWPGBEPQINMKPLJU0JZWY4KV2VF">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCYHWRVEGQQZ2KYXBLYYHJI0OAE3WH4K1FH55AOPXZH5AKCMDXBUN">Height Constraint (Min=0mm) (Max=101.6mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">121</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">PCB Health Issues</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><a name="IDIZJZVYY3FICXBBDMNJUOBS3JULJ0ASO3PN4KJNHTL2TIJN4JBCEO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10185.812mil|Location2.X=10197.062mil|Location1.Y=2925.123mil|Location2.Y=2936.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10185.812mil|Location2.X=10197.062mil|Location1.Y=2925.123mil|Location2.Y=2936.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.122mm &lt; 0.254mm) Between Pad R25-2(58.625mm,26.05mm) on Top Layer And Pad TP13-1(60.925mm,25.8mm) on Multi-Layer [Top Solder] Mask Sliver [0.122mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8747.328mil|Location2.X=8758.578mil|Location1.Y=2569.67mil|Location2.Y=2580.92mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8747.328mil|Location2.X=8758.578mil|Location1.Y=2569.67mil|Location2.Y=2580.92mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.204mm &lt; 0.254mm) Between Pad R7-1(22.95mm,17.4mm) on Bottom Layer And Pad TP2-1(22.975mm,15.425mm) on Multi-Layer [Bottom Solder] Mask Sliver [0.204mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDMG0NQOCITA5SLLBVVRQHDXK01GULMRENE3ITSHBTRMB5KBZICMVN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8445.874mil|Location2.X=8449.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8445.874mil|Location2.X=8449.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (15.681mm,3.99mm) on Top Overlay And Pad P1-18(15.7mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8545.874mil|Location2.X=8549.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8545.874mil|Location2.X=8549.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (18.221mm,3.99mm) on Top Overlay And Pad P1-17(18.24mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8645.874mil|Location2.X=8649.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8645.874mil|Location2.X=8649.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (20.761mm,3.99mm) on Top Overlay And Pad P1-16(20.78mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8745.874mil|Location2.X=8749.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8745.874mil|Location2.X=8749.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (23.301mm,3.99mm) on Top Overlay And Pad P1-15(23.32mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8845.874mil|Location2.X=8849.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8845.874mil|Location2.X=8849.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (25.841mm,3.99mm) on Top Overlay And Pad P1-14(25.86mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8945.874mil|Location2.X=8949.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8945.874mil|Location2.X=8949.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (28.381mm,3.99mm) on Top Overlay And Pad P1-13(28.4mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9045.874mil|Location2.X=9049.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9045.874mil|Location2.X=9049.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (30.921mm,3.99mm) on Top Overlay And Pad P1-12(30.94mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9145.874mil|Location2.X=9149.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9145.874mil|Location2.X=9149.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (33.461mm,3.99mm) on Top Overlay And Pad P1-11(33.48mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9245.874mil|Location2.X=9249.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9245.874mil|Location2.X=9249.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (36.001mm,3.99mm) on Top Overlay And Pad P1-10(36.02mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9345.874mil|Location2.X=9349.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9345.874mil|Location2.X=9349.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (38.541mm,3.99mm) on Top Overlay And Pad P1-9(38.56mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9445.874mil|Location2.X=9449.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9445.874mil|Location2.X=9449.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (41.081mm,3.99mm) on Top Overlay And Pad P1-8(41.1mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9545.874mil|Location2.X=9549.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9545.874mil|Location2.X=9549.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (43.621mm,3.99mm) on Top Overlay And Pad P1-7(43.64mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9645.874mil|Location2.X=9649.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9645.874mil|Location2.X=9649.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (46.161mm,3.99mm) on Top Overlay And Pad P1-6(46.18mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9745.874mil|Location2.X=9749.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9745.874mil|Location2.X=9749.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (48.701mm,3.99mm) on Top Overlay And Pad P1-5(48.72mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9845.874mil|Location2.X=9849.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9845.874mil|Location2.X=9849.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (51.241mm,3.99mm) on Top Overlay And Pad P1-4(51.26mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9945.874mil|Location2.X=9949.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9945.874mil|Location2.X=9949.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (53.781mm,3.99mm) on Top Overlay And Pad P1-3(53.8mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10045.874mil|Location2.X=10049.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10045.874mil|Location2.X=10049.498mil|Location1.Y=2058.425mil|Location2.Y=2062.05mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (56.321mm,3.99mm) on Top Overlay And Pad P1-2(56.34mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10143.493mil|Location2.X=10147.118mil|Location1.Y=2063.303mil|Location2.Y=2066.927mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10143.493mil|Location2.X=10147.118mil|Location1.Y=2063.303mil|Location2.Y=2066.927mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (58.861mm,3.99mm) on Top Overlay And Pad P1-1(58.88mm,3.95mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10316.557mil|Location2.X=10321.744mil|Location1.Y=3642.722mil|Location2.Y=3647.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10316.557mil|Location2.X=10321.744mil|Location1.Y=3642.722mil|Location2.Y=3647.909mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C10-1(63.4mm,44.35mm) on Top Layer And Track (62.638mm,43.826mm)(62.638mm,46.874mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10366.495mil|Location2.X=10371.682mil|Location1.Y=3642.249mil|Location2.Y=3647.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10366.495mil|Location2.X=10371.682mil|Location1.Y=3642.249mil|Location2.Y=3647.436mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C10-1(63.4mm,44.35mm) on Top Layer And Track (62.638mm,43.826mm)(64.162mm,43.826mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10367.226mil|Location2.X=10372.413mil|Location1.Y=3642.722mil|Location2.Y=3647.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10367.226mil|Location2.X=10372.413mil|Location1.Y=3642.722mil|Location2.Y=3647.909mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C10-1(63.4mm,44.35mm) on Top Layer And Track (64.162mm,43.826mm)(64.162mm,46.874mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10316.557mil|Location2.X=10321.744mil|Location1.Y=3721.462mil|Location2.Y=3726.649mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10316.557mil|Location2.X=10321.744mil|Location1.Y=3721.462mil|Location2.Y=3726.649mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C10-2(63.4mm,46.35mm) on Top Layer And Track (62.638mm,43.826mm)(62.638mm,46.874mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10317.282mil|Location2.X=10322.469mil|Location1.Y=3753.43mil|Location2.Y=3758.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10317.282mil|Location2.X=10322.469mil|Location1.Y=3753.43mil|Location2.Y=3758.617mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C10-2(63.4mm,46.35mm) on Top Layer And Track (62.638mm,46.874mm)(64.162mm,46.874mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10367.226mil|Location2.X=10372.413mil|Location1.Y=3721.462mil|Location2.Y=3726.649mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10367.226mil|Location2.X=10372.413mil|Location1.Y=3721.462mil|Location2.Y=3726.649mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C10-2(63.4mm,46.35mm) on Top Layer And Track (64.162mm,43.826mm)(64.162mm,46.874mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10622.918mil|Location2.X=10628.105mil|Location1.Y=2816.941mil|Location2.Y=2822.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10622.918mil|Location2.X=10628.105mil|Location1.Y=2816.941mil|Location2.Y=2822.128mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C11-1(70.95mm,23.6mm) on Top Layer And Track (70.426mm,22.838mm)(70.426mm,24.362mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10654.887mil|Location2.X=10660.074mil|Location1.Y=2816.209mil|Location2.Y=2821.396mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10654.887mil|Location2.X=10660.074mil|Location1.Y=2816.209mil|Location2.Y=2821.396mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C11-1(70.95mm,23.6mm) on Top Layer And Track (70.426mm,22.838mm)(73.474mm,22.838mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10623.391mil|Location2.X=10628.578mil|Location1.Y=2866.878mil|Location2.Y=2872.065mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10623.391mil|Location2.X=10628.578mil|Location1.Y=2866.878mil|Location2.Y=2872.065mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C11-1(70.95mm,23.6mm) on Top Layer And Track (70.426mm,24.362mm)(73.474mm,24.362mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10733.627mil|Location2.X=10738.814mil|Location1.Y=2816.209mil|Location2.Y=2821.396mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10733.627mil|Location2.X=10738.814mil|Location1.Y=2816.209mil|Location2.Y=2821.396mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C11-2(72.95mm,23.6mm) on Top Layer And Track (70.426mm,22.838mm)(73.474mm,22.838mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10702.131mil|Location2.X=10707.318mil|Location1.Y=2866.878mil|Location2.Y=2872.065mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10702.131mil|Location2.X=10707.318mil|Location1.Y=2866.878mil|Location2.Y=2872.065mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C11-2(72.95mm,23.6mm) on Top Layer And Track (70.426mm,24.362mm)(73.474mm,24.362mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10734.099mil|Location2.X=10739.286mil|Location1.Y=2816.941mil|Location2.Y=2822.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10734.099mil|Location2.X=10739.286mil|Location1.Y=2816.941mil|Location2.Y=2822.128mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C11-2(72.95mm,23.6mm) on Top Layer And Track (73.474mm,22.838mm)(73.474mm,24.362mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9948.453mil|Location2.X=9953.64mil|Location1.Y=3749.021mil|Location2.Y=3754.208mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9948.453mil|Location2.X=9953.64mil|Location1.Y=3749.021mil|Location2.Y=3754.208mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C12-1(54.05mm,47.05mm) on Bottom Layer And Track (53.288mm,46.526mm)(53.288mm,49.574mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9998.397mil|Location2.X=10003.584mil|Location1.Y=3748.548mil|Location2.Y=3753.735mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9998.397mil|Location2.X=10003.584mil|Location1.Y=3748.548mil|Location2.Y=3753.735mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C12-1(54.05mm,47.05mm) on Bottom Layer And Track (53.288mm,46.526mm)(54.812mm,46.526mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9999.122mil|Location2.X=10004.309mil|Location1.Y=3749.021mil|Location2.Y=3754.208mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9999.122mil|Location2.X=10004.309mil|Location1.Y=3749.021mil|Location2.Y=3754.208mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C12-1(54.05mm,47.05mm) on Bottom Layer And Track (54.812mm,46.526mm)(54.812mm,49.574mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9948.453mil|Location2.X=9953.64mil|Location1.Y=3827.761mil|Location2.Y=3832.948mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9948.453mil|Location2.X=9953.64mil|Location1.Y=3827.761mil|Location2.Y=3832.948mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C12-2(54.05mm,49.05mm) on Bottom Layer And Track (53.288mm,46.526mm)(53.288mm,49.574mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9949.185mil|Location2.X=9954.372mil|Location1.Y=3859.729mil|Location2.Y=3864.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9949.185mil|Location2.X=9954.372mil|Location1.Y=3859.729mil|Location2.Y=3864.916mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C12-2(54.05mm,49.05mm) on Bottom Layer And Track (53.288mm,49.574mm)(54.812mm,49.574mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9999.122mil|Location2.X=10004.309mil|Location1.Y=3827.761mil|Location2.Y=3832.948mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9999.122mil|Location2.X=10004.309mil|Location1.Y=3827.761mil|Location2.Y=3832.948mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C12-2(54.05mm,49.05mm) on Bottom Layer And Track (54.812mm,46.526mm)(54.812mm,49.574mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9692.355mil|Location2.X=9697.542mil|Location1.Y=2611.718mil|Location2.Y=2616.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9692.355mil|Location2.X=9697.542mil|Location1.Y=2611.718mil|Location2.Y=2616.905mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.075mm &lt; 0.1mm) Between Pad C16-2(46.825mm,17.3mm) on Bottom Layer And Track (46.902mm,17.9mm)(46.902mm,18.662mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9707.052mil|Location2.X=9712.239mil|Location1.Y=2611.718mil|Location2.Y=2616.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9707.052mil|Location2.X=9712.239mil|Location1.Y=2611.718mil|Location2.Y=2616.905mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.075mm &lt; 0.1mm) Between Pad C16-2(46.825mm,17.3mm) on Bottom Layer And Track (46.902mm,17.9mm)(47.324mm,17.9mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9227.249mil|Location2.X=9232.436mil|Location1.Y=2161.118mil|Location2.Y=2166.305mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9227.249mil|Location2.X=9232.436mil|Location1.Y=2161.118mil|Location2.Y=2166.305mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C17-1(35.5mm,6.942mm) on Bottom Layer And Track (34.976mm,6.18mm)(34.976mm,7.704mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9259.218mil|Location2.X=9264.405mil|Location1.Y=2160.393mil|Location2.Y=2165.58mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9259.218mil|Location2.X=9264.405mil|Location1.Y=2160.393mil|Location2.Y=2165.58mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C17-1(35.5mm,6.942mm) on Bottom Layer And Track (34.976mm,6.18mm)(38.024mm,6.18mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9227.721mil|Location2.X=9232.908mil|Location1.Y=2211.062mil|Location2.Y=2216.249mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9227.721mil|Location2.X=9232.908mil|Location1.Y=2211.062mil|Location2.Y=2216.249mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C17-1(35.5mm,6.942mm) on Bottom Layer And Track (34.976mm,7.704mm)(38.024mm,7.704mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9337.958mil|Location2.X=9343.145mil|Location1.Y=2160.393mil|Location2.Y=2165.58mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9337.958mil|Location2.X=9343.145mil|Location1.Y=2160.393mil|Location2.Y=2165.58mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C17-2(37.5mm,6.942mm) on Bottom Layer And Track (34.976mm,6.18mm)(38.024mm,6.18mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9306.462mil|Location2.X=9311.649mil|Location1.Y=2211.062mil|Location2.Y=2216.249mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9306.462mil|Location2.X=9311.649mil|Location1.Y=2211.062mil|Location2.Y=2216.249mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C17-2(37.5mm,6.942mm) on Bottom Layer And Track (34.976mm,7.704mm)(38.024mm,7.704mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9338.43mil|Location2.X=9343.617mil|Location1.Y=2161.118mil|Location2.Y=2166.305mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9338.43mil|Location2.X=9343.617mil|Location1.Y=2161.118mil|Location2.Y=2166.305mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C17-2(37.5mm,6.942mm) on Bottom Layer And Track (38.024mm,6.18mm)(38.024mm,7.704mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8964.454mil|Location2.X=8969.641mil|Location1.Y=2638.778mil|Location2.Y=2643.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8964.454mil|Location2.X=8969.641mil|Location1.Y=2638.778mil|Location2.Y=2643.965mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C26-1(28.825mm,19.075mm) on Bottom Layer And Track (28.301mm,18.313mm)(28.301mm,19.837mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8996.422mil|Location2.X=9001.609mil|Location1.Y=2638.053mil|Location2.Y=2643.24mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8996.422mil|Location2.X=9001.609mil|Location1.Y=2638.053mil|Location2.Y=2643.24mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C26-1(28.825mm,19.075mm) on Bottom Layer And Track (28.301mm,18.313mm)(31.349mm,18.313mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8964.926mil|Location2.X=8970.113mil|Location1.Y=2688.722mil|Location2.Y=2693.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8964.926mil|Location2.X=8970.113mil|Location1.Y=2688.722mil|Location2.Y=2693.909mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C26-1(28.825mm,19.075mm) on Bottom Layer And Track (28.301mm,19.837mm)(31.349mm,19.837mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9075.162mil|Location2.X=9080.349mil|Location1.Y=2638.053mil|Location2.Y=2643.24mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9075.162mil|Location2.X=9080.349mil|Location1.Y=2638.053mil|Location2.Y=2643.24mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C26-2(30.825mm,19.075mm) on Bottom Layer And Track (28.301mm,18.313mm)(31.349mm,18.313mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9043.666mil|Location2.X=9048.853mil|Location1.Y=2688.722mil|Location2.Y=2693.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9043.666mil|Location2.X=9048.853mil|Location1.Y=2688.722mil|Location2.Y=2693.909mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C26-2(30.825mm,19.075mm) on Bottom Layer And Track (28.301mm,19.837mm)(31.349mm,19.837mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9075.635mil|Location2.X=9080.822mil|Location1.Y=2638.778mil|Location2.Y=2643.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9075.635mil|Location2.X=9080.822mil|Location1.Y=2638.778mil|Location2.Y=2643.965mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C26-2(30.825mm,19.075mm) on Bottom Layer And Track (31.349mm,18.313mm)(31.349mm,19.837mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8255.533mil|Location2.X=8260.72mil|Location1.Y=3666.343mil|Location2.Y=3671.53mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8255.533mil|Location2.X=8260.72mil|Location1.Y=3666.343mil|Location2.Y=3671.53mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C7-1(11.05mm,44.95mm) on Top Layer And Track (10.288mm,44.426mm)(10.288mm,47.474mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8305.471mil|Location2.X=8310.658mil|Location1.Y=3665.871mil|Location2.Y=3671.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8305.471mil|Location2.X=8310.658mil|Location1.Y=3665.871mil|Location2.Y=3671.058mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C7-1(11.05mm,44.95mm) on Top Layer And Track (10.288mm,44.426mm)(11.812mm,44.426mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8306.202mil|Location2.X=8311.389mil|Location1.Y=3666.343mil|Location2.Y=3671.53mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8306.202mil|Location2.X=8311.389mil|Location1.Y=3666.343mil|Location2.Y=3671.53mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C7-1(11.05mm,44.95mm) on Top Layer And Track (11.812mm,44.426mm)(11.812mm,47.474mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8255.533mil|Location2.X=8260.72mil|Location1.Y=3745.084mil|Location2.Y=3750.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8255.533mil|Location2.X=8260.72mil|Location1.Y=3745.084mil|Location2.Y=3750.271mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C7-2(11.05mm,46.95mm) on Top Layer And Track (10.288mm,44.426mm)(10.288mm,47.474mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8256.258mil|Location2.X=8261.445mil|Location1.Y=3777.052mil|Location2.Y=3782.239mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8256.258mil|Location2.X=8261.445mil|Location1.Y=3777.052mil|Location2.Y=3782.239mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C7-2(11.05mm,46.95mm) on Top Layer And Track (10.288mm,47.474mm)(11.812mm,47.474mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8306.202mil|Location2.X=8311.389mil|Location1.Y=3745.084mil|Location2.Y=3750.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8306.202mil|Location2.X=8311.389mil|Location1.Y=3745.084mil|Location2.Y=3750.271mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C7-2(11.05mm,46.95mm) on Top Layer And Track (11.812mm,44.426mm)(11.812mm,47.474mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7989.533mil|Location2.X=7994.72mil|Location1.Y=2820.14mil|Location2.Y=2825.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7989.533mil|Location2.X=7994.72mil|Location1.Y=2820.14mil|Location2.Y=2825.327mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C8-1(3.25mm,23.7mm) on Top Layer And Track (0.726mm,22.938mm)(3.774mm,22.938mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7958.037mil|Location2.X=7963.224mil|Location1.Y=2870.809mil|Location2.Y=2875.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7958.037mil|Location2.X=7963.224mil|Location1.Y=2870.809mil|Location2.Y=2875.996mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C8-1(3.25mm,23.7mm) on Top Layer And Track (0.726mm,24.462mm)(3.774mm,24.462mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7990.005mil|Location2.X=7995.192mil|Location1.Y=2820.865mil|Location2.Y=2826.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7990.005mil|Location2.X=7995.192mil|Location1.Y=2820.865mil|Location2.Y=2826.052mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C8-1(3.25mm,23.7mm) on Top Layer And Track (3.774mm,22.938mm)(3.774mm,24.462mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7878.824mil|Location2.X=7884.011mil|Location1.Y=2820.865mil|Location2.Y=2826.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7878.824mil|Location2.X=7884.011mil|Location1.Y=2820.865mil|Location2.Y=2826.052mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C8-2(1.25mm,23.7mm) on Top Layer And Track (0.726mm,22.938mm)(0.726mm,24.462mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7910.792mil|Location2.X=7915.979mil|Location1.Y=2820.14mil|Location2.Y=2825.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7910.792mil|Location2.X=7915.979mil|Location1.Y=2820.14mil|Location2.Y=2825.327mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C8-2(1.25mm,23.7mm) on Top Layer And Track (0.726mm,22.938mm)(3.774mm,22.938mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7879.296mil|Location2.X=7884.483mil|Location1.Y=2870.809mil|Location2.Y=2875.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7879.296mil|Location2.X=7884.483mil|Location1.Y=2870.809mil|Location2.Y=2875.996mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C8-2(1.25mm,23.7mm) on Top Layer And Track (0.726mm,24.462mm)(3.774mm,24.462mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8586.242mil|Location2.X=8591.429mil|Location1.Y=4029.532mil|Location2.Y=4034.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8586.242mil|Location2.X=8591.429mil|Location1.Y=4029.532mil|Location2.Y=4034.72mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C9-1(19.45mm,54.175mm) on Bottom Layer And Track (18.688mm,51.651mm)(18.688mm,54.699mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8586.967mil|Location2.X=8592.154mil|Location1.Y=4061.501mil|Location2.Y=4066.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8586.967mil|Location2.X=8592.154mil|Location1.Y=4061.501mil|Location2.Y=4066.688mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C9-1(19.45mm,54.175mm) on Bottom Layer And Track (18.688mm,54.699mm)(20.212mm,54.699mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8636.911mil|Location2.X=8642.098mil|Location1.Y=4029.532mil|Location2.Y=4034.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8636.911mil|Location2.X=8642.098mil|Location1.Y=4029.532mil|Location2.Y=4034.72mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C9-1(19.45mm,54.175mm) on Bottom Layer And Track (20.212mm,51.651mm)(20.212mm,54.699mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8586.242mil|Location2.X=8591.429mil|Location1.Y=3950.792mil|Location2.Y=3955.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8586.242mil|Location2.X=8591.429mil|Location1.Y=3950.792mil|Location2.Y=3955.979mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C9-2(19.45mm,52.175mm) on Bottom Layer And Track (18.688mm,51.651mm)(18.688mm,54.699mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8636.18mil|Location2.X=8641.367mil|Location1.Y=3950.32mil|Location2.Y=3955.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8636.18mil|Location2.X=8641.367mil|Location1.Y=3950.32mil|Location2.Y=3955.507mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad C9-2(19.45mm,52.175mm) on Bottom Layer And Track (18.688mm,51.651mm)(20.212mm,51.651mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8636.911mil|Location2.X=8642.098mil|Location1.Y=3950.792mil|Location2.Y=3955.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8636.911mil|Location2.X=8642.098mil|Location1.Y=3950.792mil|Location2.Y=3955.979mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad C9-2(19.45mm,52.175mm) on Bottom Layer And Track (20.212mm,51.651mm)(20.212mm,54.699mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9940.969mil|Location2.X=9946.156mil|Location1.Y=3434.554mil|Location2.Y=3439.741mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9940.969mil|Location2.X=9946.156mil|Location1.Y=3434.554mil|Location2.Y=3439.741mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.075mm &lt; 0.1mm) Between Pad D12-1(54.3mm,37.375mm) on Top Layer And Text "C14" (52.05mm,38.75mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7937.626mil|Location2.X=7942.813mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7937.626mil|Location2.X=7942.813mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R1-1(2.975mm,21.1mm) on Top Layer And Track (2.213mm,18.576mm)(2.213mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7938.358mil|Location2.X=7943.545mil|Location1.Y=2759.336mil|Location2.Y=2764.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7938.358mil|Location2.X=7943.545mil|Location1.Y=2759.336mil|Location2.Y=2764.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R1-1(2.975mm,21.1mm) on Top Layer And Track (2.213mm,21.624mm)(3.737mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7988.296mil|Location2.X=7993.483mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7988.296mil|Location2.X=7993.483mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R1-1(2.975mm,21.1mm) on Top Layer And Track (3.737mm,18.576mm)(3.737mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7937.626mil|Location2.X=7942.813mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7937.626mil|Location2.X=7942.813mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R1-2(2.975mm,19.1mm) on Top Layer And Track (2.213mm,18.576mm)(2.213mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7987.57mil|Location2.X=7992.757mil|Location1.Y=2648.155mil|Location2.Y=2653.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7987.57mil|Location2.X=7992.757mil|Location1.Y=2648.155mil|Location2.Y=2653.341mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R1-2(2.975mm,19.1mm) on Top Layer And Track (2.213mm,18.576mm)(3.737mm,18.576mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7988.296mil|Location2.X=7993.483mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7988.296mil|Location2.X=7993.483mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R1-2(2.975mm,19.1mm) on Top Layer And Track (3.737mm,18.576mm)(3.737mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8796.619mil|Location2.X=8801.806mil|Location1.Y=2829.004mil|Location2.Y=2834.191mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8796.619mil|Location2.X=8801.806mil|Location1.Y=2829.004mil|Location2.Y=2834.191mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R12-1(23.75mm,23.925mm) on Bottom Layer And Track (21.226mm,23.163mm)(24.274mm,23.163mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8765.123mil|Location2.X=8770.31mil|Location1.Y=2879.673mil|Location2.Y=2884.86mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8765.123mil|Location2.X=8770.31mil|Location1.Y=2879.673mil|Location2.Y=2884.86mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R12-1(23.75mm,23.925mm) on Bottom Layer And Track (21.226mm,24.687mm)(24.274mm,24.687mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8797.092mil|Location2.X=8802.279mil|Location1.Y=2829.736mil|Location2.Y=2834.923mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8797.092mil|Location2.X=8802.279mil|Location1.Y=2829.736mil|Location2.Y=2834.923mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R12-1(23.75mm,23.925mm) on Bottom Layer And Track (24.274mm,23.163mm)(24.274mm,24.687mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8685.91mil|Location2.X=8691.097mil|Location1.Y=2829.736mil|Location2.Y=2834.923mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8685.91mil|Location2.X=8691.097mil|Location1.Y=2829.736mil|Location2.Y=2834.923mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R12-2(21.75mm,23.925mm) on Bottom Layer And Track (21.226mm,23.163mm)(21.226mm,24.687mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8717.879mil|Location2.X=8723.066mil|Location1.Y=2829.004mil|Location2.Y=2834.191mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8717.879mil|Location2.X=8723.066mil|Location1.Y=2829.004mil|Location2.Y=2834.191mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R12-2(21.75mm,23.925mm) on Bottom Layer And Track (21.226mm,23.163mm)(24.274mm,23.163mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8686.383mil|Location2.X=8691.57mil|Location1.Y=2879.673mil|Location2.Y=2884.86mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8686.383mil|Location2.X=8691.57mil|Location1.Y=2879.673mil|Location2.Y=2884.86mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R12-2(21.75mm,23.925mm) on Bottom Layer And Track (21.226mm,24.687mm)(24.274mm,24.687mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9965.438mil|Location2.X=9970.625mil|Location1.Y=2986.219mil|Location2.Y=2991.406mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9965.438mil|Location2.X=9970.625mil|Location1.Y=2986.219mil|Location2.Y=2991.406mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R13-1(54.25mm,27.9mm) on Bottom Layer And Track (53.726mm,27.138mm)(53.726mm,28.662mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9997.406mil|Location2.X=10002.594mil|Location1.Y=2985.494mil|Location2.Y=2990.681mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9997.406mil|Location2.X=10002.594mil|Location1.Y=2985.494mil|Location2.Y=2990.681mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R13-1(54.25mm,27.9mm) on Bottom Layer And Track (53.726mm,27.138mm)(56.774mm,27.138mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9965.91mil|Location2.X=9971.097mil|Location1.Y=3036.163mil|Location2.Y=3041.35mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9965.91mil|Location2.X=9971.097mil|Location1.Y=3036.163mil|Location2.Y=3041.35mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R13-1(54.25mm,27.9mm) on Bottom Layer And Track (53.726mm,28.662mm)(56.774mm,28.662mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10076.147mil|Location2.X=10081.334mil|Location1.Y=2985.494mil|Location2.Y=2990.681mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10076.147mil|Location2.X=10081.334mil|Location1.Y=2985.494mil|Location2.Y=2990.681mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R13-2(56.25mm,27.9mm) on Bottom Layer And Track (53.726mm,27.138mm)(56.774mm,27.138mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10044.651mil|Location2.X=10049.838mil|Location1.Y=3036.163mil|Location2.Y=3041.35mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10044.651mil|Location2.X=10049.838mil|Location1.Y=3036.163mil|Location2.Y=3041.35mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R13-2(56.25mm,27.9mm) on Bottom Layer And Track (53.726mm,28.662mm)(56.774mm,28.662mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10076.619mil|Location2.X=10081.806mil|Location1.Y=2986.219mil|Location2.Y=2991.406mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10076.619mil|Location2.X=10081.806mil|Location1.Y=2986.219mil|Location2.Y=2991.406mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R13-2(56.25mm,27.9mm) on Bottom Layer And Track (56.774mm,27.138mm)(56.774mm,28.662mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10635.461mil|Location2.X=10640.648mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10635.461mil|Location2.X=10640.648mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R2-1(71.5mm,21.1mm) on Top Layer And Track (70.738mm,18.576mm)(70.738mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10636.192mil|Location2.X=10641.379mil|Location1.Y=2759.336mil|Location2.Y=2764.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10636.192mil|Location2.X=10641.379mil|Location1.Y=2759.336mil|Location2.Y=2764.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R2-1(71.5mm,21.1mm) on Top Layer And Track (70.738mm,21.624mm)(72.262mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10686.13mil|Location2.X=10691.317mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10686.13mil|Location2.X=10691.317mil|Location1.Y=2727.367mil|Location2.Y=2732.554mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R2-1(71.5mm,21.1mm) on Top Layer And Track (72.262mm,18.576mm)(72.262mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10635.461mil|Location2.X=10640.648mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10635.461mil|Location2.X=10640.648mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R2-2(71.5mm,19.1mm) on Top Layer And Track (70.738mm,18.576mm)(70.738mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10685.405mil|Location2.X=10690.592mil|Location1.Y=2648.155mil|Location2.Y=2653.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10685.405mil|Location2.X=10690.592mil|Location1.Y=2648.155mil|Location2.Y=2653.341mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.024mm &lt; 0.1mm) Between Pad R2-2(71.5mm,19.1mm) on Top Layer And Track (70.738mm,18.576mm)(72.262mm,18.576mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.024mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10686.13mil|Location2.X=10691.317mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10686.13mil|Location2.X=10691.317mil|Location1.Y=2648.627mil|Location2.Y=2653.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.037mm &lt; 0.1mm) Between Pad R2-2(71.5mm,19.1mm) on Top Layer And Track (72.262mm,18.576mm)(72.262mm,21.624mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.037mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10028.903mil|Location2.X=10034.09mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10028.903mil|Location2.X=10034.09mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-1(56.175mm,19.5mm) on Top Layer And Track (55.35mm,18.5mm)(55.35mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10085.989mil|Location2.X=10091.176mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10085.989mil|Location2.X=10091.176mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-1(56.175mm,19.5mm) on Top Layer And Track (55.35mm,18.5mm)(59.45mm,18.5mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10182.446mil|Location2.X=10187.633mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10182.446mil|Location2.X=10187.633mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-1(58.625mm,19.5mm) on Top Layer And Track (55.35mm,18.5mm)(59.45mm,18.5mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10182.446mil|Location2.X=10187.633mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10182.446mil|Location2.X=10187.633mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-1(58.625mm,19.5mm) on Top Layer And Track (59.45mm,18.5mm)(59.45mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10028.903mil|Location2.X=10034.09mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10028.903mil|Location2.X=10034.09mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-2(56.175mm,26.05mm) on Top Layer And Track (55.35mm,18.5mm)(55.35mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10029.684mil|Location2.X=10033.308mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10029.684mil|Location2.X=10033.308mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-2(56.175mm,26.05mm) on Top Layer And Track (55.35mm,27.025mm)(59.4mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10126.14mil|Location2.X=10129.765mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10126.14mil|Location2.X=10129.765mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-2(58.625mm,26.05mm) on Top Layer And Track (55.35mm,27.025mm)(59.4mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10182.446mil|Location2.X=10187.633mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10182.446mil|Location2.X=10187.633mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R25-2(58.625mm,26.05mm) on Top Layer And Track (59.45mm,18.5mm)(59.45mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9854.69mil|Location2.X=9859.877mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9854.69mil|Location2.X=9859.877mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-1(51.75mm,19.5mm) on Top Layer And Track (50.925mm,18.5mm)(50.925mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9911.777mil|Location2.X=9916.964mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9911.777mil|Location2.X=9916.964mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-1(51.75mm,19.5mm) on Top Layer And Track (50.925mm,18.5mm)(55.025mm,18.5mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10008.233mil|Location2.X=10013.42mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10008.233mil|Location2.X=10013.42mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-1(54.2mm,19.5mm) on Top Layer And Track (50.925mm,18.5mm)(55.025mm,18.5mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10008.233mil|Location2.X=10013.42mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10008.233mil|Location2.X=10013.42mil|Location1.Y=2644.69mil|Location2.Y=2649.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-1(54.2mm,19.5mm) on Top Layer And Track (55.025mm,18.5mm)(55.025mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9854.69mil|Location2.X=9859.877mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9854.69mil|Location2.X=9859.877mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-2(51.75mm,26.05mm) on Top Layer And Track (50.925mm,18.5mm)(50.925mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9855.471mil|Location2.X=9859.096mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9855.471mil|Location2.X=9859.096mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-2(51.75mm,26.05mm) on Top Layer And Track (50.925mm,27.025mm)(54.975mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9951.928mil|Location2.X=9955.552mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9951.928mil|Location2.X=9955.552mil|Location1.Y=2977.164mil|Location2.Y=2980.789mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-2(54.2mm,26.05mm) on Top Layer And Track (50.925mm,27.025mm)(54.975mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10008.233mil|Location2.X=10013.42mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10008.233mil|Location2.X=10013.42mil|Location1.Y=2902.564mil|Location2.Y=2907.751mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R26-2(54.2mm,26.05mm) on Top Layer And Track (55.025mm,18.5mm)(55.025mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8908.548mil|Location2.X=8913.735mil|Location1.Y=3043.312mil|Location2.Y=3048.499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8908.548mil|Location2.X=8913.735mil|Location1.Y=3043.312mil|Location2.Y=3048.499mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.086mm &lt; 0.1mm) Between Pad R3-1(26.45mm,29.525mm) on Top Layer And Track (27.136mm,28.509mm)(27.136mm,30.541mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8739.808mil|Location2.X=8744.995mil|Location1.Y=3043.312mil|Location2.Y=3048.499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8739.808mil|Location2.X=8744.995mil|Location1.Y=3043.312mil|Location2.Y=3048.499mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.086mm &lt; 0.1mm) Between Pad R3-2(23.25mm,29.525mm) on Top Layer And Track (22.564mm,28.509mm)(22.564mm,30.541mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9871.147mil|Location2.X=9876.334mil|Location1.Y=3083.666mil|Location2.Y=3088.853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9871.147mil|Location2.X=9876.334mil|Location1.Y=3083.666mil|Location2.Y=3088.853mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.086mm &lt; 0.1mm) Between Pad R4-1(50.9mm,30.55mm) on Top Layer And Track (51.586mm,29.534mm)(51.586mm,31.566mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9702.406mil|Location2.X=9707.594mil|Location1.Y=3083.666mil|Location2.Y=3088.853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9702.406mil|Location2.X=9707.594mil|Location1.Y=3083.666mil|Location2.Y=3088.853mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.086mm &lt; 0.1mm) Between Pad R4-2(47.7mm,30.55mm) on Top Layer And Track (47.014mm,29.534mm)(47.014mm,31.566mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8702.212mil|Location2.X=8707.399mil|Location1.Y=2428.827mil|Location2.Y=2434.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8702.212mil|Location2.X=8707.399mil|Location1.Y=2428.827mil|Location2.Y=2434.014mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.046mm &lt; 0.1mm) Between Pad T2-1(21.075mm,13.425mm) on Bottom Layer And Track (21.875mm,11.075mm)(21.875mm,13.925mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.046mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8702.214mil|Location2.X=8707.401mil|Location1.Y=2366.147mil|Location2.Y=2371.334mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8702.214mil|Location2.X=8707.401mil|Location1.Y=2366.147mil|Location2.Y=2371.334mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.046mm &lt; 0.1mm) Between Pad T2-2(21.075mm,11.525mm) on Bottom Layer And Track (21.875mm,11.075mm)(21.875mm,13.925mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.046mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10187.164mil|Location2.X=10190.789mil|Location1.Y=2681.872mil|Location2.Y=2685.497mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10187.164mil|Location2.X=10190.789mil|Location1.Y=2681.872mil|Location2.Y=2685.497mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad TP12-1(60.775mm,19.75mm) on Multi-Layer And Track (59.45mm,18.5mm)(59.45mm,27.025mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8750.359mil|Location2.X=8755.546mil|Location1.Y=2566.314mil|Location2.Y=2571.501mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8750.359mil|Location2.X=8755.546mil|Location1.Y=2566.314mil|Location2.Y=2571.501mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.081mm &lt; 0.1mm) Between Pad TP2-1(22.975mm,15.425mm) on Multi-Layer And Track (22.275mm,16.75mm)(23.625mm,16.75mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.081mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8514.92mil|Location2.X=8518.544mil|Location1.Y=3351.296mil|Location2.Y=3354.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8514.92mil|Location2.X=8518.544mil|Location1.Y=3351.296mil|Location2.Y=3354.921mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad TP4-1(15.687mm,36.9mm) on Multi-Layer And Track (16.975mm,29.825mm)(16.975mm,38.225mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10100.55mil|Location2.X=10104.174mil|Location1.Y=3358.644mil|Location2.Y=3362.269mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\Inverters-in-development\100kW_380V_Inverter\DC-DC_Isolation\DC-DC_Isolation.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10100.55mil|Location2.X=10104.174mil|Location1.Y=3358.644mil|Location2.Y=3362.269mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad TP5-1(58.2mm,37.425mm) on Multi-Layer And Track (57.25mm,30.25mm)(57.25mm,38.65mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
