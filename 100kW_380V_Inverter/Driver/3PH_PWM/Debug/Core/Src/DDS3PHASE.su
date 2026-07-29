@@ -1,0 +1,9 @@
+../Core/Src/DDS3PHASE.c:26:7:DDS_GetSampleRate	24	static
+../Core/Src/DDS3PHASE.c:45:6:DDS_GenerateTable	16	static
+../Core/Src/DDS3PHASE.c:58:6:DDS_Init	8	static
+../Core/Src/DDS3PHASE.c:86:6:DDS_SetFrequency	24	static
+../Core/Src/DDS3PHASE.c:98:6:DDS_SetAmplitude	16	static
+../Core/Src/DDS3PHASE.c:111:6:DDS_SetDirection	16	static
+../Core/Src/DDS3PHASE.c:116:6:DDS_SetPhase	16	static
+../Core/Src/DDS3PHASE.c:131:6:DDS_Update	32	static
+../Core/Src/DDS3PHASE.c:171:6:DDS_FillBuffer	48	static
