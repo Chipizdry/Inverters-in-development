@@ -58,7 +58,7 @@ void DDS_GenerateTable(void)
 void DDS_Init(void)
 {
     DDS_GenerateTable();
-    DDS_SetFrequency(60.0f);
+    DDS_SetFrequency(300.0f);
     DDS_SetAmplitude(0.95f);
     DDS_SetPhase(0.0f);
     DDS.Direction = DDS_DIR_ABC;
