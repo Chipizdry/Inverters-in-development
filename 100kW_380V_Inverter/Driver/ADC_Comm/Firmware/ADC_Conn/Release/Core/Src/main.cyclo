@@ -1,0 +1,14 @@
+../Core/Src/main.c:556:13:MX_DMA_Init	1
+../Drivers/CMSIS/Include/core_cm4.h:2059:26:ITM_SendChar.isra	4
+../Core/Src/main.c:709:6:HAL_UART_TxCpltCallback	1
+../Core/Src/main.c:721:6:HAL_UARTEx_RxEventCallback	2
+../Core/Src/main.c:734:6:HAL_DFSDM_FilterRegConvCpltCallback	7
+../Core/Src/main.c:761:5:_write	2
+../Core/Src/main.c:829:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:847:6:Error_Handler	1
+../Core/Src/main.c:488:13:MX_USART1_UART_Init	1
+../Core/Src/main.c:646:6:Reset_USART1	3
+../Core/Src/main.c:700:6:Check_USART1_Timeout	2
+../Core/Src/main.c:780:6:StartDefaultTask	1
+../Core/Src/main.c:308:6:SystemClock_Config	3
+../Core/Src/main.c:149:5:main	10

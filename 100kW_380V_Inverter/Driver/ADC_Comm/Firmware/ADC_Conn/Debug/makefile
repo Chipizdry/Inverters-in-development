@@ -65,7 +65,7 @@ main-build: ADC_Conn.elf secondary-outputs
 
 # Tool invocations
 ADC_Conn.elf ADC_Conn.map: $(OBJS) $(USER_OBJS) D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\STM32L452CCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ADC_Conn.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\STM32L452CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_Conn.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "ADC_Conn.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GitHub\Inverters-in-development\100kW_380V_Inverter\Driver\ADC_Comm\Firmware\ADC_Conn\STM32L452CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_Conn.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

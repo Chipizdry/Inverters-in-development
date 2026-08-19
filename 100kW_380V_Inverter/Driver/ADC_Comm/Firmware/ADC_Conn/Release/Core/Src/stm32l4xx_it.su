@@ -1,0 +1,14 @@
+../Core/Src/stm32l4xx_it.c:77:6:NMI_Handler	0	static
+../Core/Src/stm32l4xx_it.c:92:6:HardFault_Handler	0	static
+../Core/Src/stm32l4xx_it.c:107:6:MemManage_Handler	0	static
+../Core/Src/stm32l4xx_it.c:122:6:BusFault_Handler	0	static
+../Core/Src/stm32l4xx_it.c:137:6:UsageFault_Handler	0	static
+../Core/Src/stm32l4xx_it.c:152:6:DebugMon_Handler	0	static
+../Core/Src/stm32l4xx_it.c:172:6:DMA1_Channel4_IRQHandler	0	static
+../Core/Src/stm32l4xx_it.c:186:6:DMA1_Channel5_IRQHandler	0	static
+../Core/Src/stm32l4xx_it.c:200:6:TIM1_UP_TIM16_IRQHandler	0	static
+../Core/Src/stm32l4xx_it.c:214:6:USART1_IRQHandler	0	static
+../Core/Src/stm32l4xx_it.c:228:6:DFSDM1_FLT0_IRQHandler	0	static
+../Core/Src/stm32l4xx_it.c:242:6:DFSDM1_FLT1_IRQHandler	0	static
+../Core/Src/stm32l4xx_it.c:256:6:DMA2_Channel6_IRQHandler	0	static
+../Core/Src/stm32l4xx_it.c:270:6:DMA2_Channel7_IRQHandler	0	static

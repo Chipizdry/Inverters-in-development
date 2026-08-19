@@ -1,0 +1,4 @@
+../Core/Src/modbusDevice.c:13:10:calcCRC16ModBus	12	static
+../Core/Src/modbusDevice.c:44:6:extractBinaryReceivedData	20	static
+../Core/Src/modbusDevice.c:56:14:sendModBusRequest	16	static
+../Core/Src/modbusDevice.c:79:6:sendError	16	static

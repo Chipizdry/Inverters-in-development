@@ -31,7 +31,35 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+# define LED_1_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET)
+# define LED_1_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET)
 
+# define LED_2_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET)
+# define LED_2_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET)
+
+# define LED_3_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET)
+# define LED_3_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET)
+
+# define LED_4_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET)
+# define LED_4_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET)
+
+# define LED_5_ON   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET)
+# define LED_5_OFF  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET)
+
+# define RELAY_1_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, GPIO_PIN_SET)
+# define RELAY_1_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, GPIO_PIN_RESET)
+
+# define RELAY_2_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET)
+# define RELAY_2_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET)
+
+# define DELAY_1_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET)
+# define DELAY_1_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET)
+
+# define START_1_ON   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET)
+# define START_1_OFF  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET)
+
+# define TX_2   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET)
+# define RX_2   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET)
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -69,8 +97,12 @@ void Error_Handler(void);
 #define RELAY_2_GPIO_Port GPIOA
 #define LED_4_Pin GPIO_PIN_6
 #define LED_4_GPIO_Port GPIOA
+#define V_SENS_DATA_Pin GPIO_PIN_7
+#define V_SENS_DATA_GPIO_Port GPIOA
 #define LED_5_Pin GPIO_PIN_0
 #define LED_5_GPIO_Port GPIOB
+#define I_SENS_DATA_Pin GPIO_PIN_12
+#define I_SENS_DATA_GPIO_Port GPIOB
 #define DELAY_Pin GPIO_PIN_11
 #define DELAY_GPIO_Port GPIOA
 #define START_Pin GPIO_PIN_12

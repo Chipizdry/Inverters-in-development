@@ -1,0 +1,11 @@
+../Core/Src/modbusSlave.c:18:14:handleReadHoldingRegs	4
+../Core/Src/modbusSlave.c:59:14:handleReadInputRegs	4
+../Core/Src/modbusSlave.c:92:14:handleReadCoils	4
+../Core/Src/modbusSlave.c:121:14:handleReadDiscreteInputs	4
+../Core/Src/modbusSlave.c:152:14:handleWriteSingleHandlingRegister	2
+../Core/Src/modbusSlave.c:180:14:handleWriteMulyipleHandlingRegister	7
+../Core/Src/modbusSlave.c:250:14:handleWriteSingleCoil	6
+../Core/Src/modbusSlave.c:286:6:extractFromByte	2
+../Core/Src/modbusSlave.c:294:6:decodeCoilsFromRXBuffer	3
+../Core/Src/modbusSlave.c:311:14:hadleWriteMultipleCoils	1
+../Core/Src/modbusSlave.c:331:14:sendModbusException	1
