@@ -764,7 +764,7 @@ GenerateClassCluster=0
 DocumentUniqueId=LGNVFSYC
 
 [Document43]
-DocumentPath=Ferrite Bead.SchLib
+DocumentPath=BLM31PG601SN1L.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -798,23 +798,6 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document45]
-DocumentPath=BLM31PG601SN1L.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document46]
 DocumentPath=BLM21PG221SN1D.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -830,6 +813,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EQGJZBJZ
+
+[Document46]
+DocumentPath=BLM31PG601SN1L.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [SearchPath1]
 Path=C:\Users\chipi\AppData\Local\Temp\05630231-1cb4-4263-8ce3-f73e187424e1_RM6.zip.4e1\RM6\Transformers\*.*
