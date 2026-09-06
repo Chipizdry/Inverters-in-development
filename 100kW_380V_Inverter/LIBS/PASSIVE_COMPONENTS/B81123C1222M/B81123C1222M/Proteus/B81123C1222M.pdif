@@ -1,0 +1,118 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "B81123C1222M"
+   (description "Safety Capacitors 0.0022uF 500Vac 20% Class Y1")
+   (family "CAP")
+   (package "B81123C1222M")
+   (attribute "Datasheet Link" "https://en.tdk-electronics.tdk.com/inf/20/20/db/fc_2009/Y1_B81123.pdf")
+   (attribute "Geometry.Height" "12.5mm")
+   (attribute "Manufacturer_Name" "TDK")
+   (attribute "Manufacturer_Part_Number" "B81123C1222M")
+   (attribute "Mouser Part Number" "871-B81123C1222M")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B81123C1222M?qs=Gus83tocK7veFAufT0DP%2FQ%3D%3D")
+   (attribute "Arrow Part Number" "B81123C1222M")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/b81123c1222m/tdk?region=nac")
+   (gate
+    (symbol "B81123C1222M")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "B81123C1222M"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 220 100) (pt 220 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 100) (pt 280 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 200 0) (pt 220 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 0) (pt 300 0))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 0) (rot 0) (mir X) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "B81123C1222M"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -1.5 3.5)
+      (pt 16.5 3.5)
+      (pt 16.5 -3.5)
+      (pt -1.5 -3.5)
+      (pt -1.5 3.5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -1.5 3.5)
+      (pt 16.5 3.5)
+      (pt 16.5 -3.5)
+      (pt -1.5 -3.5)
+      (pt -1.5 3.5))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.5 4.5)
+      (pt 17.5 4.5)
+      (pt 17.5 -4.5)
+      (pt -2.5 -4.5)
+      (pt -2.5 4.5))))
+   (leg 1 (pt 0.000 0.000) (padstack 0))
+   (leg 2 (pt 15.000 0.000) (padstack 2))
+   (padstack 0
+    (hole 1)
+    (plated true)
+    (pad (layer TCOP) (square 1.500))
+    (pad (layer INNER) (round 1.500))
+    (pad (layer BCOP) (square 1.500))
+   )
+   (padstack 2
+    (hole 1)
+    (plated true)
+    (pad (layer TCOP) (round 1.500))
+    (pad (layer INNER) (round 1.500))
+    (pad (layer BCOP) (round 1.500))
+   )
+   (model "B81123C1222M.stp"
+    (euler 180 0 0)
+    (offset 7.5 0 6.349999904632568)
+   )
+  )
+ )
+)

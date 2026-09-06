@@ -1,0 +1,9 @@
+Manufacturer=TDK
+PartNumber=B81123C1222M
+PartCategory=Capacitor
+PackageCategory=Other
+PinCount=2
+Version=1.3
+Released=2018-12-04 13:45:20
+Downloaded=2026-09-01 08:21:05
+3D=Y

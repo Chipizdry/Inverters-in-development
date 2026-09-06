@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP B81123C1222M
+D Safety Capacitors 0.0022uF 500Vac 20% Class Y1
+K
+F https://en.tdk-electronics.tdk.com/inf/20/20/db/fc_2009/Y1_B81123.pdf
+$ENDCMP
+#
+#End Doc Library

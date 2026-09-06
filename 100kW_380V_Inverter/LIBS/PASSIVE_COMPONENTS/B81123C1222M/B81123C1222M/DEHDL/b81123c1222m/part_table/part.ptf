@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'B81123C1222M'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "TDK", "B81123C1222M" (!) = "", "B81123C1222M", "Other", "871-B81123C1222M", "https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B81123C1222M?qs=Gus83tocK7veFAufT0DP%2FQ%3D%3D", "B81123C1222M", "https://www.arrow.com/en/products/b81123c1222m/tdk?region=nac", "Safety Capacitors 0.0022uF 500Vac 20% Class Y1", "https://en.tdk-electronics.tdk.com/inf/20/20/db/fc_2009/Y1_B81123.pdf", "12.5 mm"
+END_PART
+
+END.

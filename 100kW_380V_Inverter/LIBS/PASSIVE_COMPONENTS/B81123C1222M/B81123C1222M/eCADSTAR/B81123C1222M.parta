@@ -1,0 +1,68 @@
+(Japanese_coding: sjis)
+(function "ECS_1004841"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-12-04-13:45:20)
+    (utime 2023-09-21-11:10:07)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "B81123C1222M")
+)
+
+
+(pinAssign "ECS_1004841"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-12-04-13:45:20)
+    (utime 2023-09-21-11:10:07)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_1004841")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "B81123C1222M")
+)
+
+
+(part "B81123C1222M"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-12-04-13:45:20)
+    (utime 2023-09-21-11:10:07)
+    (packageRef "B81123C1222M")
+    (pinAssignRef "ECS_1004841")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "C")
+    (property "description" "Safety Capacitors 0.0022uF 500Vac 20% Class Y1")
+    (property "Manufacturer_Name" "TDK")
+    (property "Manufacturer_Part_Number" "B81123C1222M")
+    (property "Mouser_Part_Number" "871-B81123C1222M")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B81123C1222M?qs=Gus83tocK7veFAufT0DP%2FQ%3D%3D")
+    (property "Arrow_Part_Number" "B81123C1222M")
+    (property "Arrow_Price/Stock" "https://www.arrow.com/en/products/b81123c1222m/tdk?region=nac")
+    (property "Datasheet_Link" "https://en.tdk-electronics.tdk.com/inf/20/20/db/fc_2009/Y1_B81123.pdf")
+    (property "compAreaTopHeight" 12.5)
+)
+
+

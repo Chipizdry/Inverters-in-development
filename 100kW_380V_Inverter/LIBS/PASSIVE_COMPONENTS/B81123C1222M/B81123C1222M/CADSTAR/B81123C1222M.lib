@@ -1,0 +1,18 @@
+.B81123C1222M :1 ;Safety Capacitors 0.0022uF 500Vac 20% Class Y1
+B81123C1222M
+*STM C
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN B81123C1222M
+~!Manufacturer_Name (TDK)
+~!Manufacturer_Part_Number (B81123C1222M)
+~!Mouser Part Number (871-B81123C1222M)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B81123C1222M?qs=Gus83tocK7veFAufT0DP%2FQ%3D%3D)
+~!Arrow Part Number (B81123C1222M)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/b81123c1222m/tdk?region=nac)
+~!Link Datasheet (https://en.tdk-electronics.tdk.com/inf/20/20/db/fc_2009/Y1_B81123.pdf)
+~!Height (12.5mm)
+~!3D_Model (B81123C1222M)
+B81123C1222M
+1.1!U 2.1!U 
