@@ -1,0 +1,58 @@
+Removed Pin From Net: NetName=+5 Pin=FB6-2
+Removed Pin From Net: NetName=NetR74_2 Pin=U17-1
+Removed Pin From Net: NetName=NetR37_1 Pin=U17-3
+Removed Pin From Net: NetName=NetR74_2 Pin=U17-4
+Removed Member From Class: ClassName=DC-DC_Conv_MCU Member=FB6
+Change Component Footprint: Designator=U24 Old Footprint=DBV0005A_M New Footprint=DBV0005A_M
+Change Component Footprint: Designator=U26 Old Footprint=DBV0005A_M New Footprint=DBV0005A_M
+Change Component Footprint: Designator=U23 Old Footprint=DGK0008A_N New Footprint=DGK0008A_N
+Change Component Footprint: Designator=U25 Old Footprint=DGK0008A_N New Footprint=DGK0008A_N
+Added Component: Designator=C102(CAP-0603)
+Added Component: Designator=C103(CAP-0603)
+Added Component: Designator=R98(RES-0603)
+Added Component: Designator=R99(RES-0603)
+Added Component: Designator=R100(RES-0603)
+Added Component: Designator=R101(RES-0603)
+Added Component: Designator=R102(RES-0603)
+Added Component: Designator=R103(RES-0603)
+Added Component: Designator=U27(DBV0005A_M)
+Added Pin To Net: NetName=3v3 Pin=C45-2
+Added Pin To Net: NetName=3v3 Pin=C46-2
+Added Pin To Net: NetName=GND Pin=C102-1
+Added Pin To Net: NetName=+5 Pin=C102-2
+Added Pin To Net: NetName=GND Pin=C103-1
+Added Pin To Net: NetName=+5 Pin=C103-2
+Added Pin To Net: NetName=3v3 Pin=R98-1
+Added Pin To Net: NetName=NetR74_2 Pin=R99-1
+Added Pin To Net: NetName=GND Pin=R101-2
+Added Pin To Net: NetName=GND Pin=R102-2
+Added Pin To Net: NetName=NetR37_1 Pin=R103-2
+Added Pin To Net: NetName=NetR37_1 Pin=U17-4
+Added Pin To Net: NetName=3v3 Pin=U17-5
+Added Pin To Net: NetName=NetR74_2 Pin=U27-1
+Added Pin To Net: NetName=GND Pin=U27-2
+Added Pin To Net: NetName=+5 Pin=U27-5
+Added Pin To Net: NetName=NetR98_2 Pin=R98-2
+Added Pin To Net: NetName=NetR98_2 Pin=R101-1
+Added Pin To Net: NetName=NetR98_2 Pin=U17-3
+Added Net: Name=NetR98_2
+Added Pin To Net: NetName=NetR99_2 Pin=R99-2
+Added Pin To Net: NetName=NetR99_2 Pin=R102-1
+Added Pin To Net: NetName=NetR99_2 Pin=U27-4
+Added Net: Name=NetR99_2
+Added Pin To Net: NetName=NetR100_1 Pin=R100-1
+Added Pin To Net: NetName=NetR100_1 Pin=U27-3
+Added Net: Name=NetR100_1
+Added Pin To Net: NetName=NetR100_2 Pin=R100-2
+Added Pin To Net: NetName=NetR100_2 Pin=R103-1
+Added Pin To Net: NetName=NetR100_2 Pin=U17-1
+Added Net: Name=NetR100_2
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C102 0.1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C103 1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R98 10K 
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R99 10K 
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R100 10K 
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R101 10K 
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R102 10K 
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R103 15K 
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component U27 OPA320AIDBVT

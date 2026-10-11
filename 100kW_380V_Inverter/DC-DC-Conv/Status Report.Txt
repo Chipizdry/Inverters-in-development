@@ -1,0 +1,46 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Variant [[No Variations]] of Project [Free Documents]
+   Generated File[DC-DC_Conv_Copper_Signal_Top.gbr]
+   Generated File[DC-DC_Conv_Copper_Signal_1.gbr]
+   Generated File[DC-DC_Conv_Copper_Signal_2.gbr]
+   Generated File[DC-DC_Conv_Copper_Signal_Bot.gbr]
+   Generated File[DC-DC_Conv_Pads_Bot.gbr]
+   Generated File[DC-DC_Conv_Pads_Top.gbr]
+   Generated File[DC-DC_Conv_Legend_Top.gbr]
+   Generated File[DC-DC_Conv_Legend_Bot.gbr]
+   Generated File[DC-DC_Conv_Soldermask_Top.gbr]
+   Generated File[DC-DC_Conv_Soldermask_Bot.gbr]
+   Generated File[DC-DC_Conv_Paste_Top.gbr]
+   Generated File[DC-DC_Conv_Paste_Bot.gbr]
+   Generated File[DC-DC_Conv_Keep-out.gbr]
+   Generated File[DC-DC_Conv_Mechanical_1.gbr]
+   Generated File[DC-DC_Conv_Top_Assembly.gbr]
+   Generated File[DC-DC_Conv_Mechanical_3.gbr]
+   Generated File[DC-DC_Conv_Bottom_Assembly.gbr]
+   Generated File[DC-DC_Conv_Top_3D_Body.gbr]
+   Generated File[DC-DC_Conv_Bottom_3D_Body.gbr]
+   Generated File[DC-DC_Conv_Top_Designator.gbr]
+   Generated File[DC-DC_Conv_Bottom_Designator.gbr]
+   Generated File[DC-DC_Conv_Mechanical_10.gbr]
+   Generated File[DC-DC_Conv_Top_Component_Outline.gbr]
+   Generated File[DC-DC_Conv_Bottom_Component_Outline.gbr]
+   Generated File[DC-DC_Conv_Mechanical_13.gbr]
+   Generated File[DC-DC_Conv_Top_Courtyard.gbr]
+   Generated File[DC-DC_Conv_Top_Component_Center.gbr]
+   Generated File[DC-DC_Conv_Mechanical_20.gbr]
+   Generated File[DC-DC_Conv_Bottom_Courtyard.gbr]
+   Generated File[DC-DC_Conv_Bottom_Component_Center.gbr]
+   Generated File[DC-DC_Conv_Profile.gbr]
+   Generated File[DC-DC_Conv_NPTH_Drill.gbr]
+   Generated File[DC-DC_Conv_PTH_Drill.gbr]
+   Generated File[DC-DC_Conv_Drawing_1.gbr]
+   Generated File[DC-DC_Conv_Drillmap_1.gbr]
+   Generated File[DC-DC_Conv.EXTREP]
+   Generated File[DC-DC_Conv.REP]
+
+
+Files Generated   : 37
+Documents Printed : 0
+
+Finished Output Generation At 12:33:49 On 10.09.2026

@@ -1,0 +1,19 @@
+Change Component Designator: OldDesignator=C? NewDesignator=C67
+Change Component Designator: OldDesignator=C? NewDesignator=C68
+Change Component Designator: OldDesignator=C? NewDesignator=C69
+Change Component Designator: OldDesignator=C? NewDesignator=C70
+Change Component Designator: OldDesignator=C? NewDesignator=C71
+Change Component Designator: OldDesignator=C? NewDesignator=C72
+Change Component Designator: OldDesignator=L? NewDesignator=L3
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC68_1
+Change Net Name : Old Net Name=NetC?_2 New Net Name=NetC68_2
+Added Pin To Net: NetName=NetC71_2 Pin=C71-2
+Added Pin To Net: NetName=NetC71_2 Pin=C72-1
+Added Pin To Net: NetName=NetC71_2 Pin=L3-2
+Added Pin To Net: NetName=NetC71_2 Pin=P2-24
+Added Net: Name=NetC71_2
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C67 1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C69 0.1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C70 0.1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C71 0.1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C72 1000uF_25V

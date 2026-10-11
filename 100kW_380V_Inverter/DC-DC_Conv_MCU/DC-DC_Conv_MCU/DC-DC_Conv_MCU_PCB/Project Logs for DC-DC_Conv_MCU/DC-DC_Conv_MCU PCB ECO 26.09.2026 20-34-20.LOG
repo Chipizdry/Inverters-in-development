@@ -1,0 +1,476 @@
+Removed Pin From Net: NetName=NetR59_2 Pin=U16-1
+Change Component Designator: OldDesignator=C71 NewDesignator=C91
+Change Component Designator: OldDesignator=C72 NewDesignator=C92
+Change Component Designator: OldDesignator=L3 NewDesignator=L4
+Added Component: Designator=C71(CAP-0603)
+Added Component: Designator=C72(CAP-0603)
+Added Component: Designator=C73(FKP2D011001A00JSSD)
+Added Component: Designator=C74(FKP2D011001A00JSSD)
+Added Component: Designator=C75(CAP-TAN-D)
+Added Component: Designator=C76(CAP-0805)
+Added Component: Designator=C77(CAP_SMD_Size_G)
+Added Component: Designator=C78(CAP-0603)
+Added Component: Designator=C79(CAP-0603)
+Added Component: Designator=C80(CAP-0603)
+Added Component: Designator=C81(CAP-0603)
+Added Component: Designator=C82(CAP-0603)
+Added Component: Designator=C83(CAP-0603)
+Added Component: Designator=C84(CAP-0603)
+Added Component: Designator=C85(CAP-0603)
+Added Component: Designator=C86(CAP_SMD_Size_G)
+Added Component: Designator=C87(CAP-0603)
+Added Component: Designator=C88(CAP-0805)
+Added Component: Designator=C89(CAP-0603)
+Added Component: Designator=C90(CAP-0603)
+Added Component: Designator=D14(FP-SOT23-MFG)
+Add component (AddParameter): Name = "Average Rectified Current"; Value = "200mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Capacitance"; Value = "10pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "200mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "200mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "800mV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "2.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Forward Surge Current (Ifsm)"; Value = "600mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "150°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Power Dissipation"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Repetitive Reverse Voltage (Vrrm)"; Value = "30V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Reverse Voltage (DC)"; Value = "30V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-65°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Non-Repetitive Surge Current"; Value = "600mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Current"; Value = "2uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Dissipation"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reverse Recovery Time"; Value = "5ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "30V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Weight"; Value = "0.000282oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.3mm"; VariantName = "[No Variations]"
+Added Component: Designator=D15(FP-SOT23-MFG)
+Add component (AddParameter): Name = "Average Rectified Current"; Value = "200mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Capacitance"; Value = "10pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "200mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "200mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "800mV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "2.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Forward Surge Current (Ifsm)"; Value = "600mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "150°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Power Dissipation"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Repetitive Reverse Voltage (Vrrm)"; Value = "30V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Reverse Voltage (DC)"; Value = "30V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-65°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Non-Repetitive Surge Current"; Value = "600mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Current"; Value = "2uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Dissipation"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "200mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reverse Recovery Time"; Value = "5ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "30V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Weight"; Value = "0.000282oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.3mm"; VariantName = "[No Variations]"
+Added Component: Designator=D16(FP-SMB-CA-MFG)
+Added Component: Designator=D17(FP-SMB-CA-MFG)
+Added Component: Designator=D18(LED_RED)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://katalog.we-online.de/led/datasheet/151031YS06000.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Geometry.Height"; Value = "5.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "151031YS06000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "710-151031YS06000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/151031YS06000?qs=LlUlMxKIyB3xSYYW%252BcuBiQ%3D%3D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=L3(WE-PD2_7850)
+Add component (AddParameter): Name = "Case/Size Code"; Value = "7850"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Unshielded Power Inductors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/744775239?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/744775239?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Resistance"; Value = "1.151?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Resistance Max"; Value = "1.77?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.95mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inductance"; Value = "390µH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "7.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "744775239"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Match Code"; Value = "WE-PD2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Max"; Value = "125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Min"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Current"; Value = "0.38A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Saturation Current"; Value = "0.43A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Self Resonant Frequency"; Value = "3.9MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "7mm"; VariantName = "[No Variations]"
+Added Component: Designator=R64(RES-0603)
+Added Component: Designator=R65(RES-0603)
+Added Component: Designator=R66(RES-1206)
+Added Component: Designator=R67(RES-1206)
+Added Component: Designator=R68(RES-0603)
+Added Component: Designator=R69(RES-0603)
+Added Component: Designator=R70(RES-0603)
+Added Component: Designator=R71(RES-0603)
+Added Component: Designator=R72(RES-0603)
+Added Component: Designator=R73(RES-0603)
+Added Component: Designator=R74(RES-0603)
+Added Component: Designator=R75(RES-0603)
+Added Component: Designator=R76(RES-0805)
+Added Component: Designator=R77(RES-0805)
+Added Component: Designator=R78(RES-0603)
+Added Component: Designator=R79(RES-0603)
+Added Component: Designator=R80(RES-0603)
+Added Component: Designator=R81(RES-0603)
+Added Component: Designator=R82(RES-0603)
+Added Component: Designator=R83(RES-0603)
+Added Component: Designator=R84(RES-0603)
+Added Component: Designator=R85(RES-0603)
+Added Component: Designator=R86(RES-0603)
+Added Component: Designator=R87(RES-0603)
+Added Component: Designator=R88(RES-0603)
+Added Component: Designator=R89(RES-2512)
+Added Component: Designator=R90(RES-2512)
+Added Component: Designator=T1(TRANS_RM6)
+Added Component: Designator=T2(SOT23-3_IPC_A)
+Added Component: Designator=T3(SOT-223-3)
+Added Component: Designator=T4(SOT-223-3)
+Added Component: Designator=TP9(Test_Point)
+Added Component: Designator=TP10(Test_Point)
+Added Component: Designator=TP11(Test_Point)
+Added Component: Designator=TP12(Test_Point)
+Added Component: Designator=TP13(Test_Point)
+Added Component: Designator=TP14(Test_Point)
+Added Component: Designator=TP15(Test_Point)
+Added Component: Designator=TP16(Test_Point)
+Added Component: Designator=TP17(Test_Point)
+Added Component: Designator=TP18(Test_Point)
+Added Component: Designator=U19(D0016A_N)
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "MS-012AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TL494&fileType=pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Control Method"; Value = "Voltage"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SLVS074E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Duty Cycle(Max)(%)"; Value = "45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Eco-Plan"; Value = "Green (RoHS & no Sb/Br)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency(Max)(kHz)"; Value = "300"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "16-Pin Plastic Small Outline Integrated Circuit, 9.9 x 3.9 mm, Pitch 1.27 mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "D0016A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "revM, Jun-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TL494CDR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Military"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Regulated Outputs(#)"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SubFamily"; Value = "PWM Controller"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Topology"; Value = "Boost, Buck, Flyback, Forward, Full-Bridge, Half-Bridge, Push-Pull"; VariantName = "[No Variations]"
+Added Component: Designator=U20(FP-DSD0008D-IPC_A)
+Added Component: Designator=U21(TL431_SOT-23-3(A))
+Added Component: Designator=U22(TL431_SOT-23-3(A))
+Added Component: Designator=VT1(TO-220_Bended_Rad)
+Added Component: Designator=VT2(TO-220_Bended_Rad)
+Added Pin To Net: NetName=GND Pin=C71-1
+Added Pin To Net: NetName=GND Pin=C72-1
+Added Pin To Net: NetName=GND Pin=C75-2
+Added Pin To Net: NetName=GND Pin=C76-1
+Added Pin To Net: NetName=VCC Pin=C76-2
+Added Pin To Net: NetName=VCC Pin=C77-1
+Added Pin To Net: NetName=GND Pin=C77-2
+Added Pin To Net: NetName=GND Pin=C78-1
+Added Pin To Net: NetName=GND Pin=C81-1
+Added Pin To Net: NetName=VCC Pin=C81-2
+Added Pin To Net: NetName=GND Pin=C82-1
+Added Pin To Net: NetName=VCC Pin=C82-2
+Added Pin To Net: NetName=GND Pin=C83-1
+Added Pin To Net: NetName=GND Pin=C84-1
+Added Pin To Net: NetName=GND Pin=C85-1
+Added Pin To Net: NetName=GND Pin=C86-2
+Added Pin To Net: NetName=GND Pin=C87-1
+Added Pin To Net: NetName=GND Pin=C88-1
+Added Pin To Net: NetName=GND Pin=C89-1
+Added Pin To Net: NetName=GND Pin=C90-1
+Added Pin To Net: NetName=GND Pin=D14-1
+Added Pin To Net: NetName=3v3 Pin=D14-2
+Added Pin To Net: NetName=GND Pin=D15-1
+Added Pin To Net: NetName=3v3 Pin=D15-2
+Added Pin To Net: NetName=GND Pin=D16-1
+Added Pin To Net: NetName=GND Pin=D17-2
+Added Pin To Net: NetName=VCC Pin=L3-2
+Added Pin To Net: NetName=3v3 Pin=R64-1
+Added Pin To Net: NetName=3v3 Pin=R65-1
+Added Pin To Net: NetName=VCC Pin=R66-1
+Added Pin To Net: NetName=VCC Pin=R67-2
+Added Pin To Net: NetName=VCC Pin=R68-2
+Added Pin To Net: NetName=GND Pin=R78-1
+Added Pin To Net: NetName=GND Pin=R79-1
+Added Pin To Net: NetName=GND Pin=R80-1
+Added Pin To Net: NetName=GND Pin=R82-1
+Added Pin To Net: NetName=GND Pin=R83-1
+Added Pin To Net: NetName=GND Pin=R84-1
+Added Pin To Net: NetName=GND Pin=R86-1
+Added Pin To Net: NetName=GND Pin=R87-1
+Added Pin To Net: NetName=GND Pin=R89-1
+Added Pin To Net: NetName=GND Pin=R89-1
+Added Pin To Net: NetName=GND Pin=R90-1
+Added Pin To Net: NetName=GND Pin=R90-1
+Added Pin To Net: NetName=VCC Pin=T1-2
+Added Pin To Net: NetName=VCC Pin=T1-3
+Added Pin To Net: NetName=GND Pin=T2-2
+Added Pin To Net: NetName=GND Pin=TP17-1
+Added Pin To Net: NetName=NetP2_2 Pin=U16-1
+Added Pin To Net: NetName=NetC41_2 Pin=U16-21
+Added Pin To Net: NetName=NetC36_2 Pin=U16-30
+Added Pin To Net: NetName=NetC29_2 Pin=U16-40
+Added Pin To Net: NetName=NetC58_2 Pin=U16-45
+Added Pin To Net: NetName=GND Pin=U19-7
+Added Pin To Net: NetName=VCC Pin=U19-8
+Added Pin To Net: NetName=VCC Pin=U19-11
+Added Pin To Net: NetName=VCC Pin=U20-1
+Added Pin To Net: NetName=GND Pin=U20-3
+Added Pin To Net: NetName=VCC Pin=U20-6
+Added Pin To Net: NetName=VCC Pin=U20-8
+Added Pin To Net: NetName=GND Pin=U20-9
+Added Pin To Net: NetName=GND Pin=U21-3
+Added Pin To Net: NetName=GND Pin=U22-3
+Change Net Name : Old Net Name=NetC71_2 New Net Name=NetC91_2
+Added Pin To Net: NetName=NetC71_2 Pin=C71-2
+Added Pin To Net: NetName=NetC71_2 Pin=D14-3
+Added Pin To Net: NetName=NetC71_2 Pin=P2-7
+Added Pin To Net: NetName=NetC71_2 Pin=R64-2
+Added Net: Name=NetC71_2
+Added Pin To Net: NetName=NetC72_2 Pin=C72-2
+Added Pin To Net: NetName=NetC72_2 Pin=D15-3
+Added Pin To Net: NetName=NetC72_2 Pin=P2-9
+Added Pin To Net: NetName=NetC72_2 Pin=R65-2
+Added Net: Name=NetC72_2
+Added Pin To Net: NetName=NetC73_1 Pin=C73-1
+Added Pin To Net: NetName=NetC73_1 Pin=R66-2
+Added Net: Name=NetC73_1
+Added Pin To Net: NetName=NetC73_2 Pin=C73-2
+Added Pin To Net: NetName=NetC73_2 Pin=D16-2
+Added Pin To Net: NetName=NetC73_2 Pin=T1-1
+Added Pin To Net: NetName=NetC73_2 Pin=T3-2
+Added Pin To Net: NetName=NetC73_2 Pin=T3-2
+Added Pin To Net: NetName=NetC73_2 Pin=TP12-1
+Added Net: Name=NetC73_2
+Added Pin To Net: NetName=NetC74_1 Pin=C74-1
+Added Pin To Net: NetName=NetC74_1 Pin=R67-1
+Added Net: Name=NetC74_1
+Added Pin To Net: NetName=NetC74_2 Pin=C74-2
+Added Pin To Net: NetName=NetC74_2 Pin=D17-1
+Added Pin To Net: NetName=NetC74_2 Pin=T1-4
+Added Pin To Net: NetName=NetC74_2 Pin=T4-2
+Added Pin To Net: NetName=NetC74_2 Pin=T4-2
+Added Pin To Net: NetName=NetC74_2 Pin=TP13-1
+Added Net: Name=NetC74_2
+Added Pin To Net: NetName=NetC75_1 Pin=C75-1
+Added Pin To Net: NetName=NetC75_1 Pin=C78-2
+Added Pin To Net: NetName=NetC75_1 Pin=R69-2
+Added Pin To Net: NetName=NetC75_1 Pin=R70-2
+Added Pin To Net: NetName=NetC75_1 Pin=R71-2
+Added Pin To Net: NetName=NetC75_1 Pin=TP9-1
+Added Pin To Net: NetName=NetC75_1 Pin=U19-13
+Added Pin To Net: NetName=NetC75_1 Pin=U19-14
+Added Net: Name=NetC75_1
+Added Pin To Net: NetName=NetC79_1 Pin=C79-1
+Added Pin To Net: NetName=NetC79_1 Pin=C80-2
+Added Pin To Net: NetName=NetC79_1 Pin=R72-1
+Added Pin To Net: NetName=NetC79_1 Pin=R73-2
+Added Pin To Net: NetName=NetC79_1 Pin=R75-2
+Added Pin To Net: NetName=NetC79_1 Pin=U19-3
+Added Net: Name=NetC79_1
+Added Pin To Net: NetName=NetC79_2 Pin=C79-2
+Added Pin To Net: NetName=NetC79_2 Pin=C87-2
+Added Pin To Net: NetName=NetC79_2 Pin=R70-1
+Added Pin To Net: NetName=NetC79_2 Pin=R72-2
+Added Pin To Net: NetName=NetC79_2 Pin=TP10-1
+Added Pin To Net: NetName=NetC79_2 Pin=U19-2
+Added Pin To Net: NetName=NetC79_2 Pin=U21-1
+Added Pin To Net: NetName=NetC79_2 Pin=U21-2
+Added Net: Name=NetC79_2
+Added Pin To Net: NetName=NetC80_1 Pin=C80-1
+Added Pin To Net: NetName=NetC80_1 Pin=C83-2
+Added Pin To Net: NetName=NetC80_1 Pin=R69-1
+Added Pin To Net: NetName=NetC80_1 Pin=R73-1
+Added Pin To Net: NetName=NetC80_1 Pin=TP15-1
+Added Pin To Net: NetName=NetC80_1 Pin=U19-15
+Added Pin To Net: NetName=NetC80_1 Pin=U22-1
+Added Pin To Net: NetName=NetC80_1 Pin=U22-2
+Added Net: Name=NetC80_1
+Added Pin To Net: NetName=NetC84_2 Pin=C84-2
+Added Pin To Net: NetName=NetC84_2 Pin=U19-5
+Added Net: Name=NetC84_2
+Added Pin To Net: NetName=NetC85_2 Pin=C85-2
+Added Pin To Net: NetName=NetC85_2 Pin=C86-1
+Added Pin To Net: NetName=NetC85_2 Pin=L3-1
+Added Pin To Net: NetName=NetC85_2 Pin=U19-12
+Added Net: Name=NetC85_2
+Added Pin To Net: NetName=NetC88_2 Pin=C88-2
+Added Pin To Net: NetName=NetC88_2 Pin=R68-1
+Added Pin To Net: NetName=NetC88_2 Pin=R82-2
+Added Pin To Net: NetName=NetC88_2 Pin=TP11-1
+Added Pin To Net: NetName=NetC88_2 Pin=U19-16
+Added Net: Name=NetC88_2
+Added Pin To Net: NetName=NetC89_2 Pin=C89-2
+Added Pin To Net: NetName=NetC89_2 Pin=R88-1
+Added Pin To Net: NetName=NetC89_2 Pin=U19-1
+Added Net: Name=NetC89_2
+Added Pin To Net: NetName=NetC90_2 Pin=C90-2
+Added Pin To Net: NetName=NetC90_2 Pin=R88-2
+Added Pin To Net: NetName=NetC90_2 Pin=R89-2
+Added Pin To Net: NetName=NetC90_2 Pin=R89-2
+Added Pin To Net: NetName=NetC90_2 Pin=R90-2
+Added Pin To Net: NetName=NetC90_2 Pin=R90-2
+Added Pin To Net: NetName=NetC90_2 Pin=T3-3
+Added Pin To Net: NetName=NetC90_2 Pin=T4-3
+Added Pin To Net: NetName=NetC90_2 Pin=TP18-1
+Added Net: Name=NetC90_2
+Added Pin To Net: NetName=NetD18_1 Pin=D18-1
+Added Pin To Net: NetName=NetD18_1 Pin=R71-1
+Added Net: Name=NetD18_1
+Added Pin To Net: NetName=NetD18_2 Pin=D18-2
+Added Pin To Net: NetName=NetD18_2 Pin=T2-3
+Added Net: Name=NetD18_2
+Added Pin To Net: NetName=NetR74_1 Pin=R74-1
+Added Pin To Net: NetName=NetR74_1 Pin=R79-2
+Added Pin To Net: NetName=NetR74_1 Pin=U19-4
+Added Net: Name=NetR74_1
+Added Pin To Net: NetName=NetR74_2 Pin=R74-2
+Added Net: Name=NetR74_2
+Added Pin To Net: NetName=NetR75_1 Pin=R75-1
+Added Pin To Net: NetName=NetR75_1 Pin=R78-2
+Added Pin To Net: NetName=NetR75_1 Pin=T2-1
+Added Net: Name=NetR75_1
+Added Pin To Net: NetName=NetR76_1 Pin=R76-1
+Added Pin To Net: NetName=NetR76_1 Pin=U20-7
+Added Net: Name=NetR76_1
+Added Pin To Net: NetName=NetR76_2 Pin=R76-2
+Added Pin To Net: NetName=NetR76_2 Pin=R84-2
+Added Pin To Net: NetName=NetR76_2 Pin=T3-1
+Added Pin To Net: NetName=NetR76_2 Pin=TP14-1
+Added Net: Name=NetR76_2
+Added Pin To Net: NetName=NetR77_1 Pin=R77-1
+Added Pin To Net: NetName=NetR77_1 Pin=U20-5
+Added Net: Name=NetR77_1
+Added Pin To Net: NetName=NetR77_2 Pin=R77-2
+Added Pin To Net: NetName=NetR77_2 Pin=R83-2
+Added Pin To Net: NetName=NetR77_2 Pin=T4-1
+Added Pin To Net: NetName=NetR77_2 Pin=TP16-1
+Added Net: Name=NetR77_2
+Added Pin To Net: NetName=NetR80_2 Pin=R80-2
+Added Pin To Net: NetName=NetR80_2 Pin=U19-6
+Added Net: Name=NetR80_2
+Added Pin To Net: NetName=NetR81_1 Pin=R81-1
+Added Pin To Net: NetName=NetR81_1 Pin=U19-9
+Added Net: Name=NetR81_1
+Added Pin To Net: NetName=NetR81_2 Pin=R81-2
+Added Pin To Net: NetName=NetR81_2 Pin=R87-2
+Added Pin To Net: NetName=NetR81_2 Pin=U20-2
+Added Net: Name=NetR81_2
+Added Pin To Net: NetName=NetR85_1 Pin=R85-1
+Added Pin To Net: NetName=NetR85_1 Pin=U19-10
+Added Net: Name=NetR85_1
+Added Pin To Net: NetName=NetR85_2 Pin=R85-2
+Added Pin To Net: NetName=NetR85_2 Pin=R86-2
+Added Pin To Net: NetName=NetR85_2 Pin=U20-4
+Added Net: Name=NetR85_2
+Added Pin To Net: NetName=NetT1_5 Pin=T1-5
+Added Net: Name=NetT1_5
+Added Pin To Net: NetName=NetT1_6 Pin=T1-6
+Added Net: Name=NetT1_6
+Added Pin To Net: NetName=NetT1_7 Pin=T1-7
+Added Net: Name=NetT1_7
+Added Pin To Net: NetName=NetT1_8 Pin=T1-8
+Added Net: Name=NetT1_8
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C68 1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C73 63V 0.01UF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C74 63V 0.01UF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C75 100uF_16V
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C76 0.01uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C77 330uF_25V
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C78 0.1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C79 100nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C80 100nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C81 0.1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C82 0.01uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C83 100nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C84 2.2nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C85 0.01uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C86 470uF_25V
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C87 100nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C88 100nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C89 470 pF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C90 0.47uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C91 0.1uF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C92 1000uF_25V
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D14 BAT54S-7-F
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D15 BAT54S-7-F
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D16 SMBJ33CA-13-F
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D17 SMBJ33CA-13-F
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D18 LED_RED
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component L4 27µH, 1.95A
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R64 10K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R65 10K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R66 10 OMH
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R67 10 OMH
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R68 10K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R69 2K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R70 2K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R71 820
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R72 200K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R73 200K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R74 1K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R75 1K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R76 10
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R77 10
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R78 10K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R79 10K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R80 6.2K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R81 10
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R82 2K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R83 1K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R84 1K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R85 10
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R86 1K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R87 1K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R88 1K
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R89 4
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R90 4
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component T1 RM-6
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component T2 BC847C
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component T3 IRFL024ZTRPBF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component T4 IRFL024ZTRPBF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP9 Test_Point_PCB
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP10 Test_Point_PCB
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP11 Test_Point_PCB
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP12
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP13
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP14
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP15
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP16
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP17
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TP18
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component U19 TL494CDR
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component U20 UCC27524DSDR
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component U21 TL431
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component U22 TL431
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component VT1 MOSFET-N-GDS
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component VT2 MOSFET-N-GDS

@@ -1,0 +1,90 @@
+Removed Pin From Net: NetName=NetC73_2 Pin=T1-1
+Removed Pin From Net: NetName=VCC Pin=T1-2
+Removed Pin From Net: NetName=VCC Pin=T1-3
+Removed Pin From Net: NetName=NetC74_2 Pin=T1-4
+Removed Pin From Net: NetName=NetR76_2 Pin=T3-1
+Removed Pin From Net: NetName=NetC73_2 Pin=T3-2
+Removed Pin From Net: NetName=NetC73_2 Pin=T3-2
+Removed Pin From Net: NetName=NetC90_2 Pin=T3-3
+Removed Pin From Net: NetName=NetR77_2 Pin=T4-1
+Removed Pin From Net: NetName=NetC74_2 Pin=T4-2
+Removed Pin From Net: NetName=NetC74_2 Pin=T4-2
+Removed Pin From Net: NetName=NetC90_2 Pin=T4-3
+Removed Member From Class: ClassName=DC-DC_Conv_MCU Member=T1
+Removed Member From Class: ClassName=DC-DC_Conv_MCU Member=T3
+Removed Member From Class: ClassName=DC-DC_Conv_MCU Member=T4
+Change Component Footprint: Designator=U20 Old Footprint=FP-DSD0008D-IPC_A New Footprint=FP-DSD0008D-IPC_A
+Change Component Footprint: Designator=D16 Old Footprint=FP-SMB-CA-MFG New Footprint=FP-SMB-CA-MFG
+Change Component Footprint: Designator=D17 Old Footprint=FP-SMB-CA-MFG New Footprint=FP-SMB-CA-MFG
+Added Component: Designator=D19(FP-SMB-MFG)
+Added Component: Designator=D20(FP-SMB-MFG)
+Added Component: Designator=D21(FP-SMB-MFG)
+Added Component: Designator=D22(FP-SMB-MFG)
+Added Component: Designator=P3(645005114822)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/catalog/datasheet/645005114822.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Resistance"; Value = "20mOhm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "THT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40 to +105degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bag"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "645005114822"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Number"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "3.96mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "January 2020"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Current"; Value = "7A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Withstanding Voltage"; Value = "1500VAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Working Voltage"; Value = "250VAC"; VariantName = "[No Variations]"
+Added Component: Designator=R91(RES-2W)
+Added Component: Designator=R92(RES-2W)
+Added Component: Designator=TR1(TRANS_ETD_29)
+Added Pin To Net: NetName=NetC73_2 Pin=TR1-1
+Added Pin To Net: NetName=VCC Pin=TR1-3
+Added Pin To Net: NetName=VCC Pin=TR1-4
+Added Pin To Net: NetName=NetC74_2 Pin=TR1-6
+Added Pin To Net: NetName=NetR77_2 Pin=VT1-1
+Added Pin To Net: NetName=NetC74_2 Pin=VT1-2
+Added Pin To Net: NetName=NetC74_2 Pin=VT1-2
+Added Pin To Net: NetName=NetC90_2 Pin=VT1-3
+Added Pin To Net: NetName=NetR76_2 Pin=VT2-1
+Added Pin To Net: NetName=NetC73_2 Pin=VT2-2
+Added Pin To Net: NetName=NetC73_2 Pin=VT2-2
+Added Pin To Net: NetName=NetC90_2 Pin=VT2-3
+Added Pin To Net: NetName=NetD19_1 Pin=D19-1
+Added Pin To Net: NetName=NetD19_1 Pin=D22-1
+Added Pin To Net: NetName=NetD19_1 Pin=R91-1
+Added Pin To Net: NetName=NetD19_1 Pin=R92-1
+Added Net: Name=NetD19_1
+Added Pin To Net: NetName=NetD19_2 Pin=D19-2
+Added Pin To Net: NetName=NetD19_2 Pin=D20-1
+Added Pin To Net: NetName=NetD19_2 Pin=TR1-13
+Added Net: Name=NetD19_2
+Added Pin To Net: NetName=NetD20_2 Pin=D20-2
+Added Pin To Net: NetName=NetD20_2 Pin=D21-2
+Added Pin To Net: NetName=NetD20_2 Pin=P3-4
+Added Pin To Net: NetName=NetD20_2 Pin=P3-5
+Added Net: Name=NetD20_2
+Added Pin To Net: NetName=NetD21_1 Pin=D21-1
+Added Pin To Net: NetName=NetD21_1 Pin=D22-2
+Added Pin To Net: NetName=NetD21_1 Pin=TR1-7
+Added Net: Name=NetD21_1
+Added Pin To Net: NetName=NetP3_1 Pin=P3-1
+Added Pin To Net: NetName=NetP3_1 Pin=P3-2
+Added Pin To Net: NetName=NetP3_1 Pin=R91-2
+Added Pin To Net: NetName=NetP3_1 Pin=R92-2
+Added Net: Name=NetP3_1
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C71 10nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component C72 10nF
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D19 STTH212U
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D20 STTH212U
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D21 STTH212U
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component D22 STTH212U
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component L3 330µH, 0.38A
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component P3 645005114822
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R91 RES_100
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component R92 RES_100
+Added Member To Class: ClassName=DC-DC_Conv_MCU Member=Component TR1 Transformer 2xI , 1xII
